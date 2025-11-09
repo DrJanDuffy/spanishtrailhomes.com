@@ -241,7 +241,7 @@ function RealScoutListingsSection() {
             Berkshire Hathaway Listings in Spanish Trail
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Powered by RealScout, these actively updated listings highlight single-family residences between $500K and $600K inside the 89113 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
+            Actively updated listings highlighting single-family residences between $500K and $600K inside the 89113 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
           </p>
         </div>
         <div className="mt-10 rounded-3xl border border-border/60 bg-card/90 p-4 shadow-sm">

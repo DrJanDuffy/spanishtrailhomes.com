@@ -196,7 +196,7 @@ function HeroSection() {
             id="hero-heading"
             className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Homes · 89113 Hyperlocal Intelligence
+            Spanish Trail Homes · 89113 Intelligence
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
             Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
@@ -268,7 +268,7 @@ function IntroSection() {
             id="intro-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Hyperlocal expertise across Spanish Trail’s guard gates.
+            Local expertise across Spanish Trail’s guard gates.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
@@ -427,7 +427,7 @@ function LocalEssentialsSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Hyperlocal Essentials
+            Local Essentials
           </p>
           <h2
             id="local-essentials-heading"

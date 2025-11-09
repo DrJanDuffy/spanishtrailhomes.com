@@ -195,3 +195,29 @@ realscout-office-listings {
     flex-direction: column !important;
   }
 }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  clip: auto;
+  padding: 0.75rem 1.5rem;
+  background: #0f2b1e;
+  color: #f8f5ef;
+  border-radius: 999px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 30px rgba(15, 43, 30, 0.35);
+}

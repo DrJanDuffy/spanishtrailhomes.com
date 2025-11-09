@@ -83,6 +83,30 @@ const clubFaqSchema = {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/club'
 
+const clubReviewsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: testimonials.map((testimonial, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: testimonial.name,
+    item: {
+      '@type': 'Review',
+      reviewBody: testimonial.quote,
+      author: {
+        '@type': 'Person',
+        name: testimonial.name,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+      },
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Club Life | Spanish Trail Country Club',
   description:
@@ -130,6 +154,9 @@ export default function ClubPage() {
         {JSON.stringify(clubFaqSchema)}
       </Script>
       <TestimonialsHighlight />
+      <Script id="club-testimonials-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(clubReviewsSchema)}
+      </Script>
     </SiteShell>
   )
 }

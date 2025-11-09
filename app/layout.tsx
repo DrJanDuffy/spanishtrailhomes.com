@@ -179,6 +179,9 @@ gtag('config', 'G-X68WWN997N');`}
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -13,7 +13,9 @@ export function SiteShell({ children }: SiteShellProps) {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteTopBar />
       <SiteHeader />
-      <main className="flex flex-1 flex-col">{children}</main>
+      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col focus:outline-none">
+        {children}
+      </main>
       <SiteFooter />
     </div>
   )

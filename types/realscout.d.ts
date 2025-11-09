@@ -1,14 +1,18 @@
 import type { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    'realscout-office-listings': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
-      'agent-encoded-id': string
-      'sort-order'?: string
-      'listing-status'?: string
-      'property-types'?: string
-      'price-min'?: string
-      'price-max'?: string
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'realscout-office-listings': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        'agent-encoded-id': string
+        'sort-order'?: string
+        'listing-status'?: string
+        'property-types'?: string
+        'price-min'?: string
+        'price-max'?: string
+      }
     }
   }
 }
+
+export {}

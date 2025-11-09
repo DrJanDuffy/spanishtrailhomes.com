@@ -604,8 +604,8 @@ function CTASection() {
           >
             <Link href="/sellers">Get a Valuation</Link>
           </Button>
+          </div>
         </div>
-    </div>
     </section>
   )
 }

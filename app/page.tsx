@@ -56,6 +56,29 @@ const featuredListings = [
   },
 ]
 
+const neighborhoodSpotlights = [
+  {
+    name: 'The Estates & Estates West',
+    description:
+      'Custom golf-course estates ranging from 5,000–15,000 sq. ft., many with double-gated motor courts, casitas, and panoramic fairway views along the Sunrise, Ridge, and Canyon courses.',
+  },
+  {
+    name: 'The Courtyards & Gardens',
+    description:
+      'Lock-and-leave luxury with mature courtyards, private pools, and effortless access to the clubhouse, spa, and dining scenes on Tropicana and Rainbow.',
+  },
+  {
+    name: 'The Links & Carmels',
+    description:
+      'Fairway villas with wraparound patios, elevated tee-box vistas, and quick cart access to the Robert Trent Jones Jr. course and practice facility.',
+  },
+  {
+    name: 'Springs & Plum Creek',
+    description:
+      'Tree-lined streets with family-friendly floor plans, community greenbelts, and proximity to Bishop Gorman High School and Faith Lutheran Academy.',
+  },
+]
+
 const neighborhoodClusters = [
   'Carmels',
   'Courtyards',
@@ -68,6 +91,41 @@ const neighborhoodClusters = [
   'Innisbrook Estates',
   'Estates',
   'Estates West',
+]
+
+const localEssentials = [
+  {
+    title: 'Private & Charter Schools',
+    items: [
+      'Bishop Gorman High School – 2.2 miles northeast via S. Rainbow Blvd.',
+      'Faith Lutheran Middle & High School – 12 minutes to Summerlin for college-prep curriculum.',
+      'The Meadows School – 15 minutes for K-12 gifted and AP programs.',
+    ],
+  },
+  {
+    title: 'Dining & Social',
+    items: [
+      'Spanish Trail Country Club Grill & Patio – members-only dining overlooking the Lakes nine.',
+      'The Sundry at UnCommons – chef-driven food hall and lounges, 8 minutes west.',
+      'Locale Italian Kitchen & DW Bistro – beloved Rainbow Blvd. staples for brunch and dinner.',
+    ],
+  },
+  {
+    title: 'Wellness & Recreation',
+    items: [
+      'Spanish Trail Fitness & Aquatics – renovated gym, lap lanes, and trainer-led classes.',
+      'Spanish Trail Swim & Racquet – twelve lighted tennis courts plus pickleball.',
+      'Desert Breeze Park – off-leash dog runs, skate park, and indoor aquatic center nearby.',
+    ],
+  },
+  {
+    title: 'Commute & Access',
+    items: [
+      'I-215 Beltway – 6 minutes to access Summerlin Parkway or McCarran corridor.',
+      'Allegiant Stadium & The Strip – 15 minutes east for entertainment and dining.',
+      'Harry Reid International Airport – approximately 18 minutes via Tropicana Ave.',
+    ],
+  },
 ]
 
 const lifestyleHighlights = [
@@ -101,7 +159,9 @@ export default function HomePage() {
       <RealScoutListingsSection />
       <IntroSection />
       <StatsSection />
+      <NeighborhoodSpotlightsSection />
       <MarketOverviewSection />
+      <LocalEssentialsSection />
       <FeaturedInventorySection />
       <RealEstateSection />
       <ListingsSection />
@@ -136,10 +196,10 @@ function HeroSection() {
             id="hero-heading"
             className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Luxury Homes & Country Club Living
+            Spanish Trail Homes · 89113 Hyperlocal Intelligence
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-            Represented by Dr. Janet Duffy, Spanish Trail showcases guard-gated estates, golf villas, and view-rich residences moments from the Las Vegas Strip. Browse curated inventory, instant market insights, and private tour opportunities.
+            Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -147,16 +207,14 @@ function HeroSection() {
             asChild
             className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
           >
-            <Link href="#bhhs-listings">Explore Listings</Link>
+            <Link href="#bhhs-listings">See What’s New</Link>
           </Button>
           <Button
             asChild
             variant="outline"
             className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
           >
-            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
-              View Market Report
-            </Link>
+            <Link href="/contact">Plan a Private Tour</Link>
           </Button>
         </div>
       </div>
@@ -183,7 +241,7 @@ function RealScoutListingsSection() {
             Berkshire Hathaway Listings in Spanish Trail
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Powered by RealScout, these actively updated listings showcase single-family residences between $500K and $600K represented through Berkshire Hathaway HomeServices Nevada Properties. Adjust filters or connect with Dr. Janet Duffy for additional price points.
+            Powered by RealScout, these actively updated listings highlight single-family residences between $500K and $600K inside the 89113 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
           </p>
         </div>
         <div className="mt-10 rounded-3xl border border-border/60 bg-card/90 p-4 shadow-sm">
@@ -210,13 +268,13 @@ function IntroSection() {
             id="intro-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Exclusive guard-gated golf living minutes from the Strip.
+            Hyperlocal expertise across Spanish Trail’s guard gates.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Spanish Trail spans the Spring Valley area of Las Vegas with quick access to Summerlin, I-215, and Harry Reid International Airport. Established as one of the city’s earliest private golf course communities, it layers mature landscaping, shimmering lakes, and a resort-caliber clubhouse across 640 acres of all-grass fairways.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Residents enjoy the convenience of three guarded entries, proximity to upscale dining and entertainment, and the prestige of a club that has hosted the PGA Las Vegas Invitational five times while serving as home course for the UNLV Women’s Golf Team.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            As one of Las Vegas’s original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe’s, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
           </p>
         </div>
         <div className="space-y-4 rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
@@ -226,15 +284,19 @@ function IntroSection() {
           <dl className="grid grid-cols-1 gap-4 text-sm text-muted-foreground">
             <div>
               <dt className="font-semibold text-foreground">Location</dt>
-              <dd>Tropicana Ave. & Rainbow Blvd., Las Vegas NV 89113</dd>
+              <dd>Spanish Trail, 89113 · Tropicana Ave. & Rainbow Blvd.</dd>
             </div>
             <div>
-              <dt className="font-semibold text-foreground">Access</dt>
-              <dd>Two guard gates on Tropicana, one on Hacienda</dd>
+              <dt className="font-semibold text-foreground">Gate Access</dt>
+              <dd>East & West Tropicana gates + Hacienda residents gate</dd>
             </div>
             <div>
-              <dt className="font-semibold text-foreground">Airport</dt>
-              <dd>Approx. 15 minutes to Harry Reid International</dd>
+              <dt className="font-semibold text-foreground">Lifestyle</dt>
+              <dd>Golf, tennis, aquatics, and curated social programming</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-foreground">Nearby</dt>
+              <dd>UnCommons, The Bend, Allegiant Stadium, Downtown Summerlin</dd>
             </div>
           </dl>
           <Button
@@ -270,6 +332,44 @@ function StatsSection() {
             </p>
           </div>
         ))}
+      </div>
+    </section>
+  )
+}
+
+function NeighborhoodSpotlightsSection() {
+  return (
+    <section className="bg-background py-20 sm:py-24" aria-labelledby="neighborhood-spotlights-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Neighborhood Spotlights
+          </p>
+          <h2
+            id="neighborhood-spotlights-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Micro-neighborhoods that define Spanish Trail living
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Each enclave inside the gates offers a distinct vibe—from legacy custom estates with sweeping golf frontage to turn-key villas steps from the clubhouse. Here’s what buyers ask about most.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {neighborhoodSpotlights.map((spotlight) => (
+            <div
+              key={spotlight.name}
+              className="rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm"
+            >
+              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                {spotlight.name}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {spotlight.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -314,6 +414,46 @@ function MarketOverviewSection() {
               </p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
             </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LocalEssentialsSection() {
+  return (
+    <section className="bg-background py-20 sm:py-24" aria-labelledby="local-essentials-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Hyperlocal Essentials
+          </p>
+          <h2
+            id="local-essentials-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            What life looks like inside the 89113 guard gates
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            From championship golf mornings to sunset dinners on Rainbow Boulevard, Spanish Trail residents enjoy a curated lifestyle with everything within minutes. Here are the go-to spots our buyers ask about first.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {localEssentials.map((section) => (
+            <div key={section.title} className="rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                {section.title}
+              </p>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {section.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 inline-block size-2 rounded-full bg-secondary" aria-hidden />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       </div>
@@ -604,8 +744,8 @@ function CTASection() {
           >
             <Link href="/sellers">Get a Valuation</Link>
           </Button>
-          </div>
         </div>
+      </div>
     </section>
   )
 }

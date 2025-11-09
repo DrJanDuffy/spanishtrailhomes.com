@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
@@ -64,6 +65,19 @@ const guestFaq = [
   },
 ]
 
+const guestFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: guestFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Guest Information | Spanish Trail Country Club',
   description:
@@ -88,6 +102,9 @@ export default function GuestInfoPage() {
       <ArrivalSection />
       <ContactSection />
       <GuestFAQSection />
+      <Script id="guest-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(guestFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
@@ -65,6 +66,19 @@ const eventsFaq = [
   },
 ]
 
+const eventsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: eventsFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Weddings & Events | Spanish Trail Country Club',
   description:
@@ -89,6 +103,9 @@ export default function EventsPage() {
       <GolfOutingsSection />
       <ContactSection />
       <EventsFAQSection />
+      <Script id="events-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(eventsFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }

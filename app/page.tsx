@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import Script from 'next/script'
 
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
@@ -212,6 +213,19 @@ const homeFaq = [
   },
 ]
 
+const homeFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export default function HomePage() {
   return (
     <SiteShell>
@@ -236,6 +250,9 @@ export default function HomePage() {
       <NearbyCommunitiesSection />
       <FAQSection />
       <CTASection />
+      <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homeFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }

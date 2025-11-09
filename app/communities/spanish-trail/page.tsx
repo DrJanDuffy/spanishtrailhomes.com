@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
@@ -63,6 +64,19 @@ const communityFaq = [
   },
 ]
 
+const communityFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: communityFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 const highlights = [
   'Guard-gated golf course community in Southwest Las Vegas with 24/7 security',
   'Access to Spanish Trail Country Club featuring a 27-hole Robert Trent Jones Jr. course',
@@ -124,6 +138,9 @@ export default function SpanishTrailCommunityPage() {
       <AmenitiesSection />
       <BenefitsSection />
       <CommunityFAQSection />
+      <Script id="community-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(communityFaqSchema)}
+      </Script>
       <ContactSection />
     </SiteShell>
   )

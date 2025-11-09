@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
@@ -64,6 +65,19 @@ const membershipFaq = [
   },
 ]
 
+const membershipFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: membershipFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Membership | Spanish Trail Country Club',
   description:
@@ -107,6 +121,9 @@ export default function MembershipPage() {
       <YoungExecutiveSection />
       <InquirySection />
       <MembershipFAQSection />
+      <Script id="membership-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(membershipFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }

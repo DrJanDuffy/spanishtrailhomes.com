@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { golfCourses } from '@/lib/content'
@@ -66,6 +67,19 @@ const golfFaq = [
   },
 ]
 
+const golfFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: golfFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Golf Experience | Spanish Trail Country Club',
   description:
@@ -96,6 +110,9 @@ export default function GolfPage() {
       <ScorecardSection />
       <GuestInformation />
       <GolfFAQSection />
+      <Script id="golf-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(golfFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }

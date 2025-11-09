@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { amenities, testimonials } from '@/lib/content'
@@ -66,6 +67,19 @@ const clubFaq = [
   },
 ]
 
+const clubFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: clubFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Club Life | Spanish Trail Country Club',
   description:
@@ -89,6 +103,9 @@ export default function ClubPage() {
       <AmenitiesHighlights />
       <LifestyleSection />
       <ClubFAQSection />
+      <Script id="club-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(clubFaqSchema)}
+      </Script>
       <TestimonialsHighlight />
     </SiteShell>
   )

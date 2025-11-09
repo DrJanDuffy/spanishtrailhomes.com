@@ -68,8 +68,8 @@ gtag('config', 'G-X68WWN997N');`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
           storageKey="theme"
         >

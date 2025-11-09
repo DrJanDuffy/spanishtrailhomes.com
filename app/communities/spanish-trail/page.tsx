@@ -5,6 +5,30 @@ import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { Metadata } from 'next'
+
+const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
+
+export const metadata: Metadata = {
+  title: 'Spanish Trail Homes for Sale | Community Guide',
+  description:
+    'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Janet Duffy.',
+  alternates: { canonical: '/communities/spanish-trail' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Spanish Trail Homes & Community Overview',
+    description:
+      'Tour Spanish Trail real estate, amenities, and lifestyle advantages with Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spanish Trail Homes for Sale',
+    description:
+      'Explore Spanish Trail homes, amenities, and buyer guides curated by Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+}
 
 const communityNarratives = [
   {

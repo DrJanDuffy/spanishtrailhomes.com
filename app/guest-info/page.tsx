@@ -79,10 +79,27 @@ const guestFaqSchema = {
   })),
 }
 
+const pageUrl = 'https://www.spanishtrailhomes.com/guest-info'
+
 export const metadata: Metadata = {
   title: 'Guest Information | Spanish Trail Country Club',
   description:
     'Plan your visit to Spanish Trail Country Club. Review directions, etiquette, locker access, and concierge contact details.',
+  alternates: { canonical: '/guest-info' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Guest Guide | Spanish Trail Country Club',
+    description:
+      'Access directions, arrival tips, and concierge support for your visit to Spanish Trail Country Club.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Guest Information | Spanish Trail Country Club',
+    description:
+      'Review arrival instructions, etiquette, and concierge contacts before visiting Spanish Trail Country Club.',
+    images: [`${pageUrl}/og-image.png`],
+  },
 }
 
 export default function GuestInfoPage() {

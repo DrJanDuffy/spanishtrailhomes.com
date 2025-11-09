@@ -81,10 +81,27 @@ const golfFaqSchema = {
   })),
 }
 
+const pageUrl = 'https://www.spanishtrailhomes.com/golf'
+
 export const metadata: Metadata = {
   title: 'Golf Experience | Spanish Trail Country Club',
   description:
     'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and plan your next round at Spanish Trail Country Club.',
+  alternates: { canonical: '/golf' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Spanish Trail Golf Experience',
+    description:
+      'Discover the Sunrise, Lakes, and Canyon nines, practice facilities, and golf programming with Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Golf at Spanish Trail Country Club',
+    description:
+      'Plan your next round at Spanish Trail’s 27 championship holes with insights from Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
 }
 
 const scorecard = [

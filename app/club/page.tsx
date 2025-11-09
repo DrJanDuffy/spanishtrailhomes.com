@@ -81,10 +81,27 @@ const clubFaqSchema = {
   })),
 }
 
+const pageUrl = 'https://www.spanishtrailhomes.com/club'
+
 export const metadata: Metadata = {
   title: 'Club Life | Spanish Trail Country Club',
   description:
     'Explore the Spanish Trail Country Club lifestyle—clubhouse amenities, dining, fitness, tennis, and social events in Las Vegas.',
+  alternates: { canonical: '/club' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Club Life at Spanish Trail Country Club',
+    description:
+      'Discover clubhouse amenities, dining venues, and curated social experiences with Dr. Janet Duffy at Spanish Trail Country Club.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Club Life | Spanish Trail Country Club',
+    description:
+      'Uncover luxury amenities, dining, and events at Spanish Trail Country Club guided by Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
 }
 
 export default function ClubPage() {

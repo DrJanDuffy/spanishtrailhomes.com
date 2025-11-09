@@ -79,10 +79,27 @@ const membershipFaqSchema = {
   })),
 }
 
+const pageUrl = 'https://www.spanishtrailhomes.com/membership'
+
 export const metadata: Metadata = {
   title: 'Membership | Spanish Trail Country Club',
   description:
     'Discover golf, social, and corporate membership options at Spanish Trail Country Club. Request information or schedule a tour.',
+  alternates: { canonical: '/membership' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Spanish Trail Membership Options',
+    description:
+      'Evaluate membership categories, benefits, and concierge services at Spanish Trail Country Club with Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Membership | Spanish Trail Country Club',
+    description:
+      'View Spanish Trail membership tiers, pricing insights, and concierge benefits curated by Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
 }
 
 const membershipOptions = [

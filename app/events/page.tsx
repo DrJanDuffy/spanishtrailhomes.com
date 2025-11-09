@@ -80,10 +80,27 @@ const eventsFaqSchema = {
   })),
 }
 
+const pageUrl = 'https://www.spanishtrailhomes.com/events'
+
 export const metadata: Metadata = {
   title: 'Weddings & Events | Spanish Trail Country Club',
   description:
     'Host weddings, private celebrations, and golf outings at Spanish Trail Country Club with bespoke planning and panoramic Las Vegas views.',
+  alternates: { canonical: '/events' },
+  openGraph: {
+    url: pageUrl,
+    title: 'Events at Spanish Trail Country Club',
+    description:
+      'Plan weddings, galas, and corporate gatherings with Spanish Trail’s concierge team and Dr. Janet Duffy.',
+    images: [`${pageUrl}/og-image.png`],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Weddings & Events | Spanish Trail Country Club',
+    description:
+      'Discover bespoke planning for weddings, private celebrations, and golf outings at Spanish Trail Country Club.',
+    images: [`${pageUrl}/og-image.png`],
+  },
 }
 
 export default function EventsPage() {

@@ -226,6 +226,27 @@ const homeFaqSchema = {
   })),
 }
 
+const featuredListingsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: featuredListings.map((listing, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: listing.href,
+    name: `${listing.address} | ${listing.price}`,
+    item: {
+      '@type': 'SingleFamilyResidence',
+      name: listing.address,
+      address: listing.address,
+      floorSize: listing.sqft ? { '@type': 'QuantitativeValue', value: listing.sqft, unitCode: 'SQF' } : undefined,
+      numberOfRooms: listing.beds,
+      numberOfBathroomsTotal: listing.baths,
+      price: listing.price,
+      url: listing.href,
+    },
+  })),
+}
+
 export default function HomePage() {
   return (
     <SiteShell>
@@ -252,6 +273,9 @@ export default function HomePage() {
       <CTASection />
       <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeFaqSchema)}
+      </Script>
+      <Script id="featured-listings-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(featuredListingsSchema)}
       </Script>
     </SiteShell>
   )
@@ -598,6 +622,9 @@ function FeaturedInventorySection() {
             </article>
           ))}
         </div>
+        <Script id="featured-listings-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(featuredListingsSchema)}
+        </Script>
       </div>
     </section>
   )

@@ -194,7 +194,7 @@ const homeFaq = [
   {
     question: 'Which Spanish Trail neighborhoods are best for full-time residents versus seasonal owners?',
     answer:
-      'Full-time residents often gravitate toward the Estates, Estates West, and Springs enclaves because they offer larger lots, dedicated office space, and proximity to top-rated schools. Seasonal owners frequently choose the Courtyards, Gardens, and Villas for their lock-and-leave convenience and optional concierge services. Dr. Duffy maps commute times, HOA details, and lifestyle amenities to match each buyer with the right micro-neighborhood.',
+      'Full-time residents often gravitate toward the Estates, Estates West, and Springs enclaves because they offer larger lots, dedicated office space, and proximity to top-rated schools. Seasonal owners frequently choose the Courtyards, Gardens, and Villas for their lock-and-leave convenience and optional concierge services. Dr. Duffy maps commute times, HOA details, and lifestyle amenities to match each buyer with the right Spanish Trail enclave.',
   },
   {
     question: 'What should buyers budget for HOA dues and club memberships?',

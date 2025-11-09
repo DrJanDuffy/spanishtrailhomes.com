@@ -1,0 +1,54 @@
+export const golfCourses = [
+  {
+    name: 'Sunrise Course',
+    description:
+      'Sweeping vistas and forgiving fairways welcome every tee time with golden-hour light.',
+    yardage: 'Par 36 • 3,463 Yards',
+    image:
+      'https://images.unsplash.com/photo-1501856777433-9fbb13f0b2c6?q=80&w=1920&auto=format&fit=crop',
+  },
+  {
+    name: 'Lakes Course',
+    description:
+      'Water-guarded greens and mature trees carve a strategic path through Spanish Trail.',
+    yardage: 'Par 36 • 3,540 Yards',
+    image:
+      'https://images.unsplash.com/photo-1511296265584-9bab7f103259?q=80&w=1920&auto=format&fit=crop',
+  },
+  {
+    name: 'Canyon Course',
+    description:
+      'Elevation changes and desert vistas deliver the boldest test in our 27-hole collection.',
+    yardage: 'Par 36 • 3,515 Yards',
+    image:
+      'https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1920&auto=format&fit=crop',
+  },
+]
+
+export const amenities = [
+  'Private 50,000 sq. ft. clubhouse',
+  'Elegant dining & wine cellar',
+  'Aquatic center with junior Olympic pool',
+  'State-of-the-art fitness pavilion',
+  'Five lighted tennis courts & pickleball',
+  'Full social calendar for members & guests',
+]
+
+export const testimonials = [
+  {
+    quote:
+      'Spanish Trail has redefined what a private club experience should be. Every visit feels like a getaway.',
+    name: 'Michael R., Member since 2014',
+  },
+  {
+    quote:
+      'Our wedding on the Lakes Course lawn was flawless. The team anticipated every detail with grace.',
+    name: 'Samantha & Luis',
+  },
+  {
+    quote:
+      'From teaching clinics to weekly couples’ play, there is always an unforgettable way to enjoy the club.',
+    name: 'Dana H., Social Member',
+  },
+]
+

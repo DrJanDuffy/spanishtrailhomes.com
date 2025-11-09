@@ -1,237 +1,471 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
-import { ChevronRight, Menu, Phone, X } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+
 import { Button } from '@/components/ui/button'
+import { SiteShell } from '@/components/site-shell'
 
-const golfCourses = [
+const overviewStats = [
   {
-    name: 'Sunrise Course',
+    label: 'Guard-Gated Acres',
+    value: '640+',
     description:
-      'Sweeping vistas and forgiving fairways welcome every tee time with golden-hour light.',
-    yardage: 'Par 36 • 3,463 Yards',
-    image:
-      'https://images.unsplash.com/photo-1501856777433-9fbb13f0b2c6?q=80&w=1920&auto=format&fit=crop',
+      'Lush, all-grass fairways, mature landscaping, and tranquil water features spanning the master plan.',
   },
   {
-    name: 'Lakes Course',
+    label: 'Private Golf Holes',
+    value: '27',
     description:
-      'Water-guarded greens and mature trees carve a strategic path through Spanish Trail.',
-    yardage: 'Par 36 • 3,540 Yards',
-    image:
-      'https://images.unsplash.com/photo-1511296265584-9bab7f103259?q=80&w=1920&auto=format&fit=crop',
+      'Robert Trent Jones Jr. championship design with 120 bunkers, lakes, and streams woven into every layout.',
   },
   {
-    name: 'Canyon Course',
+    label: 'Neighborhoods',
+    value: '11',
     description:
-      'Elevation changes and desert vistas deliver the boldest test in our 27-hole collection.',
-    yardage: 'Par 36 • 3,515 Yards',
-    image:
-      'https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=1920&auto=format&fit=crop',
+      'Townhomes, villas, and custom estates—some with secondary gates for added privacy and exclusivity.',
   },
 ]
 
-const amenities = [
-  'Private 50,000 sq. ft. clubhouse',
-  'Elegant dining & wine cellar',
-  'Aquatic center with junior Olympic pool',
-  'State-of-the-art fitness pavilion',
-  'Five lighted tennis courts & pickleball',
-  'Full social calendar for members & guests',
+const neighborhoodClusters = [
+  'Carmels',
+  'Courtyards',
+  'Gardens',
+  'Islands',
+  'Links',
+  'Plum Creek',
+  'Springs',
+  'Villas',
+  'Innisbrook Estates',
+  'Estates',
+  'Estates West',
 ]
 
-const testimonials = [
+const featuredListings = [
   {
-    quote:
-      'Spanish Trail has redefined what a private club experience should be. Every visit feels like a getaway.',
-    name: 'Michael R., Member since 2014',
+    address: '52 Innisbrook Avenue',
+    price: '$8,500,000',
+    details: '7 Beds • 6.5 Baths • 10,235 Sq Ft',
   },
   {
-    quote:
-      'Our wedding on the Lakes Course lawn was flawless. The team anticipated every detail with grace.',
-    name: 'Samantha & Luis',
+    address: '19 Vintage Court',
+    price: '$5,995,000',
+    details: '5 Beds • 7 Baths • 6,148 Sq Ft',
   },
   {
-    quote:
-      'From teaching clinics to weekly couples’ play, there is always an unforgettable way to enjoy the club.',
-    name: 'Dana H., Social Member',
+    address: '74 Innisbrook Avenue',
+    price: '$3,690,000',
+    details: '5 Beds • 6 Baths • 6,293 Sq Ft',
   },
 ]
 
-const navigation = [
+const lifestyleHighlights = [
   {
-    label: 'Club',
-    href: '#club',
-    children: [
-      { label: 'Amenities', href: '#amenities' },
-      { label: 'History', href: '#club-history' },
-    ],
+    title: 'Clubhouse & Dining',
+    copy: 'A 50,000 sq. ft. clubhouse with glass-lined dining rooms, terrace seating, and a Bar & Grill serving daily cuisine.',
   },
   {
-    label: 'Golf',
-    href: '#golf',
-    children: [
-      { label: 'Course Tour', href: '#courses' },
-      { label: 'Golf Outings', href: '#outings' },
-      { label: 'Scorecard', href: '#scorecard' },
-      { label: 'Guest Info', href: '#guest-info' },
-    ],
+    title: 'Wellness & Recreation',
+    copy: 'Renovated fitness facility, two aquatic centers, and twelve lighted tennis courts anchor an active social calendar.',
   },
   {
-    label: 'Inquiries',
-    href: '#inquiries',
-    children: [
-      { label: 'Membership', href: '#membership' },
-      { label: 'Weddings', href: '#weddings' },
-      { label: 'Private Events', href: '#events' },
-      { label: 'Golf Outings', href: '#outings' },
-    ],
+    title: 'Premier Access',
+    copy: 'Minutes to the Strip, Harry Reid International Airport, and neighboring enclaves like The Ridges and Spanish Hills.',
   },
+]
+
+const nearbyCommunities = [
+  'The Ridges',
+  'Spanish Hills',
+  'Red Rock Country Club',
+  'The Summit Club',
+  'Willow Creek',
+  'Tournament Hills',
 ]
 
 export default function HomePage() {
-  const [mobileOpen, setMobileOpen] = useState(false)
-
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <TopBar />
-      <header className="relative z-20 border-b border-border/60 bg-background/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
-          <Link href="#" aria-label="Spanish Trail Country Club home">
-            <div className="text-left">
-              <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
-                Spanish Trail Country Club
-              </p>
-              <p className="font-[var(--font-playfair)] text-2xl font-semibold tracking-wide text-primary">
-                Las Vegas, Nevada
-              </p>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-8 lg:flex">
-            {navigation.map((item) => (
-              <div key={item.label} className="flex flex-col gap-1">
-                <Link
-                  href={item.href}
-                  className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground transition-colors hover:text-secondary"
-                >
-                  {item.label}
-                </Link>
-                <div className="flex gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.label}
-                      href={child.href}
-                      className="transition-colors hover:text-secondary"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </nav>
-
-          <div className="hidden items-center gap-4 lg:flex">
-            <Button
-              asChild
-              variant="link"
-              className="text-xs uppercase tracking-[0.2em]"
-            >
-              <Link href="tel:17023645050">Call 702.364.5050</Link>
-            </Button>
-            <Button
-              variant="secondary"
-              className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
-            >
-              Member Login
-            </Button>
-          </div>
-
-          <button
-            type="button"
-            aria-label="Toggle navigation menu"
-            className="inline-flex items-center justify-center rounded-full border border-border/60 p-2 lg:hidden"
-            onClick={() => setMobileOpen((prev) => !prev)}
-          >
-            {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
-        </div>
-
-        {mobileOpen ? (
-          <div className="border-t border-border/60 bg-background/95 px-6 py-6 lg:hidden">
-            <div className="flex flex-col gap-6">
-              {navigation.map((item) => (
-                <div key={item.label} className="flex flex-col gap-3">
-                  <Link
-                    href={item.href}
-                    className="text-sm font-semibold uppercase tracking-[0.3em] text-primary"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        className="transition-colors hover:text-secondary"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              <div className="flex flex-col gap-3">
-                <Button asChild variant="link" className="justify-start px-0">
-                  <Link href="tel:17023645050">Call 702.364.5050</Link>
-                </Button>
-                <Button className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]">
-                  Member Login
-                </Button>
-              </div>
-            </div>
-          </div>
-        ) : null}
-      </header>
-
-      <main className="flex flex-1 flex-col">
-        <HeroSection />
-        <HistorySection />
-        <CourseShowcase />
-        <AmenitiesSection />
-        <OutingsSection />
-        <MembershipSection />
-        <TestimonialsSection />
-        <LocationSection />
-      </main>
-
-      <SiteFooter />
-    </div>
+    <SiteShell>
+      <HeroSection />
+      <IntroSection />
+      <StatsSection />
+      <RealEstateSection />
+      <ListingsSection />
+      <LifestyleSection />
+      <NearbyCommunitiesSection />
+      <CTASection />
+    </SiteShell>
   )
 }
 
-function TopBar() {
+function HeroSection() {
   return (
-    <div className="flex items-center justify-between border-b border-border/60 bg-primary px-4 py-2 text-primary-foreground sm:px-6">
-      <div className="flex items-center gap-2 text-xs uppercase tracking-[0.4em]">
-        <span>Est. 1984</span>
-        <span className="h-3 w-px bg-primary-foreground/40" aria-hidden />
-        <span>Private • Member-Owned</span>
+    <section
+      className="relative isolate overflow-hidden"
+      aria-labelledby="hero-heading"
+    >
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.75)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
+        }}
+      />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
+        <div className="max-w-3xl space-y-6">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Guard-Gated Golf Community
+          </p>
+          <h1
+            id="hero-heading"
+            className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
+          >
+            Spanish Trail Country Club Las Vegas
+          </h1>
+          <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
+            Positioned west of the Las Vegas Strip near Tropicana Avenue and Rainbow Boulevard, Spanish Trail delivers the original luxury golf and country club experience in a private, guard-gated setting.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center gap-4">
+          <Button
+            asChild
+            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
+          >
+            <Link href="/membership#inquiry">Request Membership Info</Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
+          >
+            <Link href="/events#contact">Plan a Private Event</Link>
+          </Button>
+        </div>
       </div>
-      <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em]">
-        <Phone className="size-3.5" aria-hidden />
-        <a
-          href="tel:17023645050"
-          className="underline-offset-4 transition-colors hover:underline"
+    </section>
+  )
+}
+
+function IntroSection() {
+  return (
+    <section className="bg-background py-16 sm:py-20" aria-labelledby="intro-heading">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
+        <div className="space-y-6">
+          <h2
+            id="intro-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Exclusive guard-gated golf living minutes from the Strip.
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Spanish Trail spans the Spring Valley area of Las Vegas with quick access to Summerlin, I-215, and Harry Reid International Airport. Established as one of the city’s earliest private golf course communities, it layers mature landscaping, shimmering lakes, and a resort-caliber clubhouse across 640 acres of all-grass fairways.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Residents enjoy the convenience of three guarded entries, proximity to upscale dining and entertainment, and the prestige of a club that has hosted the PGA Las Vegas Invitational five times while serving as home course for the UNLV Women’s Golf Team.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+          </p>
+        </div>
+        <div className="space-y-4 rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
+          <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            Quick Facts
+          </p>
+          <dl className="grid grid-cols-1 gap-4 text-sm text-muted-foreground">
+            <div>
+              <dt className="font-semibold text-foreground">Location</dt>
+              <dd>Tropicana Ave. & Rainbow Blvd., Las Vegas NV 89113</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-foreground">Access</dt>
+              <dd>Two guard gates on Tropicana, one on Hacienda</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-foreground">Airport</dt>
+              <dd>Approx. 15 minutes to Harry Reid International</dd>
+            </div>
+          </dl>
+          <Button
+            asChild
+            variant="link"
+            className="justify-start px-0 text-xs uppercase tracking-[0.3em] text-primary"
+          >
+            <Link href="/guest-info#map">View Directions & Map</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function StatsSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80" aria-label="Community highlights">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-16 md:grid-cols-3">
+        {overviewStats.map((item) => (
+          <div
+            key={item.label}
+            className="rounded-3xl border border-border/50 bg-background/80 p-6 shadow-sm"
+          >
+            <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+              {item.label}
+            </p>
+            <p className="mt-3 font-[var(--font-playfair)] text-3xl text-foreground">
+              {item.value}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function RealEstateSection() {
+  return (
+    <section className="bg-background py-20 sm:py-24" aria-labelledby="real-estate-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
+          <div className="space-y-6">
+            <h2
+              id="real-estate-heading"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            >
+              Diverse real estate opportunities.
+            </h2>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Spanish Trail offers more than 1,200 residences ranging from attached townhomes to custom estates, many positioned on the golf course or with Red Rock Canyon views. Select enclaves feature additional privacy gates within the community, ensuring a tailored experience for every homeowner.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            </p>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Residences were primarily constructed from the mid-1980s through the 1990s, combining timeless architecture with mature landscapes that only decades of stewardship can produce.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            </p>
+            <div className="rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
+              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                Neighborhoods
+              </p>
+              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-muted-foreground sm:grid-cols-3">
+                {neighborhoodClusters.map((name) => (
+                  <span key={name} className="inline-flex items-center rounded-full border border-border/50 px-3 py-1">
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div
+            className="h-full rounded-3xl border border-border/60 bg-cover bg-center shadow-lg"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1507400492013-162706c8c83c?q=80&w=1600&auto=format&fit=crop')",
+            }}
+            role="img"
+            aria-label="Spanish Trail custom homes and golf course views"
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ListingsSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80" aria-labelledby="listings-heading">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3">
+            <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+              Featured Listings
+            </p>
+            <h2
+              id="listings-heading"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            >
+              Current luxury offerings in Spanish Trail.
+            </h2>
+          </div>
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="/buyers">View All Inventory</Link>
+          </Button>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {featuredListings.map((listing) => (
+            <article
+              key={listing.address}
+              className="flex h-full flex-col justify-between rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm"
+            >
+              <div className="space-y-3">
+                <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                  Spanish Trail
+                </p>
+                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
+                  {listing.address}
+                </h3>
+                <p className="text-sm text-muted-foreground">{listing.details}</p>
+              </div>
+              <div className="mt-6 flex items-center justify-between">
+                <span className="text-lg font-semibold text-primary">
+                  {listing.price}
+                </span>
+                <Button
+                  asChild
+                  variant="link"
+                  className="gap-1 text-xs uppercase tracking-[0.3em] text-primary"
+                >
+                  <Link href="/buyers">
+                    View Details
+                    <ArrowRight className="ml-2 size-4" />
+                  </Link>
+                </Button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LifestyleSection() {
+  return (
+    <section className="bg-background py-20 sm:py-24" aria-labelledby="lifestyle-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Lifestyle & Amenities
+          </p>
+          <h2
+            id="lifestyle-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Timeless luxury with a modern social pulse.
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Beyond golf, members access concierge-level programming, destination-worthy culinary experiences, and wellness amenities refreshed to match the expectations of today’s luxury buyer.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {lifestyleHighlights.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-border/50 bg-card/90 p-6 shadow-sm"
+            >
+              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+                {item.title}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {item.copy}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function NearbyCommunitiesSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80" aria-labelledby="nearby-heading">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 lg:grid-cols-[1fr_1.1fr]">
+        <div className="space-y-5">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Neighboring Luxury
+          </p>
+          <h2
+            id="nearby-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Connected to Las Vegas’ elite communities.
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Spanish Trail sits among a collection of acclaimed luxury enclaves across the Las Vegas Valley. Take advantage of close proximity to other guard-gated neighborhoods, boutique dining, and premier retail destinations in Summerlin and along the Strip.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+          </p>
+          <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
+            {nearbyCommunities.map((community) => (
+              <span
+                key={community}
+                className="inline-flex items-center rounded-full border border-border/50 px-3 py-1"
+              >
+                {community}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="rounded-3xl border border-border/60 bg-background/80 p-6 shadow-sm">
+          <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            Thinking of selling or buying?
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Our Las Vegas luxury team specializes in Spanish Trail, Red Rock Country Club, and the west valley’s most sought-after addresses. Whether you’re relocating or refining your portfolio, let us craft a tailored strategy.
+          </p>
+          <Button
+            asChild
+            className="mt-6 rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="/contact">Connect with the Team</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function CTASection() {
+  return (
+    <section className="bg-primary py-20 text-primary-foreground" aria-labelledby="cta-heading">
+      <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
+        <h2
+          id="cta-heading"
+          className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl"
         >
-          702.364.5050
-        </a>
+          Ready to live where championship golf meets iconic Las Vegas luxury?
+        </h2>
+        <p className="text-base leading-relaxed text-primary-foreground/85">
+          Schedule a private tour, explore current listings, or request a valuation for your Spanish Trail residence—our concierge team is ready to assist.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Button
+            asChild
+            className="rounded-full px-7 py-3 text-xs uppercase tracking-[0.4em]"
+          >
+            <Link href="/contact">Schedule Consultation</Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full border-primary-foreground/40 bg-primary/10 px-7 py-3 text-xs uppercase tracking-[0.4em] text-primary-foreground hover:bg-primary/20"
+          >
+            <Link href="/sellers">Get a Valuation</Link>
+          </Button>
+        </div>
       </div>
-    </div>
+    </section>
+  )
+}
+import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import { SiteShell } from '@/components/site-shell'
+import { amenities, golfCourses, testimonials } from '@/lib/content'
+
+export default function HomePage() {
+  return (
+    <SiteShell>
+      <HeroSection />
+      <HistorySection />
+      <CourseShowcase />
+      <AmenitiesSection />
+      <OutingsSection />
+      <MembershipSection />
+      <TestimonialsSection />
+      <LocationSection />
+    </SiteShell>
   )
 }
 
@@ -269,14 +503,18 @@ function HeroSection() {
         </div>
 
         <div className="flex flex-wrap items-center gap-4">
-          <Button className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]">
-            Explore Membership
+          <Button
+            asChild
+            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
+          >
+            <Link href="/membership">Explore Membership</Link>
           </Button>
           <Button
+            asChild
             variant="outline"
             className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
           >
-            Plan an Event
+            <Link href="/events">Plan an Event</Link>
           </Button>
         </div>
       </div>
@@ -287,15 +525,11 @@ function HeroSection() {
 function HistorySection() {
   return (
     <section
-      id="club"
       className="border-y border-border/60 bg-card/70"
       aria-labelledby="history-heading"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 py-16 sm:py-20 lg:flex-row lg:items-center lg:gap-24">
         <div className="flex-1 space-y-6 text-muted-foreground">
-          <span id="club-history" className="sr-only">
-            Spanish Trail Country Club History
-          </span>
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Since 1984
           </p>
@@ -316,7 +550,7 @@ function HistorySection() {
             programs, and memorable gatherings that celebrate Las Vegas living.
           </p>
           <Link
-            href="#membership"
+            href="/membership#inquiry"
             className="group inline-flex items-center text-sm font-medium uppercase tracking-[0.3em] text-primary transition-colors hover:text-secondary"
           >
             Schedule a Private Tour
@@ -352,13 +586,9 @@ function HistorySection() {
 function CourseShowcase() {
   return (
     <section
-      id="golf"
       className="bg-background py-20 sm:py-24"
       aria-labelledby="courses-heading"
     >
-      <span id="courses" className="sr-only">
-        Course Tour
-      </span>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
@@ -379,7 +609,7 @@ function CourseShowcase() {
             variant="outline"
             className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
           >
-            View Scorecard
+            <Link href="/golf#scorecard">View Scorecard</Link>
           </Button>
         </div>
 
@@ -405,7 +635,7 @@ function CourseShowcase() {
                   {course.description}
                 </p>
                 <Link
-                  href="#course-tour"
+                  href="/golf#course-tour"
                   className="inline-flex items-center text-sm font-semibold uppercase tracking-[0.3em] text-primary transition-colors hover:text-secondary"
                 >
                   View Tour
@@ -423,7 +653,6 @@ function CourseShowcase() {
 function AmenitiesSection() {
   return (
     <section
-      id="amenities"
       className="border-y border-border/60 bg-card/80 py-20 sm:py-24"
       aria-labelledby="amenities-heading"
     >
@@ -464,16 +693,9 @@ function AmenitiesSection() {
 function OutingsSection() {
   return (
     <section
-      id="outings"
       className="relative isolate overflow-hidden bg-primary py-24 text-primary-foreground"
       aria-labelledby="outings-heading"
     >
-      <span id="weddings" className="sr-only">
-        Weddings
-      </span>
-      <span id="events" className="sr-only">
-        Private Events
-      </span>
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center opacity-30"
         style={{
@@ -502,8 +724,8 @@ function OutingsSection() {
           </p>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          <Button className="rounded-full bg-secondary px-7 py-3 text-xs uppercase tracking-[0.4em] text-secondary-foreground hover:bg-secondary/90">
-            Request Event Consultation
+          <Button className="rounded-full bg-secondary px-7 py-3 text-xs uppercase tracking-[0.4em] text-secondary-foreground hover:bg-secondary/90" asChild>
+            <Link href="/events#contact">Request Event Consultation</Link>
           </Button>
           <Button
             asChild
@@ -523,7 +745,6 @@ function OutingsSection() {
 function MembershipSection() {
   return (
     <section
-      id="membership"
       className="bg-background py-20 sm:py-24"
       aria-labelledby="membership-heading"
     >
@@ -563,107 +784,38 @@ function MembershipSection() {
           </div>
         </div>
 
-        <form
-          id="inquiries"
-          className="space-y-5 rounded-3xl border border-border/60 bg-card/90 p-6 shadow-lg backdrop-blur sm:p-8"
-        >
+        <div className="space-y-5 rounded-3xl border border-border/60 bg-card/90 p-6 shadow-lg backdrop-blur sm:p-8">
           <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
-            Request Information
+            Concierge Contact
           </h3>
           <p className="text-sm text-muted-foreground">
-            Complete the form and our membership concierge will reach out within
-            one business day.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="firstName" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                First Name
-              </label>
-              <input
-                id="firstName"
-                name="firstName"
-                type="text"
-                placeholder="First Name"
-                className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="lastName" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                Last Name
-              </label>
-              <input
-                id="lastName"
-                name="lastName"
-                type="text"
-                placeholder="Last Name"
-                className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-                required
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="name@email.com"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Phone
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="(702) 000-0000"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="interest" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Area of Interest
-            </label>
-            <select
-              id="interest"
-              name="interest"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              defaultValue=""
-              required
+            Reach our membership concierge at{' '}
+            <a
+              href="mailto:membership@spanishtrailhomes.com"
+              className="text-primary underline-offset-4 hover:underline"
             >
-              <option value="" disabled>
-                Select an option
-              </option>
-              <option>Full Golf Membership</option>
-              <option>Young Executive Membership</option>
-              <option>Social Membership</option>
-              <option>Corporate Event</option>
-              <option>Weddings & Celebrations</option>
-            </select>
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="Share desired dates, party size, or special requests."
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <Button className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
-            Submit Inquiry
+              membership@spanishtrailhomes.com
+            </a>{' '}
+            or call{' '}
+            <a
+              href="tel:17023645050"
+              className="text-primary underline-offset-4 hover:underline"
+            >
+              702.364.5050
+            </a>
+            . Prefer online scheduling? Continue to{' '}
+            <Link
+              href="/membership#inquiry"
+              className="text-primary underline-offset-4 hover:underline"
+            >
+              the membership page
+            </Link>{' '}
+            to submit a detailed request.
+          </p>
+          <Button asChild className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
+            <Link href="/membership#inquiry">Submit Inquiry Online</Link>
           </Button>
-        </form>
+        </div>
       </div>
     </section>
   )
@@ -692,7 +844,7 @@ function TestimonialsSection() {
             variant="link"
             className="text-xs uppercase tracking-[0.3em] text-primary"
           >
-            Explore Social Calendar
+            <Link href="/club#lifestyle">Explore Social Calendar</Link>
           </Button>
         </div>
 
@@ -719,7 +871,6 @@ function TestimonialsSection() {
 function LocationSection() {
   return (
     <section
-      id="guest-info"
       className="bg-background py-20 sm:py-24"
       aria-labelledby="location-heading"
     >
@@ -739,7 +890,15 @@ function LocationSection() {
           </p>
           <div className="space-y-2 text-sm text-muted-foreground">
             <p>Guest tee times available with member host.</p>
-            <p>Concierge: <a href="tel:17023645050" className="text-primary underline-offset-4 hover:underline">702.364.5050</a></p>
+            <p>
+              Concierge:{' '}
+              <a
+                href="tel:17023645050"
+                className="text-primary underline-offset-4 hover:underline"
+              >
+                702.364.5050
+              </a>
+            </p>
             <p>
               Membership Inquiries:{' '}
               <a
@@ -752,10 +911,16 @@ function LocationSection() {
           </div>
           <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
             <span>Follow</span>
-            <Link href="https://www.instagram.com" className="transition-colors hover:text-secondary">
+            <Link
+              href="https://www.instagram.com"
+              className="transition-colors hover:text-secondary"
+            >
               Instagram
             </Link>
-            <Link href="https://www.facebook.com" className="transition-colors hover:text-secondary">
+            <Link
+              href="https://www.facebook.com"
+              className="transition-colors hover:text-secondary"
+            >
               Facebook
             </Link>
           </div>

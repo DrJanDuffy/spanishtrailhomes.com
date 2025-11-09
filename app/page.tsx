@@ -321,13 +321,13 @@ function StatsSection() {
             key={item.label}
             className="rounded-3xl border border-[#1f4a35]/80 bg-[#16402d] p-6 shadow-lg shadow-black/20"
           >
-            <p className="text-xs uppercase tracking-[0.4em] text-[#d9cfc2]">
+            <p className="text-xs uppercase tracking-[0.4em] text-[#f8f5ef]/75">
               {item.label}
             </p>
-            <p className="mt-4 font-[var(--font-playfair)] text-3xl text-white">
+            <p className="mt-4 font-[var(--font-playfair)] text-3xl text-[#f8f5ef]">
               {item.value}
             </p>
-            <p className="mt-3 text-sm leading-relaxed text-[#f4eee2]/80">
+            <p className="mt-3 text-sm leading-relaxed text-[#f8f5ef]/70">
               {item.description}
             </p>
           </div>
@@ -361,10 +361,10 @@ function NeighborhoodSpotlightsSection() {
               key={spotlight.name}
               className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
-              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
                 {spotlight.name}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-[#1f2a24]/80">
+              <p className="mt-3 text-sm leading-relaxed text-[#372a20]/85">
                 {spotlight.description}
               </p>
             </div>
@@ -423,7 +423,7 @@ function MarketOverviewSection() {
 
 function LocalEssentialsSection() {
   return (
-    <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="local-essentials-heading">
+    <section className="bg-[#ebe0d3] py-20 sm:py-24" aria-labelledby="local-essentials-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -441,11 +441,11 @@ function LocalEssentialsSection() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {localEssentials.map((section) => (
-            <div key={section.title} className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
-              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            <div key={section.title} className="rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
                 {section.title}
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#372a20]/85">
                 {section.items.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="mt-1 inline-block size-2 rounded-full bg-[#0f2b1e]" aria-hidden />
@@ -495,14 +495,14 @@ function FeaturedInventorySection() {
               className="flex h-full flex-col justify-between rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <div className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.4em] text-secondary">{listing.mls}</p>
+                <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">{listing.mls}</p>
                 <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
                   {listing.address}
                 </h3>
-                <p className="text-sm text-[#1f2a24]/80">{listing.type}</p>
+                <p className="text-sm text-[#372a20]/80">{listing.type}</p>
               </div>
               <div className="mt-6 flex items-center justify-between">
-                <span className="text-lg font-semibold text-primary">{listing.price}</span>
+                <span className="text-lg font-semibold text-[#0f2b1e]">{listing.price}</span>
                 <Button
                   asChild
                   variant="link"
@@ -530,7 +530,7 @@ function RealEstateSection() {
           <div className="space-y-6">
             <h2
               id="real-estate-heading"
-              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+              className="font-[var(--font-playfair)] text-3xl text-[#372a20] sm:text-4xl"
             >
               Diverse real estate opportunities.
             </h2>
@@ -540,11 +540,11 @@ function RealEstateSection() {
             <p className="text-base leading-relaxed text-muted-foreground">
               Residences were primarily constructed from the mid-1980s through the 1990s, combining timeless architecture with mature landscapes that only decades of stewardship can produce.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
             </p>
-            <div className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
-              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            <div className="rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
                 Neighborhoods
               </p>
-              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-muted-foreground sm:grid-cols-3">
+              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-[#372a20]/80 sm:grid-cols-3">
                 {neighborhoodClusters.map((name) => (
                   <span
                     key={name}

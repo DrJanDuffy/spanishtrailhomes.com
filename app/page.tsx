@@ -256,6 +256,7 @@ export default function HomePage() {
         priceMin="500000"
         priceMax="600000"
       />
+      <AdvancedSearchSection />
       <IntroSection />
       <StatsSection />
       <NeighborhoodSpotlightsSection />
@@ -884,6 +885,29 @@ function CTASection() {
           </Button>
         </div>
     </div>
+    </section>
+  )
+}
+
+function AdvancedSearchSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="advanced-search-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4 text-center sm:mx-auto">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Tailored Search</p>
+          <h2 id="advanced-search-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Customize your Spanish Trail home search in seconds
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Filter by price point, property style, and lifestyle amenities using our advanced RealScout experience. Save favorites, request tours, or alert Dr. Janet Duffy when the perfect Spanish Trail property appears.
+          </p>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <div className="w-full max-w-lg rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+            <realscout-advanced-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-advanced-search>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

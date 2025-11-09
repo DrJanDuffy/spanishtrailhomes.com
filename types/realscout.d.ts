@@ -11,6 +11,9 @@ declare module 'react' {
         'price-min'?: string
         'price-max'?: string
       }
+      'realscout-advanced-search': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        'agent-encoded-id': string
+      }
     }
   }
 }

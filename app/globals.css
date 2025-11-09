@@ -92,6 +92,13 @@ realscout-office-listings {
   width: 100%;
 }
 
+realscout-advanced-search {
+  --rs-as-button-text-color: #ffffff;
+  --rs-as-background-color: #000000;
+  --rs-as-button-color: #8b572a;
+  --rs-as-widget-width: 500px;
+}
+
 .animate-fade-in {
   animation: fade-in 0.3s ease-out forwards;
 }

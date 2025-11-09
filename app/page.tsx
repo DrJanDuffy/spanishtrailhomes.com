@@ -182,7 +182,7 @@ function HeroSection() {
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(15, 43, 30, 0.45), rgba(15, 43, 30, 0.6)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
+            "linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.8)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
         }}
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
@@ -314,20 +314,20 @@ function IntroSection() {
 
 function StatsSection() {
   return (
-    <section className="border-y border-border/40 bg-[#f3e9dc]" aria-label="Community highlights">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-16 md:grid-cols-3">
+    <section className="border-y border-[#0b2016] bg-[#0f2b1e]" aria-label="Community highlights">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-20 md:grid-cols-3">
         {overviewStats.map((item) => (
           <div
             key={item.label}
-            className="rounded-3xl border border-border/40 bg-white p-6 shadow-md shadow-primary/10"
+            className="rounded-3xl border border-[#1f4a35]/80 bg-[#16402d] p-6 shadow-lg shadow-black/20"
           >
-            <p className="text-xs uppercase tracking-[0.4em] text-secondary">
+            <p className="text-xs uppercase tracking-[0.4em] text-[#d9cfc2]">
               {item.label}
             </p>
-            <p className="mt-3 font-[var(--font-playfair)] text-3xl text-[#1f2a24]">
+            <p className="mt-4 font-[var(--font-playfair)] text-3xl text-white">
               {item.value}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-sm leading-relaxed text-[#f4eee2]/80">
               {item.description}
             </p>
           </div>
@@ -733,14 +733,14 @@ function CTASection() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button
             asChild
-            className="rounded-full px-7 py-3 text-xs uppercase tracking-[0.4em]"
+            className="rounded-full bg-white px-7 py-3 text-xs uppercase tracking-[0.4em] text-[#0f2b1e] hover:bg-[#f1eadd]"
           >
             <Link href="/contact">Schedule Consultation</Link>
           </Button>
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-primary-foreground/60 bg-primary/10 px-7 py-3 text-xs uppercase tracking-[0.4em] text-primary-foreground hover:bg-primary/20"
+            className="rounded-full border-[#f8f5ef]/70 bg-transparent px-7 py-3 text-xs uppercase tracking-[0.4em] text-[#f8f5ef] hover:bg-white/10"
           >
             <Link href="/sellers">Get a Valuation</Link>
           </Button>

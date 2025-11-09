@@ -1,9 +1,8 @@
+import type { DetailedHTMLProps, HTMLAttributes } from 'react'
+
 declare namespace JSX {
   interface IntrinsicElements {
-    'realscout-office-listings': React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLElement>,
-      HTMLElement
-    > & {
+    'realscout-office-listings': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
       'agent-encoded-id': string
       'sort-order'?: string
       'listing-status'?: string

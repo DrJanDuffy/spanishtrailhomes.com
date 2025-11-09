@@ -40,14 +40,14 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div className="border-b border-border/60 bg-background/90 backdrop-blur">
+      <div className="border-b border-border/60 bg-white/90 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
           <Link href="/" aria-label="Spanish Trail Country Club home" className="group">
             <div className="text-left">
               <p className="text-[0.65rem] uppercase tracking-[0.45em] text-muted-foreground group-hover:text-secondary">
                 Berkshire Hathaway HomeServices
               </p>
-              <p className="font-[var(--font-playfair)] text-2xl font-semibold tracking-[0.1em] text-primary">
+              <p className="font-[var(--font-playfair)] text-2xl font-semibold tracking-[0.1em] text-[#0f2b1e]">
                 Dr. Janet Duffy · Spanish Trail
               </p>
             </div>
@@ -62,7 +62,7 @@ export function SiteHeader() {
                 <div key={item.label} className="relative">
                   <button
                     type="button"
-                    className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-[0.32em] transition-colors hover:text-secondary ${isActive ? 'text-secondary' : 'text-foreground'}`}
+                    className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-[0.32em] transition-colors hover:text-secondary ${isActive ? 'text-secondary' : 'text-[#1f2a24]'}`}
                     onMouseEnter={() => hasChildren && setActiveFlyout(item.label)}
                     onMouseLeave={() => hasChildren && setActiveFlyout(null)}
                     onClick={() => (hasChildren ? toggleFlyout(item.label) : undefined)}
@@ -77,7 +77,7 @@ export function SiteHeader() {
 
                   {hasChildren && activeFlyout === item.label ? (
                     <div
-                      className="absolute left-1/2 mt-4 w-[28rem] -translate-x-1/2 rounded-3xl border border-border/80 bg-background/95 p-6 shadow-xl"
+                      className="absolute left-1/2 mt-4 w-[28rem] -translate-x-1/2 rounded-3xl border border-[#d8cdbf]/60 bg-white p-6 shadow-xl shadow-primary/10"
                       onMouseEnter={() => setActiveFlyout(item.label)}
                       onMouseLeave={() => setActiveFlyout(null)}
                     >
@@ -89,7 +89,7 @@ export function SiteHeader() {
                             </p>
                             <Link
                               href={child.href}
-                              className="inline-flex text-[0.78rem] leading-relaxed text-muted-foreground hover:text-primary hover:underline"
+                              className="inline-flex text-[0.78rem] leading-relaxed text-[#4d5c55] hover:text-[#0f2b1e] hover:underline"
                             >
                               Visit {child.label}
                             </Link>
@@ -104,13 +104,15 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
-            <Button asChild variant="link" className="text-xs uppercase tracking-[0.28em]">
-              <Link href="tel:17023645050">Call 702.364.5050</Link>
+            <Button asChild variant="link" className="text-xs uppercase tracking-[0.28em] text-[#0f2b1e]">
+              <Link href="tel:17023645050" className="hover:underline">
+                Call 702.364.5050
+              </Link>
             </Button>
             <Button
               asChild
               variant="secondary"
-              className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.32em]"
+              className="rounded-full bg-[#0f2b1e] px-6 py-2 text-xs uppercase tracking-[0.32em] text-white hover:bg-[#0c2118]"
             >
               <Link href="/contact">Speak with Dr. Duffy</Link>
             </Button>
@@ -138,7 +140,7 @@ export function SiteHeader() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="text-sm font-semibold uppercase tracking-[0.32em] text-primary hover:underline"
+                      className="text-sm font-semibold uppercase tracking-[0.32em] text-[#0f2b1e] hover:underline"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -160,7 +162,7 @@ export function SiteHeader() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-1 transition-colors hover:text-secondary hover:underline"
+                          className="block py-1 transition-colors text-[#4d5c55] hover:text-secondary hover:underline"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.label}
@@ -176,7 +178,7 @@ export function SiteHeader() {
               <Button
                 asChild
                 variant="secondary"
-                className="rounded-full px-6 py-3 text-xs uppercase tracking-[0.32em]"
+                className="rounded-full bg-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.32em] text-white hover:bg-[#0c2118]"
               >
                 <Link href="/contact">Speak with Dr. Duffy</Link>
               </Button>

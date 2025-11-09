@@ -448,7 +448,7 @@ function LocalEssentialsSection() {
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
                 {section.items.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="mt-1 inline-block size-2 rounded-full bg-secondary" aria-hidden />
+                    <span className="mt-1 inline-block size-2 rounded-full bg-[#0f2b1e]" aria-hidden />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -546,7 +546,10 @@ function RealEstateSection() {
               </p>
               <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-muted-foreground sm:grid-cols-3">
                 {neighborhoodClusters.map((name) => (
-                  <span key={name} className="inline-flex items-center rounded-full border border-border/50 px-3 py-1">
+                  <span
+                    key={name}
+                    className="inline-flex items-center rounded-full border border-[#d8cdbf] bg-white px-3 py-1 text-[#1f2a24]"
+                  >
                     {name}
                   </span>
                 ))}

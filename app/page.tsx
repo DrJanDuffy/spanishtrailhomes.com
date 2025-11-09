@@ -156,28 +156,28 @@ const nearbyCommunities = [
 
 const homeDeepDive = [
   {
-    title: 'Spanish Trail Homes Market Pulse',
+    title: 'Spanish Trail housing update',
     paragraphs: [
       'Spanish Trail homes continue to command premium attention across the west side of the Las Vegas Valley, and 2025 has only intensified demand. Inventory remains intentionally limited, with many sellers opting for private network releases before a property ever reaches the MLS. That means buyers who rely only on public search portals can miss out on Spanish Trail real estate opportunities that align perfectly with their wish list. Working alongside Dr. Janet Duffy provides immediate access to those private channels, pricing intelligence pulled from Berkshire Hathaway HomeServices data, and an honest assessment of where each home sits within the neighborhood’s value spectrum.',
       'The average list-to-sale window for well-prepared Spanish Trail homes has tightened to under 30 days, and buyers often submit offers that include appraisal-gap coverage or flexible rent-backs to appeal to sellers who are simultaneously shopping within the guard gates. Whether you are analyzing the Estates, the Villas, or a golf villa in the Links, understanding micro market velocity is vital. Dr. Duffy maps each enclave’s historical absorption rates, identifies the weeks that attract out-of-state cash buyers, and guides timing strategies so you secure the right property without overpaying.'
     ],
   },
   {
-    title: 'Lifestyle Advantages Inside the Guard Gates',
+    title: 'Life inside the Spanish Trail gates',
     paragraphs: [
       'Spanish Trail real estate is about more than square footage; it is about instant access to a curated lifestyle that can be felt the moment you drive through the mature tree-lined boulevards. Residents wake up to golf course sunrises, stroll over to the 50,000-square-foot clubhouse for a fitness session, then spend evenings at the Bar & Grill surrounded by neighbors who quickly become lifelong friends. Families leverage the gated streets for cycling, pop-up pickleball matches, and community events hosted on the club lawn. Every home—whether a lock-and-leave villa or a custom estate—sits within minutes of wellness programming, concierge support, and tennis professionals who know members by name.',
       'Because Dr. Duffy lives and works in the western Las Vegas market, she maintains a daily pulse on how residents actually use their amenities. She can recommend which Spanish Trail homes offer the quickest cart path access for golfers who play multiple times a week, which streets capture the best sunset views, and which enclaves provide enhanced security for seasonal homeowners. Her concierge introductions help buyers join social clubs or interest groups even before closing, ensuring the transition from visitor to resident feels effortless and deeply personal.'
     ],
   },
   {
-    title: 'Architecture, Design, and Renovation Guidance',
+    title: 'Design and renovation tips',
     paragraphs: [
       'Spanish Trail homes showcase a rare blend of timeless architecture and refreshed interiors. Many original estates were crafted by renowned architects who prioritized natural light, interior courtyards, and wide setbacks that frame the Robert Trent Jones Jr. fairways. Over the past decade, homeowners have invested heavily in modernizing kitchens, spa baths, and outdoor lounges, yet the community’s design guidelines maintain a cohesive, elevated aesthetic. Buyers interested in renovation opportunities benefit from Dr. Duffy’s vetted roster of contractors who understand the neighborhood’s review process and can deliver turnkey transformations without compromising historical character.',
       'For clients seeking a contemporary canvas, Dr. Duffy spotlights Spanish Trail real estate offerings that already feature tall pocket doors, climate-controlled wine walls, smart-home integration, and resort-style pools with Baja shelves. For those who prefer to curate their own finishes, she outlines cost ranges, available incentives from local lenders for energy upgrades, and resale strategies that maximize long-term equity. Her design consultations also highlight how to create multi-generational spaces—casitas, flex suites, and wellness studios—that align with today’s luxury buyer expectations.'
     ],
   },
   {
-    title: 'Investment, Financing, and Advisory Support',
+    title: 'Financing and advisory help',
     paragraphs: [
       'Spanish Trail real estate appeals to both primary homeowners and sophisticated investors who recognize the stability of guard-gated communities minutes from Allegiant Stadium, the Strip, and Summerlin. Rental demand for long-term executive leases remains strong, particularly for properties near the Tropicana gate that offer quick freeway access. Dr. Duffy collaborates with Berkshire Hathaway HomeServices mortgage partners to provide scenario planning, whether you need jumbo financing, portfolio loans, or cross-collateralization options that leverage existing assets. She also introduces trusted CPAs who structure 1031 exchanges or wealth advisors who evaluate Spanish Trail homes as part of a broader estate strategy.',
       'Clients appreciate that her counsel extends beyond closing. Quarterly market reviews outline appreciation trends, tax updates impacting Nevada homeowners, and capital improvement projects planned by the Country Club. When it is time to sell, Dr. Duffy’s listing blueprint—complete with professional staging, targeted digital marketing, and private preview events—ensures Spanish Trail homes are positioned to secure the strongest offers. The result: a full-circle advisory experience from acquisition through resale, aligned with the expectations of discerning Las Vegas clientele.'
@@ -304,7 +304,7 @@ function HeroSection() {
             id="hero-heading"
             className="font-[var(--font-playfair)] text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Homes · 89117 Intelligence
+            Spanish Trail Homes in Las Vegas 89117
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
             Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
@@ -339,7 +339,7 @@ function IntroSection() {
             id="intro-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Local expertise across Spanish Trail’s guard gates.
+            Why Spanish Trail works for everyday life.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
@@ -418,7 +418,7 @@ function NeighborhoodSpotlightsSection() {
             id="neighborhood-spotlights-heading"
             className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
           >
-            Micro-neighborhoods buyers love in Spanish Trail
+            Neighborhoods buyers love in Spanish Trail
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Each enclave offers a different buyer experience—from legacy custom estates with sweeping golf frontage to ready-to-enjoy villas near the clubhouse. Here’s what today’s Spanish Trail buyers ask about most when we tour together.
@@ -455,7 +455,7 @@ function MarketOverviewSection() {
               id="market-overview-heading"
               className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
-              Berkshire Hathaway HomeServices Snapshot
+              Spanish Trail market snapshot
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Dr. Janet Duffy leverages real-time Berkshire Hathaway HomeServices data to position your listing or offer. Spanish Trail currently carries a balanced mix of residences—from golf villas to custom estates—inviting both primary homeowners and investors.
@@ -502,7 +502,7 @@ function LocalEssentialsSection() {
             id="local-essentials-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            What life looks like inside the 89117 guard gates
+            Everyday essentials inside 89117
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             From championship golf mornings to sunset dinners on Rainbow Boulevard, Spanish Trail residents enjoy a curated lifestyle with everything within minutes. Here are the go-to spots our buyers ask about first.
@@ -537,7 +537,7 @@ function DeepDiveNarrativesSection() {
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights</p>
           <h2 id="deep-dive-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            What buyers and sellers must know about Spanish Trail homes in 2025
+            Key things to know about Spanish Trail homes in 2025
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Dr. Janet Duffy distills on-the-ground research, Berkshire Hathaway HomeServices analytics, and more than a decade of luxury experience to guide each phase of your move. Use the following briefings to understand how Spanish Trail real estate performs, the amenities residents prioritize, and the strategic moves that keep you ahead of competing offers.
@@ -574,7 +574,7 @@ function FeaturedInventorySection() {
               id="featured-inventory-heading"
               className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
-              Signature Listings Curated by Berkshire Hathaway
+              Featured Spanish Trail listings
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Explore a sampling of Spanish Trail residences currently represented through Berkshire Hathaway HomeServices Nevada Properties. Schedule a private tour with Dr. Janet Duffy to access the full portfolio, including off-market opportunities.
@@ -664,9 +664,9 @@ function RealEstateSection() {
           <div className="space-y-6">
             <h2
               id="real-estate-heading"
-              className="font-[var(--font-playfair)] text-3xl text-[#372a20] sm:text-4xl"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
-              Diverse real estate opportunities.
+              Spanish Trail home styles and sizes
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Spanish Trail offers more than 1,200 residences ranging from attached townhomes to custom estates, many positioned on the golf course or with Red Rock Canyon views. Select enclaves feature additional privacy gates within the community, ensuring a tailored experience for every homeowner.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
@@ -718,7 +718,7 @@ function ListingsSection() {
               id="listings-heading"
               className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
-              Current luxury offerings in Spanish Trail.
+              Spanish Trail homes available now
             </h2>
           </div>
           <Button
@@ -780,7 +780,7 @@ function LifestyleSection() {
             id="lifestyle-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Timeless luxury with a modern social pulse.
+            Life inside Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             Beyond golf, members access concierge-level programming, destination-worthy culinary experiences, and wellness amenities refreshed to match the expectations of today’s luxury buyer.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
@@ -819,7 +819,7 @@ function NearbyCommunitiesSection() {
             id="nearby-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Connected to Las Vegas’ elite communities.
+            Other nearby luxury communities
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             Spanish Trail sits among a collection of acclaimed luxury enclaves across the Las Vegas Valley. Take advantage of close proximity to other guard-gated neighborhoods, boutique dining, and premier retail destinations in Summerlin and along the Strip.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
@@ -862,7 +862,7 @@ function CTASection() {
           id="cta-heading"
           className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl"
         >
-          Ready to live where championship golf meets iconic Las Vegas luxury?
+          Ready to explore Spanish Trail homes?
         </h2>
         <p className="text-base leading-relaxed text-primary-foreground/85">
           Schedule a private tour, explore current listings, or request a valuation for your Spanish Trail residence—our concierge team is ready to assist.

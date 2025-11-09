@@ -6,6 +6,16 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   {
+    label: 'Community',
+    href: '/communities/spanish-trail',
+    children: [
+      { label: 'Overview', href: '/communities/spanish-trail' },
+      { label: 'Amenities', href: '/communities/spanish-trail#amenities-heading' },
+      { label: 'Benefits', href: '/communities/spanish-trail#benefits-heading' },
+      { label: 'Contact', href: '/communities/spanish-trail#contact-heading' },
+    ],
+  },
+  {
     label: 'Club',
     href: '/club',
     children: [
@@ -47,7 +57,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Directions', href: '/guest-info#map' },
       { label: 'Etiquette', href: '/guest-info#etiquette' },
-      { label: 'Contact', href: '/guest-info#contact' },
+      { label: 'Contact', href: '/guest-info#contact-heading' },
     ],
   },
 ]

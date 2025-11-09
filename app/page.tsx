@@ -25,6 +25,37 @@ const overviewStats = [
   },
 ]
 
+const marketHighlights = [
+  { label: 'Total Listings', value: '74 Active', trend: '+', context: 'Across single-family, condo, and townhome offerings.' },
+  { label: 'Average List Price', value: '$682K', trend: '-22.15%', context: 'Month-over-month change across current inventory.' },
+  { label: 'Average Sold Price', value: '$651K', trend: '-23.92%', context: 'Latest 30-day closed sale average.' },
+  { label: 'Average Days on Market', value: '60 Days', trend: '-', context: 'Balanced pace with luxury buyer activity.' },
+]
+
+const featuredListings = [
+  {
+    address: '8330 Carmel Ridge Court',
+    price: '$1,095,000',
+    type: 'Single-Family • 3 Bed • 3 Bath • 2,500 Sq Ft',
+    mls: 'MLS# 2733586',
+    href: 'https://bhhsnv.com/single-family/glv/2733586/8330-carmel-ridge-court-las-vegas-nv-89113',
+  },
+  {
+    address: '7283 Mission Hills Drive',
+    price: '$630,000',
+    type: 'Condo/Townhome • 2 Bed • 2 Bath • 2,065 Sq Ft',
+    mls: 'MLS# 2732075',
+    href: 'https://bhhsnv.com/condo-townhouse/glv/2732075/7283-mission-hills-drive-las-vegas-nv-89113',
+  },
+  {
+    address: '22 Burning Tree Court',
+    price: '$2,590,000',
+    type: 'Estate Residence • 4 Bed • 5 Bath • 6,361 Sq Ft',
+    mls: 'MLS# 2732026',
+    href: 'https://bhhsnv.com/single-family/glv/2732026/22-burning-tree-court-las-vegas-nv-89113',
+  },
+]
+
 const neighborhoodClusters = [
   'Carmels',
   'Courtyards',
@@ -37,24 +68,6 @@ const neighborhoodClusters = [
   'Innisbrook Estates',
   'Estates',
   'Estates West',
-]
-
-const featuredListings = [
-  {
-    address: '52 Innisbrook Avenue',
-    price: '$8,500,000',
-    details: '7 Beds • 6.5 Baths • 10,235 Sq Ft',
-  },
-  {
-    address: '19 Vintage Court',
-    price: '$5,995,000',
-    details: '5 Beds • 7 Baths • 6,148 Sq Ft',
-  },
-  {
-    address: '74 Innisbrook Avenue',
-    price: '$3,690,000',
-    details: '5 Beds • 6 Baths • 6,293 Sq Ft',
-  },
 ]
 
 const lifestyleHighlights = [
@@ -85,8 +98,11 @@ export default function HomePage() {
   return (
     <SiteShell>
       <HeroSection />
+      <RealScoutListingsSection />
       <IntroSection />
       <StatsSection />
+      <MarketOverviewSection />
+      <FeaturedInventorySection />
       <RealEstateSection />
       <ListingsSection />
       <LifestyleSection />
@@ -114,16 +130,16 @@ function HeroSection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Guard-Gated Golf Community
+            Berkshire Hathaway HomeServices Presents
           </p>
           <h1
             id="hero-heading"
             className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Country Club Las Vegas
+            Spanish Trail Luxury Homes & Country Club Living
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-            Positioned west of the Las Vegas Strip near Tropicana Avenue and Rainbow Boulevard, Spanish Trail delivers the original luxury golf and country club experience in a private, guard-gated setting.
+            Represented by Dr. Janet Duffy, Spanish Trail showcases guard-gated estates, golf villas, and view-rich residences moments from the Las Vegas Strip. Browse curated inventory, instant market insights, and private tour opportunities.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -131,15 +147,54 @@ function HeroSection() {
             asChild
             className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
           >
-            <Link href="/membership#inquiry">Request Membership Info</Link>
+            <Link href="#bhhs-listings">Explore Listings</Link>
           </Button>
           <Button
             asChild
             variant="outline"
             className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
           >
-            <Link href="/events#contact">Plan a Private Event</Link>
+            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
+              View Market Report
+            </Link>
           </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function RealScoutListingsSection() {
+  return (
+    <section
+      id="bhhs-listings"
+      className="bg-background py-16 sm:py-20"
+      aria-labelledby="bhhs-listings-heading"
+    >
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="space-y-4 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Real-Time Inventory
+          </p>
+          <h2
+            id="bhhs-listings-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Berkshire Hathaway Listings in Spanish Trail
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Powered by RealScout, these actively updated listings showcase single-family residences between $500K and $600K represented through Berkshire Hathaway HomeServices Nevada Properties. Adjust filters or connect with Dr. Janet Duffy for additional price points.
+          </p>
+        </div>
+        <div className="mt-10 rounded-3xl border border-border/60 bg-card/90 p-4 shadow-sm">
+          <realscout-office-listings
+            agent-encoded-id="QWdlbnQtMjI1MDUw"
+            sort-order="NEWEST"
+            listing-status="For Sale"
+            property-types=",SFR"
+            price-min="500000"
+            price-max="600000"
+          ></realscout-office-listings>
         </div>
       </div>
     </section>
@@ -215,6 +270,113 @@ function StatsSection() {
             </p>
           </div>
         ))}
+      </div>
+    </section>
+  )
+}
+
+function MarketOverviewSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80" aria-labelledby="market-overview-heading">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl space-y-3">
+            <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Insights</p>
+            <h2
+              id="market-overview-heading"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            >
+              Berkshire Hathaway HomeServices Snapshot
+            </h2>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Dr. Janet Duffy leverages real-time Berkshire Hathaway HomeServices data to position your listing or offer. Spanish Trail currently carries a balanced mix of residences—from golf villas to custom estates—inviting both primary homeowners and investors.
+            </p>
+          </div>
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails">View Full Market Report</Link>
+          </Button>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-4">
+          {marketHighlights.map((item) => (
+            <article
+              key={item.label}
+              className="rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm"
+            >
+              <p className="text-xs uppercase tracking-[0.4em] text-secondary">{item.label}</p>
+              <p className="mt-3 font-[var(--font-playfair)] text-2xl text-foreground">{item.value}</p>
+              <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                {item.trend} change
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function FeaturedInventorySection() {
+  return (
+    <section className="bg-background py-20 sm:py-24" aria-labelledby="featured-inventory-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl space-y-3">
+            <p className="text-xs uppercase tracking-[0.5em] text-secondary">Featured Inventory</p>
+            <h2
+              id="featured-inventory-heading"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            >
+              Signature Listings Curated by Berkshire Hathaway
+            </h2>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Explore a sampling of Spanish Trail residences currently represented through Berkshire Hathaway HomeServices Nevada Properties. Schedule a private tour with Dr. Janet Duffy to access the full portfolio, including off-market opportunities.
+            </p>
+          </div>
+          <Button
+            asChild
+            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails#featured-listings">
+              Speak with Dr. Duffy
+            </Link>
+          </Button>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {featuredListings.map((listing) => (
+            <article
+              key={listing.address}
+              className="flex h-full flex-col justify-between rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm"
+            >
+              <div className="space-y-3">
+                <p className="text-xs uppercase tracking-[0.4em] text-secondary">{listing.mls}</p>
+                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
+                  {listing.address}
+                </h3>
+                <p className="text-sm text-muted-foreground">{listing.type}</p>
+              </div>
+              <div className="mt-6 flex items-center justify-between">
+                <span className="text-lg font-semibold text-primary">{listing.price}</span>
+                <Button
+                  asChild
+                  variant="link"
+                  className="gap-1 text-xs uppercase tracking-[0.3em] text-primary"
+                >
+                  <Link href={listing.href} target="_blank" rel="noopener noreferrer">
+                    View Listing
+                    <ArrowRight className="ml-2 size-4" />
+                  </Link>
+                </Button>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -304,7 +466,7 @@ function ListingsSection() {
                 <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
                   {listing.address}
                 </h3>
-                <p className="text-sm text-muted-foreground">{listing.details}</p>
+                <p className="text-sm text-muted-foreground">{listing.type}</p>
               </div>
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-lg font-semibold text-primary">

@@ -86,6 +86,12 @@
   }
 }
 
+.realscout-office-listings,
+realscout-office-listings {
+  --rs-listing-divider-color: #0e64c8;
+  width: 100%;
+}
+
 .animate-fade-in {
   animation: fade-in 0.3s ease-out forwards;
 }

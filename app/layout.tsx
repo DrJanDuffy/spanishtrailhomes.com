@@ -56,6 +56,12 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-X68WWN997N');`}
         </Script>
+        <Script
+          id="realscout-widget"
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          type="module"
+          strategy="beforeInteractive"
+        />
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}

@@ -20,7 +20,7 @@ const amenities = [
 ]
 
 const communityFacts = [
-  { label: 'Location', value: 'Spanish Trail, Las Vegas, NV 89113' },
+  { label: 'Location', value: 'Spanish Trail, Las Vegas, NV 89117' },
   { label: 'Access', value: 'Entries via West/East Tropicana and Hacienda gates' },
   { label: 'Golf', value: '27-hole Robert Trent Jones Jr. design, private club' },
   { label: 'Residences', value: 'Townhomes, villas, and custom estates across 11 neighborhoods' },

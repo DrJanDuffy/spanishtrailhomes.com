@@ -196,7 +196,7 @@ function HeroSection() {
             id="hero-heading"
             className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Homes · 89113 Intelligence
+            Spanish Trail Homes · 89117 Intelligence
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
             Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
@@ -241,7 +241,7 @@ function RealScoutListingsSection() {
             Berkshire Hathaway Listings in Spanish Trail
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Actively updated listings highlighting single-family residences between $500K and $600K inside the 89113 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
+            Actively updated listings highlighting single-family residences between $500K and $600K inside the 89117 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
           </p>
         </div>
         <div className="mt-10 rounded-3xl border border-border/60 bg-card/90 p-4 shadow-sm">
@@ -284,7 +284,7 @@ function IntroSection() {
           <dl className="grid grid-cols-1 gap-4 text-sm text-muted-foreground">
             <div>
               <dt className="font-semibold text-foreground">Location</dt>
-              <dd>Spanish Trail, 89113 · Tropicana Ave. & Rainbow Blvd.</dd>
+              <dd>Spanish Trail, 89117 · Tropicana Ave. & Rainbow Blvd.</dd>
             </div>
             <div>
               <dt className="font-semibold text-foreground">Gate Access</dt>
@@ -433,7 +433,7 @@ function LocalEssentialsSection() {
             id="local-essentials-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            What life looks like inside the 89113 guard gates
+            What life looks like inside the 89117 guard gates
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             From championship golf mornings to sunset dinners on Rainbow Boulevard, Spanish Trail residents enjoy a curated lifestyle with everything within minutes. Here are the go-to spots our buyers ask about first.

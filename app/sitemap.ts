@@ -10,6 +10,7 @@ const routes = [
   '/events',
   '/membership',
   '/guest-info',
+  '/contact',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

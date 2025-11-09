@@ -60,5 +60,14 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Contact', href: '/guest-info#contact-heading' },
     ],
   },
+  {
+    label: 'Contact',
+    href: '/contact',
+    children: [
+      { label: 'Connect', href: '/contact#contact-heading' },
+      { label: 'Market Snapshot', href: '/contact#market-heading' },
+      { label: 'FAQ', href: '/contact#faq-heading' },
+    ],
+  },
 ]
 

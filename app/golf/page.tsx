@@ -5,6 +5,66 @@ import { ArrowRight } from 'lucide-react'
 import { SiteShell } from '@/components/site-shell'
 import { golfCourses } from '@/lib/content'
 import { Button } from '@/components/ui/button'
+import { RealScoutSection } from '@/components/realscout-section'
+
+const golfNarratives = [
+  {
+    title: 'Course Conditions and Seasonal Strategy',
+    paragraphs: [
+      'Spanish Trail’s 27 holes reward players who understand how the desert seasons impact turf, wind, and shot selection. Overseed schedules typically wrap in early fall, delivering emerald-green fairways and receptive greens just in time for peak golf tourism. Winter mornings can be crisp, so members often schedule tee times mid-morning to catch warming sunlight while enjoying the dramatic contrast of snow-dusted Spring Mountains. Dr. Janet Duffy shares a monthly golf intelligence report outlining hole locations, slope speeds, and tournament calendars so buyers know exactly how the club plays across the year.',
+      'During the summer, early tee times offer cooler temperatures and the best chance to experience the Sunrise nine’s signature water features without afternoon winds. Conditioning remains stellar thanks to expert agronomy teams, and Spanish Trail’s double-sided range stays open with misting fans and shaded hitting bays. Dr. Duffy connects new members to golf staff who manage private lockers, club storage, and caddie scheduling so their transition into club life is seamless.'
+    ],
+  },
+  {
+    title: 'Instruction, Technology, and Player Development',
+    paragraphs: [
+      'Spanish Trail Country Club invests continuously in player development. The Golf Learning Center features swing studios with Foresight GCQuad, BodiTrak pressure mats, and high-speed cameras for detailed analysis. PGA professionals design lesson series tailored to beginners, competitive amateurs, and juniors charting a path toward collegiate golf. Fitness trainers collaborate with instructors to build strength and flexibility programs that boost longevity on the course.',
+      'Many of Dr. Duffy’s clients integrate these services into their weekly routine. She pairs newcomers with on-staff pros who match their learning style—whether they prefer analytical breakdowns, on-course coaching, or short-game immersion. Members also receive invites to fittings hosted by premium brands, ensuring equipment is dialed to their swing DNA and Spanish Trail’s unique course conditions.'
+    ],
+  },
+  {
+    title: 'Competitive Play and Social Traditions',
+    paragraphs: [
+      'Competition thrives at Spanish Trail. The Men’s Invitational draws players from across the West, while the Ladies Member-Guest showcases hospitality with themed décor, live music, and boutique gifting suites. Couples leagues, nine-and-dine events, and twilight shootouts fill the calendar, offering friendly formats for every skill level. Charity tournaments raise funds for local causes, combining golf with purpose and strengthening community bonds.',
+      'Dr. Duffy helps clients map out the tournaments that align with their goals—whether they seek high-stakes competition or relaxed social play. She also highlights traditions like the annual Glow-Ball Classic and junior-parent scrambles that foster multigenerational memories. Knowing these rhythms allows buyers to evaluate how Spanish Trail’s golf culture complements their lifestyle before committing to membership.'
+    ],
+  },
+  {
+    title: 'Real Estate Synergy with the Golf Experience',
+    paragraphs: [
+      'Many Spanish Trail homes are designed with the golfer in mind: motor courts that accommodate cart parking, patios positioned for panoramic fairway views, and outdoor kitchens ideal for post-round gatherings. Some estates even feature putting greens and chipping complexes that mimic club conditions. Dr. Duffy curates home tours that showcase these amenities, explaining HOA guidelines for accessory structures, lighting, and landscaping that preserve sightlines and pace of play.',
+      'For members who travel frequently, lock-and-leave villas near the Sunrise and Lakes practice facilities deliver ultimate convenience. Dr. Duffy evaluates each listing’s proximity to cart paths, starter huts, and halfway houses, ensuring her clients can maximize their time on the course. She also advises on noise considerations, premium pricing for double-fairway exposure, and property enhancements that resonate with fellow golf enthusiasts when it is time to resell.'
+    ],
+  },
+]
+
+const golfFaq = [
+  {
+    question: 'How do tee times work for members and their guests?',
+    answer:
+      'Members can book tee times up to seven days in advance using the Spanish Trail mobile app or by contacting the golf shop. Peak morning times typically fill first, especially on weekends and during major events. Dr. Janet Duffy shares best practices for coordinating guest play, including dress code guidelines, pace-of-play expectations, and gratuity norms for caddies and forecaddies.',
+  },
+  {
+    question: 'Are there reciprocal privileges with other clubs?',
+    answer:
+      'Yes. Spanish Trail maintains relationships with select premier clubs across the United States, allowing members to request reciprocal tee times when traveling. Opportunities vary by season, so Dr. Duffy connects members with the golf staff to arrange advanced requests and provides insider tips on partner clubs that mirror Spanish Trail’s service standards.',
+  },
+  {
+    question: 'What golf programs are available for juniors?',
+    answer:
+      'Junior golfers can enroll in seasonal academies, year-round development programs, and travel teams that compete across Nevada. Instruction emphasizes fundamentals, etiquette, and tournament preparation. Parents appreciate mentorship from PGA professionals and the supportive culture among junior members. Dr. Duffy supplies calendars, tuition details, and equipment recommendations tailored to each family’s goals.',
+  },
+  {
+    question: 'Do Spanish Trail homes include golf memberships?',
+    answer:
+      'Golf memberships are independent of real estate purchases. However, some sellers choose to transfer or negotiate initiation fees within their contract. Dr. Duffy reviews each listing’s membership status, coordinates introductions to the membership office, and ensures buyers understand dues schedules before submitting offers.',
+  },
+  {
+    question: 'What amenities support non-golfing family members?',
+    answer:
+      'Spanish Trail provides a full resort experience: fitness classes, spa services, tennis and pickleball courts, pools, and a vibrant social calendar. Non-golfers often accompany players to the clubhouse for brunch, wellness workshops, or live entertainment. Dr. Duffy helps families balance membership categories so every household member enjoys value, regardless of their time on the course.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'Golf Experience | Spanish Trail Country Club',
@@ -22,10 +82,20 @@ export default function GolfPage() {
   return (
     <SiteShell>
       <GolfHero />
+      <RealScoutSection
+        id="golf-course-listings"
+        eyebrow="Golf Course Homes"
+        title="Spanish Trail Residences with Fairway Views"
+        description="Scroll current listings positioned along the Sunrise, Lakes, and Canyon nines. Adjust filters to target cart-path privacy, pool homes, or lock-and-leave villas."
+        priceMin="700000"
+        propertyTypes=",SFR"
+      />
+      <GolfNarrativesSection />
       <CourseTour />
       <ExperienceDetails />
       <ScorecardSection />
       <GuestInformation />
+      <GolfFAQSection />
     </SiteShell>
   )
 }
@@ -199,6 +269,39 @@ function ExperienceDetails() {
   )
 }
 
+function GolfNarrativesSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="golf-narratives-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf Insights</p>
+          <h2 id="golf-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            How Spanish Trail elevates every round, every season
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Dr. Janet Duffy partners with the golf team to deliver real-time updates on course conditions, instruction opportunities, and lifestyle offerings. These narratives help prospective members and homeowners appreciate the depth of Spanish Trail’s golf culture.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-12">
+          {golfNarratives.map((topic) => (
+            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
+                {topic.title}
+              </h3>
+              {topic.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function ScorecardSection() {
   return (
     <section
@@ -257,6 +360,35 @@ function ScorecardSection() {
               ))}
             </tbody>
           </table>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function GolfFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="golf-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf FAQ</p>
+          <h2 id="golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Essential answers for future Spanish Trail golfers
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Whether you are joining as a single player, a couple, or a family, these insights highlight the details that make Spanish Trail a premier golf destination in Las Vegas.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {golfFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

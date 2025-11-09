@@ -4,6 +4,66 @@ import { ArrowRight } from 'lucide-react'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { RealScoutSection } from '@/components/realscout-section'
+
+const eventsNarratives = [
+  {
+    title: 'Designing Signature Celebrations',
+    paragraphs: [
+      'Spanish Trail Country Club approaches every celebration as a bespoke experience. Event stylists collaborate with clients to curate themes, floral artistry, lighting installations, and culinary journeys that rival five-star resorts. Whether it is an intimate anniversary dinner or a corporate gala welcoming hundreds, the planning team choreographs each touchpoint to reflect the host’s story. Dr. Janet Duffy connects clients with in-demand vendors—photographers, entertainment specialists, and experiential designers—whose work complements the club’s elevated aesthetic.',
+      'Because the clubhouse sits within a private, guard-gated community, hosts appreciate the seamless guest arrival process: valet greets attendees, concierge guides them to reserved spaces, and the events team executes behind the scenes so the host can genuinely enjoy the night. Dr. Duffy provides checklists, timeline templates, and budgeting tools that help clients navigate decisions confidently, from custom stationery to late-night lounge activations.'
+    ],
+  },
+  {
+    title: 'Weddings with Las Vegas Glamour and Garden Romance',
+    paragraphs: [
+      'Spanish Trail weddings capture the best of Las Vegas: the drama of skyline views paired with the serenity of palm-lined lakes. Couples often exchange vows on the Lakes Course lawn before transitioning to cocktail hour on the terrace, where the Strip twinkles in the background. Indoors, the ballroom adapts to grand stages, choreographed first dances, and immersive décor that astonishes guests. Dr. Duffy ensures couples understand ceremony logistics, from coordinating with gatehouse security for vendor access to arranging guest shuttles from hospitality partners along the Strip.',
+      'Her advisory support extends to weekend itineraries. She connects couples with trusted officiants, beauty teams, and rehearsal dinner venues, while also highlighting Spanish Trail homes ideal for hosting family gatherings. Because many couples inquire about future residency after experiencing the community, Dr. Duffy provides tours tailored to newlyweds who envision owning Spanish Trail real estate.'
+    ],
+  },
+  {
+    title: 'Corporate and Charity Events with Strategic Impact',
+    paragraphs: [
+      'Businesses rely on Spanish Trail Country Club for product launches, executive retreats, and investor summits. Boardrooms feature advanced audiovisual technology, while outdoor spaces provide creative environments for breakouts or immersive brand activations. Charity organizers love the combination of tournament-ready golf, gala venues, and donor stewardship lounges. Dr. Duffy offers insights into sponsorship packages, silent auction strategies, and storytelling moments that help organizations exceed fundraising targets.',
+      'She also leverages Berkshire Hathaway HomeServices relationships to introduce corporate clients to local influencers, media partners, and service providers. From branded gifting suites to curated culinary pairings, Dr. Duffy ensures events stay aligned with brand values and leave a lasting impression on attendees.'
+    ],
+  },
+  {
+    title: 'Extended-Stay and Hospitality Coordination',
+    paragraphs: [
+      'Hosting out-of-town guests? Spanish Trail’s concierge team partners with luxury resorts, transportation services, and entertainment venues to craft memorable itineraries beyond the gates. Clients can reserve tee times, spa appointments, or VIP tickets to headline shows and sporting events. Dr. Duffy layers in personal touches such as welcome baskets placed inside Spanish Trail homes, curated restaurant reservations, and private tours of the community for guests exploring a move to Las Vegas.',
+      'She also coordinates with the club’s culinary leadership to design farewell brunches, day-after poolside gatherings, and chef-led tastings that extend the celebration. These elevated touches resonate with hosts who expect flawless execution from start to finish.'
+    ],
+  },
+]
+
+const eventsFaq = [
+  {
+    question: 'How far in advance should I reserve Spanish Trail for a wedding?',
+    answer:
+      'Prime dates—particularly spring and fall weekends—book 12 to 18 months ahead. Dr. Janet Duffy collaborates with the club’s event managers to identify openings, secure holds, and design planning timelines that keep couples on track. She also recommends preferred vendors that align with the club’s service standards.',
+  },
+  {
+    question: 'Can non-members host events at Spanish Trail Country Club?',
+    answer:
+      'Yes. Non-members can host events with sponsorship from a member or through direct booking with the club’s catering department. Dr. Duffy facilitates introductions, explains deposit requirements, and ensures hosts understand support services—from valet to audiovisual technicians—available throughout the planning process.',
+  },
+  {
+    question: 'What spaces are available for corporate meetings?',
+    answer:
+      'Spanish Trail offers boardrooms, classroom-style suites, outdoor terraces, and the main ballroom. Each space includes high-speed connectivity, presentation technology, and culinary options tailored to corporate needs. Dr. Duffy walks clients through floor plans and recommends setups that encourage collaboration and brand storytelling.',
+  },
+  {
+    question: 'Does the club accommodate cultural or fusion celebrations?',
+    answer:
+      'Absolutely. The culinary and planning teams excel at creating menus and experiences that honor cultural traditions. From South Asian baraats to Latin-inspired receptions, the club collaborates with families to incorporate rituals, décor, and entertainment that feel authentic. Dr. Duffy shares examples and coordinates tastings to fine-tune every detail.',
+  },
+  {
+    question: 'How can I showcase Spanish Trail homes to guests during an event?',
+    answer:
+      'Many hosts schedule private property tours or open-house style gatherings for interested guests. Dr. Duffy arranges bespoke itineraries that highlight available Spanish Trail homes, explains membership pathways, and provides professional guidance for anyone considering a purchase. It is an effortless way to extend hospitality and share the community with loved ones.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'Weddings & Events | Spanish Trail Country Club',
@@ -15,10 +75,20 @@ export default function EventsPage() {
   return (
     <SiteShell>
       <EventsHero />
+      <RealScoutSection
+        id="events-listings"
+        eyebrow="Nearby Estates"
+        title="Spanish Trail Homes Ready for Private Entertaining"
+        description="Discover residences with indoor-outdoor venues, guest casitas, and catering-ready kitchens—ideal for hosting celebrations just steps from the clubhouse."
+        priceMin="800000"
+        propertyTypes=",SFR"
+      />
+      <EventsNarrativesSection />
       <WeddingsSection />
       <PrivateEventsSection />
       <GolfOutingsSection />
       <ContactSection />
+      <EventsFAQSection />
     </SiteShell>
   )
 }
@@ -231,6 +301,39 @@ function GolfOutingsSection() {
   )
 }
 
+function EventsNarrativesSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="events-narratives-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Event Strategy</p>
+          <h2 id="events-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            How Spanish Trail brings every celebration to life
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Dr. Janet Duffy partners with Spanish Trail’s events team to deliver extraordinary experiences. These narratives outline the planning insights, hospitality touches, and extended-stay conveniences available to hosts.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-12">
+          {eventsNarratives.map((topic) => (
+            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
+                {topic.title}
+              </h3>
+              {topic.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function ContactSection() {
   return (
     <section
@@ -345,6 +448,35 @@ function ContactSection() {
             </Button>
           </div>
         </form>
+      </div>
+    </section>
+  )
+}
+
+function EventsFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="events-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Events FAQ</p>
+          <h2 id="events-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Planning answers for Spanish Trail celebrations
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Use these responses to build your planning timeline and align expectations with the club’s capabilities. Dr. Janet Duffy remains available for personalized strategy sessions tailored to your event goals.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {eventsFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

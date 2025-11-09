@@ -3,6 +3,66 @@ import Link from 'next/link'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { RealScoutSection } from '@/components/realscout-section'
+
+const membershipNarratives = [
+  {
+    title: 'Membership Pathways and Onboarding',
+    paragraphs: [
+      'Spanish Trail Country Club offers a refined onboarding experience that aligns with the expectations of discerning members. Prospective applicants meet with membership directors to review category options, from full golf to young executive, corporate, or social. Background interviews focus on community engagement and shared values, ensuring the club’s welcoming culture remains intact. Dr. Janet Duffy prepares clients with application timelines, sponsor recommendations, and financial planning resources so the process feels effortless.',
+      'Once accepted, new members are paired with ambassadors who coordinate clubhouse tours, golf shop introductions, and dinner reservations. They also receive curated invitations to upcoming events, making it easy to integrate into the social fabric. Dr. Duffy’s concierge follow-up covers everything from locker assignments to introducing family members to youth programs, ensuring the entire household feels at home.'
+    ],
+  },
+  {
+    title: 'Lifestyle Programming for Every Membership Tier',
+    paragraphs: [
+      'Full golf members enjoy unlimited tee times, a bustling tournament slate, and reciprocal privileges across a network of premier clubs. Social and lifestyle members love access to dining venues, wine tastings, and a calendar of fashion showcases, speaker series, and philanthropic initiatives. Young executive members benefit from progressive dues, mentorship mixers, and professional development workshops. Regardless of tier, wellness offerings—fitness classes, spa therapy, and nutrition coaching—deliver everyday luxury.',
+      'Dr. Duffy helps clients evaluate which membership aligns with their schedule and budget. She provides sample itineraries, highlights popular gatherings, and outlines add-on programs such as locker service or personal training packages. Her proactive guidance ensures every member extracts maximum value from their investment.'
+    ],
+  },
+  {
+    title: 'Real Estate Synergy with Membership Goals',
+    paragraphs: [
+      'Many members choose to own Spanish Trail homes because proximity enhances every aspect of club life. Residents can cart to morning tee times, host after-hours events on their patios, or pause midday for spa appointments without navigating city traffic. Dr. Duffy pairs club prospects with listings that complement their routines—estates with casitas for multi-generational living, villas with minimal maintenance for frequent travelers, or homes near specific gates for convenient commutes.',
+      'She also advises on lender programs designed for luxury buyers, including portfolio loans and cross-collateralization strategies that leverage existing assets. Her Berkshire Hathaway HomeServices partnerships provide access to insurance advisors, estate planners, and wealth managers who understand how membership integrates into broader financial goals.'
+    ],
+  },
+  {
+    title: 'Community Impact and Philanthropy',
+    paragraphs: [
+      'Spanish Trail members are deeply involved in the Las Vegas community, supporting charities through galas, golf tournaments, and volunteer events. The club’s foundations contribute to schools, military families, and local nonprofits. Membership therefore offers a platform to amplify personal philanthropy and network with changemakers. Dr. Duffy connects civic-minded clients with committees where they can immediately make a difference.',
+      'Her team also coordinates with media partners and marketing experts who showcase charitable initiatives, ensuring fundraising events reach the audiences they deserve. This full-circle approach illustrates how membership extends beyond recreation to meaningful community leadership.'
+    ],
+  },
+]
+
+const membershipFaq = [
+  {
+    question: 'What documentation is required for membership applications?',
+    answer:
+      'Applications generally include completed forms, letters of introduction from current members, and financial statements. Background checks may also be conducted to maintain the club’s secure environment. Dr. Janet Duffy assists applicants in assembling materials, coordinating sponsor meetings, and tracking key deadlines so the process progresses smoothly.',
+  },
+  {
+    question: 'Are memberships transferable when selling a Spanish Trail home?',
+    answer:
+      'Memberships are personal and not automatically transferable with a home sale. However, some sellers negotiate initiation fees or introductions as part of contract terms. Dr. Duffy outlines best practices and liaises with the membership office to craft agreements that benefit both parties.',
+  },
+  {
+    question: 'How do dues differ between membership categories?',
+    answer:
+      'Full golf memberships carry the highest dues, reflecting extensive course access and tournament programming. Social and young executive memberships offer lower monthly investments while still providing access to dining, fitness, and social events. Dr. Duffy provides updated fee schedules, payment options, and examples of annual spending so clients can budget confidently.',
+  },
+  {
+    question: 'Can corporate memberships include multiple designees?',
+    answer:
+      'Yes. Corporate memberships allow companies to name several designees who can host clients, attend events, and leverage meeting spaces. Dr. Duffy works with businesses to tailor packages that align with branding, client hospitality goals, and HR benefits.',
+  },
+  {
+    question: 'What support exists for members relocating from out of state?',
+    answer:
+      'The club provides relocation assistance through concierge introductions to schools, service providers, and regional partners. Dr. Duffy arranges neighborhood tours, recommends interior designers and moving specialists, and supplies city guides highlighting healthcare, shopping, and entertainment options. Her concierge model ensures Spanish Trail membership feels like an immediate home base in Las Vegas.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'Membership | Spanish Trail Country Club',
@@ -33,10 +93,20 @@ export default function MembershipPage() {
   return (
     <SiteShell>
       <MembershipHero />
+      <RealScoutSection
+        id="membership-listings"
+        eyebrow="Member-Favorite Homes"
+        title="Residences that Complement Spanish Trail Membership"
+        description="Evaluate active listings suited for primary residents and second-home members—featuring proximity to the clubhouse, wellness center, and tennis complex."
+        priceMin="500000"
+        propertyTypes=",SFR,CONDO"
+      />
+      <MembershipNarrativesSection />
       <OfferingsSection />
       <ValueHighlights />
       <YoungExecutiveSection />
       <InquirySection />
+      <MembershipFAQSection />
     </SiteShell>
   )
 }
@@ -111,6 +181,39 @@ function OfferingsSection() {
                 {option.copy}
               </p>
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function MembershipNarrativesSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="membership-narratives-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Membership Journey</p>
+          <h2 id="membership-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Navigate every stage of Spanish Trail membership with confidence
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Dr. Janet Duffy demystifies application steps, programming options, and real estate synergies. These narratives outline the strategies she shares with discerning clients relocating to Spanish Trail or upgrading their existing membership tier.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-12">
+          {membershipNarratives.map((topic) => (
+            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
+                {topic.title}
+              </h3>
+              {topic.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
           ))}
         </div>
       </div>
@@ -349,6 +452,34 @@ function InquirySection() {
             </Button>
           </div>
         </form>
+      </div>
+    </section>
+  )
+}
+
+function MembershipFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="membership-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Membership FAQ</p>
+          <h2 id="membership-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Frequently asked questions from future members</h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Use these insights to streamline your application, plan financial commitments, and integrate into the Spanish Trail community faster.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {membershipFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

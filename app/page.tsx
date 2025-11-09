@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
+import { RealScoutSection } from '@/components/realscout-section'
 
 const overviewStats = [
   {
@@ -152,21 +153,88 @@ const nearbyCommunities = [
   'Tournament Hills',
 ]
 
+const homeDeepDive = [
+  {
+    title: 'Spanish Trail Homes Market Pulse',
+    paragraphs: [
+      'Spanish Trail homes continue to command premium attention across the west side of the Las Vegas Valley, and 2025 has only intensified demand. Inventory remains intentionally limited, with many sellers opting for private network releases before a property ever reaches the MLS. That means buyers who rely only on public search portals can miss out on Spanish Trail real estate opportunities that align perfectly with their wish list. Working alongside Dr. Janet Duffy provides immediate access to those private channels, pricing intelligence pulled from Berkshire Hathaway HomeServices data, and an honest assessment of where each home sits within the neighborhood’s value spectrum.',
+      'The average list-to-sale window for well-prepared Spanish Trail homes has tightened to under 30 days, and buyers often submit offers that include appraisal-gap coverage or flexible rent-backs to appeal to sellers who are simultaneously shopping within the guard gates. Whether you are analyzing the Estates, the Villas, or a golf villa in the Links, understanding micro market velocity is vital. Dr. Duffy maps each enclave’s historical absorption rates, identifies the weeks that attract out-of-state cash buyers, and guides timing strategies so you secure the right property without overpaying.'
+    ],
+  },
+  {
+    title: 'Lifestyle Advantages Inside the Guard Gates',
+    paragraphs: [
+      'Spanish Trail real estate is about more than square footage; it is about instant access to a curated lifestyle that can be felt the moment you drive through the mature tree-lined boulevards. Residents wake up to golf course sunrises, stroll over to the 50,000-square-foot clubhouse for a fitness session, then spend evenings at the Bar & Grill surrounded by neighbors who quickly become lifelong friends. Families leverage the gated streets for cycling, pop-up pickleball matches, and community events hosted on the club lawn. Every home—whether a lock-and-leave villa or a custom estate—sits within minutes of wellness programming, concierge support, and tennis professionals who know members by name.',
+      'Because Dr. Duffy lives and works in the western Las Vegas market, she maintains a daily pulse on how residents actually use their amenities. She can recommend which Spanish Trail homes offer the quickest cart path access for golfers who play multiple times a week, which streets capture the best sunset views, and which enclaves provide enhanced security for seasonal homeowners. Her concierge introductions help buyers join social clubs or interest groups even before closing, ensuring the transition from visitor to resident feels effortless and deeply personal.'
+    ],
+  },
+  {
+    title: 'Architecture, Design, and Renovation Guidance',
+    paragraphs: [
+      'Spanish Trail homes showcase a rare blend of timeless architecture and refreshed interiors. Many original estates were crafted by renowned architects who prioritized natural light, interior courtyards, and wide setbacks that frame the Robert Trent Jones Jr. fairways. Over the past decade, homeowners have invested heavily in modernizing kitchens, spa baths, and outdoor lounges, yet the community’s design guidelines maintain a cohesive, elevated aesthetic. Buyers interested in renovation opportunities benefit from Dr. Duffy’s vetted roster of contractors who understand the neighborhood’s review process and can deliver turnkey transformations without compromising historical character.',
+      'For clients seeking a contemporary canvas, Dr. Duffy spotlights Spanish Trail real estate offerings that already feature tall pocket doors, climate-controlled wine walls, smart-home integration, and resort-style pools with Baja shelves. For those who prefer to curate their own finishes, she outlines cost ranges, available incentives from local lenders for energy upgrades, and resale strategies that maximize long-term equity. Her design consultations also highlight how to create multi-generational spaces—casitas, flex suites, and wellness studios—that align with today’s luxury buyer expectations.'
+    ],
+  },
+  {
+    title: 'Investment, Financing, and Advisory Support',
+    paragraphs: [
+      'Spanish Trail real estate appeals to both primary homeowners and sophisticated investors who recognize the stability of guard-gated communities minutes from Allegiant Stadium, the Strip, and Summerlin. Rental demand for long-term executive leases remains strong, particularly for properties near the Tropicana gate that offer quick freeway access. Dr. Duffy collaborates with Berkshire Hathaway HomeServices mortgage partners to provide scenario planning, whether you need jumbo financing, portfolio loans, or cross-collateralization options that leverage existing assets. She also introduces trusted CPAs who structure 1031 exchanges or wealth advisors who evaluate Spanish Trail homes as part of a broader estate strategy.',
+      'Clients appreciate that her counsel extends beyond closing. Quarterly market reviews outline appreciation trends, tax updates impacting Nevada homeowners, and capital improvement projects planned by the Country Club. When it is time to sell, Dr. Duffy’s listing blueprint—complete with professional staging, targeted digital marketing, and private preview events—ensures Spanish Trail homes are positioned to secure the strongest offers. The result: a full-circle advisory experience from acquisition through resale, aligned with the expectations of discerning Las Vegas clientele.'
+    ],
+  },
+]
+
+const homeFaq = [
+  {
+    question: 'How competitive is the current market for Spanish Trail homes?',
+    answer:
+      'Inventory in Spanish Trail remains limited, with many properties selling within the first two weeks when they are priced correctly. Dr. Janet Duffy prepares buyers with lender introductions, appraisal strategies, and neighborhood intel so they can move decisively. Her Berkshire Hathaway HomeServices network also uncovers private offerings and upcoming listings that never hit public portals, giving clients a competitive advantage.',
+  },
+  {
+    question: 'Which Spanish Trail neighborhoods are best for full-time residents versus seasonal owners?',
+    answer:
+      'Full-time residents often gravitate toward the Estates, Estates West, and Springs enclaves because they offer larger lots, dedicated office space, and proximity to top-rated schools. Seasonal owners frequently choose the Courtyards, Gardens, and Villas for their lock-and-leave convenience and optional concierge services. Dr. Duffy maps commute times, HOA details, and lifestyle amenities to match each buyer with the right micro-neighborhood.',
+  },
+  {
+    question: 'What should buyers budget for HOA dues and club memberships?',
+    answer:
+      'HOA assessments vary by enclave but generally range from the mid-$200s to the mid-$400s per month, covering guard-gate staffing, landscaping, and community maintenance. Club memberships are optional for homeowners and include multiple categories—full golf, young executive, social, and corporate. Dr. Duffy outlines the latest fee schedules, initiation options, and financing considerations so clients can plan holistically.',
+  },
+  {
+    question: 'Are there renovation restrictions for Spanish Trail homes?',
+    answer:
+      'The Architectural Review Committee maintains community standards, but it also supports thoughtful modernization. Homeowners submit plans that detail exterior elevations, materials, and landscaping. Dr. Duffy partners with designers experienced in Spanish Trail guidelines to ensure approvals move quickly and projects enhance both property value and neighborhood aesthetics.',
+  },
+  {
+    question: 'How can sellers maximize exposure for Spanish Trail listings?',
+    answer:
+      'Sellers working with Dr. Duffy benefit from multi-layered marketing: Berkshire Hathaway HomeServices global syndication, hyperlocal campaigns targeting 89117 and Summerlin move-up buyers, and private preview events for Dr. Duffy’s concierge clients. In addition, she deploys analytics-driven pricing models and property-specific landing pages to capture leads around the clock—essential for Spanish Trail homes where discerning buyers often preview online before booking a showing.',
+  },
+]
+
 export default function HomePage() {
   return (
     <SiteShell>
       <HeroSection />
-      <RealScoutListingsSection />
+      <RealScoutSection
+        id="bhhs-listings"
+        title="Berkshire Hathaway Listings in Spanish Trail"
+        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market introductions, connect with Dr. Janet Duffy."
+        priceMin="500000"
+        priceMax="600000"
+      />
       <IntroSection />
       <StatsSection />
       <NeighborhoodSpotlightsSection />
       <MarketOverviewSection />
       <LocalEssentialsSection />
+      <DeepDiveNarrativesSection />
       <FeaturedInventorySection />
       <RealEstateSection />
       <ListingsSection />
       <LifestyleSection />
       <NearbyCommunitiesSection />
+      <FAQSection />
       <CTASection />
     </SiteShell>
   )
@@ -216,43 +284,6 @@ function HeroSection() {
           >
             <Link href="/contact">Plan a Private Tour</Link>
           </Button>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function RealScoutListingsSection() {
-  return (
-    <section
-      id="bhhs-listings"
-      className="bg-[#f9f4eb] py-20"
-      aria-labelledby="bhhs-listings-heading"
-    >
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="space-y-4 text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Real-Time Inventory
-          </p>
-          <h2
-            id="bhhs-listings-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-          >
-            Berkshire Hathaway Listings in Spanish Trail
-          </h2>
-          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
-            Actively updated listings highlighting single-family residences between $500K and $600K inside the 89117 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
-          </p>
-        </div>
-        <div className="mt-12 rounded-3xl border border-border/40 bg-white p-6 shadow-xl shadow-primary/10">
-          <realscout-office-listings
-            agent-encoded-id="QWdlbnQtMjI1MDUw"
-            sort-order="NEWEST"
-            listing-status="For Sale"
-            property-types=",SFR"
-            price-min="500000"
-            price-max="600000"
-          ></realscout-office-listings>
         </div>
       </div>
     </section>
@@ -461,6 +492,39 @@ function LocalEssentialsSection() {
   )
 }
 
+function DeepDiveNarrativesSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="deep-dive-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights</p>
+          <h2 id="deep-dive-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            What buyers and sellers must know about Spanish Trail homes in 2025
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Dr. Janet Duffy distills on-the-ground research, Berkshire Hathaway HomeServices analytics, and more than a decade of luxury experience to guide each phase of your move. Use the following briefings to understand how Spanish Trail real estate performs, the amenities residents prioritize, and the strategic moves that keep you ahead of competing offers.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-12">
+          {homeDeepDive.map((topic) => (
+            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
+                {topic.title}
+              </h3>
+              {topic.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function FeaturedInventorySection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="featured-inventory-heading">
@@ -514,6 +578,35 @@ function FeaturedInventorySection() {
                   </Link>
                 </Button>
               </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function FAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Homes FAQ</p>
+          <h2 id="faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Answers to the most frequent Spanish Trail real estate questions
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Buyers and sellers trust Dr. Janet Duffy to navigate the nuances of guard-gated transactions. These answers provide clarity on timing, pricing, and strategy so you can move forward with confidence. Need deeper insight? Book a private consultation for guidance tailored to your goals.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {homeFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
             </article>
           ))}
         </div>
@@ -628,8 +721,8 @@ function ListingsSection() {
               </div>
             </article>
           ))}
+          </div>
         </div>
-      </div>
     </section>
   )
 }
@@ -651,7 +744,7 @@ function LifestyleSection() {
           <p className="text-base leading-relaxed text-muted-foreground">
             Beyond golf, members access concierge-level programming, destination-worthy culinary experiences, and wellness amenities refreshed to match the expectations of today’s luxury buyer.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
           </p>
-        </div>
+      </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {lifestyleHighlights.map((item) => (

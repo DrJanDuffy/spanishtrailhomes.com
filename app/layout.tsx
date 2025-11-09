@@ -5,6 +5,8 @@ import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
 import './globals.css'
 
+const siteUrl = 'https://www.spanishtrailhomes.com'
+
 const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
@@ -19,22 +21,130 @@ const lato = Lato({
   weight: ['300', '400', '700'],
 })
 
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': ['RealEstateAgent', 'LocalBusiness'],
+    name: 'Spanish Trail Homes | Dr. Janet Duffy',
+    image: `${siteUrl}/og-image.png`,
+    url: siteUrl,
+    telephone: '+1-702-364-5050',
+    email: 'info@spanishtrailhomes.com',
+    priceRange: '$$$',
+    areaServed: [
+      'Spanish Trail, Las Vegas, NV',
+      'Summerlin, Las Vegas, NV',
+      'Spring Valley, Las Vegas, NV',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '5050 Spanish Trail Ln.',
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      postalCode: '89117',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.109145,
+      longitude: -115.282642,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+        ],
+        opens: '08:00',
+        closes: '18:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Saturday', 'Sunday'],
+        opens: '08:00',
+        closes: '16:00',
+      },
+    ],
+    sameAs: [
+      'https://www.facebook.com/spanishtrailhomes',
+      'https://www.instagram.com/spanishtrailhomes',
+      'https://www.linkedin.com/company/spanishtrailhomes',
+      'https://www.youtube.com/@spanishtrailhomes',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Spanish Trail Homes',
+    url: siteUrl,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?query={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  },
+]
+
 export const metadata: Metadata = {
-  title: 'Spanish Trail Country Club | Private Club in Las Vegas',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Spanish Trail Country Club | Private Club in Las Vegas',
+    template: '%s | Spanish Trail Homes',
+  },
   description:
-    'Experience the private, 27-hole Robert Trent Jones Jr. golf club just minutes from the Las Vegas Strip. Discover membership, amenities, and events at Spanish Trail Country Club.',
+    'Spanish Trail Homes by Dr. Janet Duffy offers guard-gated real estate, membership insights, and private club amenities minutes from the Las Vegas Strip.',
+  keywords: [
+    'Spanish Trail homes',
+    'Las Vegas luxury real estate',
+    'Spanish Trail Country Club',
+    'guard gated communities Las Vegas',
+    'golf course homes Las Vegas',
+    'Dr. Janet Duffy real estate',
+  ],
+  category: 'Real Estate',
+  applicationName: 'Spanish Trail Homes',
+  authors: [{ name: 'Dr. Janet Duffy' }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Spanish Trail Country Club',
+    type: 'website',
+    url: siteUrl,
+    title: 'Spanish Trail Homes | Private Club Living in Las Vegas',
     description:
-      'Private 27-hole golf and country club living in Las Vegas featuring premier amenities, weddings, and member events.',
-    images: ['/og-image.png'],
+      'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Janet Duffy.',
+    siteName: 'Spanish Trail Homes',
+    images: [`${siteUrl}/og-image.png`],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Country Club',
+    title: 'Spanish Trail Homes | Private Club in Las Vegas',
     description:
-      'Discover membership and experiences at Spanish Trail Country Club in Las Vegas.',
-    images: ['/og-image.png'],
+      'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Janet Duffy.',
+    images: [`${siteUrl}/og-image.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxSnippet: -1,
+      maxImagePreview: 'large',
+      maxVideoPreview: -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  themeColor: '#0f2b1e',
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 }
 
@@ -62,6 +172,9 @@ gtag('config', 'G-X68WWN997N');`}
           type="module"
           strategy="beforeInteractive"
         />
+        <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(structuredData)}
+        </Script>
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}

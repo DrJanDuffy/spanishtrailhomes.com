@@ -3,6 +3,66 @@ import Link from 'next/link'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { RealScoutSection } from '@/components/realscout-section'
+
+const guestNarratives = [
+  {
+    title: 'Preparing for Arrival at Spanish Trail',
+    paragraphs: [
+      'Guests begin their Spanish Trail experience at the gated entry, where security teams confirm host details and provide directions to the clubhouse. Plan to arrive 20 minutes prior to your reservation to allow for valet service and a brief orientation. Dr. Janet Duffy recommends sharing your license plate information in advance and highlighting any accessibility needs so the concierge team can prepare assistance. This thoughtful approach ensures every arrival feels relaxed and tailored to your visit.',
+      'If you are considering Spanish Trail homes while visiting, Dr. Duffy can coordinate property previews that align with your itinerary. Many guests schedule tours between brunch and afternoon tee times, giving them an authentic feel for daily life within the community.'
+    ],
+  },
+  {
+    title: 'Clubhouse Etiquette and Comfort',
+    paragraphs: [
+      'Spanish Trail maintains a refined yet welcoming atmosphere. Collared shirts and tailored attire are requested in most dining venues, while denim is acceptable when free of distressing. Mobile devices should remain on silent indoors, and voice calls are best taken in designated lounges or on the terrace. Locker room hosts provide day lockers, shoe care, and complimentary amenities, allowing guests to freshen up before or after activities.',
+      'Dr. Duffy encourages guests to introduce themselves to staff—bartenders, valets, and concierges pride themselves on attentive service. Mention dietary preferences and beverage favorites so the culinary team can personalize your experience, whether you are enjoying a casual lunch or a multi-course tasting.'
+    ],
+  },
+  {
+    title: 'Exploring Spanish Trail Amenities',
+    paragraphs: [
+      'Beyond golf, visitors can schedule time at the fitness pavilion, tennis complex, or resort-style pools. The pro shop offers merchandise from top designers, and spa providers deliver revitalizing treatments ranging from deep-tissue massage to post-round recovery sessions. Families appreciate children’s programming and the game lounge, which keeps younger guests entertained while adults socialize nearby.',
+      'For extended stays, Dr. Duffy curates off-property excursions that complement the Spanish Trail experience—think reserved seating at Allegiant Stadium events, culinary tours of Chinatown, or sunset hikes at Red Rock Canyon. She also recommends Spanish Trail homes that feature guest casitas or lock-off suites ideal for hosting friends and relatives.'
+    ],
+  },
+  {
+    title: 'Transitioning from Guest to Resident',
+    paragraphs: [
+      'Many visitors fall in love with Spanish Trail homes during their stay. Dr. Duffy streamlines the transition by offering real estate consultations, outlining membership pathways, and coordinating financing introductions. She highlights listings that mirror the spaces guests enjoyed most—golf villas near the clubhouse, estate homes with grand entertaining rooms, or villas tucked inside secondary gates for lock-and-leave convenience.',
+      'Her concierge team also connects newcomers with trusted service providers—interior designers, education consultants, and relocation specialists—so the move feels effortless. By the time guests receive their keys, they already feel like part of the Spanish Trail community.'
+    ],
+  },
+]
+
+const guestFaq = [
+  {
+    question: 'What identification should I bring to the gatehouse?',
+    answer:
+      'A government-issued ID is required for every guest. Provide your host’s name and event details to gate staff, who will grant access and guide you toward valet. Sharing your arrival time with the concierge ensures a streamlined check-in.',
+  },
+  {
+    question: 'Is there a dress code for dining and clubhouse areas?',
+    answer:
+      'Smart casual attire is recommended throughout the clubhouse. Collared shirts, blouses, and tailored pants or skirts keep the atmosphere refined. Denim without distressing is acceptable in casual dining spaces. Athletic wear is welcomed in the fitness pavilion and pool deck.',
+  },
+  {
+    question: 'Can guests access the golf course without a member present?',
+    answer:
+      'A member must accompany or sponsor all golf play. Dr. Duffy can arrange introductions to members or the golf shop if you are exploring Spanish Trail membership. She also provides guidance on fees, rental clubs, and caddie availability.',
+  },
+  {
+    question: 'Where should rideshares pick up and drop off?',
+    answer:
+      'Rideshares should check in at the gatehouse, then proceed to the clubhouse valet circle for drop-off and pick-up. If you are staying at a Spanish Trail home, confirm the exact address and gate instructions with your host. Dr. Duffy supplies custom maps and QR codes for guests planning multiple stops.',
+  },
+  {
+    question: 'How do I schedule a property tour during my visit?',
+    answer:
+      'Reach out to Dr. Janet Duffy at 702.364.5050 or via the concierge team. She will tailor a tour around your schedule, highlighting Spanish Trail homes that match your lifestyle. Expect curated packets with market data, neighborhood insights, and membership information to support your decision-making.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'Guest Information | Spanish Trail Country Club',
@@ -14,10 +74,20 @@ export default function GuestInfoPage() {
   return (
     <SiteShell>
       <GuestHero />
+      <RealScoutSection
+        id="guest-info-listings"
+        eyebrow="Plan Your Stay"
+        title="Spanish Trail Homes Available for Your Next Visit"
+        description="Browse current inventory to extend your connection with the community—perfect for guests exploring membership or long-term stays."
+        priceMin="500000"
+        propertyTypes=",SFR,CONDO"
+      />
+      <GuestNarrativesSection />
       <DirectionsSection />
       <EtiquetteSection />
       <ArrivalSection />
       <ContactSection />
+      <GuestFAQSection />
     </SiteShell>
   )
 }
@@ -93,6 +163,39 @@ function DirectionsSection() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function GuestNarrativesSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="guest-narratives-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Visitor Experience</p>
+          <h2 id="guest-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Make the most of your time inside Spanish Trail Country Club
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            These briefings from Dr. Janet Duffy help guests navigate arrival protocols, clubhouse etiquette, and amenity access. Use them to design an itinerary that feels effortless and luxurious.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-12">
+          {guestNarratives.map((topic) => (
+            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
+                {topic.title}
+              </h3>
+              {topic.paragraphs.map((paragraph, index) => (
+                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -281,6 +384,34 @@ function ContactSection() {
               Notify Concierge
             </Button>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function GuestFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="guest-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Guest FAQ</p>
+          <h2 id="guest-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+            Plan every detail of your Spanish Trail visit</h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            From gatehouse etiquette to property tours, these answers keep you prepared and confident during your time inside the community.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {guestFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

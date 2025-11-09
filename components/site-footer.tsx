@@ -41,12 +41,12 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-[#352922] text-[#f8f5ef]">
-      <div className="border-b border-[#be9956]/40 bg-[#3a2d27]">
+      <div className="border-b border-[#be9956]/40 bg-[#3e3028]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-6 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1 text-xs uppercase tracking-[0.35em]">
             <p className="text-[#cbb8a6]">Berkshire Hathaway HomeServices Nevada Properties</p>
             <p>Dr. Janet Duffy · Luxury Real Estate Advisor</p>
-            <Link href="tel:17023645050" className="hover:text-[#be9956]">
+            <Link href="tel:17023645050" className="hover:text-[#be9956] hover:underline">
               702.364.5050 · info@spanishtrailhomes.com
             </Link>
           </div>
@@ -73,7 +73,7 @@ export function SiteFooter() {
           <p className="font-[var(--font-playfair)] text-2xl tracking-[0.08em]">
             5050 Spanish Trail Ln. Las Vegas, NV 89117
           </p>
-          <p className="text-sm text-[#d9cfc2]">
+          <p className="text-sm text-[#efe5d8]">
             Guard-gated golf living minutes from the Strip, represented exclusively by Berkshire Hathaway HomeServices agent Dr. Janet Duffy.
           </p>
         </div>
@@ -87,7 +87,7 @@ export function SiteFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="transition-colors hover:text-[#be9956]"
+                    className="transition-colors hover:text-[#be9956] hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -98,24 +98,24 @@ export function SiteFooter() {
         ))}
       </div>
 
-      <div className="border-t border-[#be9956]/30 bg-[#2c211b]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 text-xs text-[#d9cfc2] md:flex-row md:items-center md:justify-between">
-          <div className="space-y-2">
+      <div className="border-t border-[#be9956]/30 bg-[#36271f]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 text-sm text-[#e5d7c8] md:flex-row md:items-center md:justify-between">
+          <div className="space-y-2 leading-relaxed">
             <p>Equal Housing Opportunity · MLS #123456 · NV Lic #S.1234567</p>
             <p>
               © {new Date().getFullYear()} Spanish Trail Country Club. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of HomeServices of America, Inc.® Equal Housing Opportunity.
             </p>
           </div>
-          <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.35em]">
-            <Link href="/privacy" className="hover:text-[#be9956]">
+          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.35em] md:text-sm">
+            <Link href="/privacy" className="hover:text-[#be9956] hover:underline">
               Privacy Policy
             </Link>
             <span aria-hidden>·</span>
-            <Link href="/terms" className="hover:text-[#be9956]">
+            <Link href="/terms" className="hover:text-[#be9956] hover:underline">
               Terms of Use
             </Link>
             <span aria-hidden>·</span>
-            <Link href="/accessibility" className="hover:text-[#be9956]">
+            <Link href="/accessibility" className="hover:text-[#be9956] hover:underline">
               Accessibility
             </Link>
           </div>

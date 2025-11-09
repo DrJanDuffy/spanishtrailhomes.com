@@ -194,25 +194,25 @@ function HeroSection() {
           </p>
           <h1
             id="hero-heading"
-            className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
+            className="font-[var(--font-playfair)] text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl"
           >
             Spanish Trail Homes · 89117 Intelligence
           </h1>
-          <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
+          <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
             Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
           <Button
             asChild
-            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
+            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em] shadow-md shadow-primary/25"
           >
             <Link href="#bhhs-listings">See What’s New</Link>
           </Button>
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
+            className="rounded-full border-[#0d3b2c]/60 bg-background/95 px-8 py-3 text-xs uppercase tracking-[0.4em] text-[#0d3b2c] shadow-md shadow-primary/10 hover:bg-[#0d3b2c]/10"
           >
             <Link href="/contact">Plan a Private Tour</Link>
           </Button>
@@ -226,7 +226,7 @@ function RealScoutListingsSection() {
   return (
     <section
       id="bhhs-listings"
-      className="bg-background py-16 sm:py-20"
+      className="bg-[#f9f4eb] py-20"
       aria-labelledby="bhhs-listings-heading"
     >
       <div className="mx-auto max-w-6xl px-6">
@@ -244,7 +244,7 @@ function RealScoutListingsSection() {
             Actively updated listings highlighting single-family residences between $500K and $600K inside the 89117 guard gates. For golf estates, lakefront villas, or secondary-gated enclaves, connect with Dr. Janet Duffy for curated options.
           </p>
         </div>
-        <div className="mt-10 rounded-3xl border border-border/60 bg-card/90 p-4 shadow-sm">
+        <div className="mt-12 rounded-3xl border border-border/40 bg-white p-6 shadow-xl shadow-primary/10">
           <realscout-office-listings
             agent-encoded-id="QWdlbnQtMjI1MDUw"
             sort-order="NEWEST"
@@ -261,7 +261,7 @@ function RealScoutListingsSection() {
 
 function IntroSection() {
   return (
-    <section className="bg-background py-16 sm:py-20" aria-labelledby="intro-heading">
+    <section className="bg-white py-20" aria-labelledby="intro-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6">
           <h2
@@ -277,7 +277,7 @@ function IntroSection() {
             As one of Las Vegas’s original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe’s, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
           </p>
         </div>
-        <div className="space-y-4 rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
+        <div className="space-y-4 rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
           <p className="text-xs uppercase tracking-[0.4em] text-secondary">
             Quick Facts
           </p>
@@ -314,17 +314,17 @@ function IntroSection() {
 
 function StatsSection() {
   return (
-    <section className="border-y border-border/60 bg-card/80" aria-label="Community highlights">
+    <section className="border-y border-border/40 bg-[#f3e9dc]" aria-label="Community highlights">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-16 md:grid-cols-3">
         {overviewStats.map((item) => (
           <div
             key={item.label}
-            className="rounded-3xl border border-border/50 bg-background/80 p-6 shadow-sm"
+            className="rounded-3xl border border-border/40 bg-white p-6 shadow-md shadow-primary/10"
           >
             <p className="text-xs uppercase tracking-[0.4em] text-secondary">
               {item.label}
             </p>
-            <p className="mt-3 font-[var(--font-playfair)] text-3xl text-foreground">
+            <p className="mt-3 font-[var(--font-playfair)] text-3xl text-[#1f2a24]">
               {item.value}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -339,7 +339,7 @@ function StatsSection() {
 
 function NeighborhoodSpotlightsSection() {
   return (
-    <section className="bg-background py-20 sm:py-24" aria-labelledby="neighborhood-spotlights-heading">
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="neighborhood-spotlights-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -359,12 +359,12 @@ function NeighborhoodSpotlightsSection() {
           {neighborhoodSpotlights.map((spotlight) => (
             <div
               key={spotlight.name}
-              className="rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm"
+              className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">
                 {spotlight.name}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-3 text-sm leading-relaxed text-[#1f2a24]/80">
                 {spotlight.description}
               </p>
             </div>
@@ -377,7 +377,7 @@ function NeighborhoodSpotlightsSection() {
 
 function MarketOverviewSection() {
   return (
-    <section className="border-y border-border/60 bg-card/80" aria-labelledby="market-overview-heading">
+    <section className="border-y border-border/40 bg-white" aria-labelledby="market-overview-heading">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
@@ -395,7 +395,7 @@ function MarketOverviewSection() {
           <Button
             asChild
             variant="outline"
-            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+            className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
             <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails">View Full Market Report</Link>
           </Button>
@@ -405,10 +405,10 @@ function MarketOverviewSection() {
           {marketHighlights.map((item) => (
             <article
               key={item.label}
-              className="rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm"
+              className="rounded-3xl border border-border/40 bg-white p-6 shadow-md shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">{item.label}</p>
-              <p className="mt-3 font-[var(--font-playfair)] text-2xl text-foreground">{item.value}</p>
+              <p className="mt-3 font-[var(--font-playfair)] text-2xl text-[#1f2a24]">{item.value}</p>
               <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
                 {item.trend} change
               </p>
@@ -423,7 +423,7 @@ function MarketOverviewSection() {
 
 function LocalEssentialsSection() {
   return (
-    <section className="bg-background py-20 sm:py-24" aria-labelledby="local-essentials-heading">
+    <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="local-essentials-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -441,7 +441,7 @@ function LocalEssentialsSection() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {localEssentials.map((section) => (
-            <div key={section.title} className="rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm">
+            <div key={section.title} className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">
                 {section.title}
               </p>
@@ -463,7 +463,7 @@ function LocalEssentialsSection() {
 
 function FeaturedInventorySection() {
   return (
-    <section className="bg-background py-20 sm:py-24" aria-labelledby="featured-inventory-heading">
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="featured-inventory-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
@@ -492,14 +492,14 @@ function FeaturedInventorySection() {
           {featuredListings.map((listing) => (
             <article
               key={listing.address}
-              className="flex h-full flex-col justify-between rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm"
+              className="flex h-full flex-col justify-between rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <div className="space-y-3">
                 <p className="text-xs uppercase tracking-[0.4em] text-secondary">{listing.mls}</p>
                 <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
                   {listing.address}
                 </h3>
-                <p className="text-sm text-muted-foreground">{listing.type}</p>
+                <p className="text-sm text-[#1f2a24]/80">{listing.type}</p>
               </div>
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-lg font-semibold text-primary">{listing.price}</span>
@@ -524,7 +524,7 @@ function FeaturedInventorySection() {
 
 function RealEstateSection() {
   return (
-    <section className="bg-background py-20 sm:py-24" aria-labelledby="real-estate-heading">
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="real-estate-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-6">
@@ -540,7 +540,7 @@ function RealEstateSection() {
             <p className="text-base leading-relaxed text-muted-foreground">
               Residences were primarily constructed from the mid-1980s through the 1990s, combining timeless architecture with mature landscapes that only decades of stewardship can produce.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
             </p>
-            <div className="rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
+            <div className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">
                 Neighborhoods
               </p>
@@ -570,7 +570,7 @@ function RealEstateSection() {
 
 function ListingsSection() {
   return (
-    <section className="border-y border-border/60 bg-card/80" aria-labelledby="listings-heading">
+    <section className="border-y border-border/40 bg-white" aria-labelledby="listings-heading">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">
@@ -587,7 +587,7 @@ function ListingsSection() {
           <Button
             asChild
             variant="outline"
-            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+            className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
             <Link href="/buyers">View All Inventory</Link>
           </Button>
@@ -597,7 +597,7 @@ function ListingsSection() {
           {featuredListings.map((listing) => (
             <article
               key={listing.address}
-              className="flex h-full flex-col justify-between rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm"
+              className="flex h-full flex-col justify-between rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <div className="space-y-3">
                 <p className="text-xs uppercase tracking-[0.4em] text-secondary">
@@ -606,7 +606,7 @@ function ListingsSection() {
                 <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
                   {listing.address}
                 </h3>
-                <p className="text-sm text-muted-foreground">{listing.type}</p>
+                <p className="text-sm text-[#1f2a24]/80">{listing.type}</p>
               </div>
               <div className="mt-6 flex items-center justify-between">
                 <span className="text-lg font-semibold text-primary">
@@ -633,7 +633,7 @@ function ListingsSection() {
 
 function LifestyleSection() {
   return (
-    <section className="bg-background py-20 sm:py-24" aria-labelledby="lifestyle-heading">
+    <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="lifestyle-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -654,7 +654,7 @@ function LifestyleSection() {
           {lifestyleHighlights.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-border/50 bg-card/90 p-6 shadow-sm"
+              className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">
                 {item.title}
@@ -672,7 +672,7 @@ function LifestyleSection() {
 
 function NearbyCommunitiesSection() {
   return (
-    <section className="border-y border-border/60 bg-card/80" aria-labelledby="nearby-heading">
+    <section className="border-y border-border/40 bg-white" aria-labelledby="nearby-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 lg:grid-cols-[1fr_1.1fr]">
         <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -698,7 +698,7 @@ function NearbyCommunitiesSection() {
             ))}
           </div>
         </div>
-        <div className="rounded-3xl border border-border/60 bg-background/80 p-6 shadow-sm">
+        <div className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
           <p className="text-xs uppercase tracking-[0.4em] text-secondary">
             Thinking of selling or buying?
           </p>
@@ -740,12 +740,12 @@ function CTASection() {
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-primary-foreground/40 bg-primary/10 px-7 py-3 text-xs uppercase tracking-[0.4em] text-primary-foreground hover:bg-primary/20"
+            className="rounded-full border-primary-foreground/60 bg-primary/10 px-7 py-3 text-xs uppercase tracking-[0.4em] text-primary-foreground hover:bg-primary/20"
           >
             <Link href="/sellers">Get a Valuation</Link>
           </Button>
         </div>
-      </div>
+    </div>
     </section>
   )
 }

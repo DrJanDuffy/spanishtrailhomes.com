@@ -69,7 +69,9 @@ export function SiteHeader() {
                     aria-haspopup={hasChildren ? 'true' : undefined}
                     aria-expanded={activeFlyout === item.label}
                   >
-                    <Link href={item.href}>{item.label}</Link>
+                    <Link href={item.href} className="hover:underline">
+                      {item.label}
+                    </Link>
                     {hasChildren ? <ChevronDown className="size-3" aria-hidden /> : null}
                   </button>
 
@@ -136,7 +138,7 @@ export function SiteHeader() {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="text-sm font-semibold uppercase tracking-[0.32em] text-primary"
+                      className="text-sm font-semibold uppercase tracking-[0.32em] text-primary hover:underline"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -158,7 +160,7 @@ export function SiteHeader() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-1 transition-colors hover:text-secondary"
+                          className="block py-1 transition-colors hover:text-secondary hover:underline"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.label}

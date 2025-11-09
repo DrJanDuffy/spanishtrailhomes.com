@@ -50,21 +50,14 @@ export function RealScoutSection({
           </p>
         </div>
         <div className="mt-12 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-xl shadow-primary/10">
-          {(() => {
-            const attributes: Record<string, string | undefined> = {
-              'agent-encoded-id': 'QWdlbnQtMjI1MDUw',
-              'sort-order': 'NEWEST',
-              'listing-status': 'For Sale',
-              'property-types': propertyTypes,
-              'price-min': priceMin,
-            }
-
-            if (priceMax) {
-              attributes['price-max'] = priceMax
-            }
-
-            return <realscout-office-listings {...attributes} />
-          })()}
+          <realscout-office-listings
+            agent-encoded-id="QWdlbnQtMjI1MDUw"
+            sort-order="NEWEST"
+            listing-status="For Sale"
+            property-types={propertyTypes}
+            price-min={priceMin}
+            price-max={priceMax}
+          />
         </div>
       </div>
     </section>

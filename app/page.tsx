@@ -413,17 +413,15 @@ function NeighborhoodSpotlightsSection() {
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="neighborhood-spotlights-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Neighborhood Spotlights
-          </p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Home Buyer Spotlight</p>
           <h2
             id="neighborhood-spotlights-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
           >
-            Micro-neighborhoods that define Spanish Trail living
+            Micro-neighborhoods buyers love in Spanish Trail
           </h2>
-          <p className="text-base leading-relaxed text-muted-foreground">
-            Each enclave inside the gates offers a distinct vibe—from legacy custom estates with sweeping golf frontage to turn-key villas steps from the clubhouse. Here’s what buyers ask about most.
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Each enclave offers a different buyer experience—from legacy custom estates with sweeping golf frontage to ready-to-enjoy villas near the clubhouse. Here’s what today’s Spanish Trail buyers ask about most when we tour together.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">

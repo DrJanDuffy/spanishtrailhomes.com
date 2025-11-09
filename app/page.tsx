@@ -25,6 +25,72 @@ const overviewStats = [
   },
 ]
 
+const neighborhoodDetails = [
+  {
+    name: 'The Estates',
+    priceRange: '$1.2M - $3.5M',
+    description: 'Magnificent custom estates on oversized lots with golf course and mountain views',
+    features: ['7,000-12,000 sq ft', 'Golf course frontage', 'Private pools & spas', 'Gated enclaves'],
+  },
+  {
+    name: 'The Villas',
+    priceRange: '$450K - $750K',
+    description: 'Elegant attached residences with resort-style living and low maintenance',
+    features: ['1,800-2,800 sq ft', 'Courtyards', 'Community pools', 'Lock-and-leave lifestyle'],
+  },
+  {
+    name: 'The Links',
+    priceRange: '$600K - $1.1M',
+    description: 'Premium single-family homes directly on the championship golf course',
+    features: ['2,500-4,500 sq ft', 'Fairway views', 'Private lots', 'Golf cart access'],
+  },
+  {
+    name: 'Plum Creek',
+    priceRange: '$500K - $900K',
+    description: 'Secluded enclave with mature trees and water features throughout',
+    features: ['2,200-3,800 sq ft', 'Tree-lined streets', 'Lake views', 'Family-friendly'],
+  },
+]
+
+const lifestyleFeatures = [
+  {
+    category: 'Championship Golf',
+    highlights: [
+      '27-hole Robert Trent Jones Jr. design',
+      'Host course for PGA Las Vegas Invitational',
+      'UNLV Women\'s Golf Team home course',
+      '120+ bunkers, 15 pristine lakes',
+    ],
+  },
+  {
+    category: 'Dining & Social',
+    highlights: [
+      '50,000 sq ft Mediterranean-style clubhouse',
+      'Fine dining with Strip-caliber cuisine',
+      'Casual Bar & Grill with terrace seating',
+      'Private event spaces for 300+ guests',
+    ],
+  },
+  {
+    category: 'Wellness & Recreation',
+    highlights: [
+      'State-of-the-art fitness center',
+      'Two resort-style aquatic centers',
+      '12 lighted tennis courts',
+      'Pickleball, yoga, and fitness classes',
+    ],
+  },
+  {
+    category: 'Location Excellence',
+    highlights: [
+      '10 minutes to Las Vegas Strip',
+      '15 minutes to Harry Reid Airport',
+      'Adjacent to premier shopping & dining',
+      'Easy I-215 and Summerlin access',
+    ],
+  },
+]
+
 const marketHighlights = [
   { label: 'Total Listings', value: '74 Active', trend: '+', context: 'Across single-family, condo, and townhome offerings.' },
   { label: 'Average List Price', value: '$682K', trend: '-22.15%', context: 'Month-over-month change across current inventory.' },
@@ -100,10 +166,13 @@ export default function HomePage() {
       <HeroSection />
       <RealScoutListingsSection />
       <IntroSection />
+      <LocationSection />
       <StatsSection />
+      <NeighborhoodShowcaseSection />
       <MarketOverviewSection />
       <FeaturedInventorySection />
       <RealEstateSection />
+      <LifestyleFeaturesSection />
       <ListingsSection />
       <LifestyleSection />
       <NearbyCommunitiesSection />
@@ -122,41 +191,53 @@ function HeroSection() {
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.75)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
+            "linear-gradient(rgba(15, 43, 30, 0.5), rgba(15, 43, 30, 0.7)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
         }}
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
-        <div className="max-w-3xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Berkshire Hathaway HomeServices Presents
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-28 text-primary-foreground sm:py-36 lg:py-48">
+        <div className="max-w-4xl space-y-8">
+          <div className="space-y-4">
+            <p className="text-xs font-medium uppercase tracking-[0.5em] text-secondary/90">
+              Las Vegas' Premier Golf Course Community
+            </p>
+            <h1
+              id="hero-heading"
+              className="font-[var(--font-playfair)] text-5xl font-semibold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl"
+            >
+              Spanish Trail
+              <span className="block text-4xl font-normal sm:text-5xl lg:text-6xl">
+                Luxury Homes
+              </span>
+            </h1>
+          </div>
+          <p className="max-w-2xl text-lg leading-relaxed text-primary-foreground/95 sm:text-xl">
+            Guard-gated estates, championship golf, and resort-caliber amenities in Southwest Las Vegas. Minutes from the Strip, yet a world apart.
           </p>
-          <h1
-            id="hero-heading"
-            className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
-          >
-            Spanish Trail Luxury Homes & Country Club Living
-          </h1>
-          <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
-            Represented by Dr. Janet Duffy, Spanish Trail showcases guard-gated estates, golf villas, and view-rich residences moments from the Las Vegas Strip. Browse curated inventory, instant market insights, and private tour opportunities.
-          </p>
+          <div className="flex items-center gap-6 border-l-2 border-secondary/50 pl-6">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-secondary/80">Represented By</p>
+              <p className="mt-1 font-[var(--font-playfair)] text-lg font-medium">Dr. Janet Duffy</p>
+              <p className="text-sm text-primary-foreground/80">Berkshire Hathaway HomeServices</p>
+            </div>
+          </div>
         </div>
         <div className="flex flex-wrap items-center gap-4">
           <Button
             asChild
-            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em]"
+            size="lg"
+            className="rounded-full px-10 py-6 text-xs font-semibold uppercase tracking-[0.4em] shadow-xl transition-all hover:scale-105"
           >
-            <Link href="#bhhs-listings">Explore Listings</Link>
+            <Link href="#bhhs-listings">View Available Homes</Link>
           </Button>
           <Button
             asChild
+            size="lg"
             variant="outline"
-            className="rounded-full border-primary/40 bg-background/90 px-8 py-3 text-xs uppercase tracking-[0.4em] text-primary hover:bg-background/60"
+            className="rounded-full border-2 border-primary-foreground/30 bg-background/10 px-10 py-6 text-xs font-semibold uppercase tracking-[0.4em] text-primary-foreground backdrop-blur-sm transition-all hover:scale-105 hover:bg-background/20"
           >
-            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
-              View Market Report
-            </Link>
+            <Link href="#neighborhoods">Explore Neighborhoods</Link>
           </Button>
         </div>
       </div>
@@ -213,10 +294,10 @@ function IntroSection() {
             Exclusive guard-gated golf living minutes from the Strip.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Spanish Trail spans the Spring Valley area of Las Vegas with quick access to Summerlin, I-215, and Harry Reid International Airport. Established as one of the city’s earliest private golf course communities, it layers mature landscaping, shimmering lakes, and a resort-caliber clubhouse across 640 acres of all-grass fairways.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            Spanish Trail spans the Spring Valley area of Las Vegas with quick access to Summerlin, I-215, and Harry Reid International Airport. Established as one of the city's earliest private golf course communities, it layers mature landscaping, shimmering lakes, and a resort-caliber clubhouse across 640 acres of all-grass fairways.
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Residents enjoy the convenience of three guarded entries, proximity to upscale dining and entertainment, and the prestige of a club that has hosted the PGA Las Vegas Invitational five times while serving as home course for the UNLV Women’s Golf Team.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            Residents enjoy the convenience of three guarded entries, proximity to upscale dining and entertainment, and the prestige of a club that has hosted the PGA Las Vegas Invitational five times while serving as home course for the UNLV Women's Golf Team.
           </p>
         </div>
         <div className="space-y-4 rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm">
@@ -244,6 +325,117 @@ function IntroSection() {
           >
             <Link href="/guest-info#map">View Directions & Map</Link>
           </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LocationSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80 py-20 sm:py-24" aria-labelledby="location-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-12 space-y-4 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Prime Southwest Las Vegas Location
+          </p>
+          <h2
+            id="location-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Ideally Positioned for the Las Vegas Lifestyle
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Spanish Trail occupies one of the most coveted locations in the Las Vegas Valley, offering the perfect balance of tranquil resort living and metropolitan convenience.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="space-y-6">
+            <div className="rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm">
+              <h3 className="mb-4 font-[var(--font-playfair)] text-xl text-foreground">
+                Minutes From Everything
+              </h3>
+              <dl className="space-y-4 text-sm">
+                <div className="flex justify-between border-b border-border/30 pb-3">
+                  <dt className="font-medium text-foreground">Las Vegas Strip</dt>
+                  <dd className="text-muted-foreground">10 minutes</dd>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-3">
+                  <dt className="font-medium text-foreground">Harry Reid International Airport</dt>
+                  <dd className="text-muted-foreground">15 minutes</dd>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-3">
+                  <dt className="font-medium text-foreground">Downtown Summerlin</dt>
+                  <dd className="text-muted-foreground">12 minutes</dd>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-3">
+                  <dt className="font-medium text-foreground">Red Rock Canyon</dt>
+                  <dd className="text-muted-foreground">18 minutes</dd>
+                </div>
+                <div className="flex justify-between border-b border-border/30 pb-3">
+                  <dt className="font-medium text-foreground">Town Square Las Vegas</dt>
+                  <dd className="text-muted-foreground">8 minutes</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="font-medium text-foreground">I-215 Beltway Access</dt>
+                  <dd className="text-muted-foreground">5 minutes</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-3xl border border-border/60 bg-background/90 p-6 shadow-sm">
+              <h3 className="mb-4 font-[var(--font-playfair)] text-xl text-foreground">
+                Neighborhood Essentials
+              </h3>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Premium grocery shopping at Whole Foods, Trader Joe's, and Smith's within 5 minutes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Award-winning restaurants along nearby Rainbow Blvd and in Summerlin</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Top-rated Clark County schools including Bonner Elementary and Durango High</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Healthcare access via Spring Valley Hospital and Summerlin Hospital</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Entertainment options from world-class casinos to boutique shopping</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                  <span>Quick freeway access to all Las Vegas Valley destinations</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 p-6 text-center shadow-sm">
+              <p className="mb-2 text-xs uppercase tracking-[0.4em] text-secondary">Address</p>
+              <p className="font-[var(--font-playfair)] text-lg text-foreground">
+                Spanish Trail Country Club
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Tropicana Ave & Rainbow Blvd
+              </p>
+              <p className="text-sm text-muted-foreground">Las Vegas, NV 89113</p>
+              <Button
+                asChild
+                variant="link"
+                className="mt-4 text-xs uppercase tracking-[0.3em] text-primary"
+              >
+                <Link href="/guest-info#map">Get Directions</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -571,6 +763,152 @@ function NearbyCommunitiesSection() {
           >
             <Link href="/contact">Connect with the Team</Link>
           </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function NeighborhoodShowcaseSection() {
+  return (
+    <section id="neighborhoods" className="bg-background py-20 sm:py-24" aria-labelledby="neighborhoods-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-12 space-y-4 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            Discover Your Neighborhood
+          </p>
+          <h2
+            id="neighborhoods-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Spanish Trail's Exclusive Enclaves
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Each neighborhood within Spanish Trail offers its own distinct character, from lock-and-leave villas to sprawling golf course estates. Explore the community that matches your lifestyle.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          {neighborhoodDetails.map((neighborhood) => (
+            <article
+              key={neighborhood.name}
+              className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card/90 shadow-lg transition-all hover:shadow-xl"
+            >
+              <div className="p-8">
+                <div className="mb-4 flex items-start justify-between">
+                  <div>
+                    <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
+                      {neighborhood.name}
+                    </h3>
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+                      {neighborhood.priceRange}
+                    </p>
+                  </div>
+                </div>
+                <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+                  {neighborhood.description}
+                </p>
+                <div className="space-y-2">
+                  <p className="text-xs uppercase tracking-[0.4em] text-secondary">Key Features</p>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {neighborhood.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <span className="size-1.5 rounded-full bg-primary" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/50 via-primary to-primary/50 opacity-0 transition-opacity group-hover:opacity-100" />
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="/communities/spanish-trail">Explore All 11 Neighborhoods</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LifestyleFeaturesSection() {
+  return (
+    <section className="border-y border-border/60 bg-card/80 py-20 sm:py-24" aria-labelledby="lifestyle-features-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-12 space-y-4 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+            The Spanish Trail Lifestyle
+          </p>
+          <h2
+            id="lifestyle-features-heading"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          >
+            Where Luxury Living Meets Championship Amenities
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground">
+            Beyond the gate lies a world-class private club experience. From the legendary golf course to resort-caliber dining and wellness facilities, every day offers new opportunities for recreation and connection.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {lifestyleFeatures.map((feature) => (
+            <article
+              key={feature.category}
+              className="rounded-3xl border border-border/60 bg-background/90 p-8 shadow-sm"
+            >
+              <h3 className="mb-6 font-[var(--font-playfair)] text-2xl text-foreground">
+                {feature.category}
+              </h3>
+              <ul className="space-y-3">
+                {feature.highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="flex items-start gap-3 text-sm leading-relaxed text-muted-foreground"
+                  >
+                    <span className="mt-1.5 size-2 flex-shrink-0 rounded-full bg-primary" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12">
+          <div className="rounded-3xl border border-border/60 bg-gradient-to-br from-primary/5 to-secondary/5 p-8 text-center shadow-sm">
+            <p className="mb-4 font-[var(--font-playfair)] text-2xl text-foreground">
+              Experience the Spanish Trail difference
+            </p>
+            <p className="mx-auto mb-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              Join one of Las Vegas' most prestigious golf communities. Schedule a private tour and discover why Spanish Trail homeowners consistently rate their lifestyle experience among the best in the valley.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                asChild
+                className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+              >
+                <Link href="/membership">Learn About Membership</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+              >
+                <Link href="/golf">Explore the Golf Experience</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -86,7 +86,7 @@ export default function DeployBanner() {
               <div className="flex items-center gap-3 sm:flex-shrink-0">
                 <Button variant="default" size="sm" asChild>
                   <a
-                    href="https://www.bhhsnv.com/neighborhood/83/spanish-trails"
+                    href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

@@ -467,7 +467,7 @@ function MarketOverviewSection() {
             variant="outline"
             className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
-            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails">View Full Market Report</Link>
+            <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails">View Full Market Report</Link>
           </Button>
         </div>
 
@@ -585,7 +585,7 @@ function FeaturedInventorySection() {
             asChild
             className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
           >
-            <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails#featured-listings">
+            <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails#featured-listings">
               Speak with Dr. Duffy
             </Link>
           </Button>

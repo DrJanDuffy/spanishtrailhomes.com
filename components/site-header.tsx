@@ -183,7 +183,7 @@ export function SiteHeader() {
                 <Link href="/contact">Speak with Dr. Duffy</Link>
               </Button>
               <Button asChild variant="link" className="justify-start px-0 text-xs uppercase tracking-[0.32em]">
-                <Link href="https://www.bhhsnv.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
+                <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
                   View Listings
                 </Link>
               </Button>

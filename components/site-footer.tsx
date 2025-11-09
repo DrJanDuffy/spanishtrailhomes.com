@@ -23,8 +23,8 @@ export function SiteFooter() {
       heading: 'Market Resources',
       links: [
         {
-          label: 'BHHS Spanish Trail Report',
-          href: 'https://www.bhhsnv.com/neighborhood/83/spanish-trails',
+          label: 'Spanish Trail Market Report',
+          href: 'https://searchforaffordablehomes.com/neighborhood/83/spanish-trails',
         },
         { label: 'Home Valuation Request', href: '/sellers' },
         { label: 'Buyer Consultation', href: '/buyers' },

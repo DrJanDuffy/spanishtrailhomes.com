@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const membershipNarratives = [
   {
@@ -107,6 +108,11 @@ export default function MembershipPage() {
   return (
     <SiteShell>
       <MembershipHero />
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Membership' }]} />
+        </div>
+      </div>
       <RealScoutSection
         id="membership-listings"
         eyebrow="Member-Favorite Homes"

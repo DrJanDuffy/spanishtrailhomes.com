@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const guestNarratives = [
   {
@@ -88,6 +89,11 @@ export default function GuestInfoPage() {
   return (
     <SiteShell>
       <GuestHero />
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Guest Information' }]} />
+        </div>
+      </div>
       <RealScoutSection
         id="guest-info-listings"
         eyebrow="Plan Your Stay"

@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const communityNarratives = [
   {
@@ -124,6 +125,16 @@ export default function SpanishTrailCommunityPage() {
   return (
     <SiteShell>
       <HeroSection />
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Community' },
+            ]}
+          />
+        </div>
+      </div>
       <RealScoutSection
         id="community-listings"
         eyebrow="Available Homes"

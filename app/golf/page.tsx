@@ -7,6 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { golfCourses } from '@/lib/content'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const golfNarratives = [
   {
@@ -96,6 +97,11 @@ export default function GolfPage() {
   return (
     <SiteShell>
       <GolfHero />
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Golf' }]} />
+        </div>
+      </div>
       <RealScoutSection
         id="golf-course-listings"
         eyebrow="Golf Course Homes"

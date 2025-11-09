@@ -80,7 +80,7 @@ export function SiteHeader() {
                       onMouseLeave={() => setActiveFlyout(null)}
                     >
                       <div className="grid grid-cols-2 gap-6 text-sm">
-                        {item.children.map((child) => (
+                        {(item.children ?? []).map((child) => (
                           <div key={child.label} className="space-y-2">
                             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-secondary">
                               {child.label}
@@ -154,7 +154,7 @@ export function SiteHeader() {
                   </div>
                   {hasChildren && activeFlyout === item.label ? (
                     <div className="space-y-2 pl-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                      {item.children.map((child) => (
+                      {(item.children ?? []).map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}

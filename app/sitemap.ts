@@ -11,6 +11,16 @@ const routes = [
   '/membership',
   '/guest-info',
   '/contact',
+  '/spanish-trail-homes-for-sale-las-vegas',
+  '/spanish-trail-guard-gated-golf-homes',
+  '/spanish-trail-luxury-golf-course-properties',
+  '/spanish-trail-custom-estate-homes-strip',
+  '/spanish-trail-townhomes-villas',
+  '/spanish-trail-gated-golf-realtor',
+  '/spanish-trail-southwest-las-vegas-luxury-homes',
+  '/spanish-trail-private-golf-course-homes',
+  '/spanish-trail-country-club-estate-listings',
+  '/spanish-trail-waterfront-golf-homes',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

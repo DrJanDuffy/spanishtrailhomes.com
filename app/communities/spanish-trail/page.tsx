@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
+import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
 
@@ -148,6 +149,7 @@ const benefits = [
 export default function SpanishTrailCommunityPage() {
   return (
     <SiteShell>
+      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">

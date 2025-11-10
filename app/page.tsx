@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
+import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 
 const overviewStats = [
   {
@@ -248,6 +249,7 @@ const featuredListingsSchema = {
 export default function HomePage() {
   return (
     <SiteShell>
+      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <RealScoutSection
         id="bhhs-listings"

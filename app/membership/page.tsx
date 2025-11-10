@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const membershipNarratives = [
@@ -124,6 +125,7 @@ const membershipOptions = [
 export default function MembershipPage() {
   return (
     <SiteShell>
+      <RealScoutSimpleSearchWidget />
       <MembershipHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">

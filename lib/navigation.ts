@@ -13,6 +13,23 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Amenities', href: '/communities/spanish-trail#amenities-heading' },
       { label: 'Benefits', href: '/communities/spanish-trail#benefits-heading' },
       { label: 'Contact', href: '/communities/spanish-trail#contact-heading' },
+      { label: 'Homes for Sale', href: '/spanish-trail-homes-for-sale-las-vegas' },
+    ],
+  },
+  {
+    label: 'Buyers',
+    href: '/spanish-trail-homes-for-sale-las-vegas',
+    children: [
+      { label: 'Homes for Sale', href: '/spanish-trail-homes-for-sale-las-vegas' },
+      { label: 'Guard-Gated Golf Homes', href: '/spanish-trail-guard-gated-golf-homes' },
+      { label: 'Luxury Golf Course Estates', href: '/spanish-trail-luxury-golf-course-properties' },
+      { label: 'Custom Estates Near Strip', href: '/spanish-trail-custom-estate-homes-strip' },
+      { label: 'Townhomes & Villas', href: '/spanish-trail-townhomes-villas' },
+      { label: 'Gated Golf Realtor', href: '/spanish-trail-gated-golf-realtor' },
+      { label: 'Southwest Luxury Homes', href: '/spanish-trail-southwest-las-vegas-luxury-homes' },
+      { label: 'Private Golf Course Homes', href: '/spanish-trail-private-golf-course-homes' },
+      { label: 'Estate Listings', href: '/spanish-trail-country-club-estate-listings' },
+      { label: 'Waterfront Golf Homes', href: '/spanish-trail-waterfront-golf-homes' },
     ],
   },
   {

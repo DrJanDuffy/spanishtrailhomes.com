@@ -7,6 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { amenities, testimonials } from '@/lib/content'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const clubNarratives = [
@@ -131,6 +132,7 @@ export const metadata: Metadata = {
 export default function ClubPage() {
   return (
     <SiteShell>
+      <RealScoutSimpleSearchWidget />
       <ClubHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">

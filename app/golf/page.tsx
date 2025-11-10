@@ -7,6 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { golfCourses } from '@/lib/content'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
+import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const golfNarratives = [
@@ -113,6 +114,7 @@ const scorecard = [
 export default function GolfPage() {
   return (
     <SiteShell>
+      <RealScoutSimpleSearchWidget />
       <GolfHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">

@@ -1,6 +1,6 @@
 import type { DetailedHTMLProps, HTMLAttributes } from 'react'
 
-declare module 'react' {
+declare global {
   namespace JSX {
     interface IntrinsicElements {
       'realscout-office-listings': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
@@ -12,6 +12,12 @@ declare module 'react' {
         'price-max'?: string
       }
       'realscout-advanced-search': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        'agent-encoded-id': string
+      }
+      'realscout-simple-search': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        'agent-encoded-id': string
+      }
+      'realscout-home-value': DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
         'agent-encoded-id': string
       }
     }

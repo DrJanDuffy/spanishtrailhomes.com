@@ -12,13 +12,15 @@ export const metadata: Metadata = {
 }
 
 type NewChatPageProps = {
-  searchParams?: {
-    projectId?: string
-  }
+  searchParams?: Promise<{
+    projectId?: string | string[]
+  }>
 }
 
-export default function NewChatPage({ searchParams }: NewChatPageProps) {
-  const projectId = searchParams?.projectId
+export default async function NewChatPage({ searchParams }: NewChatPageProps) {
+  const params = searchParams ? await searchParams : undefined
+  const projectParam = params?.projectId
+  const projectId = Array.isArray(projectParam) ? projectParam[0] : projectParam
 
   if (projectId) {
     redirect(`/projects/${projectId}/chats/new`)
@@ -27,7 +29,7 @@ export default function NewChatPage({ searchParams }: NewChatPageProps) {
   return (
     <div className="min-h-dvh bg-[#f8f2e7] px-6 py-16">
       <div className="mx-auto max-w-2xl rounded-3xl border border-[#d8cdbf] bg-white p-8 text-center shadow-lg shadow-primary/10">
-        <h1 className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">Select a Project First</h1>
+        <h1 className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">Select a Project First</h1>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           To begin a new chat, open an existing project or create a new one. Each chat stays linked to a project so your
           prompts, designs, and deploys remain organized.

@@ -23,9 +23,9 @@ const recognitionTimeline = [
   },
   {
     year: '2023',
-    title: 'RealScout Market Expert | Spanish Trail',
+    title: 'Spanish Trail Market Expert · Berkshire Hathaway HomeServices Top Agent in Las Vegas',
     description:
-      'Awarded for sustained engagement insights, buyer tour conversion, and RealScout activity leadership within Spanish Trail enclaves.',
+      'Recognized by RealScout as the Spanish Trail Market Expert and honored by Berkshire Hathaway HomeServices as a Top Agent in Las Vegas for luxury volume and client satisfaction.',
   },
   {
     year: '2022',

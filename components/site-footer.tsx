@@ -101,7 +101,7 @@ export function SiteFooter() {
       <div className="border-t border-[#be9956]/30 bg-[#36271f]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 text-sm text-[#e5d7c8] md:flex-row md:items-center md:justify-between">
           <div className="space-y-2 leading-relaxed">
-            <p>Equal Housing Opportunity · MLS #123456 · NV Lic #S.1234567</p>
+            <p>Equal Housing Opportunity · Dr Jan Duffy | Spanish Trail Homes REALTOR® S.0197614.LLC</p>
             <p>
               © {new Date().getFullYear()} Spanish Trail Country Club. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of HomeServices of America, Inc.® Equal Housing Opportunity.
             </p>

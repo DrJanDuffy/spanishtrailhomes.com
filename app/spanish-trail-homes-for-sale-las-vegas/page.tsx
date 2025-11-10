@@ -38,7 +38,7 @@ const faqContent = [
   {
     question: 'How much do Spanish Trail homes cost right now?',
     answer:
-      'As of October 2025, the median Spanish Trail home value is $755,000 with an average price-per-square-foot of $355. Villas and townhomes close between $835K and $1.1M, golf course homes typically secure $1.2M–$1.5M, and custom estates stretch beyond $2M. Ask me for a tailored report for your timeline—text 702-222-1964.',
+      'As of October 2025, the median Spanish Trail home value is $755,000 with an average price-per-square-foot of $355. Villas and townhomes close between $835K and $1.1M, golf course homes typically secure $1.2M–$1.5M, and custom estates stretch beyond $2M. Ask me for a tailored report for your timeline—call or text (702) 766-3299.',
   },
   {
     question: 'How quickly are Spanish Trail homes selling?',
@@ -393,7 +393,7 @@ function ContactCTASection() {
           Ready to explore Spanish Trail homes?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Text 702-222-1964 for instant updates or call 702-500-1955 to book a private tour. Prefer email? <Link href="mailto:jduffy@bhhsnv.com" className="underline-offset-4 hover:underline">jduffy@bhhsnv.com</Link>.
+          Call or text (702) 766-3299 for instant updates or to book a private tour. Prefer email? <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

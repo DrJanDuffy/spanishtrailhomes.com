@@ -8,12 +8,34 @@ import type { HTMLAttributes } from 'react'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
   'agent-encoded-id': string
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/sellers'
+const sellersPageDescription =
+  'Discover how Dr. Jan Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.'
+
+const sellersWebPageSchema = createWebPageSchema({
+  name: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
+  description: sellersPageDescription,
+  path: '/sellers',
+  type: 'CollectionPage',
+  extra: {
+    about: {
+      '@type': 'Service',
+      serviceType: 'Spanish Trail Listing Representation',
+      provider: {
+        '@type': 'RealEstateAgent',
+        name: 'Dr. Janet Duffy',
+        areaServed: 'Spanish Trail, Las Vegas, Nevada',
+      },
+      areaServed: 'Spanish Trail, Las Vegas, Nevada',
+    },
+  },
+})
 
 const realScoutHomeValueStyles = `
   realscout-home-value {
@@ -66,8 +88,7 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   title: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
-  description:
-    'Discover how Dr. Jan Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.',
+  description: sellersPageDescription,
   alternates: {
     canonical: '/sellers',
   },
@@ -111,6 +132,9 @@ export default function SellersPage() {
         <ClubAndLifestylePositioningSection />
         <FAQSection />
         <CallToActionSection />
+        <Script id="sellers-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(sellersWebPageSchema)}
+        </Script>
         <Script id="sellers-faq-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(faqSchema)}
         </Script>
@@ -440,9 +464,9 @@ function CallToActionSection() {
           Ready to unlock your Spanish Trail equity?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Every successful sale begins with clarity and collaboration. Text 702-222-1964 for immediate assistance or call 702-500-1955 to schedule a confidential appointment. Prefer email? Send a note to{' '}
-          <Link href="mailto:jduffy@bhhsnv.com" className="underline-offset-4 hover:underline text-[#f8f5ef]">
-            jduffy@bhhsnv.com
+          Every successful sale begins with clarity and collaboration. Call or text (702) 766-3299 to schedule a confidential appointment. Prefer email? Send a note to{' '}
+          <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline text-[#f8f5ef]">
+            DrDuffySells@SpanishTrailHomes.com
           </Link>{' '}
           with your desired timeline and any confidentiality considerations. I am honored to guide Spanish Trail homeowners through seamless, profitable transitions—always with discretion, integrity, and a commitment to exceeding expectations.
         </p>

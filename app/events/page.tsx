@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const eventsNarratives = [
   {
@@ -82,11 +83,33 @@ const eventsFaqSchema = {
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/events'
+const eventsPageDescription =
+  'Host weddings, private celebrations, and golf outings at Spanish Trail Country Club with bespoke planning and panoramic Las Vegas views.'
+
+const eventsWebPageSchema = createWebPageSchema({
+  name: 'Weddings & Events | Spanish Trail Country Club',
+  description: eventsPageDescription,
+  path: '/events',
+  type: 'CollectionPage',
+  extra: {
+    about: {
+      '@type': 'Place',
+      name: 'Spanish Trail Country Club',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '5050 Spanish Trail Ln.',
+        addressLocality: 'Las Vegas',
+        addressRegion: 'NV',
+        postalCode: '89113',
+        addressCountry: 'US',
+      },
+    },
+  },
+})
 
 export const metadata: Metadata = {
   title: 'Weddings & Events | Spanish Trail Country Club',
-  description:
-    'Host weddings, private celebrations, and golf outings at Spanish Trail Country Club with bespoke planning and panoramic Las Vegas views.',
+  description: eventsPageDescription,
   alternates: { canonical: '/events' },
   openGraph: {
     url: pageUrl,
@@ -129,6 +152,9 @@ export default function EventsPage() {
       <EventsFAQSection />
       <Script id="events-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(eventsFaqSchema)}
+      </Script>
+      <Script id="events-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(eventsWebPageSchema)}
       </Script>
     </SiteShell>
   )
@@ -391,11 +417,8 @@ function ContactSection() {
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
           Call{' '}
-          <Link
-            href="tel:17023645050"
-            className="text-primary underline-offset-4 hover:underline"
-          >
-            702.364.5050
+          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
+            (702) 766-3299
           </Link>{' '}
           or email{' '}
           <Link

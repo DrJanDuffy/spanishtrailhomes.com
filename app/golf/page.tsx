@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const golfNarratives = [
   {
@@ -83,11 +84,24 @@ const golfFaqSchema = {
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/golf'
+const golfPageDescription =
+  'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and plan your next round at Spanish Trail Country Club.'
+
+const golfWebPageSchema = createWebPageSchema({
+  name: 'Golf Experience | Spanish Trail Country Club',
+  description: golfPageDescription,
+  path: '/golf',
+  extra: {
+    about: {
+      '@type': 'SportsActivityLocation',
+      name: 'Spanish Trail Country Club Golf',
+    },
+  },
+})
 
 export const metadata: Metadata = {
   title: 'Golf Experience | Spanish Trail Country Club',
-  description:
-    'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and plan your next round at Spanish Trail Country Club.',
+  description: golfPageDescription,
   alternates: { canonical: '/golf' },
   openGraph: {
     url: pageUrl,
@@ -136,6 +150,9 @@ export default function GolfPage() {
       <GolfFAQSection />
       <Script id="golf-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(golfFaqSchema)}
+      </Script>
+      <Script id="golf-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(golfWebPageSchema)}
       </Script>
     </SiteShell>
   )

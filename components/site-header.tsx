@@ -23,8 +23,8 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 text-xs tracking-[0.35em]">
           <div className="flex items-center gap-3">
             <Phone className="size-3.5" aria-hidden />
-            <Link href="tel:17023645050" className="hover:underline">
-              702.364.5050
+            <Link href="tel:17027663299" className="hover:underline">
+              (702) 766-3299
             </Link>
           </div>
           <div className="flex items-center gap-3">
@@ -105,8 +105,8 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-4 lg:flex">
             <Button asChild variant="link" className="text-xs uppercase tracking-[0.28em] text-[#0f2b1e]">
-              <Link href="tel:17023645050" className="hover:underline">
-                Call 702.364.5050
+              <Link href="tel:17027663299" className="hover:underline">
+                Call (702) 766-3299
               </Link>
             </Button>
             <Button
@@ -188,7 +188,7 @@ export function SiteHeader() {
                 </Link>
               </Button>
               <Button asChild variant="link" className="justify-start px-0 text-xs uppercase tracking-[0.32em] text-muted-foreground">
-                <Link href="tel:17023645050">Call 702.364.5050</Link>
+                <Link href="tel:17027663299">Call (702) 766-3299</Link>
               </Button>
             </div>
           </div>

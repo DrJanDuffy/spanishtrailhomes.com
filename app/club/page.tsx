@@ -10,6 +10,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { lifestyleHighlights } from '@/lib/spanishTrailContent'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const clubNarratives = [
   {
@@ -84,6 +85,8 @@ const clubFaqSchema = {
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/club'
+const clubPageDescription =
+  'Explore the Spanish Trail Country Club lifestyle—clubhouse amenities, dining, fitness, tennis, and social events in Las Vegas.'
 
 const clubReviewsSchema = {
   '@context': 'https://schema.org',
@@ -109,10 +112,21 @@ const clubReviewsSchema = {
   })),
 }
 
+const clubWebPageSchema = createWebPageSchema({
+  name: 'Club Life | Spanish Trail Country Club',
+  description: clubPageDescription,
+  path: '/club',
+  extra: {
+    about: {
+      '@type': 'Organization',
+      name: 'Spanish Trail Country Club',
+    },
+  },
+})
+
 export const metadata: Metadata = {
   title: 'Club Life | Spanish Trail Country Club',
-  description:
-    'Explore the Spanish Trail Country Club lifestyle—clubhouse amenities, dining, fitness, tennis, and social events in Las Vegas.',
+  description: clubPageDescription,
   alternates: { canonical: '/club' },
   openGraph: {
     url: pageUrl,
@@ -158,6 +172,9 @@ export default function ClubPage() {
       <TestimonialsHighlight />
       <Script id="club-testimonials-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(clubReviewsSchema)}
+      </Script>
+      <Script id="club-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(clubWebPageSchema)}
       </Script>
     </SiteShell>
   )

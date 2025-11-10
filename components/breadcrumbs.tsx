@@ -1,7 +1,10 @@
 'use client'
 
-import Script from 'next/script'
 import Link from 'next/link'
+import Script from 'next/script'
+import { usePathname } from 'next/navigation'
+
+import { createBreadcrumbSchema } from '@/lib/structuredData'
 
 type BreadcrumbItem = {
   label: string
@@ -14,20 +17,22 @@ type BreadcrumbsProps = {
 }
 
 export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
+  const pathname = usePathname() || '/'
+
   if (!items.length) return null
 
   const lastIndex = items.length - 1
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.label,
-      item: item.href ? item.href : undefined,
-    })),
-  }
+  const schemaItems = items.map((item, index) => ({
+    name: item.label,
+    url: item.href
+      ? item.href
+      : index === lastIndex
+        ? pathname
+        : items[index + 1]?.href ?? pathname,
+  }))
+
+  const jsonLd = createBreadcrumbSchema(schemaItems)
 
   return (
     <nav aria-label="Breadcrumb" className={className}>

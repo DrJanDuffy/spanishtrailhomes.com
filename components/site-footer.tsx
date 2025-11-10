@@ -46,8 +46,8 @@ export function SiteFooter() {
           <div className="space-y-1 text-xs uppercase tracking-[0.35em]">
             <p className="text-[#cbb8a6]">Berkshire Hathaway HomeServices Nevada Properties</p>
             <p>Dr. Janet Duffy · Luxury Real Estate Advisor</p>
-            <Link href="tel:17023645050" className="hover:text-[#be9956] hover:underline">
-              702.364.5050 · info@spanishtrailhomes.com
+            <Link href="tel:17027663299" className="hover:text-[#be9956] hover:underline">
+              (702) 766-3299 · DrDuffySells@SpanishTrailHomes.com
             </Link>
           </div>
           <div className="flex items-center gap-4">

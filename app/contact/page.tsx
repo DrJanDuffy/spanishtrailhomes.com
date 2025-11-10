@@ -7,13 +7,36 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
+const contactPageDescription =
+  'Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $799K median. Call/text (702) 766-3299.'
+
+const contactWebPageSchema = createWebPageSchema({
+  name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
+  description: contactPageDescription,
+  path: '/contact',
+  type: 'ContactPage',
+  extra: {
+    potentialAction: [
+      {
+        '@type': 'ContactAction',
+        target: `${pageUrl}#contact-form`,
+        name: 'Request Spanish Trail Consultation',
+      },
+      {
+        '@type': 'CommunicateAction',
+        target: 'tel:17027663299',
+        name: 'Call (702) 766-3299',
+      },
+    ],
+  },
+})
 
 export const metadata: Metadata = {
   title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
-  description:
-    'Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $799K median. 702-222-1964',
+  description: contactPageDescription,
   alternates: {
     canonical: '/contact',
   },
@@ -37,7 +60,7 @@ const faqContent = [
   {
     question: "What's the average price in Spanish Trail right now?",
     answer:
-      "Spanish Trail's median home value is $799,000 as of October 2025. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call/text 702-222-1964.",
+      "Spanish Trail's median home value is $799,000 as of October 2025. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.",
   },
   {
     question: 'Is Spanish Trail a good investment?',
@@ -94,6 +117,9 @@ export default function ContactPage() {
       <Script id="contact-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(faqSchema)}
       </Script>
+      <Script id="contact-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(contactWebPageSchema)}
+      </Script>
     </SiteShell>
   )
 }
@@ -115,7 +141,7 @@ function HeroSection() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
-            <Link href="tel:17022221964">Call or Text 702-222-1964</Link>
+            <Link href="tel:17027663299">Call or Text (702) 766-3299</Link>
           </Button>
           <Button
             asChild
@@ -309,7 +335,7 @@ function ContactCTASection() {
               Buyers receive curated previews, weekly absorption reports, and private-network alerts before listings surface publicly. Sellers get a pricing road map, concierge prep plan, and real-time feedback from every showing.
             </p>
             <p>
-              Text 702-222-1964 for time-sensitive questions or call my direct line at 702-500-1955. Prefer email? Send details to <Link href="mailto:jduffy@bhhsnv.com" className="underline-offset-4 hover:underline">jduffy@bhhsnv.com</Link> and I\'ll reply within the business day.
+              Call or text (702) 766-3299 for time-sensitive questions. Prefer email? Send details to <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> and I\'ll reply within the business day.
             </p>
           </div>
           <form className="grid grid-cols-1 gap-4 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10 text-left sm:grid-cols-2 sm:p-8">
@@ -391,12 +417,9 @@ function ContactCTASection() {
 
         <div className="mt-10 space-y-2 text-sm text-[#372a20]/80">
           <p>
-            📞 Professional: <Link href="tel:17025001955" className="underline-offset-4 hover:underline">702-500-1955</Link>
+            📞 Direct: <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
           </p>
-          <p>
-            📱 Marketing/Urgent: <Link href="tel:17022221964" className="underline-offset-4 hover:underline">702-222-1964</Link>
-          </p>
-          <p>📧 Email: <Link href="mailto:jduffy@bhhsnv.com" className="underline-offset-4 hover:underline">jduffy@bhhsnv.com</Link></p>
+          <p>📧 Email: <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link></p>
         </div>
       </div>
     </section>

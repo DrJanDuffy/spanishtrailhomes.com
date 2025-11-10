@@ -8,6 +8,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { localEssentials } from '@/lib/spanishTrailContent'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const guestNarratives = [
   {
@@ -64,7 +65,7 @@ const guestFaq = [
   {
     question: 'How do I schedule a property tour during my visit?',
     answer:
-      'Reach out to Dr. Janet Duffy at 702.364.5050 or via the concierge team. She will tailor a tour around your schedule, highlighting Spanish Trail homes that match your lifestyle. Expect curated packets with market data, neighborhood insights, and membership information to support your decision-making.',
+      'Reach out to Dr. Janet Duffy at (702) 766-3299 or via the concierge team. She will tailor a tour around your schedule, highlighting Spanish Trail homes that match your lifestyle. Expect curated packets with market data, neighborhood insights, and membership information to support your decision-making.',
   },
 ]
 
@@ -82,11 +83,24 @@ const guestFaqSchema = {
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/guest-info'
+const guestInfoPageDescription =
+  'Plan your visit to Spanish Trail Country Club. Review directions, etiquette, locker access, and concierge contact details.'
+
+const guestInfoWebPageSchema = createWebPageSchema({
+  name: 'Guest Information | Spanish Trail Country Club',
+  description: guestInfoPageDescription,
+  path: '/guest-info',
+  extra: {
+    about: {
+      '@type': 'Place',
+      name: 'Spanish Trail Country Club',
+    },
+  },
+})
 
 export const metadata: Metadata = {
   title: 'Guest Information | Spanish Trail Country Club',
-  description:
-    'Plan your visit to Spanish Trail Country Club. Review directions, etiquette, locker access, and concierge contact details.',
+  description: guestInfoPageDescription,
   alternates: { canonical: '/guest-info' },
   openGraph: {
     url: pageUrl,
@@ -130,6 +144,9 @@ export default function GuestInfoPage() {
       <GuestFAQSection />
       <Script id="guest-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(guestFaqSchema)}
+      </Script>
+      <Script id="guest-info-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(guestInfoWebPageSchema)}
       </Script>
     </SiteShell>
   )
@@ -405,11 +422,8 @@ function ContactSection() {
         <p className="text-base leading-relaxed text-muted-foreground">
           For additional questions, valet requests, or special accommodations, contact
           our concierge team at{' '}
-          <Link
-            href="tel:17023645050"
-            className="text-primary underline-offset-4 hover:underline"
-          >
-            702.364.5050
+          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
+            (702) 766-3299
           </Link>{' '}
           or{' '}
           <Link

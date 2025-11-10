@@ -7,8 +7,30 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/buyers'
+const buyersPageDescription =
+  'Plan your Spanish Trail home purchase with Dr. Jan Duffy—concierge tours, real-time listings, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers.'
+
+const buyersWebPageSchema = createWebPageSchema({
+  name: 'Spanish Trail Home Buyer Guide | Dr. Jan Duffy',
+  description: buyersPageDescription,
+  path: '/buyers',
+  type: 'CollectionPage',
+  extra: {
+    about: {
+      '@type': 'Service',
+      serviceType: 'Spanish Trail Buyer Representation',
+      provider: {
+        '@type': 'RealEstateAgent',
+        name: 'Dr. Jan Duffy',
+        areaServed: 'Spanish Trail, Las Vegas, Nevada',
+      },
+      areaServed: 'Spanish Trail, Las Vegas, Nevada',
+    },
+  },
+})
 
 const faqContent = [
   {
@@ -48,8 +70,7 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   title: 'Spanish Trail Home Buyer Guide | Dr. Jan Duffy',
-  description:
-    'Plan your Spanish Trail home purchase with Dr. Jan Duffy—concierge tours, real-time listings, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers.',
+  description: buyersPageDescription,
   alternates: {
     canonical: '/buyers',
   },
@@ -98,6 +119,9 @@ export default function BuyersPage() {
       <OfferAndClosingSection />
       <FAQSection />
       <BuyerCTASection />
+      <Script id="buyers-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(buyersWebPageSchema)}
+      </Script>
       <Script id="buyers-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(faqSchema)}
       </Script>
@@ -455,9 +479,9 @@ function BuyerCTASection() {
           Ready to tour Spanish Trail?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Call 702-500-1955 or text 702-222-1964 for immediate assistance. Prefer email? Reach me at{' '}
-          <Link href="mailto:jduffy@bhhsnv.com" className="underline-offset-4 hover:underline text-[#f8f5ef]">
-            jduffy@bhhsnv.com
+          Call or text (702) 766-3299 for immediate assistance. Prefer email? Reach me at{' '}
+          <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline text-[#f8f5ef]">
+            DrDuffySells@SpanishTrailHomes.com
           </Link>
           . Share your desired move-in timeline, must-have features, and any confidentiality requests—I will deliver a personalized buyer plan within one business day.
         </p>

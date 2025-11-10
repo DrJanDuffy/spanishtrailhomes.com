@@ -13,11 +13,8 @@ export function SiteTopBar() {
       </div>
       <div className="flex items-center gap-3 text-xs uppercase tracking-[0.3em]">
         <Phone className="size-3.5" aria-hidden />
-        <Link
-          href="tel:17023645050"
-          className="underline-offset-4 transition-colors hover:underline"
-        >
-          702.364.5050
+        <Link href="tel:17027663299" className="underline-offset-4 transition-colors hover:underline">
+          (702) 766-3299
         </Link>
       </div>
     </div>

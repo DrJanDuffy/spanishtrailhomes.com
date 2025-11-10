@@ -7,13 +7,34 @@ import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
+import { createBreadcrumbSchema, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
+const homePageDescription =
+  'Explore Spanish Trail homes for sale, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse listings, market data, and neighborhood guides tailored to Las Vegas 89117.'
+
+const homeWebPageSchema = createWebPageSchema({
+  name: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
+  description: homePageDescription,
+  path: '/',
+  type: 'CollectionPage',
+  extra: {
+    about: {
+      '@type': 'RealEstateAgent',
+      name: 'Dr. Janet Duffy',
+      url: pageUrl,
+      areaServed: 'Spanish Trail, Las Vegas, Nevada',
+    },
+  },
+})
+
+const homeBreadcrumbSchema = createBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+])
 
 export const metadata: Metadata = {
   title: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
-  description:
-    'Explore Spanish Trail homes for sale, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse listings, market data, and neighborhood guides tailored to Las Vegas 89117.',
+  description: homePageDescription,
   alternates: {
     canonical: '/',
   },
@@ -152,6 +173,12 @@ export default function HomePage() {
       <ExploreFurtherSection />
       <FAQSection />
       <CTASection />
+      <Script id="home-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homeBreadcrumbSchema)}
+      </Script>
+      <Script id="home-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homeWebPageSchema)}
+      </Script>
       <Script id="home-resource-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeResourceSchema)}
       </Script>

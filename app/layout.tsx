@@ -28,8 +28,8 @@ const structuredData = [
     name: 'Spanish Trail Homes | Dr. Janet Duffy',
     image: `${siteUrl}/og-image.png`,
     url: siteUrl,
-    telephone: '+1-702-364-5050',
-    email: 'info@spanishtrailhomes.com',
+    telephone: '+1-702-766-3299',
+    email: 'DrDuffySells@SpanishTrailHomes.com',
     priceRange: '$$$',
     areaServed: [
       'Spanish Trail, Las Vegas, NV',

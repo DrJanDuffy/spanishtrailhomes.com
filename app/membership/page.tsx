@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const membershipNarratives = [
   {
@@ -81,11 +82,29 @@ const membershipFaqSchema = {
 }
 
 const pageUrl = 'https://www.spanishtrailhomes.com/membership'
+const membershipPageDescription =
+  'Discover golf, social, and corporate membership options at Spanish Trail Country Club. Request information or schedule a tour.'
+
+const membershipWebPageSchema = createWebPageSchema({
+  name: 'Membership | Spanish Trail Country Club',
+  description: membershipPageDescription,
+  path: '/membership',
+  type: 'CollectionPage',
+  extra: {
+    about: {
+      '@type': 'Organization',
+      name: 'Spanish Trail Country Club',
+      memberOf: {
+        '@type': 'Organization',
+        name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      },
+    },
+  },
+})
 
 export const metadata: Metadata = {
   title: 'Membership | Spanish Trail Country Club',
-  description:
-    'Discover golf, social, and corporate membership options at Spanish Trail Country Club. Request information or schedule a tour.',
+  description: membershipPageDescription,
   alternates: { canonical: '/membership' },
   openGraph: {
     url: pageUrl,
@@ -147,6 +166,9 @@ export default function MembershipPage() {
       <MembershipFAQSection />
       <Script id="membership-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(membershipFaqSchema)}
+      </Script>
+      <Script id="membership-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(membershipWebPageSchema)}
       </Script>
     </SiteShell>
   )
@@ -384,11 +406,8 @@ function InquirySection() {
         <p className="text-base leading-relaxed text-muted-foreground">
           Submit the form below and we will contact you within one business day.
           Prefer to speak directly? Call{' '}
-          <Link
-            href="tel:17023645050"
-            className="text-primary underline-offset-4 hover:underline"
-          >
-            702.364.5050
+          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
+            (702) 766-3299
           </Link>{' '}
           or email{' '}
           <Link

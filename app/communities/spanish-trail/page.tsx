@@ -7,13 +7,22 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
+const communityPageDescription =
+  'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Janet Duffy.'
+
+const communityWebPageSchema = createWebPageSchema({
+  name: 'Spanish Trail Homes for Sale | Community Guide',
+  description: communityPageDescription,
+  path: '/communities/spanish-trail',
+  type: 'CollectionPage',
+})
 
 export const metadata: Metadata = {
   title: 'Spanish Trail Homes for Sale | Community Guide',
-  description:
-    'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Janet Duffy.',
+  description: communityPageDescription,
   alternates: { canonical: '/communities/spanish-trail' },
   openGraph: {
     url: pageUrl,
@@ -178,6 +187,9 @@ export default function SpanishTrailCommunityPage() {
         {JSON.stringify(communityFaqSchema)}
       </Script>
       <ContactSection />
+      <Script id="community-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(communityWebPageSchema)}
+      </Script>
     </SiteShell>
   )
 }

@@ -5,8 +5,11 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/awards'
+const awardsPageDescription =
+  'See recent awards, professional memberships, and press highlights that validate Dr. Janet Duffy’s Spanish Trail real estate leadership.'
 
 const recognitionTimeline = [
   {
@@ -122,7 +125,7 @@ const professionalProfileSchema = {
   award: recognitionTimeline.map((item) => `${item.year} ${item.title}`),
   memberOf: memberships.map((item) => item.label),
   makesOffer: 'Residential real estate brokerage services, listing representation, and buyer advisory in Spanish Trail.',
-  telephone: '+1-702-xxx-xxxx',
+  telephone: '+1-702-766-3299',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Las Vegas',
@@ -133,10 +136,27 @@ const professionalProfileSchema = {
   image: 'https://www.spanishtrailhomes.com/images/janet-duffy.jpg',
 }
 
+const awardsWebPageSchema = createWebPageSchema({
+  name: 'Awards & Recognition | Dr. Janet Duffy',
+  description: awardsPageDescription,
+  path: '/awards',
+  type: 'AboutPage',
+  extra: {
+    about: {
+      '@type': 'Person',
+      name: 'Dr. Janet Duffy',
+      jobTitle: 'REALTOR®',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      },
+    },
+  },
+})
+
 export const metadata: Metadata = {
   title: 'Awards & Recognition | Dr. Janet Duffy',
-  description:
-    'See recent awards, professional memberships, and press highlights that validate Dr. Janet Duffy’s Spanish Trail real estate leadership.',
+  description: awardsPageDescription,
   alternates: {
     canonical: '/awards',
   },
@@ -178,6 +198,9 @@ export default function AwardsPage() {
       </Script>
       <Script id="janet-duffy-profile-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(professionalProfileSchema)}
+      </Script>
+      <Script id="awards-webpage-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(awardsWebPageSchema)}
       </Script>
     </SiteShell>
   )

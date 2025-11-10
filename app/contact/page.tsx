@@ -5,8 +5,8 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 
@@ -67,7 +67,6 @@ const faqSchema = {
 export default function ContactPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -126,6 +125,7 @@ function HeroSection() {
             <Link href="#contact-form">Request a Strategy Session</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )

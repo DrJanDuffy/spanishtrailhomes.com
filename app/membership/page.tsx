@@ -5,8 +5,8 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const membershipNarratives = [
   {
@@ -125,7 +125,6 @@ const membershipOptions = [
 export default function MembershipPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <MembershipHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -160,13 +159,9 @@ function MembershipHero() {
       aria-labelledby="membership-hero-heading"
     >
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,43,30,0.55), rgba(15,43,30,0.75)), url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2400&auto=format&fit=crop')",
-        }}
+        className="absolute inset-0 -z-10 bg-cover bg-center membership-hero-background"
       />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
           Membership
@@ -182,6 +177,7 @@ function MembershipHero() {
           service minutes from the Las Vegas Strip.
         </p>
       </div>
+      <HeroSearchWidget theme="dark" />
     </section>
   )
 }

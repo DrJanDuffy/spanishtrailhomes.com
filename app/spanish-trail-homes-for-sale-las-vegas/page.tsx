@@ -5,9 +5,9 @@ import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
@@ -68,7 +68,6 @@ const faqSchema = {
 export default function SpanishTrailHomesForSalePage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -125,6 +124,7 @@ function HeroSection() {
             <Link href="#homes-for-sale-listings">View Listings</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )

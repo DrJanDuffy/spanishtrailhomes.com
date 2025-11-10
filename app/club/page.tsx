@@ -7,8 +7,9 @@ import { SiteShell } from '@/components/site-shell'
 import { amenities, testimonials } from '@/lib/content'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { lifestyleHighlights } from '@/lib/spanishTrailContent'
 
 const clubNarratives = [
   {
@@ -132,7 +133,6 @@ export const metadata: Metadata = {
 export default function ClubPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <ClubHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -194,6 +194,7 @@ function ClubHero() {
           Trail Country Club.
         </p>
       </div>
+      <HeroSearchWidget theme="dark" />
     </section>
   )
 }
@@ -368,7 +369,7 @@ function LifestyleSection() {
           </p>
           <h2
             id="lifestyle-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             A calendar tailored for curated connection.
           </h2>
@@ -387,24 +388,7 @@ function LifestyleSection() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {[
-            {
-              title: 'Dining',
-              copy: 'Signature restaurant with chef-driven menus highlighting seasonal ingredients.',
-            },
-            {
-              title: 'Social Calendar',
-              copy: 'Weekly themed events, members-only concerts, and curated excursions beyond the club.',
-            },
-            {
-              title: 'Wellness',
-              copy: 'Fitness pavilion with personal training, spa services, and group classes.',
-            },
-            {
-              title: 'Family Programs',
-              copy: 'Junior golf academies, swim instruction, and teen socials create lifelong memories.',
-            },
-          ].map((item) => (
+          {lifestyleHighlights.map((item) => (
             <div
               key={item.title}
               className="rounded-3xl border border-border/50 bg-background/80 p-6 shadow-sm"

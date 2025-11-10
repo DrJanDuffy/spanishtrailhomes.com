@@ -4,6 +4,8 @@ const baseUrl = 'https://www.spanishtrailhomes.com'
 
 const routes = [
   '/',
+  '/buyers',
+  '/sellers',
   '/communities/spanish-trail',
   '/club',
   '/golf',
@@ -21,6 +23,9 @@ const routes = [
   '/spanish-trail-private-golf-course-homes',
   '/spanish-trail-country-club-estate-listings',
   '/spanish-trail-waterfront-golf-homes',
+  '/spanish-trail-market-report',
+  '/spanish-trail-insights',
+  '/las-vegas-luxury-neighborhoods',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

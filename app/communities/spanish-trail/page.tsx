@@ -4,9 +4,9 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
 
@@ -149,7 +149,6 @@ const benefits = [
 export default function SpanishTrailCommunityPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -186,14 +185,8 @@ export default function SpanishTrailCommunityPage() {
 function HeroSection() {
   return (
     <section className="relative isolate overflow-hidden" aria-labelledby="community-hero-heading">
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.75)), url('https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=2400&auto=format&fit=crop')",
-        }}
-      />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-0 -z-10 bg-cover bg-center community-hero-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
@@ -225,6 +218,7 @@ function HeroSection() {
             <Link href="/contact">Schedule a Consultation</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )

@@ -7,8 +7,8 @@ import { SiteShell } from '@/components/site-shell'
 import { golfCourses } from '@/lib/content'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const golfNarratives = [
   {
@@ -114,7 +114,6 @@ const scorecard = [
 export default function GolfPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <GolfHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -148,21 +147,15 @@ function GolfHero() {
       className="relative isolate overflow-hidden"
       aria-labelledby="golf-hero-heading"
     >
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,43,30,0.6), rgba(15,43,30,0.75)), url('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?q=80&w=2400&auto=format&fit=crop')",
-        }}
-      />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-0 -z-10 bg-cover bg-center golf-hero-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
           Golf at Spanish Trail
         </p>
         <h1
           id="golf-hero-heading"
-          className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
+          className="mt-5 font-(--font-playfair) text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
           27 championship holes. Three distinct personalities. Endless ways to
           play.
@@ -180,6 +173,7 @@ function GolfHero() {
             <Link href="/events#golf-outings">Host a Golf Outing</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )
@@ -200,7 +194,7 @@ function CourseTour() {
             </p>
             <h2
               id="course-tour-heading"
-              className="mt-3 font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+              className="mt-3 font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
             >
               Three nines, each with a signature rhythm.
             </h2>
@@ -220,7 +214,7 @@ function CourseTour() {
               className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-2 hover:shadow-lg"
             >
               <div
-                className="h-48 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                className="h-48 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 golf-course-card"
                 style={{ backgroundImage: `url('${course.image}')` }}
                 aria-hidden
               />
@@ -228,7 +222,7 @@ function CourseTour() {
                 <p className="text-xs uppercase tracking-[0.3em] text-secondary">
                   {course.yardage}
                 </p>
-                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
+                <h3 className="font-(--font-playfair) text-2xl text-foreground">
                   {course.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
@@ -263,7 +257,7 @@ function ExperienceDetails() {
           </p>
           <h2
             id="experience-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             Elevate every round with expert guidance.
           </h2>
@@ -317,7 +311,7 @@ function GolfNarrativesSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf Insights</p>
-          <h2 id="golf-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="golf-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             How Spanish Trail elevates every round, every season
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -358,7 +352,7 @@ function ScorecardSection() {
           </p>
           <h2
             id="scorecard-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             Championship routing for every skill level.
           </h2>
@@ -414,7 +408,7 @@ function GolfFAQSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf FAQ</p>
-          <h2 id="golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="golf-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             Essential answers for future Spanish Trail golfers
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -450,7 +444,7 @@ function GuestInformation() {
           </p>
           <h2
             id="guest-info-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             Planning a visit? Let us curate your round.
           </h2>

@@ -6,8 +6,8 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 
 const eventsNarratives = [
   {
@@ -107,7 +107,6 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <EventsHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -142,13 +141,9 @@ function EventsHero() {
       aria-labelledby="events-hero-heading"
     >
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,43,30,0.55), rgba(15,43,30,0.75)), url('https://images.unsplash.com/photo-1520854221050-0f4caff449fb?q=80&w=2400&auto=format&fit=crop')",
-        }}
+        className="absolute inset-0 -z-10 bg-cover bg-center events-hero-background"
       />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
           Weddings & Events
@@ -165,6 +160,7 @@ function EventsHero() {
           our skyline-view ballroom, our planning team curates every detail.
         </p>
       </div>
+      <HeroSearchWidget theme="dark" />
     </section>
   )
 }

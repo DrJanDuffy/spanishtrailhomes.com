@@ -5,8 +5,9 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { localEssentials } from '@/lib/spanishTrailContent'
 
 const guestNarratives = [
   {
@@ -106,7 +107,6 @@ export const metadata: Metadata = {
 export default function GuestInfoPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <GuestHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -125,6 +125,7 @@ export default function GuestInfoPage() {
       <DirectionsSection />
       <EtiquetteSection />
       <ArrivalSection />
+      <LocalEssentialsSection />
       <ContactSection />
       <GuestFAQSection />
       <Script id="guest-faq-schema" type="application/ld+json" strategy="afterInteractive">
@@ -140,21 +141,15 @@ function GuestHero() {
       className="relative isolate overflow-hidden"
       aria-labelledby="guest-hero-heading"
     >
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15,43,30,0.55), rgba(15,43,30,0.75)), url('https://images.unsplash.com/photo-1462212210362-162e9f0ce5a1?q=80&w=2400&auto=format&fit=crop')",
-        }}
-      />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-0 -z-10 bg-cover bg-center guest-hero-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
           Guest Guide
         </p>
         <h1
           id="guest-hero-heading"
-          className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
+          className="mt-5 font-(--font-playfair) text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
           Welcome to Spanish Trail Country Club.
         </h1>
@@ -162,6 +157,7 @@ function GuestHero() {
           We look forward to hosting you. Review the guide below for directions,
           arrival details, and clubhouse etiquette to make the most of your visit.
         </p>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )
@@ -179,10 +175,10 @@ function DirectionsSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Directions
           </p>
-          <h2
-            id="directions-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-          >
+        <h2
+          id="directions-heading"
+          className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+        >
             Find your way to our private entrance.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
@@ -217,7 +213,7 @@ function GuestNarrativesSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Visitor Experience</p>
-          <h2 id="guest-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="guest-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             Make the most of your time inside Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -258,7 +254,7 @@ function EtiquetteSection() {
           </p>
           <h2
             id="etiquette-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             A few notes to ensure every visit is exceptional.
           </h2>
@@ -313,13 +309,13 @@ function ArrivalSection() {
       aria-labelledby="arrival-heading"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
-        <div className="space-y-5">
+          <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Arrival & Amenities
           </p>
           <h2
             id="arrival-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             Valet, locker rooms, and on-site services.
           </h2>
@@ -336,14 +332,54 @@ function ArrivalSection() {
         </div>
 
         <div
-          className="h-full rounded-3xl border border-border/60 bg-cover bg-center shadow-lg"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1507537509458-b8312d35a233?q=80&w=1600&auto=format&fit=crop')",
-          }}
+          className="h-full rounded-3xl border border-border/60 bg-cover bg-center shadow-lg guest-arrival-background"
           role="img"
           aria-label="Clubhouse interior at Spanish Trail Country Club"
         />
+      </div>
+    </section>
+  )
+}
+
+function LocalEssentialsSection() {
+  return (
+    <section
+      id="local-essentials"
+      className="bg-[#f8f2e7] py-20 sm:py-24"
+      aria-labelledby="local-essentials-heading"
+    >
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Beyond the gates</p>
+          <h2
+            id="local-essentials-heading"
+            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
+          >
+            Everyday essentials within minutes
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Here’s where our members dine, study, and recharge between tee times. Use this shortlist to plan your visit or to
+            imagine life as a future Spanish Trail homeowner.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {localEssentials.map((section) => (
+            <div
+              key={section.title}
+              className="rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10"
+            >
+              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">{section.title}</p>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#372a20]/85">
+                {section.items.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 inline-block size-2 rounded-full bg-[#0f2b1e]" aria-hidden />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -362,7 +398,7 @@ function ContactSection() {
         </p>
         <h2
           id="guest-contact-heading"
-          className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+          className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
         >
           We are here to assist with every detail.
         </h2>
@@ -438,7 +474,7 @@ function GuestFAQSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Guest FAQ</p>
-          <h2 id="guest-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="guest-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             Plan every detail of your Spanish Trail visit</h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             From gatehouse etiquette to property tours, these answers keep you prepared and confident during your time inside the community.

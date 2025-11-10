@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 
@@ -67,7 +67,6 @@ const faqSchema = {
 export default function LuxuryGolfCoursePropertiesPage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget sectionClassName="bg-white" />
       <HeroSection />
       <div className="bg-[#f8f2e7]">
         <div className="mx-auto max-w-6xl px-6 py-4">
@@ -124,6 +123,7 @@ function HeroSection() {
             <Link href="#luxury-golf-properties">See golf frontage homes</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )

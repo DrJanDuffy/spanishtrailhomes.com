@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import Script from 'next/script'
 
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 
 const overviewStats = [
   {
@@ -28,163 +28,6 @@ const overviewStats = [
   },
 ]
 
-const marketHighlights = [
-  { label: 'Total Listings', value: '74 Active', trend: '+', context: 'Across single-family, condo, and townhome offerings.' },
-  { label: 'Average List Price', value: '$682K', trend: '-22.15%', context: 'Month-over-month change across current inventory.' },
-  { label: 'Average Sold Price', value: '$651K', trend: '-23.92%', context: 'Latest 30-day closed sale average.' },
-  { label: 'Average Days on Market', value: '60 Days', trend: '-', context: 'Balanced pace with luxury buyer activity.' },
-]
-
-const featuredListings = [
-  {
-    address: '8330 Carmel Ridge Court',
-    price: '$1,095,000',
-    type: 'Single-Family • 3 Bed • 3 Bath • 2,500 Sq Ft',
-    mls: 'MLS# 2733586',
-    href: 'https://bhhsnv.com/single-family/glv/2733586/8330-carmel-ridge-court-las-vegas-nv-89113',
-  },
-  {
-    address: '7283 Mission Hills Drive',
-    price: '$630,000',
-    type: 'Condo/Townhome • 2 Bed • 2 Bath • 2,065 Sq Ft',
-    mls: 'MLS# 2732075',
-    href: 'https://bhhsnv.com/condo-townhouse/glv/2732075/7283-mission-hills-drive-las-vegas-nv-89113',
-  },
-  {
-    address: '22 Burning Tree Court',
-    price: '$2,590,000',
-    type: 'Estate Residence • 4 Bed • 5 Bath • 6,361 Sq Ft',
-    mls: 'MLS# 2732026',
-    href: 'https://bhhsnv.com/single-family/glv/2732026/22-burning-tree-court-las-vegas-nv-89113',
-  },
-]
-
-const neighborhoodSpotlights = [
-  {
-    name: 'The Estates & Estates West',
-    description:
-      'Custom golf-course estates ranging from 5,000–15,000 sq. ft., many with double-gated motor courts, casitas, and panoramic fairway views along the Sunrise, Ridge, and Canyon courses.',
-  },
-  {
-    name: 'The Courtyards & Gardens',
-    description:
-      'Lock-and-leave luxury with mature courtyards, private pools, and effortless access to the clubhouse, spa, and dining scenes on Tropicana and Rainbow.',
-  },
-  {
-    name: 'The Links & Carmels',
-    description:
-      'Fairway villas with wraparound patios, elevated tee-box vistas, and quick cart access to the Robert Trent Jones Jr. course and practice facility.',
-  },
-  {
-    name: 'Springs & Plum Creek',
-    description:
-      'Tree-lined streets with family-friendly floor plans, community greenbelts, and proximity to Bishop Gorman High School and Faith Lutheran Academy.',
-  },
-]
-
-const neighborhoodClusters = [
-  'Carmels',
-  'Courtyards',
-  'Gardens',
-  'Islands',
-  'Links',
-  'Plum Creek',
-  'Springs',
-  'Villas',
-  'Innisbrook Estates',
-  'Estates',
-  'Estates West',
-]
-
-const localEssentials = [
-  {
-    title: 'Private & Charter Schools',
-    items: [
-      'Bishop Gorman High School – 2.2 miles northeast via S. Rainbow Blvd.',
-      'Faith Lutheran Middle & High School – 12 minutes to Summerlin for college-prep curriculum.',
-      'The Meadows School – 15 minutes for K-12 gifted and AP programs.',
-    ],
-  },
-  {
-    title: 'Dining & Social',
-    items: [
-      'Spanish Trail Country Club Grill & Patio – members-only dining overlooking the Lakes nine.',
-      'The Sundry at UnCommons – chef-driven food hall and lounges, 8 minutes west.',
-      'Locale Italian Kitchen & DW Bistro – beloved Rainbow Blvd. staples for brunch and dinner.',
-    ],
-  },
-  {
-    title: 'Wellness & Recreation',
-    items: [
-      'Spanish Trail Fitness & Aquatics – renovated gym, lap lanes, and trainer-led classes.',
-      'Spanish Trail Swim & Racquet – twelve lighted tennis courts plus pickleball.',
-      'Desert Breeze Park – off-leash dog runs, skate park, and indoor aquatic center nearby.',
-    ],
-  },
-  {
-    title: 'Commute & Access',
-    items: [
-      'I-215 Beltway – 6 minutes to access Summerlin Parkway or McCarran corridor.',
-      'Allegiant Stadium & The Strip – 15 minutes east for entertainment and dining.',
-      'Harry Reid International Airport – approximately 18 minutes via Tropicana Ave.',
-    ],
-  },
-]
-
-const lifestyleHighlights = [
-  {
-    title: 'Clubhouse & Dining',
-    copy: 'A 50,000 sq. ft. clubhouse with glass-lined dining rooms, terrace seating, and a Bar & Grill serving daily cuisine.',
-  },
-  {
-    title: 'Wellness & Recreation',
-    copy: 'Renovated fitness facility, two aquatic centers, and twelve lighted tennis courts anchor an active social calendar.',
-  },
-  {
-    title: 'Premier Access',
-    copy: 'Minutes to the Strip, Harry Reid International Airport, and neighboring enclaves like The Ridges and Spanish Hills.',
-  },
-]
-
-const nearbyCommunities = [
-  'The Ridges',
-  'Spanish Hills',
-  'Red Rock Country Club',
-  'The Summit Club',
-  'Willow Creek',
-  'Tournament Hills',
-]
-
-const homeDeepDive = [
-  {
-    title: 'Spanish Trail housing update',
-    paragraphs: [
-      'Spanish Trail homes continue to command premium attention across the west side of the Las Vegas Valley, and 2025 has only intensified demand. Inventory remains intentionally limited, with many sellers opting for private network releases before a property ever reaches the MLS. That means buyers who rely only on public search portals can miss out on Spanish Trail real estate opportunities that align perfectly with their wish list. Working alongside Dr. Janet Duffy provides immediate access to those private channels, pricing intelligence pulled from Berkshire Hathaway HomeServices data, and an honest assessment of where each home sits within the neighborhood’s value spectrum.',
-      'The average list-to-sale window for well-prepared Spanish Trail homes has tightened to under 30 days, and buyers often submit offers that include appraisal-gap coverage or flexible rent-backs to appeal to sellers who are simultaneously shopping within the guard gates. Whether you are analyzing the Estates, the Villas, or a golf villa in the Links, understanding micro market velocity is vital. Dr. Duffy maps each enclave’s historical absorption rates, identifies the weeks that attract out-of-state cash buyers, and guides timing strategies so you secure the right property without overpaying.'
-    ],
-  },
-  {
-    title: 'Life inside the Spanish Trail gates',
-    paragraphs: [
-      'Spanish Trail real estate is about more than square footage; it is about instant access to a curated lifestyle that can be felt the moment you drive through the mature tree-lined boulevards. Residents wake up to golf course sunrises, stroll over to the 50,000-square-foot clubhouse for a fitness session, then spend evenings at the Bar & Grill surrounded by neighbors who quickly become lifelong friends. Families leverage the gated streets for cycling, pop-up pickleball matches, and community events hosted on the club lawn. Every home—whether a lock-and-leave villa or a custom estate—sits within minutes of wellness programming, concierge support, and tennis professionals who know members by name.',
-      'Because Dr. Duffy lives and works in the western Las Vegas market, she maintains a daily pulse on how residents actually use their amenities. She can recommend which Spanish Trail homes offer the quickest cart path access for golfers who play multiple times a week, which streets capture the best sunset views, and which enclaves provide enhanced security for seasonal homeowners. Her concierge introductions help buyers join social clubs or interest groups even before closing, ensuring the transition from visitor to resident feels effortless and deeply personal.'
-    ],
-  },
-  {
-    title: 'Design and renovation tips',
-    paragraphs: [
-      'Spanish Trail homes showcase a rare blend of timeless architecture and refreshed interiors. Many original estates were crafted by renowned architects who prioritized natural light, interior courtyards, and wide setbacks that frame the Robert Trent Jones Jr. fairways. Over the past decade, homeowners have invested heavily in modernizing kitchens, spa baths, and outdoor lounges, yet the community’s design guidelines maintain a cohesive, elevated aesthetic. Buyers interested in renovation opportunities benefit from Dr. Duffy’s vetted roster of contractors who understand the neighborhood’s review process and can deliver turnkey transformations without compromising historical character.',
-      'For clients seeking a contemporary canvas, Dr. Duffy spotlights Spanish Trail real estate offerings that already feature tall pocket doors, climate-controlled wine walls, smart-home integration, and resort-style pools with Baja shelves. For those who prefer to curate their own finishes, she outlines cost ranges, available incentives from local lenders for energy upgrades, and resale strategies that maximize long-term equity. Her design consultations also highlight how to create multi-generational spaces—casitas, flex suites, and wellness studios—that align with today’s luxury buyer expectations.'
-    ],
-  },
-  {
-    title: 'Financing and advisory help',
-    paragraphs: [
-      'Spanish Trail real estate appeals to both primary homeowners and sophisticated investors who recognize the stability of guard-gated communities minutes from Allegiant Stadium, the Strip, and Summerlin. Rental demand for long-term executive leases remains strong, particularly for properties near the Tropicana gate that offer quick freeway access. Dr. Duffy collaborates with Berkshire Hathaway HomeServices mortgage partners to provide scenario planning, whether you need jumbo financing, portfolio loans, or cross-collateralization options that leverage existing assets. She also introduces trusted CPAs who structure 1031 exchanges or wealth advisors who evaluate Spanish Trail homes as part of a broader estate strategy.',
-      'Clients appreciate that her counsel extends beyond closing. Quarterly market reviews outline appreciation trends, tax updates impacting Nevada homeowners, and capital improvement projects planned by the Country Club. When it is time to sell, Dr. Duffy’s listing blueprint—complete with professional staging, targeted digital marketing, and private preview events—ensures Spanish Trail homes are positioned to secure the strongest offers. The result: a full-circle advisory experience from acquisition through resale, aligned with the expectations of discerning Las Vegas clientele.'
-    ],
-  },
-]
 
 const homeFaq = [
   {
@@ -227,29 +70,9 @@ const homeFaqSchema = {
   })),
 }
 
-const featuredListingsSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  itemListElement: featuredListings.map((listing, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    url: listing.href,
-    name: `${listing.address} | ${listing.price}`,
-    item: {
-      '@type': 'SingleFamilyResidence',
-      name: listing.address,
-      address: listing.address,
-      numberOfRooms: listing.type,
-      price: listing.price,
-      url: listing.href,
-    },
-  })),
-}
-
 export default function HomePage() {
   return (
     <SiteShell>
-      <RealScoutSimpleSearchWidget />
       <HeroSection />
       <RealScoutSection
         id="bhhs-listings"
@@ -262,21 +85,13 @@ export default function HomePage() {
       <IntroSection />
       <StatsSection />
       <NeighborhoodSpotlightsSection />
-      <MarketOverviewSection />
-      <LocalEssentialsSection />
-      <DeepDiveNarrativesSection />
-      <FeaturedInventorySection />
-      <RealEstateSection />
-      <ListingsSection />
-      <LifestyleSection />
-      <NearbyCommunitiesSection />
+      <MarketPreviewSection />
+      <InsightsPreviewSection />
+      <ExploreFurtherSection />
       <FAQSection />
       <CTASection />
       <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeFaqSchema)}
-      </Script>
-      <Script id="featured-listings-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(featuredListingsSchema)}
       </Script>
     </SiteShell>
   )
@@ -304,7 +119,7 @@ function HeroSection() {
           </p>
           <h1
             id="hero-heading"
-            className="font-[var(--font-playfair)] text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl"
+            className="font-(--font-playfair) text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl"
           >
             Spanish Trail Homes in Las Vegas 89117
           </h1>
@@ -327,6 +142,7 @@ function HeroSection() {
             <Link href="/contact">Plan a Private Tour</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )
@@ -339,7 +155,7 @@ function IntroSection() {
         <div className="space-y-6">
           <h2
             id="intro-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
           >
             Why Spanish Trail works for everyday life.
           </h2>
@@ -397,7 +213,7 @@ function StatsSection() {
             <p className="text-xs uppercase tracking-[0.4em] text-[#f8f5ef]/75">
               {item.label}
             </p>
-            <p className="mt-4 font-[var(--font-playfair)] text-3xl text-[#f8f5ef]">
+            <p className="mt-4 font-(--font-playfair) text-3xl text-[#f8f5ef]">
               {item.value}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-[#f8f5ef]/70">
@@ -418,16 +234,17 @@ function NeighborhoodSpotlightsSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Home Buyer Spotlight</p>
           <h2
             id="neighborhood-spotlights-heading"
-            className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
+            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
           >
-            Neighborhoods buyers love in Spanish Trail
+            Preview top enclaves before you tour
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Each enclave offers a different buyer experience—from legacy custom estates with sweeping golf frontage to ready-to-enjoy villas near the clubhouse. Here’s what today’s Spanish Trail buyers ask about most when we tour together.
+            Inside the Spanish Trail gates you&apos;ll discover distinct lifestyles—from double-gated estates to turnkey villas.
+            Explore a snapshot below, then dive deeper into every enclave on the dedicated buyer guide.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {neighborhoodSpotlights.map((spotlight) => (
+          {neighborhoodSpotlights.slice(0, 2).map((spotlight) => (
             <div
               key={spotlight.name}
               className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
@@ -441,48 +258,54 @@ function NeighborhoodSpotlightsSection() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  )
-}
-
-function MarketOverviewSection() {
-  return (
-    <section className="border-y border-border/40 bg-white" aria-labelledby="market-overview-heading">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl space-y-3">
-            <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Insights</p>
-            <h2
-              id="market-overview-heading"
-              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-            >
-              Spanish Trail market snapshot
-            </h2>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Dr. Janet Duffy leverages real-time Berkshire Hathaway HomeServices data to position your listing or offer. Spanish Trail currently carries a balanced mix of residences—from golf villas to custom estates—inviting both primary homeowners and investors.
-            </p>
-          </div>
+        <div className="mt-10 text-center">
           <Button
             asChild
             variant="outline"
             className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
-            <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails">View Full Market Report</Link>
+            <Link href="/buyers">See the full buyer blueprint</Link>
           </Button>
         </div>
+      </div>
+    </section>
+  )
+}
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-4">
-          {marketHighlights.map((item) => (
+function MarketPreviewSection() {
+  return (
+    <section className="border-y border-border/40 bg-white" aria-labelledby="market-preview-heading">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl space-y-3">
+            <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Snapshot</p>
+            <h2
+              id="market-preview-heading"
+              className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            >
+              Track Spanish Trail performance in real time
+            </h2>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Dr. Janet Duffy refreshes pricing, absorption, and buyer activity every week. Here are the metrics we&apos;re
+              watching most closely this month.
+            </p>
+          </div>
+          <Button
+            asChild
+            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+          >
+            <Link href="/spanish-trail-market-report">View full market report</Link>
+          </Button>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {marketHighlights.slice(0, 3).map((item) => (
             <article
               key={item.label}
               className="rounded-3xl border border-border/40 bg-white p-6 shadow-md shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">{item.label}</p>
-              <p className="mt-3 font-[var(--font-playfair)] text-2xl text-[#1f2a24]">{item.value}</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                {item.trend} change
-              </p>
+              <p className="mt-3 font-(--font-playfair) text-2xl text-[#1f2a24]">{item.value}</p>
+              <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">{item.trend} change</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
             </article>
           ))}
@@ -492,138 +315,112 @@ function MarketOverviewSection() {
   )
 }
 
-function LocalEssentialsSection() {
+const insightHighlights = [
+  'Quarterly Spanish Trail housing update and pricing intel',
+  'Lifestyle briefings that showcase how residents use club amenities',
+  'Renovation, financing, and advisory guidance tailored to 89117',
+]
+
+function InsightsPreviewSection() {
   return (
-    <section className="bg-[#ebe0d3] py-20 sm:py-24" aria-labelledby="local-essentials-heading">
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="insights-preview-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Local Essentials
-          </p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Strategy & Advisory</p>
           <h2
-            id="local-essentials-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
+            id="insights-preview-heading"
+            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
           >
-            Everyday essentials inside 89117
+            Stay informed with Spanish Trail insights
           </h2>
-          <p className="text-base leading-relaxed text-muted-foreground">
-            From championship golf mornings to sunset dinners on Rainbow Boulevard, Spanish Trail residents enjoy a curated lifestyle with everything within minutes. Here are the go-to spots our buyers ask about first.
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Go beyond listings with Dr. Duffy&apos;s long-form analysis—designed for buyers, sellers, and investors who want a
+            clear playbook for the guard-gated market.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {localEssentials.map((section) => (
-            <div key={section.title} className="rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
-              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
-                {section.title}
-              </p>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#372a20]/85">
-                {section.items.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="mt-1 inline-block size-2 rounded-full bg-[#0f2b1e]" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {insightHighlights.map((highlight) => (
+            <div
+              key={highlight}
+              className="rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 text-sm leading-relaxed text-[#372a20]/85 shadow-lg shadow-primary/10"
+            >
+              {highlight}
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  )
-}
-
-function DeepDiveNarrativesSection() {
-  return (
-    <section className="bg-white py-20 sm:py-24" aria-labelledby="deep-dive-heading">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights</p>
-          <h2 id="deep-dive-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Key things to know about Spanish Trail homes in 2025
-          </h2>
-          <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Janet Duffy distills on-the-ground research, Berkshire Hathaway HomeServices analytics, and more than a decade of luxury experience to guide each phase of your move. Use the following briefings to understand how Spanish Trail real estate performs, the amenities residents prioritize, and the strategic moves that keep you ahead of competing offers.
-          </p>
-        </div>
-
-        <div className="mt-12 space-y-12">
-          {homeDeepDive.map((topic) => (
-            <article key={topic.title} className="space-y-6 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg shadow-primary/10">
-              <h3 className="text-lg font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
-                {topic.title}
-              </h3>
-              {topic.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-base leading-relaxed text-[#372a20]/85">
-                  {paragraph}
-                </p>
-              ))}
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function FeaturedInventorySection() {
-  return (
-    <section className="bg-white py-20 sm:py-24" aria-labelledby="featured-inventory-heading">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl space-y-3">
-            <p className="text-xs uppercase tracking-[0.5em] text-secondary">Featured Inventory</p>
-            <h2
-              id="featured-inventory-heading"
-              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-            >
-              Featured Spanish Trail listings
-            </h2>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Explore a sampling of Spanish Trail residences currently represented through Berkshire Hathaway HomeServices Nevada Properties. Schedule a private tour with Dr. Janet Duffy to access the full portfolio, including off-market opportunities.
-            </p>
-          </div>
+        <div className="mt-10 text-center">
           <Button
             asChild
-            className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
+            variant="outline"
+            className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
-            <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails#featured-listings">
-              Speak with Dr. Duffy
-            </Link>
+            <Link href="/spanish-trail-insights">Read the full insight hub</Link>
           </Button>
         </div>
+      </div>
+    </section>
+  )
+}
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {featuredListings.map((listing) => (
-            <article
-              key={listing.address}
-              className="flex h-full flex-col justify-between rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
+const exploreCards = [
+  {
+    title: 'Spanish Trail Market Report',
+    description: 'Weekly pricing shifts, absorption rates, and buyer demand indicators to guide smart offers.',
+    href: '/spanish-trail-market-report',
+  },
+  {
+    title: 'Spanish Trail Insights',
+    description: 'Long-form strategy briefs covering lifestyle trends, renovation ROI, and advisory tips.',
+    href: '/spanish-trail-insights',
+  },
+  {
+    title: 'Luxury Neighborhood Comparisons',
+    description: 'Compare Spanish Trail with The Ridges, Summit Club, and other guard-gated Las Vegas enclaves.',
+    href: '/las-vegas-luxury-neighborhoods',
+  },
+  {
+    title: 'Club Lifestyle & Amenities',
+    description: 'See dining, wellness, and event programming inside the 50,000 sq. ft. clubhouse.',
+    href: '/club#lifestyle',
+  },
+]
+
+function ExploreFurtherSection() {
+  return (
+    <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="explore-further-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-secondary">Deeper resources</p>
+          <h2
+            id="explore-further-heading"
+            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+          >
+            Explore the full Spanish Trail knowledge base
+          </h2>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Ready for details beyond the homepage? Jump into curated guides that expand on market performance, lifestyle
+            planning, and neighborhood comparisons.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {exploreCards.map((card) => (
+            <Link
+              key={card.title}
+              href={card.href}
+              className="group flex h-full flex-col justify-between rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10 transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">{listing.mls}</p>
-                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
-                  {listing.address}
-                </h3>
-                <p className="text-sm text-[#372a20]/80">{listing.type}</p>
+              <div className="space-y-4">
+                <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
+                  {card.title}
+                </p>
+                <p className="text-sm leading-relaxed text-[#372a20]/85">{card.description}</p>
               </div>
-              <div className="mt-6 flex items-center justify-between">
-                <span className="text-lg font-semibold text-[#0f2b1e]">{listing.price}</span>
-                <Button
-                  asChild
-                  variant="link"
-                  className="gap-1 text-xs uppercase tracking-[0.3em] text-primary"
-                >
-                  <Link href={listing.href} target="_blank" rel="noopener noreferrer">
-                    View Listing
-                    <ArrowRight className="ml-2 size-4" />
-                  </Link>
-                </Button>
-              </div>
-            </article>
+              <span className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] group-hover:text-[#0b2016]">
+                Discover ->
+              </span>
+            </Link>
           ))}
         </div>
-        <Script id="featured-listings-schema" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify(featuredListingsSchema)}
-        </Script>
       </div>
     </section>
   )
@@ -635,7 +432,7 @@ function FAQSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Homes FAQ</p>
-          <h2 id="faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             Answers to the most frequent Spanish Trail real estate questions
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -658,211 +455,13 @@ function FAQSection() {
   )
 }
 
-function RealEstateSection() {
-  return (
-    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="real-estate-heading">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <div className="space-y-6">
-            <h2
-              id="real-estate-heading"
-              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-            >
-              Spanish Trail home styles and sizes
-            </h2>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Spanish Trail offers more than 1,200 residences ranging from attached townhomes to custom estates, many positioned on the golf course or with Red Rock Canyon views. Select enclaves feature additional privacy gates within the community, ensuring a tailored experience for every homeowner.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
-            </p>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              Residences were primarily constructed from the mid-1980s through the 1990s, combining timeless architecture with mature landscapes that only decades of stewardship can produce.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
-            </p>
-            <div className="rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
-              <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">
-                Neighborhoods
-              </p>
-              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-[#372a20]/80 sm:grid-cols-3">
-                {neighborhoodClusters.map((name) => (
-                  <span
-                    key={name}
-                    className="inline-flex items-center rounded-full border border-[#d8cdbf] bg-white px-3 py-1 text-[#1f2a24]"
-                  >
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div
-            className="h-full rounded-3xl border border-border/60 bg-cover bg-center shadow-lg"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1507400492013-162706c8c83c?q=80&w=1600&auto=format&fit=crop')",
-            }}
-            role="img"
-            aria-label="Spanish Trail custom homes and golf course views"
-          />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function ListingsSection() {
-  return (
-    <section className="border-y border-border/40 bg-white" aria-labelledby="listings-heading">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="space-y-3">
-            <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-              Featured Listings
-            </p>
-            <h2
-              id="listings-heading"
-              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-            >
-              Spanish Trail homes available now
-            </h2>
-          </div>
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
-          >
-            <Link href="/buyers">View All Inventory</Link>
-          </Button>
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {featuredListings.map((listing) => (
-            <article
-              key={listing.address}
-              className="flex h-full flex-col justify-between rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
-            >
-              <div className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.4em] text-secondary">
-                  Spanish Trail
-                </p>
-                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
-                  {listing.address}
-                </h3>
-                <p className="text-sm text-[#1f2a24]/80">{listing.type}</p>
-              </div>
-              <div className="mt-6 flex items-center justify-between">
-                <span className="text-lg font-semibold text-primary">
-                  {listing.price}
-                </span>
-                <Button
-                  asChild
-                  variant="link"
-                  className="gap-1 text-xs uppercase tracking-[0.3em] text-primary"
-                >
-                  <Link href="/buyers">
-                    View Details
-                    <ArrowRight className="ml-2 size-4" />
-                  </Link>
-                </Button>
-              </div>
-            </article>
-          ))}
-          </div>
-        </div>
-    </section>
-  )
-}
-
-function LifestyleSection() {
-  return (
-    <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Lifestyle & Amenities
-          </p>
-          <h2
-            id="lifestyle-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-          >
-            Life inside Spanish Trail Country Club
-          </h2>
-          <p className="text-base leading-relaxed text-muted-foreground">
-            Beyond golf, members access concierge-level programming, destination-worthy culinary experiences, and wellness amenities refreshed to match the expectations of today’s luxury buyer.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
-          </p>
-      </div>
-
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {lifestyleHighlights.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
-            >
-              <p className="text-xs uppercase tracking-[0.4em] text-secondary">
-                {item.title}
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {item.copy}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function NearbyCommunitiesSection() {
-  return (
-    <section className="border-y border-border/40 bg-white" aria-labelledby="nearby-heading">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 lg:grid-cols-[1fr_1.1fr]">
-        <div className="space-y-5">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Neighboring Luxury
-          </p>
-          <h2
-            id="nearby-heading"
-            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
-          >
-            Other nearby luxury communities
-          </h2>
-          <p className="text-base leading-relaxed text-muted-foreground">
-            Spanish Trail sits among a collection of acclaimed luxury enclaves across the Las Vegas Valley. Take advantage of close proximity to other guard-gated neighborhoods, boutique dining, and premier retail destinations in Summerlin and along the Strip.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
-          </p>
-          <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
-            {nearbyCommunities.map((community) => (
-              <span
-                key={community}
-                className="inline-flex items-center rounded-full border border-border/50 px-3 py-1"
-              >
-                {community}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
-          <p className="text-xs uppercase tracking-[0.4em] text-secondary">
-            Thinking of selling or buying?
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Our Las Vegas luxury team specializes in Spanish Trail, Red Rock Country Club, and the west valley’s most sought-after addresses. Whether you’re relocating or refining your portfolio, let us craft a tailored strategy.
-          </p>
-          <Button
-            asChild
-            className="mt-6 rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
-          >
-            <Link href="/contact">Connect with the Team</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function CTASection() {
   return (
     <section className="bg-primary py-20 text-primary-foreground" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h2
           id="cta-heading"
-          className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl"
+          className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl"
         >
           Ready to explore Spanish Trail homes?
         </h2>
@@ -895,7 +494,7 @@ function AdvancedSearchSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4 text-center sm:mx-auto">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Tailored Search</p>
-          <h2 id="advanced-search-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="advanced-search-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
             Customize your Spanish Trail home search in seconds
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">

@@ -4,7 +4,7 @@ import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
-import { RealScoutSimpleSearchWidget } from '@/components/realscout-simple-search-widget'
+import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 
@@ -68,7 +68,6 @@ export default function WaterfrontGolfHomesPage() {
   return (
     <SiteShell>
       <HeroSection />
-      <RealScoutSimpleSearchWidget sectionClassName="bg-[#0f2b1e]" containerClassName="justify-center" />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-4">
           <Breadcrumbs
@@ -123,6 +122,7 @@ function HeroSection() {
             <Link href="#waterfront-golf-homes">See homes</Link>
           </Button>
         </div>
+        <HeroSearchWidget theme="dark" />
       </div>
     </section>
   )

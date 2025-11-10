@@ -30,6 +30,9 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Private Golf Course Homes', href: '/spanish-trail-private-golf-course-homes' },
       { label: 'Estate Listings', href: '/spanish-trail-country-club-estate-listings' },
       { label: 'Waterfront Golf Homes', href: '/spanish-trail-waterfront-golf-homes' },
+      { label: 'Market Report', href: '/spanish-trail-market-report' },
+      { label: 'Insights', href: '/spanish-trail-insights' },
+      { label: 'Luxury Comparisons', href: '/las-vegas-luxury-neighborhoods' },
     ],
   },
   {

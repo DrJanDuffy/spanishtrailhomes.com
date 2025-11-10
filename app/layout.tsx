@@ -1,25 +1,10 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Lato } from 'next/font/google'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
 import './globals.css'
 
 const siteUrl = 'https://www.spanishtrailhomes.com'
-
-const playfair = Playfair_Display({
-  variable: '--font-playfair',
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-})
-
-const lato = Lato({
-  variable: '--font-lato',
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['300', '400', '700'],
-})
 
 const structuredData = [
   {
@@ -156,6 +141,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X68WWN997N"
           strategy="afterInteractive"
@@ -177,7 +168,10 @@ gtag('config', 'G-X68WWN997N');`}
         </Script>
       </head>
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased`}
+        className="antialiased"
+        style={{
+          fontFamily: 'var(--font-lato, Lato, system-ui, sans-serif)',
+        }}
       >
         <a href="#main-content" className="skip-link">
           Skip to main content

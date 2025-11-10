@@ -116,6 +116,8 @@ realscout-advanced-search {
 }
 
 :root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-lato: 'Lato', system-ui, sans-serif;
   --radius: 0.625rem;
   --background: #f4eee2;
   --foreground: #1a1a1a;

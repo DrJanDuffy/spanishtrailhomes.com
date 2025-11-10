@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-townhomes-villas'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Townhomes & Villas for Sale',
     description:
       'Explore guard-gated Spanish Trail villas, Links residences, and lock-and-leave townhomes with bespoke services from Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Villas & Townhomes',
+        subtitle: 'Lock-and-leave living with concierge support',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Villas & Townhomes | Dr. Jan Duffy',
     description:
       'Discover the Villas, Links, Courtyards, and Springs enclaves for turnkey Spanish Trail living minutes from the Strip.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Townhomes',
+        subtitle: 'HOA insights & curated buyer services',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

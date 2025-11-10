@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/buyers'
 const buyersPageDescription =
@@ -79,12 +79,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Buyer Services | Dr. Jan Duffy',
     description:
       'Explore Spanish Trail homes with personalized search, gated access coordination, and negotiation strategy from Dr. Jan Duffy, Berkshire Hathaway HomeServices.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Buyer Roadmap',
+        subtitle: 'Concierge tours & negotiation strategy by Dr. Jan Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Buyer Concierge by Dr. Jan Duffy',
     description:
       'Discover Spanish Trail guard-gated homes, villas, and estates with concierge tours, data-backed strategy, and club insights tailored to your lifestyle.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Buyer Concierge',
+        subtitle: 'Live listings, financing strategy, private tours',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

@@ -7,6 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { homeDeepDive, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-insights'
 
@@ -29,6 +30,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Insights & Advisory',
     description:
       'Explore data-backed commentary on Spanish Trail real estate, amenities, and strategy from Dr. Janet Duffy of Berkshire Hathaway HomeServices.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Insights',
+        subtitle: 'Market analysis & advisory guidance',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spanish Trail Real Estate Insights | Dr. Janet Duffy',
+    description:
+      'Get deep-dive analysis on Spanish Trail real estate trends, renovations, and club lifestyle from Dr. Janet Duffy.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Advisory',
+        subtitle: 'Concierge insights for buyers & sellers',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

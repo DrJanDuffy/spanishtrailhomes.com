@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
@@ -45,14 +45,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
     description:
       'Connect with Dr. Jan Duffy for Spanish Trail luxury homes, current market data, and private club lifestyle guidance.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Connect with Dr. Jan Duffy',
+        subtitle: 'Spanish Trail strategy sessions & private tours',
+        eyebrow: 'Contact • SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
     description:
       'Schedule a Spanish Trail strategy session with Dr. Jan Duffy—luxury guard-gated golf community specialist.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Consultation',
+        subtitle: 'Call (702) 766-3299 or plan a private tour',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

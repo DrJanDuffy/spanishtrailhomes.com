@@ -29,14 +29,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Homes & Community Overview',
     description:
       'Tour Spanish Trail real estate, amenities, and lifestyle advantages with Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Community Guide',
+        subtitle: 'Neighborhood insights & active listings',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes for Sale',
     description:
       'Explore Spanish Trail homes, amenities, and buyer guides curated by Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Homes',
+        subtitle: 'Guard-gated community insights & listings',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

@@ -133,14 +133,26 @@ export const metadata: Metadata = {
     title: 'Club Life at Spanish Trail Country Club',
     description:
       'Discover clubhouse amenities, dining venues, and curated social experiences with Dr. Janet Duffy at Spanish Trail Country Club.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Club Lifestyle',
+        subtitle: 'Dining • Wellness • Social events',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Club Life | Spanish Trail Country Club',
     description:
       'Uncover luxury amenities, dining, and events at Spanish Trail Country Club guided by Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Country Club',
+        subtitle: 'Member lifestyle curated by Dr. Janet Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

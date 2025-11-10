@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/privacy'
 const privacyPageDescription =
@@ -89,12 +89,26 @@ export const metadata: Metadata = {
     title: 'SpanishTrailHomes.com Privacy Policy',
     description:
       'Understand data practices, consent preferences, and contact options for privacy-related requests on SpanishTrailHomes.com.',
+    images: [
+      createOgImageUrl({
+        title: 'Privacy Policy',
+        subtitle: 'How SpanishTrailHomes.com safeguards your data',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary',
     title: 'SpanishTrailHomes.com Privacy Policy',
     description:
       'Learn how your personal information is protected when you work with Dr. Janet Duffy for Spanish Trail real estate.',
+    images: [
+      createOgImageUrl({
+        title: 'Privacy Policy',
+        subtitle: 'Data protection & client confidentiality',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

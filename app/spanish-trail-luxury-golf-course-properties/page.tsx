@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Luxury Golf Course Properties | Spanish Trail Las Vegas',
     description:
       'See Spanish Trail luxury golf course estates, renovation trends, and buyer strategies guided by Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Golf Estate Collection',
+        subtitle: 'Luxury fairway homes & market strategy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Luxury Golf Course Properties',
     description:
       'Discover premier golf frontage homes, lakeside vistas, and custom estates with Dr. Jan Duffy in Spanish Trail.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Luxury Golf Homes',
+        subtitle: 'Premier fairway estates by Dr. Jan Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-private-golf-course-homes'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Private Golf Course Homes in Spanish Trail',
     description:
       'Robert Trent Jones Jr. golf, private club perks, and curated course-front homes in Spanish Trail. Guided by Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Golf Course Homes',
+        subtitle: 'Fairway estates & membership expertise',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Private Golf Homes | Dr. Jan Duffy',
     description:
       'Tour Spanish Trail’s private golf course residences, memberships, and lifestyle advantages with Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Private Golf Homes',
+        subtitle: 'Concierge tours & club guidance',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

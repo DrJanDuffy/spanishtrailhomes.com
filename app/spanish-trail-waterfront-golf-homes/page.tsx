@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-waterfront-golf-homes'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Waterfront Golf Homes in Spanish Trail',
     description:
       'Explore Spanish Trail’s lakeside golf homes—tranquil water views, private club amenities, and bespoke service from Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Waterfront Homes',
+        subtitle: 'Lakeside golf living & concierge tours',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Waterfront Golf Homes',
     description:
       'Premier waterfront golf properties in Spanish Trail curated by Dr. Jan Duffy. View listings, amenities, and buying strategies.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Waterfront Golf Homes',
+        subtitle: 'Exclusive lakeside estates & buyer strategy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

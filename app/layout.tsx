@@ -4,8 +4,9 @@ import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
 import './globals.css'
+import { createOgImageUrl, structuredDataSiteUrl } from '@/lib/structuredData'
 
-const siteUrl = 'https://www.spanishtrailhomes.com'
+const siteUrl = structuredDataSiteUrl
 
 const playfair = Playfair_Display({
   variable: '--font-playfair',
@@ -26,7 +27,11 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     name: 'Spanish Trail Homes | Dr. Janet Duffy',
-    image: `${siteUrl}/og-image.png`,
+    image: createOgImageUrl({
+      title: 'Spanish Trail Homes & Country Club',
+      subtitle: 'Guard-gated Las Vegas luxury real estate by Dr. Janet Duffy',
+      eyebrow: 'SpanishTrailHomes.com',
+    }),
     url: siteUrl,
     telephone: '+1-702-766-3299',
     email: 'DrDuffySells@SpanishTrailHomes.com',
@@ -118,7 +123,7 @@ export const metadata: Metadata = {
     description:
       'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Janet Duffy.',
     siteName: 'Spanish Trail Homes',
-    images: [`${siteUrl}/og-image.png`],
+    images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Janet Duffy' })],
     locale: 'en_US',
   },
   twitter: {
@@ -126,7 +131,7 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Homes | Private Club in Las Vegas',
     description:
       'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Janet Duffy.',
-    images: [`${siteUrl}/og-image.png`],
+    images: [createOgImageUrl({ title: 'Spanish Trail Homes', subtitle: 'Luxury guard-gated homes and club expertise', eyebrow: 'SpanishTrailHomes.com' })],
   },
   robots: {
     index: true,

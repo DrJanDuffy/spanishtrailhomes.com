@@ -55,3 +55,24 @@ export const createWebPageSchema = ({ name, description, path, type = 'WebPage',
 
 export const structuredDataSiteUrl = siteUrl
 
+type OgImageOptions = {
+  title: string
+  subtitle?: string
+  eyebrow?: string
+}
+
+export const createOgImageUrl = ({ title, subtitle, eyebrow }: OgImageOptions) => {
+  const params = new URLSearchParams()
+  params.set('title', title)
+
+  if (subtitle) {
+    params.set('subtitle', subtitle)
+  }
+
+  if (eyebrow) {
+    params.set('eyebrow', eyebrow)
+  }
+
+  return `${siteUrl}/api/og?${params.toString()}`
+}
+

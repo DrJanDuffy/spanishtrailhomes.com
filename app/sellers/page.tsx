@@ -8,7 +8,7 @@ import type { HTMLAttributes } from 'react'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
   'agent-encoded-id': string
@@ -97,12 +97,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Home Seller Guide',
     description:
       'Maximize your equity with Dr. Jan Duffy’s Spanish Trail seller strategy—precision pricing, concierge prep, luxury marketing, and RealScout-powered valuation tools.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Seller Blueprint',
+        subtitle: 'Pricing strategy • Concierge prep • Premium marketing',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Seller Strategy by Dr. Jan Duffy',
     description:
       'Sell your Spanish Trail home with a proven valuation, preparation, and marketing roadmap. Schedule a private strategy session with Dr. Jan Duffy.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Seller Strategy',
+        subtitle: 'Equity planning & negotiation by Dr. Jan Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

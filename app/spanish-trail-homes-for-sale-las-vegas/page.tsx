@@ -8,6 +8,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
@@ -23,14 +24,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
       'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Jan Duffy—Las Vegas luxury golf community specialist.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Homes for Sale',
+        subtitle: 'Active listings & concierge tours with Dr. Jan Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
       'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Jan Duffy. Live market data and private tours available.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Listings',
+        subtitle: 'Live market data & private showings',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

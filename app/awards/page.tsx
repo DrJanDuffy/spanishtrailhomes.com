@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/awards'
 const awardsPageDescription =
@@ -165,12 +165,26 @@ export const metadata: Metadata = {
     title: 'Dr. Janet Duffy | Awards & Recognition',
     description:
       'Review Berkshire Hathaway honors, RealScout achievements, and professional memberships that support Spanish Trail clients.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Awards & Recognition',
+        subtitle: 'Dr. Janet Duffy • Berkshire Hathaway HomeServices',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dr. Janet Duffy | Awards & Recognition',
     description:
       'Spanish Trail-focused REALTOR® with Berkshire Hathaway honors, luxury marketing credentials, and media features.',
+    images: [
+      createOgImageUrl({
+        title: 'Awards & Recognition',
+        subtitle: 'Spanish Trail leadership by Dr. Janet Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

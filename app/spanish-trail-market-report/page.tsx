@@ -8,6 +8,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { featuredListings, marketHighlights } from '@/lib/spanishTrailContent'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-market-report'
 
@@ -42,6 +43,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Real Estate Market Report',
     description:
       'Track pricing trends, absorption rates, and featured Spanish Trail listings updated by Dr. Janet Duffy of Berkshire Hathaway HomeServices.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Market Report',
+        subtitle: 'Weekly pricing & absorption insights',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spanish Trail Market Report | Dr. Janet Duffy',
+    description:
+      'Stay ahead of Spanish Trail real estate trends with updated stats, featured listings, and concierge advisory from Dr. Janet Duffy.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Market Intelligence',
+        subtitle: 'Data-driven advisory by Dr. Janet Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/terms'
 const termsPageDescription =
@@ -52,12 +52,26 @@ export const metadata: Metadata = {
     title: 'SpanishTrailHomes.com Terms of Use',
     description:
       'Understand the rules for using SpanishTrailHomes.com, including permitted activities, data accuracy, and MLS disclosure requirements.',
+    images: [
+      createOgImageUrl({
+        title: 'Terms of Use',
+        subtitle: 'Guidelines for SpanishTrailHomes.com',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary',
     title: 'SpanishTrailHomes.com Terms of Use',
     description:
       'Learn about authorized use, intellectual property, and disclaimers for SpanishTrailHomes.com, operated by Dr. Janet Duffy.',
+    images: [
+      createOgImageUrl({
+        title: 'Terms of Use',
+        subtitle: 'Policies & legal disclosures',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

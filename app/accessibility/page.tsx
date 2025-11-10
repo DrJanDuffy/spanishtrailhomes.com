@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/accessibility'
 const accessibilityPageDescription =
@@ -59,12 +59,26 @@ export const metadata: Metadata = {
     title: 'SpanishTrailHomes.com Accessibility Statement',
     description:
       'See the inclusive design practices, assistive technology support, and contact information for accessibility requests on SpanishTrailHomes.com.',
+    images: [
+      createOgImageUrl({
+        title: 'Accessibility Commitment',
+        subtitle: 'Inclusive access to SpanishTrailHomes.com',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary',
     title: 'SpanishTrailHomes.com Accessibility Statement',
     description:
       'Discover how SpanishTrailHomes.com meets WCAG guidance and how to request accommodations or report usability issues.',
+    images: [
+      createOgImageUrl({
+        title: 'Accessibility Support',
+        subtitle: 'WCAG-aligned experience & request channels',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

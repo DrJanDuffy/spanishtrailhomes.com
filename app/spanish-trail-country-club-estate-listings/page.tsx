@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Country Club Estate Listings',
     description:
       'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Estate Listings',
+        subtitle: 'Custom homes & double-gated enclaves',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Country Club Estates',
     description:
       'Exclusive estate listings, tailored buying strategies, and club integration for Spanish Trail Country Club residents.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Country Club Estates',
+        subtitle: 'Concierge representation by Dr. Jan Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

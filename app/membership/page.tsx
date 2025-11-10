@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const membershipNarratives = [
   {
@@ -111,14 +111,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Membership Options',
     description:
       'Evaluate membership categories, benefits, and concierge services at Spanish Trail Country Club with Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Membership',
+        subtitle: 'Golf • Social • Corporate pathways',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Membership | Spanish Trail Country Club',
     description:
       'View Spanish Trail membership tiers, pricing insights, and concierge benefits curated by Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Membership Concierge',
+        subtitle: 'Tailored onboarding & lifestyle insights',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

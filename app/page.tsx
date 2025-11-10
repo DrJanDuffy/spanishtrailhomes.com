@@ -7,7 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
-import { createBreadcrumbSchema, createWebPageSchema } from '@/lib/structuredData'
+import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
@@ -43,12 +43,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Luxury Homes & Market Intelligence',
     description:
       'Get guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Luxury Homes',
+        subtitle: 'Market intelligence & club lifestyle by Dr. Janet Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes & Club Lifestyle by Dr. Janet Duffy',
     description:
       'Track Spanish Trail listings, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Janet Duffy.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Homes',
+        subtitle: 'Guard-gated listings & concierge strategy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

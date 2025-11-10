@@ -6,6 +6,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { nearbyCommunities } from '@/lib/spanishTrailContent'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/las-vegas-luxury-neighborhoods'
 
@@ -51,6 +52,26 @@ export const metadata: Metadata = {
     title: 'Compare Las Vegas Luxury Neighborhoods',
     description:
       'Evaluate Spanish Trail alongside The Ridges, Red Rock Country Club, and more. Guidance by Dr. Janet Duffy, Berkshire Hathaway HomeServices.',
+    images: [
+      createOgImageUrl({
+        title: 'Las Vegas Luxury Comparisons',
+        subtitle: 'Spanish Trail vs. top west valley communities',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Janet Duffy',
+    description:
+      'See how Spanish Trail stacks up against The Ridges, Red Rock CC, Spanish Hills, and The Summit Club.',
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail vs. Las Vegas Luxury',
+        subtitle: 'Concierge comparisons for discerning buyers',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

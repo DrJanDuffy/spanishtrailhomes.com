@@ -108,14 +108,26 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Golf Experience',
     description:
       'Discover the Sunrise, Lakes, and Canyon nines, practice facilities, and golf programming with Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Golf',
+        subtitle: '27-hole experience by Robert Trent Jones Jr.',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Golf at Spanish Trail Country Club',
     description:
       'Plan your next round at Spanish Trail’s 27 championship holes with insights from Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Golf Club',
+        subtitle: 'Sunrise • Lakes • Canyon nines',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

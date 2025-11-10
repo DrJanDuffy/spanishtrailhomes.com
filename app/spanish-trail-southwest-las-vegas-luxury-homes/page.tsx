@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-southwest-las-vegas-luxury-homes'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Southwest Las Vegas Luxury Homes in Spanish Trail',
     description:
       'Compare Spanish Trail to other Southwest Las Vegas luxury enclaves. Discover estates, amenities, and buyer strategy with Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Southwest Las Vegas Luxury',
+        subtitle: 'Why Spanish Trail leads the 89117 market',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Southwest Las Vegas Luxury Homes',
     description:
       'Guard-gated Spanish Trail offers prime Southwest Las Vegas luxury real estate. See how it stacks up with nearby communities.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Luxury Living',
+        subtitle: 'Compare Southwest Las Vegas enclaves',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

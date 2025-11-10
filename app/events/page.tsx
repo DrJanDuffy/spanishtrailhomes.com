@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 import { createWebPageSchema } from '@/lib/structuredData'
 
 const eventsNarratives = [
@@ -116,14 +117,26 @@ export const metadata: Metadata = {
     title: 'Events at Spanish Trail Country Club',
     description:
       'Plan weddings, galas, and corporate gatherings with Spanish Trail’s concierge team and Dr. Janet Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Events',
+        subtitle: 'Weddings • Galas • Golf Outings',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Weddings & Events | Spanish Trail Country Club',
     description:
       'Discover bespoke planning for weddings, private celebrations, and golf outings at Spanish Trail Country Club.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Event Concierge',
+        subtitle: 'Plan unforgettable celebrations with Dr. Janet Duffy',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

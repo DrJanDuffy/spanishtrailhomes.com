@@ -87,6 +87,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Connect', href: '/contact#contact-heading' },
       { label: 'Market Snapshot', href: '/contact#market-heading' },
       { label: 'FAQ', href: '/contact#faq-heading' },
+      { label: 'Awards & Recognition', href: '/awards' },
     ],
   },
 ]

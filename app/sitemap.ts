@@ -13,6 +13,7 @@ const routes = [
   '/membership',
   '/guest-info',
   '/contact',
+  '/awards',
   '/spanish-trail-homes-for-sale-las-vegas',
   '/spanish-trail-guard-gated-golf-homes',
   '/spanish-trail-luxury-golf-course-properties',

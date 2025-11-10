@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { createOgImageUrl } from '@/lib/structuredData'
 import { createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'

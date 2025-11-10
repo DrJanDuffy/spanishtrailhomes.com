@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
 
@@ -6,6 +7,29 @@ import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
+
+const pageUrl = 'https://www.spanishtrailhomes.com/'
+
+export const metadata: Metadata = {
+  title: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
+  description:
+    'Explore Spanish Trail homes for sale, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse listings, market data, and neighborhood guides tailored to Las Vegas 89117.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: pageUrl,
+    title: 'Spanish Trail Luxury Homes & Market Intelligence',
+    description:
+      'Get guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spanish Trail Homes & Club Lifestyle by Dr. Janet Duffy',
+    description:
+      'Track Spanish Trail listings, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Janet Duffy.',
+  },
+}
 
 const overviewStats = [
   {
@@ -70,6 +94,44 @@ const homeFaqSchema = {
   })),
 }
 
+const homeResourceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Spanish Trail Resource Guides',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Spanish Trail Buyer Roadmap',
+      url: `${pageUrl}buyers`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Spanish Trail Seller Blueprint',
+      url: `${pageUrl}sellers`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Spanish Trail Market Report',
+      url: `${pageUrl}spanish-trail-market-report`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'Spanish Trail Insights & Editorials',
+      url: `${pageUrl}spanish-trail-insights`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 5,
+      name: 'Las Vegas Luxury Neighborhood Comparisons',
+      url: `${pageUrl}las-vegas-luxury-neighborhoods`,
+    },
+  ],
+}
+
 export default function HomePage() {
   return (
     <SiteShell>
@@ -90,6 +152,9 @@ export default function HomePage() {
       <ExploreFurtherSection />
       <FAQSection />
       <CTASection />
+      <Script id="home-resource-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homeResourceSchema)}
+      </Script>
       <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeFaqSchema)}
       </Script>
@@ -103,24 +168,15 @@ function HeroSection() {
       className="relative isolate overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.8)), url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop')",
-        }}
-      />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background" />
+      <div className="absolute inset-0 -z-10 home-hero-background" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Berkshire Hathaway HomeServices Presents
           </p>
-          <h1
-            id="hero-heading"
-            className="font-(--font-playfair) text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl"
-          >
+          <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
             Spanish Trail Homes in Las Vegas 89117
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
@@ -153,10 +209,7 @@ function IntroSection() {
     <section className="bg-white py-20" aria-labelledby="intro-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.2fr_1fr]">
         <div className="space-y-6">
-          <h2
-            id="intro-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
-          >
+          <h2 id="intro-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
             Why Spanish Trail works for everyday life.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
@@ -213,7 +266,7 @@ function StatsSection() {
             <p className="text-xs uppercase tracking-[0.4em] text-[#f8f5ef]/75">
               {item.label}
             </p>
-            <p className="mt-4 font-(--font-playfair) text-3xl text-[#f8f5ef]">
+            <p className="mt-4 font-heading text-3xl text-[#f8f5ef]">
               {item.value}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-[#f8f5ef]/70">
@@ -232,10 +285,7 @@ function NeighborhoodSpotlightsSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Home Buyer Spotlight</p>
-          <h2
-            id="neighborhood-spotlights-heading"
-            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
-          >
+          <h2 id="neighborhood-spotlights-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
             Preview top enclaves before you tour
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -279,10 +329,7 @@ function MarketPreviewSection() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Snapshot</p>
-            <h2
-              id="market-preview-heading"
-              className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
-            >
+            <h2 id="market-preview-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
               Track Spanish Trail performance in real time
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -304,7 +351,7 @@ function MarketPreviewSection() {
               className="rounded-3xl border border-border/40 bg-white p-6 shadow-md shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">{item.label}</p>
-              <p className="mt-3 font-(--font-playfair) text-2xl text-[#1f2a24]">{item.value}</p>
+                <p className="mt-3 font-heading text-2xl text-[#1f2a24]">{item.value}</p>
               <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">{item.trend} change</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
             </article>
@@ -327,10 +374,7 @@ function InsightsPreviewSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Strategy & Advisory</p>
-          <h2
-            id="insights-preview-heading"
-            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
-          >
+          <h2 id="insights-preview-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
             Stay informed with Spanish Trail insights
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -391,10 +435,7 @@ function ExploreFurtherSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Deeper resources</p>
-          <h2
-            id="explore-further-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
-          >
+          <h2 id="explore-further-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
             Explore the full Spanish Trail knowledge base
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
@@ -416,7 +457,7 @@ function ExploreFurtherSection() {
                 <p className="text-sm leading-relaxed text-[#372a20]/85">{card.description}</p>
               </div>
               <span className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] group-hover:text-[#0b2016]">
-                Discover ->
+                Discover &rarr;
               </span>
             </Link>
           ))}
@@ -432,7 +473,7 @@ function FAQSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Homes FAQ</p>
-        <h2 id="faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
             Answers to the most frequent Spanish Trail real estate questions
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -459,10 +500,7 @@ function CTASection() {
   return (
     <section className="bg-primary py-20 text-primary-foreground" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h2
-          id="cta-heading"
-          className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl"
-        >
+        <h2 id="cta-heading" className="font-heading text-3xl leading-tight sm:text-4xl">
           Ready to explore Spanish Trail homes?
         </h2>
         <p className="text-base leading-relaxed text-primary-foreground/85">
@@ -494,7 +532,7 @@ function AdvancedSearchSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4 text-center sm:mx-auto">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Tailored Search</p>
-          <h2 id="advanced-search-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="advanced-search-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
             Customize your Spanish Trail home search in seconds
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">

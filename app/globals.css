@@ -210,6 +210,13 @@ realscout-advanced-search {
   background-position: center;
 }
 
+.home-hero-background {
+  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.8)),
+    url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
 .guest-arrival-background {
   background-image: url('https://images.unsplash.com/photo-1507537509458-b8312d35a233?q=80&w=1600&auto=format&fit=crop');
   background-size: cover;
@@ -247,6 +254,10 @@ realscout-advanced-search {
     url('https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=2400&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
+}
+
+.font-heading {
+  font-family: var(--font-playfair), serif;
 }
 
 .skip-link {

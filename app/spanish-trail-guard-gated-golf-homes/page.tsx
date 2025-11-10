@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
+import { createOgImageUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-guard-gated-golf-homes'
 
@@ -22,14 +23,26 @@ export const metadata: Metadata = {
     title: 'Guard-Gated Golf Community Homes in Spanish Trail',
     description:
       'Understand Spanish Trail guard gates, golf lifestyle, and vetted listings with Dr. Jan Duffy—Las Vegas luxury real estate advisor.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Guard-Gated Golf Homes',
+        subtitle: 'Spanish Trail security & fairway living',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Guard-Gated Golf Homes | Spanish Trail',
     description:
       'Security walkthroughs, golf privileges, and premium listings in Spanish Trail’s guard-gated golf community. Work with Dr. Jan Duffy.',
-    images: [`${pageUrl}/og-image.png`],
+    images: [
+      createOgImageUrl({
+        title: 'Spanish Trail Guard-Gated Homes',
+        subtitle: 'Security, golf, and concierge guidance',
+        eyebrow: 'SpanishTrailHomes.com',
+      }),
+    ],
   },
 }
 

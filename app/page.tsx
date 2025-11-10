@@ -416,7 +416,7 @@ function ExploreFurtherSection() {
                 <p className="text-sm leading-relaxed text-[#372a20]/85">{card.description}</p>
               </div>
               <span className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] group-hover:text-[#0b2016]">
-                Discover ->
+                Discover {'->'}
               </span>
             </Link>
           ))}

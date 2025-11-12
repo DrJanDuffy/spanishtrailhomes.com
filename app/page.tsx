@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     title: 'Spanish Trail Luxury Homes & Market Intelligence',
     description:
       'Get guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
+    siteName: 'Spanish Trail Homes',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Homes',

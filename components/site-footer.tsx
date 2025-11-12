@@ -7,7 +7,6 @@ export function SiteFooter() {
       heading: 'About Dr. Janet Duffy',
       links: [
         { label: 'Meet Janet Duffy', href: '/about' },
-        { label: 'Client Testimonials', href: '/testimonials' },
         { label: 'Awards & Recognition', href: '/awards' },
       ],
     },

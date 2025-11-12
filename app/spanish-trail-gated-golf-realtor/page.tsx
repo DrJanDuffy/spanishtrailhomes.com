@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-gated-golf-realtor'
 
 export const metadata: Metadata = {
-  title: 'Gated Golf Community Spanish Trail Las Vegas Realtor | Dr. Jan Duffy',
+  title: 'Gated Golf Community Spanish Trail Las Vegas Realtor | Dr. Janet Duffy',
   description:
-    'Partner with Dr. Jan Duffy, Berkshire Hathaway luxury advisor and Spanish Trail gated golf community expert. Concierge buying, market intel, and club integration.',
+    'Partner with Dr. Janet Duffy, Berkshire Hathaway luxury advisor and Spanish Trail gated golf community expert. Concierge buying, market intel, and club integration.',
   alternates: {
     canonical: '/spanish-trail-gated-golf-realtor',
   },
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Gated Golf Community Realtor',
     description:
-      'Discover how Dr. Jan Duffy helps buyers and sellers leverage Spanish Trail’s guard gates, golf amenities, and luxury positioning.',
+      'Discover how Dr. Janet Duffy helps buyers and sellers leverage Spanish Trail’s guard gates, golf amenities, and luxury positioning.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Gated Golf Realtor',
-        subtitle: 'Luxury representation by Dr. Jan Duffy',
+        subtitle: 'Luxury representation by Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Gated Golf Realtor | Dr. Jan Duffy',
+    title: 'Spanish Trail Gated Golf Realtor | Dr. Janet Duffy',
     description:
-      'Concierge representation for Spanish Trail gated golf homes—timing, negotiation, and membership access guided by Dr. Jan Duffy.',
+      'Concierge representation for Spanish Trail gated golf homes—timing, negotiation, and membership access guided by Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Realtor',

@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-custom-estate-homes-strip'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Custom Estate Homes Near the Strip | Dr. Jan Duffy',
+  title: 'Spanish Trail Custom Estate Homes Near the Strip | Dr. Janet Duffy',
   description:
-    'Discover custom estate homes near the Las Vegas Strip in Spanish Trail. Gated privacy, expansive lots, and personalized concierge buying with Dr. Jan Duffy.',
+    'Discover custom estate homes near the Las Vegas Strip in Spanish Trail. Gated privacy, expansive lots, and personalized concierge buying with Dr. Janet Duffy.',
   alternates: {
     canonical: '/spanish-trail-custom-estate-homes-strip',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Custom Estate Homes Near the Strip | Spanish Trail',
     description:
-      'Tour Spanish Trail custom estates minutes from the Strip with Dr. Jan Duffy. Explore double-gated enclaves, luxury amenities, and curated buyer journeys.',
+      'Tour Spanish Trail custom estates minutes from the Strip with Dr. Janet Duffy. Explore double-gated enclaves, luxury amenities, and curated buyer journeys.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Custom Estates',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Custom Estate Homes Near the Strip',
     description:
-      'Secure private tours of double-gated Spanish Trail estates offering proximity to the Las Vegas Strip. Guided by Dr. Jan Duffy.',
+      'Secure private tours of double-gated Spanish Trail estates offering proximity to the Las Vegas Strip. Guided by Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Custom Estates',

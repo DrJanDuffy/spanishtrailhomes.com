@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-private-golf-course-homes'
 
 export const metadata: Metadata = {
-  title: 'Private Golf Course Homes Spanish Trail | Dr. Jan Duffy',
+  title: 'Private Golf Course Homes Spanish Trail | Dr. Janet Duffy',
   description:
-    'Secure private golf course homes in Spanish Trail with Dr. Jan Duffy. Explore memberships, course-front estates, and concierge buyer services.',
+    'Secure private golf course homes in Spanish Trail with Dr. Janet Duffy. Explore memberships, course-front estates, and concierge buyer services.',
   alternates: {
     canonical: '/spanish-trail-private-golf-course-homes',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Private Golf Course Homes in Spanish Trail',
     description:
-      'Robert Trent Jones Jr. golf, private club perks, and curated course-front homes in Spanish Trail. Guided by Dr. Jan Duffy.',
+      'Robert Trent Jones Jr. golf, private club perks, and curated course-front homes in Spanish Trail. Guided by Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf Course Homes',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Private Golf Homes | Dr. Jan Duffy',
+    title: 'Spanish Trail Private Golf Homes | Dr. Janet Duffy',
     description:
-      'Tour Spanish Trail’s private golf course residences, memberships, and lifestyle advantages with Dr. Jan Duffy.',
+      'Tour Spanish Trail’s private golf course residences, memberships, and lifestyle advantages with Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Private Golf Homes',

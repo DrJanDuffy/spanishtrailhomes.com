@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-townhomes-villas'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Townhomes & Villas for Sale | Dr. Jan Duffy',
+  title: 'Spanish Trail Townhomes & Villas for Sale | Dr. Janet Duffy',
   description:
-    'Browse Spanish Trail townhomes and villas with Dr. Jan Duffy. Lock-and-leave luxury, HOA insights, curated amenities, and concierge buyer representation.',
+    'Browse Spanish Trail townhomes and villas with Dr. Janet Duffy. Lock-and-leave luxury, HOA insights, curated amenities, and concierge buyer representation.',
   alternates: {
     canonical: '/spanish-trail-townhomes-villas',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Townhomes & Villas for Sale',
     description:
-      'Explore guard-gated Spanish Trail villas, Links residences, and lock-and-leave townhomes with bespoke services from Dr. Jan Duffy.',
+      'Explore guard-gated Spanish Trail villas, Links residences, and lock-and-leave townhomes with bespoke services from Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Villas & Townhomes',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Villas & Townhomes | Dr. Jan Duffy',
+    title: 'Spanish Trail Villas & Townhomes | Dr. Janet Duffy',
     description:
       'Discover the Villas, Links, Courtyards, and Springs enclaves for turnkey Spanish Trail living minutes from the Strip.',
     images: [

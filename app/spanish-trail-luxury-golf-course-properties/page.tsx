@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
 export const metadata: Metadata = {
-  title: 'Luxury Golf Course Properties Spanish Trail Las Vegas | Dr. Jan Duffy',
+  title: 'Luxury Golf Course Properties Spanish Trail Las Vegas | Dr. Janet Duffy',
   description:
-    'Explore luxury golf course homes in Spanish Trail with Dr. Jan Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
+    'Explore luxury golf course homes in Spanish Trail with Dr. Janet Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
   alternates: {
     canonical: '/spanish-trail-luxury-golf-course-properties',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Luxury Golf Course Properties | Spanish Trail Las Vegas',
     description:
-      'See Spanish Trail luxury golf course estates, renovation trends, and buyer strategies guided by Dr. Jan Duffy.',
+      'See Spanish Trail luxury golf course estates, renovation trends, and buyer strategies guided by Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf Estate Collection',
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Luxury Golf Course Properties',
     description:
-      'Discover premier golf frontage homes, lakeside vistas, and custom estates with Dr. Jan Duffy in Spanish Trail.',
+      'Discover premier golf frontage homes, lakeside vistas, and custom estates with Dr. Janet Duffy in Spanish Trail.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Golf Homes',
-        subtitle: 'Premier fairway estates by Dr. Jan Duffy',
+        subtitle: 'Premier fairway estates by Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],

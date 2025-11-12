@@ -16,7 +16,7 @@ type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/sellers'
 const sellersPageDescription =
-  'Discover how Dr. Jan Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.'
+  'Discover how Dr. Janet Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.'
 
 const sellersWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Home Seller Guide',
     description:
-      'Maximize your equity with Dr. Jan Duffy’s Spanish Trail seller strategy—precision pricing, concierge prep, luxury marketing, and RealScout-powered valuation tools.',
+      'Maximize your equity with Dr. Janet Duffy’s Spanish Trail seller strategy—precision pricing, concierge prep, luxury marketing, and RealScout-powered valuation tools.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Seller Blueprint',
@@ -107,13 +107,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Seller Strategy by Dr. Jan Duffy',
+    title: 'Spanish Trail Seller Strategy by Dr. Janet Duffy',
     description:
-      'Sell your Spanish Trail home with a proven valuation, preparation, and marketing roadmap. Schedule a private strategy session with Dr. Jan Duffy.',
+      'Sell your Spanish Trail home with a proven valuation, preparation, and marketing roadmap. Schedule a private strategy session with Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Seller Strategy',
-        subtitle: 'Equity planning & negotiation by Dr. Jan Duffy',
+        subtitle: 'Equity planning & negotiation by Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],

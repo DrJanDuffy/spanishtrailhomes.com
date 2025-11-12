@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Country Club Estate Listings | Dr. Jan Duffy',
+  title: 'Spanish Trail Country Club Estate Listings | Dr. Janet Duffy',
   description:
-    'Browse Spanish Trail Country Club estate listings with Dr. Jan Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
+    'Browse Spanish Trail Country Club estate listings with Dr. Janet Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
   alternates: {
     canonical: '/spanish-trail-country-club-estate-listings',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Country Club Estate Listings',
     description:
-      'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Jan Duffy.',
+      'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Estate Listings',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Country Club Estates',
-        subtitle: 'Concierge representation by Dr. Jan Duffy',
+        subtitle: 'Concierge representation by Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],

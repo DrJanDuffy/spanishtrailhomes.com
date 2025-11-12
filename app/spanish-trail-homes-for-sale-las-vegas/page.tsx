@@ -13,9 +13,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Janet Duffy',
   description:
-    'Browse Spanish Trail homes for sale in Las Vegas with Dr. Jan Duffy. Guard-gated golf community, 27-hole course, custom estates, villas, and real-time market data.',
+    'Browse Spanish Trail homes for sale in Las Vegas with Dr. Janet Duffy. Guard-gated golf community, 27-hole course, custom estates, villas, and real-time market data.',
   alternates: {
     canonical: '/spanish-trail-homes-for-sale-las-vegas',
   },
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
-      'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Jan Duffy—Las Vegas luxury golf community specialist.',
+      'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Janet Duffy—Las Vegas luxury golf community specialist.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes for Sale',
-        subtitle: 'Active listings & concierge tours with Dr. Jan Duffy',
+        subtitle: 'Active listings & concierge tours with Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
-      'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Jan Duffy. Live market data and private tours available.',
+      'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Janet Duffy. Live market data and private tours available.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Listings',

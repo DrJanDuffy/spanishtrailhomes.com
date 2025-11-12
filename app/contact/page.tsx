@@ -11,10 +11,10 @@ import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
-  'Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $799K median. Call/text (702) 766-3299.'
+  'Spanish Trail luxury homes in Las Vegas. Dr. Janet Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $799K median. Call/text (702) 766-3299.'
 
 const contactWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
+  name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
   description: contactPageDescription,
   path: '/contact',
   type: 'ContactPage',
@@ -35,19 +35,19 @@ const contactWebPageSchema = createWebPageSchema({
 })
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
+  title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
   description: contactPageDescription,
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
+    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
     description:
-      'Connect with Dr. Jan Duffy for Spanish Trail luxury homes, current market data, and private club lifestyle guidance.',
+      'Connect with Dr. Janet Duffy for Spanish Trail luxury homes, current market data, and private club lifestyle guidance.',
     images: [
       createOgImageUrl({
-        title: 'Connect with Dr. Jan Duffy',
+        title: 'Connect with Dr. Janet Duffy',
         subtitle: 'Spanish Trail strategy sessions & private tours',
         eyebrow: 'Contact • SpanishTrailHomes.com',
       }),
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
+    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
     description:
-      'Schedule a Spanish Trail strategy session with Dr. Jan Duffy—luxury guard-gated golf community specialist.',
+      'Schedule a Spanish Trail strategy session with Dr. Janet Duffy—luxury guard-gated golf community specialist.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Consultation',
@@ -108,7 +108,7 @@ export default function ContactPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
-              { label: 'Contact Dr. Jan Duffy' },
+              { label: 'Contact Dr. Janet Duffy' },
             ]}
           />
         </div>
@@ -141,7 +141,7 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="contact-hero-heading">
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 text-center">
         <h1 id="contact-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy
+          Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Spanish Trail's median value sits at $799K this month, and I'm tracking three contracts scheduled to close before month-end—including a villas listing at 6976 Emerald Springs Lane that secured a full-price offer after four days on market.
@@ -418,11 +418,11 @@ function ContactCTASection() {
             </div>
             <div className="sm:col-span-2">
               <Button type="submit" className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
-                Send Message to Dr. Jan
+                Send Message to Dr. Janet
               </Button>
             </div>
             <p className="sm:col-span-2 text-xs text-[#6f5237]/80">
-              By submitting, you agree to receive updates from Dr. Jan Duffy. You can unsubscribe anytime.
+              By submitting, you agree to receive updates from Dr. Janet Duffy. You can unsubscribe anytime.
             </p>
           </form>
         </div>

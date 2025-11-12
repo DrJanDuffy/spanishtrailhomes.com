@@ -11,10 +11,10 @@ import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/buyers'
 const buyersPageDescription =
-  'Plan your Spanish Trail home purchase with Dr. Jan Duffy—concierge tours, real-time listings, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers.'
+  'Plan your Spanish Trail home purchase with Dr. Janet Duffy—concierge tours, real-time listings, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers.'
 
 const buyersWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Home Buyer Guide | Dr. Jan Duffy',
+  name: 'Spanish Trail Home Buyer Guide | Dr. Janet Duffy',
   description: buyersPageDescription,
   path: '/buyers',
   type: 'CollectionPage',
@@ -24,7 +24,7 @@ const buyersWebPageSchema = createWebPageSchema({
       serviceType: 'Spanish Trail Buyer Representation',
       provider: {
         '@type': 'RealEstateAgent',
-        name: 'Dr. Jan Duffy',
+        name: 'Dr. Janet Duffy',
         areaServed: 'Spanish Trail, Las Vegas, Nevada',
       },
       areaServed: 'Spanish Trail, Las Vegas, Nevada',
@@ -69,27 +69,27 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Home Buyer Guide | Dr. Jan Duffy',
+  title: 'Spanish Trail Home Buyer Guide | Dr. Janet Duffy',
   description: buyersPageDescription,
   alternates: {
     canonical: '/buyers',
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Buyer Services | Dr. Jan Duffy',
+    title: 'Spanish Trail Buyer Services | Dr. Janet Duffy',
     description:
-      'Explore Spanish Trail homes with personalized search, gated access coordination, and negotiation strategy from Dr. Jan Duffy, Berkshire Hathaway HomeServices.',
+      'Explore Spanish Trail homes with personalized search, gated access coordination, and negotiation strategy from Dr. Janet Duffy, Berkshire Hathaway HomeServices.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Buyer Roadmap',
-        subtitle: 'Concierge tours & negotiation strategy by Dr. Jan Duffy',
+        subtitle: 'Concierge tours & negotiation strategy by Dr. Janet Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Buyer Concierge by Dr. Jan Duffy',
+    title: 'Spanish Trail Buyer Concierge by Dr. Janet Duffy',
     description:
       'Discover Spanish Trail guard-gated homes, villas, and estates with concierge tours, data-backed strategy, and club insights tailored to your lifestyle.',
     images: [
@@ -187,7 +187,7 @@ function BuyerJourneySection() {
             A concierge buying experience tailored to your lifestyle goals
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Jan Duffy aligns every Spanish Trail purchase—from villas and townhomes to Strip-view estates—with your plan for living, entertaining, and investing. You gain on-the-ground intelligence about seller motivations, membership options, and neighborhood micro-trends so you can move forward with confidence.
+            Dr. Janet Duffy aligns every Spanish Trail purchase—from villas and townhomes to Strip-view estates—with your plan for living, entertaining, and investing. You gain on-the-ground intelligence about seller motivations, membership options, and neighborhood micro-trends so you can move forward with confidence.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

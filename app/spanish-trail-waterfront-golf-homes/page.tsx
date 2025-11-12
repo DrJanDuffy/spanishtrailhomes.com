@@ -12,9 +12,9 @@ import { createOgImageUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-waterfront-golf-homes'
 
 export const metadata: Metadata = {
-  title: 'Waterfront Golf Course Homes Spanish Trail | Dr. Jan Duffy',
+  title: 'Waterfront Golf Course Homes Spanish Trail | Dr. Janet Duffy',
   description:
-    'Discover Spanish Trail waterfront golf course homes with Dr. Jan Duffy. Lakeside patios, golf frontage, and concierge buying expertise.',
+    'Discover Spanish Trail waterfront golf course homes with Dr. Janet Duffy. Lakeside patios, golf frontage, and concierge buying expertise.',
   alternates: {
     canonical: '/spanish-trail-waterfront-golf-homes',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Waterfront Golf Homes in Spanish Trail',
     description:
-      'Explore Spanish Trail’s lakeside golf homes—tranquil water views, private club amenities, and bespoke service from Dr. Jan Duffy.',
+      'Explore Spanish Trail’s lakeside golf homes—tranquil water views, private club amenities, and bespoke service from Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Waterfront Homes',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Waterfront Golf Homes',
     description:
-      'Premier waterfront golf properties in Spanish Trail curated by Dr. Jan Duffy. View listings, amenities, and buying strategies.',
+      'Premier waterfront golf properties in Spanish Trail curated by Dr. Janet Duffy. View listings, amenities, and buying strategies.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Waterfront Golf Homes',

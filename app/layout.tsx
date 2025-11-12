@@ -79,6 +79,7 @@ const structuredData = [
       'https://www.instagram.com/spanishtrailhomes',
       'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true',
       'https://www.youtube.com/@spanishtrailhomes',
+      'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
     ],
   },
   {
@@ -172,7 +173,10 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-X68WWN997N');`}
+gtag('config', 'G-X68WWN997N', {
+  page_path: window.location.pathname,
+  send_page_view: true
+});`}
         </Script>
         <Script
           id="realscout-widget"

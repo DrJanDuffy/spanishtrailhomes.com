@@ -36,7 +36,7 @@ const faqContent = [
   {
     question: 'How competitive is the Spanish Trail home market right now?',
     answer:
-      'Spanish Trail listings averaged 24 days on market during October–November 2025, with golf-course homes receiving offers in as little as eight days. I monitor active, pending, and private listings daily so we can anticipate new releases, price adjustments, and seller motivations before they reach wider circulation.',
+      'Spanish Trail listings averaged 24 days on market as of November 2025, with golf-course homes receiving offers in as little as eight days. I monitor active, pending, and private listings daily so we can anticipate new releases, price adjustments, and seller motivations before they reach wider circulation.',
   },
   {
     question: 'Can I tour Spanish Trail if I am not yet a club member?',
@@ -237,7 +237,7 @@ function MarketIntelligenceSection() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">What I&apos;m watching this quarter</h3>
             <ul className="space-y-3">
               <li>
-                • Median sale price across all enclaves sits at $782,000, climbing 3.2% quarter-over-quarter as cash buyers return from Southern California and Arizona.
+                • Median sale price across all enclaves sits at $812,500 as of November 2025, reflecting strong demand as cash buyers return from Southern California and Arizona.
               </li>
               <li>
                 • Homes with Strip panorama or golf trifecta views see 1.4 showings per day during launch week—timing your offer within the first 72 hours matters.

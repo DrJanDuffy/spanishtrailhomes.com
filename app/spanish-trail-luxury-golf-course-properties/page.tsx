@@ -60,7 +60,7 @@ const faqContent = [
   {
     question: 'How competitive is the luxury segment right now?',
     answer:
-      'In Q4 2025, luxury golf homes ($1.5M+) are averaging 43 days on market with negotiations tightening around 3% below list price. Properties above $2.5M with full renovations and furnished packages often attract cash buyers. I monitor every showing note and agent preview so my clients move quickly without overpaying.',
+      'As of November 2025, luxury golf homes ($1.5M+) are averaging 43 days on market with negotiations tightening around 3% below list price. Properties above $2.5M with full renovations and furnished packages often attract cash buyers. I monitor every showing note and agent preview so my clients move quickly without overpaying.',
   },
 ]
 
@@ -147,7 +147,7 @@ function MarketSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="luxury-market-heading">
       <div className="mx-auto max-w-6xl px-6">
         <h2 id="luxury-market-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Current luxury golf market intelligence (Q4 2025)
+          Current luxury golf market intelligence (November 2025)
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           I monitor every showing request, off-market whisper, and appraisal within Spanish Trail’s luxury tier. The snapshot below covers active listings above $1M, recently closed contracts, and inventory velocity by enclave so you know when to act decisively.
@@ -414,7 +414,7 @@ function LuxuryCTASection() {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Consult with Dr. Jan</Link>
+            <Link href="/contact">Consult with Dr. Janet</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#luxury-golf-properties">Browse listings</Link>

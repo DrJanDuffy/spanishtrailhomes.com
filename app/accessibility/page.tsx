@@ -29,7 +29,7 @@ const accessibilitySchema = {
   accessibilityControl: ['keyboard', 'voiceControl', 'textToSpeech', 'highContrast', 'captions'],
   accessibilityFeature: ['altText', 'structuralNavigation', 'responsiveUI', 'aria'],
   accessibilityHazard: 'noFlashingHazard',
-  datePublished: '2024-11-10',
+  datePublished: '2025-11-10',
   dateModified: new Date().toISOString().split('T')[0],
   description:
     'Accessibility commitment for SpanishTrailHomes.com detailing WCAG conformance goals, assistive technology support, testing process, and feedback channels.',

@@ -62,7 +62,7 @@ const privacySchema = {
     },
     areaServed: 'Spanish Trail, Las Vegas, Nevada',
   },
-  datePublished: '2024-11-10',
+  datePublished: '2025-11-10',
   dateModified: new Date().toISOString().split('T')[0],
   description:
     'Privacy practices for SpanishTrailHomes.com detailing data collection, usage, sharing, cookies, marketing communications, and contact information.',

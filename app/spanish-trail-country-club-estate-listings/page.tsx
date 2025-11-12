@@ -55,7 +55,7 @@ const faqContent = [
   {
     question: 'How competitive is the estate market right now?',
     answer:
-      'As of Q4 2025, 12 estate homes are active with a median list price of $2.35M. Well-prepared properties with updated interiors average 37 days on market; off-market placements move even faster. I monitor private network releases to ensure clients act before listings go public.',
+      'As of November 2025, 12 estate homes are active with a median list price of $2.35M. Well-prepared properties with updated interiors average 37 days on market; off-market placements move even faster. I monitor private network releases to ensure clients act before listings go public.',
   },
   {
     question: 'Can you help with renovations or turnkey preparation?',
@@ -391,7 +391,7 @@ function CTASection() {
           Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll curate estate listings, share private releases, and coordinate a personalized tour itinerary.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Jan</Link>
+            <Link href="/contact">Connect with Dr. Janet</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#country-club-estate-listings">See estate listings</Link>

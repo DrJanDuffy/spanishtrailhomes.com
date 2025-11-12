@@ -25,7 +25,7 @@ const termsSchema = {
       name: 'SpanishTrailHomes.com',
     },
   },
-  datePublished: '2024-11-10',
+  datePublished: '2025-11-10',
   dateModified: new Date().toISOString().split('T')[0],
   description:
     'Terms governing access to SpanishTrailHomes.com, including permissible use, MLS data guidelines, intellectual property, disclaimers, and dispute resolution.',

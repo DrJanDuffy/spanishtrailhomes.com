@@ -11,7 +11,7 @@ import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
-  'Spanish Trail luxury homes in Las Vegas. Dr. Janet Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $799K median. Call/text (702) 766-3299.'
+  'Spanish Trail luxury homes in Las Vegas. Dr. Janet Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $812,500 median. Call/text (702) 766-3299.'
 
 const contactWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
@@ -72,7 +72,7 @@ const faqContent = [
   {
     question: "What's the average price in Spanish Trail right now?",
     answer:
-      "Spanish Trail's median home value is $799,000 as of October 2025. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.",
+      "Spanish Trail's median home value is $812,500 as of November 2025. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.",
   },
   {
     question: 'Is Spanish Trail a good investment?',
@@ -144,7 +144,7 @@ function HeroSection() {
           Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail's median value sits at $799K this month, and I'm tracking three contracts scheduled to close before month-end—including a villas listing at 6976 Emerald Springs Lane that secured a full-price offer after four days on market.
+          Spanish Trail's median value sits at $812,500 as of November 2025, reflecting strong demand for guard-gated golf community living. Well-positioned listings continue to attract competitive offers, with golf-view properties and updated interiors commanding premium pricing.
           <span className="block text-xs uppercase tracking-[0.3em] text-[#f8f5ef]/70">
             <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails" className="underline-offset-4 hover:underline">
               Source: Spanish Trail Weekly Market Activity
@@ -272,11 +272,11 @@ function MarketSnapshotSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="market-heading">
       <div className="mx-auto max-w-6xl px-6">
         <h2 id="market-heading" className="font-[var(--font-playfair)] text-2xl leading-tight sm:text-3xl">
-          Current Spanish Trail Market: $799K Median (2025)
+          Current Spanish Trail Market: $812,500 Median (November 2025)
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-4">
           {[
-            { label: 'Median Value', value: '$799,000' },
+            { label: 'Median Value', value: '$812,500' },
             { label: 'Average Price / Sq. Ft.', value: '$441.15' },
             { label: 'Active Listings', value: '70' },
             { label: 'Days on Market', value: '60 (avg.)' },

@@ -17,6 +17,24 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    label: 'Neighborhoods',
+    href: '/neighborhoods',
+    children: [
+      { label: 'All Neighborhoods', href: '/neighborhoods' },
+      { label: 'Estates West', href: '/neighborhoods/estates-west' },
+      { label: 'The Carmels', href: '/neighborhoods/carmels' },
+      { label: 'The Courtyards', href: '/neighborhoods/courtyards' },
+      { label: 'The Gardens', href: '/neighborhoods/gardens' },
+      { label: 'The Islands', href: '/neighborhoods/islands' },
+      { label: 'The Links', href: '/neighborhoods/links' },
+      { label: 'Plum Creek', href: '/neighborhoods/plum-creek' },
+      { label: 'The Springs', href: '/neighborhoods/springs' },
+      { label: 'The Villas', href: '/neighborhoods/villas' },
+      { label: 'Townhomes', href: '/neighborhoods/townhomes' },
+      { label: 'The Plazas', href: '/neighborhoods/plazas' },
+    ],
+  },
+  {
     label: 'Buyers',
     href: '/spanish-trail-homes-for-sale-las-vegas',
     children: [

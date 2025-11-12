@@ -227,7 +227,7 @@ function HeroSection() {
             Spanish Trail Homes in Las Vegas 89117
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
-            Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
+            Guard-gated living in southwest Las Vegas near Bishop Gorman High School, Summerlin, and Desert Breeze Park. Explore 11 neighborhoods from Estates West to The Villas, with homes ranging from $400K townhomes to $5M+ golf course estates. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -260,10 +260,10 @@ function IntroSection() {
             Why Spanish Trail works for everyday life.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue in zip code 89117, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials. <Link href="/neighborhoods" className="underline hover:text-[#0f2b1e]">Explore 11 distinct neighborhoods</Link> including Estates West, The Carmels, The Courtyards, The Gardens, The Islands, The Links, Plum Creek, The Springs, The Villas, Townhomes, and The Plazas.
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
-            As one of Las Vegas’s original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe’s, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            As one of Las Vegas's original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Located near Bishop Gorman High School (2.2 miles), Faith Lutheran Academy (5 miles), and Desert Breeze Park (2-3 miles), Spanish Trail offers easy access to Whole Foods, Trader Joe's, Downtown Summerlin, and the I-215 Beltway—within a 10- to 15-minute radius.
           </p>
         </div>
         <div className="space-y-4 rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
@@ -336,8 +336,8 @@ function NeighborhoodSpotlightsSection() {
             Preview top enclaves before you tour
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Inside the Spanish Trail gates you&apos;ll discover distinct lifestyles—from double-gated estates to turnkey villas.
-            Explore a snapshot below, then dive deeper into every enclave on the dedicated buyer guide.
+            Inside the Spanish Trail gates you&apos;ll discover 11 distinct neighborhoods—from double-gated estates in <Link href="/neighborhoods/estates-west" className="underline hover:text-[#0f2b1e]">Estates West</Link> and <Link href="/neighborhoods/links" className="underline hover:text-[#0f2b1e]">The Links</Link> to turnkey villas in <Link href="/neighborhoods/villas" className="underline hover:text-[#0f2b1e]">The Villas</Link> and <Link href="/neighborhoods/carmels" className="underline hover:text-[#0f2b1e]">The Carmels</Link>.
+            Explore a snapshot below, then dive deeper into every enclave.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -355,7 +355,14 @@ function NeighborhoodSpotlightsSection() {
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
+          >
+            <Link href="/neighborhoods">Explore All 11 Neighborhoods</Link>
+          </Button>
           <Button
             asChild
             variant="outline"

@@ -66,8 +66,6 @@ export const NAV_ITEMS: NavItem[] = [
     label: 'Membership',
     href: '/membership',
     children: [
-      { label: 'Memberships', href: '/membership#offerings' },
-      { label: 'Young Executives', href: '/membership#young-executive' },
       { label: 'Schedule Tour', href: '/membership#inquiry' },
     ],
   },

@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { HeroBackground } from '@/components/hero-background'
 import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/accessibility'
@@ -116,7 +117,11 @@ export default function AccessibilityPage() {
 function HeroSection() {
   return (
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="accessibility-hero-heading">
-      <div className="absolute inset-0 -z-10 accessibility-hero-background" />
+      <HeroBackground
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&auto=format&fit=crop&w=2000"
+        overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/85"
+        sizes="(max-width: 1024px) 100vw, 1280px"
+      />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-linear-to-t from-[#0f2b1e]/80" />
       <div className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-24 text-center sm:py-28">
         <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/75">Accessibility at SpanishTrailHomes.com</p>

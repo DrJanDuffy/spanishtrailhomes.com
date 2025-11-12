@@ -7,6 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { HeroBackground } from '@/components/hero-background'
 import { createOgImageUrl } from '@/lib/structuredData'
 import { createWebPageSchema } from '@/lib/structuredData'
 
@@ -210,7 +211,11 @@ export default function SpanishTrailCommunityPage() {
 function HeroSection() {
   return (
     <section className="relative isolate overflow-hidden" aria-labelledby="community-hero-heading">
-      <div className="absolute inset-0 -z-10 bg-cover bg-center community-hero-background" />
+      <HeroBackground
+        src="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&auto=format&fit=crop&w=2000"
+        overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 via-[#0f2b1e]/60 to-[#0f2b1e]/80"
+        sizes="(max-width: 1024px) 100vw, 1280px"
+      />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">

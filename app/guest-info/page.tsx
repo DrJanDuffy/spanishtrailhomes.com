@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { HeroBackground } from '@/components/hero-background'
 import { localEssentials } from '@/lib/spanishTrailContent'
 import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
@@ -170,7 +171,11 @@ function GuestHero() {
       className="relative isolate overflow-hidden"
       aria-labelledby="guest-hero-heading"
     >
-      <div className="absolute inset-0 -z-10 bg-cover bg-center guest-hero-background" />
+      <HeroBackground
+        src="https://images.unsplash.com/photo-1462212210362-162e9f0ce5a1?q=80&auto=format&fit=crop&w=2000"
+        overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
+        sizes="(max-width: 1024px) 100vw, 1280px"
+      />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -204,10 +209,10 @@ function DirectionsSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Directions
           </p>
-        <h2
-          id="directions-heading"
+          <h2
+            id="directions-heading"
           className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
-        >
+          >
             Find your way to our private entrance.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
@@ -338,7 +343,7 @@ function ArrivalSection() {
       aria-labelledby="arrival-heading"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
-          <div className="space-y-5">
+        <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Arrival & Amenities
           </p>

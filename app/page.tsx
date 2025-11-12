@@ -8,6 +8,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
@@ -159,7 +160,7 @@ const homeResourceSchema = {
       url: `${pageUrl}spanish-trail-insights`,
     },
     {
-      '@type': 'ListItem',
+    '@type': 'ListItem',
       position: 5,
       name: 'Las Vegas Luxury Neighborhood Comparisons',
       url: `${pageUrl}las-vegas-luxury-neighborhoods`,
@@ -209,7 +210,12 @@ function HeroSection() {
       className="relative isolate overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      <div className="absolute inset-0 -z-10 home-hero-background" />
+      <HeroBackground
+        src="https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&auto=format&fit=crop&w=2000"
+        overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/80"
+        priority
+        sizes="(max-width: 1024px) 100vw, 1280px"
+      />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">

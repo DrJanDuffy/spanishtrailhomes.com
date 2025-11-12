@@ -12,6 +12,7 @@ const routes = [
   '/events',
   '/membership',
   '/guest-info',
+  '/about',
   '/contact',
   '/awards',
   '/privacy',

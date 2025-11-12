@@ -81,6 +81,15 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    label: 'About',
+    href: '/about',
+    children: [
+      { label: 'Meet Dr. Duffy', href: '/about#story-heading' },
+      { label: 'Advisory Approach', href: '/about#approach-heading' },
+      { label: 'Credentials', href: '/about#credentials-heading' },
+    ],
+  },
+  {
     label: 'Contact',
     href: '/contact',
     children: [

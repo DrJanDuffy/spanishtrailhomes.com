@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
+import { HeroBackground } from '@/components/hero-background'
 import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
 
 const eventsNarratives = [
@@ -178,8 +179,10 @@ function EventsHero() {
       className="relative isolate overflow-hidden"
       aria-labelledby="events-hero-heading"
     >
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center events-hero-background"
+      <HeroBackground
+        src="https://images.unsplash.com/photo-1520854221050-0f4caff449fb?q=80&auto=format&fit=crop&w=2000"
+        overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
+        sizes="(max-width: 1024px) 100vw, 1280px"
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">

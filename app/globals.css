@@ -203,83 +203,13 @@ realscout-advanced-search {
   }
 }
 
-.guest-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.75)),
-    url('https://images.unsplash.com/photo-1462212210362-162e9f0ce5a1?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.home-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.8)),
-    url('https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
 .guest-arrival-background {
   background-image: url('https://images.unsplash.com/photo-1507537509458-b8312d35a233?q=80&w=1600&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
 }
 
-.golf-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.75)),
-    url('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
 .golf-course-card {
-  background-size: cover;
-  background-position: center;
-}
-
-.membership-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.75)),
-    url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.events-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.75)),
-    url('https://images.unsplash.com/photo-1520854221050-0f4caff449fb?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.community-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.75)),
-    url('https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.awards-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.6), rgba(15, 43, 30, 0.85)),
-    url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.privacy-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.85)),
-    url('https://images.unsplash.com/photo-1575517111478-7f6afd0973db?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.terms-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.85)),
-    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-}
-
-.accessibility-hero-background {
-  background-image: linear-gradient(rgba(15, 43, 30, 0.55), rgba(15, 43, 30, 0.85)),
-    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
 }

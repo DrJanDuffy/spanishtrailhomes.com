@@ -77,7 +77,7 @@ const structuredData = [
     sameAs: [
       'https://www.facebook.com/spanishtrailhomes',
       'https://www.instagram.com/spanishtrailhomes',
-      'https://www.linkedin.com/company/spanishtrailhomes',
+      'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true',
       'https://www.youtube.com/@spanishtrailhomes',
     ],
   },

@@ -33,10 +33,10 @@ export function SiteFooter() {
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com', label: 'LinkedIn' },
-    { icon: Youtube, href: 'https://www.youtube.com', label: 'YouTube' },
+    { icon: Facebook, href: 'https://www.facebook.com/spanishtrailhomes', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/spanishtrailhomes', label: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true', label: 'LinkedIn' },
+    { icon: Youtube, href: 'https://www.youtube.com/@spanishtrailhomes', label: 'YouTube' },
   ]
 
   return (

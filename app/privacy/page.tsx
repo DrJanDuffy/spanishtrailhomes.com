@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/privacy'
 const privacyPageDescription =
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | SpanishTrailHomes.com',
   description: privacyPageDescription,
   alternates: {
-    canonical: '/privacy',
+    canonical: getCanonicalUrl('/privacy'),
   },
   robots: {
     index: true,

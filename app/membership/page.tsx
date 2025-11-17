@@ -8,7 +8,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const membershipNarratives = [
   {
@@ -106,7 +106,18 @@ const membershipWebPageSchema = createWebPageSchema({
 export const metadata: Metadata = {
   title: 'Membership | Spanish Trail Country Club',
   description: membershipPageDescription,
-  alternates: { canonical: '/membership' },
+  alternates: { canonical: getCanonicalUrl('/membership') },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
     url: pageUrl,
     title: 'Spanish Trail Membership Options',

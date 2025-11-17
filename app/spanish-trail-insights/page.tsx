@@ -7,7 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { homeDeepDive, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-insights'
 
@@ -23,7 +23,18 @@ export const metadata: Metadata = {
   description:
     'Deep-dive analysis of Spanish Trail homes, lifestyle, renovations, and financing tips curated by Dr. Janet Duffy for discerning buyers and sellers.',
   alternates: {
-    canonical: '/spanish-trail-insights',
+    canonical: getCanonicalUrl('/spanish-trail-insights'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

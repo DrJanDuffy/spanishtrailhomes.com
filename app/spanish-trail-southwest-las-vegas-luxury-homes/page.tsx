@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-southwest-las-vegas-luxury-homes'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Explore Southwest Las Vegas luxury living within Spanish Trail. Guard-gated estates, villas, and curated neighborhood comparisons with Dr. Janet Duffy.',
   alternates: {
-    canonical: '/spanish-trail-southwest-las-vegas-luxury-homes',
+    canonical: getCanonicalUrl('/spanish-trail-southwest-las-vegas-luxury-homes'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

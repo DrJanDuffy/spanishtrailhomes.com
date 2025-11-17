@@ -8,8 +8,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Metadata } from 'next'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl } from '@/lib/structuredData'
-import { createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
 const communityPageDescription =
@@ -25,7 +24,18 @@ const communityWebPageSchema = createWebPageSchema({
 export const metadata: Metadata = {
   title: 'Spanish Trail Homes for Sale | Community Guide',
   description: communityPageDescription,
-  alternates: { canonical: '/communities/spanish-trail' },
+  alternates: { canonical: getCanonicalUrl('/communities/spanish-trail') },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
     url: pageUrl,
     title: 'Spanish Trail Homes & Community Overview',

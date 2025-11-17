@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-waterfront-golf-homes'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Discover Spanish Trail waterfront golf course homes with Dr. Janet Duffy. Lakeside patios, golf frontage, and concierge buying expertise.',
   alternates: {
-    canonical: '/spanish-trail-waterfront-golf-homes',
+    canonical: getCanonicalUrl('/spanish-trail-waterfront-golf-homes'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

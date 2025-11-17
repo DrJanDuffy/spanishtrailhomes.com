@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
 import './globals.css'
-import { createOgImageUrl, structuredDataSiteUrl } from '@/lib/structuredData'
+import { createOgImageUrl, structuredDataSiteUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const siteUrl = structuredDataSiteUrl
 
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
   applicationName: 'Spanish Trail Homes',
   authors: [{ name: 'Dr. Janet Duffy' }],
   alternates: {
-    canonical: '/',
+    canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     type: 'website',

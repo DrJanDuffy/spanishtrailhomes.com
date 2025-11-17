@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-townhomes-villas'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Browse Spanish Trail townhomes and villas with Dr. Janet Duffy. Lock-and-leave luxury, HOA insights, curated amenities, and concierge buyer representation.',
   alternates: {
-    canonical: '/spanish-trail-townhomes-villas',
+    canonical: getCanonicalUrl('/spanish-trail-townhomes-villas'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

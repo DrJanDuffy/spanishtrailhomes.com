@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
   description: contactPageDescription,
   alternates: {
-    canonical: '/contact',
+    canonical: getCanonicalUrl('/contact'),
   },
   openGraph: {
     url: pageUrl,

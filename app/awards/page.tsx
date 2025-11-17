@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/awards'
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
   title: 'Awards & Recognition | Dr. Janet Duffy',
   description: awardsPageDescription,
   alternates: {
-    canonical: '/awards',
+    canonical: getCanonicalUrl('/awards'),
   },
   openGraph: {
     url: pageUrl,

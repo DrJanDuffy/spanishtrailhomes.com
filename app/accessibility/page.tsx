@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/accessibility'
 const accessibilityPageDescription =
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   title: 'Accessibility Statement | SpanishTrailHomes.com',
   description: accessibilityPageDescription,
   alternates: {
-    canonical: '/accessibility',
+    canonical: getCanonicalUrl('/accessibility'),
   },
   robots: {
     index: true,

@@ -7,7 +7,7 @@ import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
-import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
   description: homePageDescription,
   alternates: {
-    canonical: '/',
+    canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     url: pageUrl,

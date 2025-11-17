@@ -9,7 +9,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { HeroBackground } from '@/components/hero-background'
 import { localEssentials } from '@/lib/spanishTrailContent'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const guestNarratives = [
   {
@@ -102,7 +102,18 @@ const guestInfoWebPageSchema = createWebPageSchema({
 export const metadata: Metadata = {
   title: 'Guest Information | Spanish Trail Country Club',
   description: guestInfoPageDescription,
-  alternates: { canonical: '/guest-info' },
+  alternates: { canonical: getCanonicalUrl('/guest-info') },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
     url: pageUrl,
     title: 'Guest Guide | Spanish Trail Country Club',

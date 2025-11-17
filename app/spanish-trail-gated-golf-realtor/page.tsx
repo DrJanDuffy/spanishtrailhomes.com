@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-gated-golf-realtor'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Partner with Dr. Janet Duffy, Berkshire Hathaway luxury advisor and Spanish Trail gated golf community expert. Concierge buying, market intel, and club integration.',
   alternates: {
-    canonical: '/spanish-trail-gated-golf-realtor',
+    canonical: getCanonicalUrl('/spanish-trail-gated-golf-realtor'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

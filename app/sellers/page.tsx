@@ -8,7 +8,7 @@ import type { HTMLAttributes } from 'react'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
   'agent-encoded-id': string
@@ -90,7 +90,18 @@ export const metadata: Metadata = {
   title: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
   description: sellersPageDescription,
   alternates: {
-    canonical: '/sellers',
+    canonical: getCanonicalUrl('/sellers'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

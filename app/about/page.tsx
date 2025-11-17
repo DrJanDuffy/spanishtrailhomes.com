@@ -6,7 +6,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/about'
 
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   description:
     'Meet Dr. Janet Duffy, Berkshire Hathaway HomeServices REALTOR® and Spanish Trail community specialist delivering concierge real estate advisory.',
   alternates: {
-    canonical: '/about',
+    canonical: getCanonicalUrl('/about'),
   },
   openGraph: {
     url: pageUrl,

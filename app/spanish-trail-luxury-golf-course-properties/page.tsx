@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Explore luxury golf course homes in Spanish Trail with Dr. Janet Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
   alternates: {
-    canonical: '/spanish-trail-luxury-golf-course-properties',
+    canonical: getCanonicalUrl('/spanish-trail-luxury-golf-course-properties'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

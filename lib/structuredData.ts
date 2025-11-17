@@ -55,6 +55,19 @@ export const createWebPageSchema = ({ name, description, path, type = 'WebPage',
 
 export const structuredDataSiteUrl = siteUrl
 
+/**
+ * Generate an absolute canonical URL for a given path
+ * Ensures the URL is clean (no query parameters) and absolute
+ */
+export const getCanonicalUrl = (path: string): string => {
+  if (!path || path === '/') {
+    return siteUrl
+  }
+  // Remove any query parameters and ensure path starts with /
+  const cleanPath = path.split('?')[0].split('#')[0]
+  return `${siteUrl}${cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`}`
+}
+
 type OgImageOptions = {
   title: string
   subtitle?: string

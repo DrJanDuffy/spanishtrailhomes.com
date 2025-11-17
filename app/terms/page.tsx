@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/terms'
 const termsPageDescription =
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   title: 'Terms of Use | SpanishTrailHomes.com',
   description: termsPageDescription,
   alternates: {
-    canonical: '/terms',
+    canonical: getCanonicalUrl('/terms'),
   },
   robots: {
     index: true,

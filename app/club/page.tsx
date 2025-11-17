@@ -10,7 +10,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { lifestyleHighlights } from '@/lib/spanishTrailContent'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const clubNarratives = [
   {
@@ -127,7 +127,7 @@ const clubWebPageSchema = createWebPageSchema({
 export const metadata: Metadata = {
   title: 'Club Life | Spanish Trail Country Club',
   description: clubPageDescription,
-  alternates: { canonical: '/club' },
+  alternates: { canonical: getCanonicalUrl('/club') },
   openGraph: {
     url: pageUrl,
     title: 'Club Life at Spanish Trail Country Club',

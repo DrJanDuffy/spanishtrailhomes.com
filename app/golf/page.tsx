@@ -10,7 +10,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { HeroBackground } from '@/components/hero-background'
-import { createOgImageUrl, createWebPageSchema } from '@/lib/structuredData'
+import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
 const golfNarratives = [
   {
@@ -103,7 +103,18 @@ const golfWebPageSchema = createWebPageSchema({
 export const metadata: Metadata = {
   title: 'Golf Experience | Spanish Trail Country Club',
   description: golfPageDescription,
-  alternates: { canonical: '/golf' },
+  alternates: { canonical: getCanonicalUrl('/golf') },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
   openGraph: {
     url: pageUrl,
     title: 'Spanish Trail Golf Experience',

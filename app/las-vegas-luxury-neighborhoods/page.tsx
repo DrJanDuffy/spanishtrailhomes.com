@@ -6,7 +6,7 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { nearbyCommunities } from '@/lib/spanishTrailContent'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/las-vegas-luxury-neighborhoods'
 
@@ -45,7 +45,18 @@ export const metadata: Metadata = {
   description:
     'Compare Spanish Trail with top Las Vegas luxury communities including The Ridges, Red Rock Country Club, and The Summit Club.',
   alternates: {
-    canonical: '/las-vegas-luxury-neighborhoods',
+    canonical: getCanonicalUrl('/las-vegas-luxury-neighborhoods'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

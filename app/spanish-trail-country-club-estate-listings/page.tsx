@@ -7,7 +7,7 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
-import { createOgImageUrl } from '@/lib/structuredData'
+import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   description:
     'Browse Spanish Trail Country Club estate listings with Dr. Janet Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
   alternates: {
-    canonical: '/spanish-trail-country-club-estate-listings',
+    canonical: getCanonicalUrl('/spanish-trail-country-club-estate-listings'),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
   },
   openGraph: {
     url: pageUrl,

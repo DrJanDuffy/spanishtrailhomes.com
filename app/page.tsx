@@ -220,13 +220,13 @@ function HeroSection() {
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+          <p className="text-xs uppercase tracking-[0.5em] text-accent">
             Berkshire Hathaway HomeServices Presents
           </p>
           <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
             Spanish Trail Homes in Las Vegas 89117
           </h1>
-          <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
+          <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
             Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
           </p>
         </div>
@@ -550,7 +550,7 @@ function CTASection() {
         <h2 id="cta-heading" className="font-heading text-3xl leading-tight sm:text-4xl">
           Ready to explore Spanish Trail homes?
         </h2>
-        <p className="text-base leading-relaxed text-primary-foreground/85">
+        <p className="text-base leading-relaxed text-primary-foreground">
           Schedule a private tour, explore current listings, or request a valuation for your Spanish Trail residence—our concierge team is ready to assist.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">

@@ -189,7 +189,7 @@ function GuestHero() {
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
-        <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+        <p className="text-xs uppercase tracking-[0.5em] text-accent">
           Guest Guide
         </p>
         <h1
@@ -198,7 +198,7 @@ function GuestHero() {
         >
           Welcome to Spanish Trail Country Club.
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground/90 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           We look forward to hosting you. Review the guide below for directions,
           arrival details, and clubhouse etiquette to make the most of your visit.
         </p>

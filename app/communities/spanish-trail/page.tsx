@@ -230,7 +230,7 @@ function HeroSection() {
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+          <p className="text-xs uppercase tracking-[0.5em] text-accent">
             Featured Community
           </p>
           <h1
@@ -239,7 +239,7 @@ function HeroSection() {
           >
             Spanish Trail Luxury Homes for Sale
           </h1>
-          <p className="text-base leading-relaxed text-primary-foreground/90 sm:text-lg">
+          <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
             Discover a guard-gated golf enclave in Southwest Las Vegas that pairs timeless architecture with resort-level amenities, all moments from Spring Valley and the Strip.
           </p>
         </div>

@@ -195,7 +195,7 @@ function GolfHero() {
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
-        <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+        <p className="text-xs uppercase tracking-[0.5em] text-accent">
           Golf at Spanish Trail
         </p>
         <h1
@@ -205,7 +205,7 @@ function GolfHero() {
           27 championship holes. Three distinct personalities. Endless ways to
           play.
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground/90 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           Robert Trent Jones Jr. designed each nine to challenge strategy, ball
           striking, and creativity—paired with postcard views of Red Rock Canyon
           and the Las Vegas Strip.

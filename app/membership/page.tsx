@@ -211,7 +211,7 @@ function MembershipHero() {
       />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
-        <p className="text-xs uppercase tracking-[0.5em] text-secondary">
+        <p className="text-xs uppercase tracking-[0.5em] text-accent">
           Membership
         </p>
         <h1
@@ -220,7 +220,7 @@ function MembershipHero() {
         >
           A private club community curated for golfers, families, and tastemakers.
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground/90 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           Unlock championship golf, vibrant social programming, and concierge-level
           service minutes from the Las Vegas Strip.
         </p>

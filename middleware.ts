@@ -3,8 +3,15 @@ import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
+  const hostname = request.headers.get('host') || ''
   const pathname = url.pathname
   const searchParams = url.searchParams
+
+  // Redirect non-www to www (canonical domain)
+  if (hostname === 'spanishtrailhomes.com') {
+    const wwwUrl = new URL(`https://www.spanishtrailhomes.com${pathname}${url.search}`)
+    return NextResponse.redirect(wwwUrl, 301)
+  }
 
   // Remove query parameters that create duplicate content
   // Common culprits: date, timestamp, utm_*, ref, source, etc.

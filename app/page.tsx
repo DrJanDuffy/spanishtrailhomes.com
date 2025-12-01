@@ -267,11 +267,20 @@ function IntroSection() {
             Why Spanish Trail works for everyday life.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
-            As one of Las Vegas’s original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe’s, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.【https://luxuryhomesoflasvegas.com/communities/spanish-trail/】
+            As one of Las Vegas's original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe's, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.
           </p>
+          <div className="pt-4">
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-[#0f2b1e]/60 px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e] hover:text-white"
+            >
+              <Link href="/communities/spanish-trail">Explore Spanish Trail Community</Link>
+            </Button>
+          </div>
         </div>
         <div className="space-y-4 rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10">
           <p className="text-xs uppercase tracking-[0.4em] text-secondary">

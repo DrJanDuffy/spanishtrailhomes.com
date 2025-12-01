@@ -13,6 +13,8 @@ const playfair = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+  preload: true,
+  fallback: ['Georgia', 'serif'],
 })
 
 const lato = Lato({
@@ -20,6 +22,8 @@ const lato = Lato({
   subsets: ['latin'],
   display: 'swap',
   weight: ['300', '400', '700'],
+  preload: true,
+  fallback: ['system-ui', 'sans-serif'],
 })
 
 const structuredData = [
@@ -189,9 +193,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to external domains for faster resource loading */}
+        <link rel="preconnect" href="https://www.realscout.com" />
+        <link rel="preconnect" href="https://em.realscout.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://d1buiexcd5gara.cloudfront.net" />
+        
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X68WWN997N"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
@@ -206,7 +218,7 @@ gtag('config', 'G-X68WWN997N', {
           id="realscout-widget"
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}

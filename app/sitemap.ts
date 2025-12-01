@@ -16,6 +16,7 @@ const routeConfig: Array<{
   { path: '/sellers', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/communities/spanish-trail', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/spanish-trail-homes-for-sale-las-vegas', priority: 0.9, changeFrequency: 'daily' },
+  { path: '/homes-for-sale-in-spanish-trail-las-vegas', priority: 0.9, changeFrequency: 'daily' },
   
   // Club and lifestyle pages - high priority
   { path: '/club', priority: 0.9, changeFrequency: 'monthly' },

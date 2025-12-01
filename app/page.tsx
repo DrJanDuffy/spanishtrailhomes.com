@@ -496,6 +496,11 @@ const exploreCards = [
     href: '/spanish-trail-homes-for-sale-las-vegas',
   },
   {
+    title: 'Homes for Sale in Spanish Trail - Las Vegas',
+    description: 'Find elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail. Guard-gated golf community with diverse housing options.',
+    href: '/homes-for-sale-in-spanish-trail-las-vegas',
+  },
+  {
     title: 'Spanish Trail Community',
     description: 'Explore the guard-gated community, amenities, and lifestyle at Spanish Trail Country Club.',
     href: '/communities/spanish-trail',

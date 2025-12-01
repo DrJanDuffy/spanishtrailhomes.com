@@ -97,6 +97,7 @@ export default function SpanishTrailGatedGolfRealtorPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Gated Golf Realtor' },
             ]}
           />

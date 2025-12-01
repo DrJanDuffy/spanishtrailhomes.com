@@ -8,6 +8,47 @@ import { Button } from '@/components/ui/button'
 import { HeroBackground } from '@/components/hero-background'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 
+const aboutFaq = [
+  {
+    question: 'What makes Dr. Janet Duffy different from other Spanish Trail real estate agents?',
+    answer:
+      'Dr. Duffy brings a unique combination of academic research in organizational leadership, Berkshire Hathaway HomeServices resources, and daily Spanish Trail immersion. With a Ph.D. focused on high-trust advisory relationships, she applies data-led preparation, concierge project management, and deep club/community fluency to every transaction. Her approach translates complex market data into actionable strategy while coordinating multi-disciplinary teams with discretion.',
+  },
+  {
+    question: 'How many Spanish Trail families has Dr. Duffy worked with?',
+    answer:
+      'Dr. Duffy has advised over 500 Spanish Trail families across purchases, sales, and long-range planning. Her daily presence inside the community—reviewing listings, coordinating with gate staff, and previewing renovations—keeps clients ahead of market headlines and positioned to act when the right opportunity appears.',
+  },
+  {
+    question: 'What credentials and awards has Dr. Janet Duffy received?',
+    answer:
+      'Dr. Duffy holds a Ph.D. in Organizational Leadership and is a Certified Luxury Marketing Specialist (CLHMS). She has been recognized as Berkshire Hathaway HomeServices Chairman\'s Circle Gold (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
+  },
+  {
+    question: 'How does Dr. Duffy\'s research background benefit clients?',
+    answer:
+      'Her doctorate research on trust-centered decision making shapes her real estate practice. Every listing launch, private tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics. This academic foundation helps clients understand not just what to do, but why—leading to more confident decisions and better long-term outcomes.',
+  },
+  {
+    question: 'What concierge services does Dr. Duffy provide?',
+    answer:
+      'Beyond traditional real estate services, Dr. Duffy coordinates pre-listing renovations, relocation logistics, vetted designers, stagers, lenders, and membership teams. She maintains a 24-hour concierge response cadence for active negotiations and provides introductions to HOA boards, club leadership, and philanthropic partners to help clients integrate into the Spanish Trail community.',
+  },
+]
+
+const aboutFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: aboutFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 const pageUrl = 'https://www.spanishtrailhomes.com/about'
 
 const aboutWebPageSchema = createWebPageSchema({
@@ -131,7 +172,11 @@ export default function AboutPage() {
       <ApproachSection />
       <CredentialsSection />
       <CommunitySection />
+      <AboutFAQSection />
       <CTASection />
+      <Script id="about-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(aboutFaqSchema)}
+      </Script>
       <Script id="about-webpage-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(aboutWebPageSchema)}
       </Script>
@@ -147,6 +192,7 @@ function HeroSection() {
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="about-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&auto=format&fit=crop&w=2000"
+        alt="Dr. Janet Duffy - Spanish Trail real estate agent and luxury home specialist in Las Vegas"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1200px"
       />
@@ -192,12 +238,12 @@ function StorySection() {
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Before guiding Spanish Trail clients, Dr. Duffy built a career advising Fortune 500 leadership teams on
-            trust-centered decision making. That research now shapes her real estate practice: every listing launch, private
+            trust-centered decision making. That research now shapes her real estate practice: every <Link href="/sellers" className="text-[#0f2b1e] underline-offset-4 hover:underline">listing launch</Link>, private
             tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics.
           </p>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Daily, you’ll find her inside the community—reviewing new listings, catching up with gate staff, coordinating
-            club introductions, or previewing upcoming renovations. That boots-on-the-ground rhythm keeps clients ahead of the
+            Daily, you'll find her inside the community—reviewing new <Link href="/buyers" className="text-[#0f2b1e] underline-offset-4 hover:underline">Spanish Trail listings</Link>, catching up with gate staff, coordinating
+            <Link href="/membership" className="text-[#0f2b1e] underline-offset-4 hover:underline"> club introductions</Link>, or previewing upcoming renovations. That boots-on-the-ground rhythm keeps clients ahead of the
             headlines and positioned to act the moment the right opportunity appears.
           </p>
         </div>
@@ -233,8 +279,8 @@ function ApproachSection() {
             Precision, privacy, and concierge execution for every client
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Spanish Trail decisions require more than MLS snapshots. Dr. Duffy translates gated-community data into actionable
-            strategy, orchestrating multi-disciplinary teams with the discretion expected of high-net-worth households.
+            Spanish Trail decisions require more than MLS snapshots. Dr. Duffy translates <Link href="/spanish-trail-market-report" className="text-[#0f2b1e] underline-offset-4 hover:underline">gated-community data</Link> into actionable
+            strategy, orchestrating multi-disciplinary teams with the discretion expected of high-net-worth households. Explore our <Link href="/spanish-trail-insights" className="text-[#0f2b1e] underline-offset-4 hover:underline">Spanish Trail insights</Link> for deeper market analysis.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -327,16 +373,45 @@ function CommunitySection() {
   )
 }
 
+function AboutFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="about-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">About Dr. Janet Duffy FAQ</p>
+          <h2 id="about-faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
+            Frequently asked questions about working with Dr. Janet Duffy
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Learn more about Dr. Duffy's approach, credentials, and how she helps Spanish Trail clients achieve their real estate goals.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {aboutFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function CTASection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="about-cta-heading">
       <div className="mx-auto max-w-4xl rounded-3xl border border-border/60 bg-[#0f2b1e] px-8 py-16 text-center text-[#f8f5ef] shadow-xl shadow-primary/20">
         <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Work With Dr. Janet Duffy</p>
         <h2 id="about-cta-heading" className="mt-4 font-heading text-3xl leading-tight sm:text-4xl">
-          Let’s design the next chapter of your Spanish Trail story
+          Let's design the next chapter of your Spanish Trail story
         </h2>
         <p className="mt-6 text-base leading-relaxed text-[#f8f5ef]/85">
-          Whether you’re refining an estate sale, relocating into the guard gates, or benchmarking your market position, Dr.
+          Whether you're refining an estate sale, relocating into the guard gates, or benchmarking your market position, Dr.
           Duffy brings disciplined planning, concierge resources, and unrivaled neighborhood fluency to every decision.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

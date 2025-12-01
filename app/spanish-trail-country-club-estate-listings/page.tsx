@@ -97,6 +97,7 @@ export default function CountryClubEstateListingsPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Spanish Trail Estate Listings' },
             ]}
           />

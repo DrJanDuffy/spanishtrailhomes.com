@@ -184,6 +184,7 @@ function GuestHero() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1462212210362-162e9f0ce5a1?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Country Club guest information and directions in Las Vegas 89117"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -240,7 +241,7 @@ function DirectionsSection() {
 
         <div className="overflow-hidden rounded-3xl border border-border/60 bg-card shadow-lg">
           <iframe
-            title="Spanish Trail Country Club Map"
+            title="Spanish Trail Country Club Map - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1155408815076!2d-115.28609452341818!3d36.10914500736459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8bf27532cd0f3%3A0xba327d02c4e3709e!2sSpanish%20Trail%20Country%20Club!5e0!3m2!1sen!2sus!4v1731191452004!5m2!1sen!2sus"
             className="h-[360px] w-full border-0"
             loading="lazy"

@@ -40,6 +40,47 @@ const relocationChecklist = [
   'Renovation guidelines, architectural review timelines, and preferred vendor lists',
 ]
 
+const luxuryNeighborhoodsFaq = [
+  {
+    question: 'How does Spanish Trail compare to The Ridges in terms of price and lifestyle?',
+    answer:
+      'Spanish Trail typically offers better value per square foot with established landscaping and mature amenities, while The Ridges features newer construction and ultra-modern architecture at a premium. Spanish Trail\'s triple-course golf and guard-gated security appeal to buyers seeking established community character, while The Ridges attracts those prioritizing new-build technology and elevated HOA programming. Dr. Duffy provides detailed comparisons during neighborhood tours.',
+  },
+  {
+    question: 'What makes Spanish Trail stand out among Las Vegas luxury communities?',
+    answer:
+      'Spanish Trail combines mature tree-lined streets, 27-hole championship golf, 24-hour guard gates, and proximity to the Strip (15 minutes) in a way few other communities match. Its established club programming, architectural diversity (from custom estates to lock-and-leave villas), and strong resale value make it appealing to both full-time residents and seasonal owners. The community\'s reputation for discretion and quality has remained consistent for decades.',
+  },
+  {
+    question: 'Should I consider multiple luxury communities before deciding?',
+    answer:
+      'Absolutely. Dr. Duffy coordinates comparison tours across Spanish Trail, The Ridges, Red Rock Country Club, The Summit Club, and Spanish Hills—all on the same day when possible. This allows you to experience differences in architecture, club culture, HOA management, and lifestyle firsthand. Each community has distinct strengths, and understanding these nuances helps ensure you choose the best fit for your goals.',
+  },
+  {
+    question: 'How do club memberships differ between Spanish Trail and other luxury communities?',
+    answer:
+      'Spanish Trail offers flexible membership categories (Full Golf, Young Executive, Lifestyle, Corporate) with initiation fees typically lower than newer communities like The Summit Club. Red Rock Country Club has two Arnold Palmer courses with family-focused programming. The Ridges features Bear\'s Best golf with modern amenities. Dr. Duffy arranges meetings with membership directors at each club to review categories, fees, waitlist status, and reciprocity benefits so you can make informed decisions.',
+  },
+  {
+    question: 'What factors should I prioritize when comparing luxury neighborhoods?',
+    answer:
+      'Consider: 1) Lifestyle match (golf-centric, family-focused, lock-and-leave), 2) Commute times to work, entertainment, and services, 3) Resale value and market stability, 4) Club membership costs and availability, 5) Architectural style and renovation flexibility, 6) HOA fees and services provided, 7) Community maturity and established amenities. Dr. Duffy helps clients evaluate these factors systematically during consultation sessions.',
+  },
+]
+
+const luxuryNeighborhoodsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: luxuryNeighborhoodsFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Janet Duffy',
   description:
@@ -121,6 +162,7 @@ export default function LuxuryNeighborhoodComparisonsPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Las Vegas Luxury Neighborhoods' },
             ]}
           />
@@ -129,7 +171,11 @@ export default function LuxuryNeighborhoodComparisonsPage() {
       <ComparisonGridSection />
       <RelocationChecklistSection />
       <SpanishTrailPositioningSection />
+      <LuxuryNeighborhoodsFAQSection />
       <LuxuryCTASection />
+      <Script id="luxury-neighborhoods-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(luxuryNeighborhoodsFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }
@@ -252,15 +298,44 @@ function SpanishTrailPositioningSection() {
   )
 }
 
+function LuxuryNeighborhoodsFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="luxury-neighborhoods-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Luxury Neighborhood Comparison FAQ</p>
+          <h2 id="luxury-neighborhoods-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+            Frequently asked questions about comparing Las Vegas luxury communities
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Understand how Spanish Trail compares to other premier Las Vegas neighborhoods and make informed decisions about your luxury community choice.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {luxuryNeighborhoodsFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function LuxuryCTASection() {
   return (
     <section className="bg-[#0f2b1e] py-20 text-[#f8f5ef]" aria-labelledby="luxury-cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h2 id="luxury-cta-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
-          Let’s match you with the right community
+          Let's match you with the right community
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Share your desired move timeline, household needs, and amenity wish list. We’ll craft an itinerary covering
+          Share your desired move timeline, household needs, and amenity wish list. We'll craft an itinerary covering
           Spanish Trail and the Las Vegas neighborhoods that suit you best.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

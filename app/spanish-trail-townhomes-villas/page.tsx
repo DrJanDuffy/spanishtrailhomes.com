@@ -97,6 +97,7 @@ export default function SpanishTrailTownhomesVillasPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Spanish Trail Townhomes & Villas' },
             ]}
           />

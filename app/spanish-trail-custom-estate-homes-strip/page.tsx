@@ -97,6 +97,7 @@ export default function CustomEstateHomesStripPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Custom Estate Homes Near the Strip' },
             ]}
           />

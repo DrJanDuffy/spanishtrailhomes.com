@@ -18,6 +18,47 @@ const advisoryHighlights = [
   'Quarterly valuation check-ins and exit strategies for homeowners and investors',
 ]
 
+const insightsFaq = [
+  {
+    question: 'How often are Spanish Trail Insights updated?',
+    answer:
+      'Insights are refreshed weekly based on new listings, sales activity, club programming updates, and market shifts. Dr. Janet Duffy shares these observations through briefings that reflect on-the-ground research and real-time buyer behavior patterns. Subscribe to receive updates via email or follow along on the website.',
+  },
+  {
+    question: 'What topics do the insights cover?',
+    answer:
+      'The insights dive into market momentum, lifestyle trends (golf, dining, social events), renovation priorities that increase value, strategic financing approaches, neighborhood comparisons, club membership considerations, and investment outlook. Each briefing distills complex market data into actionable guidance for buyers, sellers, and investors.',
+  },
+  {
+    question: 'Can insights help me decide between different Spanish Trail enclaves?',
+    answer:
+      'Absolutely. The insights include detailed neighborhood spotlights comparing enclaves by lifestyle (full-time vs. seasonal), amenities (golf course proximity, secondary gates), price points, HOA fees, and buyer demographics. Dr. Duffy uses these insights during buyer consultations to match clients with the Spanish Trail section that best aligns with their goals.',
+  },
+  {
+    question: 'How do insights differ from the market report?',
+    answer:
+      'The market report focuses on quantitative data (pricing, inventory, absorption rates). Insights provide qualitative analysis, strategic recommendations, lifestyle context, and forward-looking trends. Together, they offer a complete picture: the numbers tell you what\'s happening, while insights explain why and what it means for your specific situation.',
+  },
+  {
+    question: 'Do insights include information about off-market opportunities?',
+    answer:
+      'While specific off-market listings aren\'t published publicly, insights frequently discuss market conditions that indicate upcoming private sales, seller motivations, and timing considerations. Dr. Duffy\'s concierge clients receive direct notifications about off-market opportunities that match their criteria.',
+  },
+]
+
+const insightsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: insightsFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Spanish Trail Real Estate Insights | Dr. Janet Duffy',
   description:
@@ -99,6 +140,7 @@ export default function SpanishTrailInsightsPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Spanish Trail Insights' },
             ]}
           />
@@ -115,7 +157,11 @@ export default function SpanishTrailInsightsPage() {
         priceMin="500000"
         propertyTypes=",SFR,CONDO"
       />
+      <InsightsFAQSection />
       <InsightsCTASection />
+      <Script id="insights-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(insightsFaqSchema)}
+      </Script>
     </SiteShell>
   )
 }
@@ -232,6 +278,35 @@ function AdvisoryServicesSection() {
             >
               {highlight}
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function InsightsFAQSection() {
+  return (
+    <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="insights-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights FAQ</p>
+          <h2 id="insights-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+            Frequently asked questions about Spanish Trail insights
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Learn how to use insights effectively, understand market trends, and leverage strategic guidance for your Spanish Trail real estate decisions.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {insightsFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
+            </article>
           ))}
         </div>
       </div>

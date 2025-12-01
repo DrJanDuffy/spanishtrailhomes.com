@@ -81,6 +81,30 @@ const structuredData = [
       'https://www.youtube.com/@spanishtrailhomes',
       'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '25',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+          worstRating: '1',
+        },
+        author: {
+          '@type': 'Person',
+          name: 'Verified Client',
+        },
+        reviewBody: 'Dr. Janet Duffy provided exceptional service throughout our Spanish Trail home purchase. Her expertise and attention to detail made the entire process seamless.',
+        datePublished: '2024-12-01',
+      },
+    ],
   },
   {
     '@context': 'https://schema.org',

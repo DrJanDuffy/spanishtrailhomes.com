@@ -97,6 +97,7 @@ export default function SouthwestLasVegasLuxuryHomesPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Southwest Las Vegas Luxury Homes' },
             ]}
           />

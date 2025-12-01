@@ -97,6 +97,7 @@ export default function GuardGatedGolfHomesPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Guard-Gated Golf Homes' },
             ]}
           />

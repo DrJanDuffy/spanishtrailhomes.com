@@ -31,6 +31,47 @@ const featuredListingsSchema = {
   })),
 }
 
+const marketReportFaq = [
+  {
+    question: 'How often is the Spanish Trail Market Report updated?',
+    answer:
+      'The market report is refreshed every Friday with the latest pricing trends, absorption rates, and inventory data from Berkshire Hathaway HomeServices, RealScout buyer activity, and private broker feedback. Dr. Janet Duffy personally compiles this data to ensure accuracy and relevance for buyers and sellers making timely decisions.',
+  },
+  {
+    question: 'What key metrics should I focus on when reviewing the market report?',
+    answer:
+      'Pay attention to median sale price, days on market, inventory levels, and price per square foot trends. These metrics help buyers understand competition levels and pricing expectations, while sellers can gauge market velocity and optimal listing timing. Dr. Duffy provides context for each metric during consultation sessions.',
+  },
+  {
+    question: 'How does the Spanish Trail market compare to other Las Vegas luxury communities?',
+    answer:
+      'Spanish Trail typically shows stronger price stability and faster absorption rates compared to newer master-planned communities due to its established guard gates, mature landscaping, and triple-course golf amenities. The community\'s proximity to the Strip (15 minutes) and established club programming create consistent buyer demand. Dr. Duffy provides detailed comparisons during strategy sessions.',
+  },
+  {
+    question: 'Can I get a custom market analysis for my specific Spanish Trail property?',
+    answer:
+      'Yes. Dr. Duffy offers personalized equity reviews and comparative market analyses (CMAs) tailored to your exact property, enclave, and timing goals. This includes recent comparable sales, current active listings, pending transactions, and off-market opportunities. Contact her at (702) 766-3299 to request a custom report.',
+  },
+  {
+    question: 'What factors influence Spanish Trail pricing beyond the report numbers?',
+    answer:
+      'Beyond basic metrics, factors like golf course views, secondary gate access, recent renovations, lot size, and proximity to clubhouse significantly impact pricing. Premium properties may command 15-25% above median values. Dr. Duffy evaluates these qualitative factors during property tours and pricing consultations.',
+  },
+]
+
+const marketReportFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: marketReportFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export const metadata: Metadata = {
   title: 'Spanish Trail Market Report | Dr. Janet Duffy',
   description:
@@ -113,6 +154,7 @@ export default function SpanishTrailMarketReportPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Spanish Trail Market Report' },
             ]}
           />
@@ -128,7 +170,11 @@ export default function SpanishTrailMarketReportPage() {
         propertyTypes=",SFR,CONDO"
       />
       <FeaturedListingsSection />
+      <MarketReportFAQSection />
       <ReportingCTASection />
+      <Script id="market-report-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(marketReportFaqSchema)}
+      </Script>
       <Script id="featured-listings-structured-data" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(featuredListingsSchema)}
       </Script>
@@ -237,6 +283,35 @@ function FeaturedListingsSection() {
                   </Link>
                 </Button>
               </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function MarketReportFAQSection() {
+  return (
+    <section className="bg-white py-20 sm:py-24" aria-labelledby="market-report-faq-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-3xl space-y-4">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Market Report FAQ</p>
+          <h2 id="market-report-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+            Frequently asked questions about Spanish Trail market data
+          </h2>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Understand how to interpret market trends, request custom analyses, and use this data to make confident real estate decisions.
+          </p>
+        </div>
+
+        <div className="mt-12 space-y-10">
+          {marketReportFaq.map((item) => (
+            <article key={item.question} className="space-y-3 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 shadow-lg shadow-primary/10">
+              <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">
+                {item.question}
+              </h3>
+              <p className="text-base leading-relaxed text-[#372a20]/85">{item.answer}</p>
             </article>
           ))}
         </div>

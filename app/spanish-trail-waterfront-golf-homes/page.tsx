@@ -97,6 +97,7 @@ export default function WaterfrontGolfHomesPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Waterfront Golf Homes' },
             ]}
           />

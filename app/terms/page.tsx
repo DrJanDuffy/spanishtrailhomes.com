@@ -113,6 +113,7 @@ function HeroSection() {
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="terms-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Homes terms of use and legal information for Las Vegas real estate services"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />

@@ -97,6 +97,7 @@ export default function PrivateGolfCourseHomesPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Private Golf Course Homes' },
             ]}
           />

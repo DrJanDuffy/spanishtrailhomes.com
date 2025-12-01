@@ -84,6 +84,21 @@ const faqContent = [
     answer:
       "Spanish Trail has 11 sub-neighborhoods including Villas at Spanish Trail, Patios at Spanish Trail, and Estate homes behind secondary gates. Each has distinct character, price points, and HOA fees ($180-$425/month). Which lifestyle appeals to you?",
   },
+  {
+    question: 'How quickly can I schedule a consultation with Dr. Janet Duffy?',
+    answer:
+      'Dr. Duffy maintains a 24-hour concierge response cadence. Typically, consultations can be scheduled within 48 hours, though same-day availability may be possible for urgent transactions. Contact via phone at (702) 766-3299 or email DrDuffySells@SpanishTrailHomes.com to coordinate a time that works with your schedule.',
+  },
+  {
+    question: 'What should I prepare for my first consultation?',
+    answer:
+      'Bring your timeline, budget parameters, lifestyle priorities (golf, privacy, proximity to clubhouse), and any specific enclaves or home styles you\'re considering. Dr. Duffy will prepare current market data, comparable sales, and neighborhood insights tailored to your goals. This initial conversation helps refine your search strategy and identify the best opportunities.',
+  },
+  {
+    question: 'Does Dr. Duffy work with buyers and sellers outside of Spanish Trail?',
+    answer:
+      'While Dr. Duffy specializes in Spanish Trail and maintains deep expertise in the guard-gated community, she also serves clients throughout southwest Las Vegas, including Summerlin, The Ridges, and other premier enclaves. Her Berkshire Hathaway HomeServices network provides comprehensive coverage across the Las Vegas Valley for relocation clients and those comparing multiple luxury communities.',
+  },
 ]
 
 const faqSchema = {
@@ -119,6 +134,7 @@ export default function ContactPage() {
       <MarketSnapshotSection />
       <NeighborhoodFitSection />
       <ContactCTASection />
+      <GBPIntegrationSection />
       <RealScoutSection
         id="contact-advanced-search"
         eyebrow="Start Your Search"
@@ -432,6 +448,105 @@ function ContactCTASection() {
             📞 Direct: <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
           </p>
           <p>📧 Email: <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link></p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function GBPIntegrationSection() {
+  const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
+  const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89117'
+  
+  return (
+    <section className="bg-white py-16 sm:py-20" aria-labelledby="gbp-heading">
+      <div className="mx-auto max-w-6xl px-6">
+        <h2 id="gbp-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
+          Visit Spanish Trail Homes | Dr. Janet Duffy
+        </h2>
+        <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
+          Located at Spanish Trail Country Club in Las Vegas. Connect with Dr. Janet Duffy for luxury real estate consultations and private tours.
+        </p>
+        
+        <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.2fr]">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">Contact Information</h3>
+              <div className="space-y-3 text-base leading-relaxed text-[#372a20]/85">
+                <p>
+                  <strong className="font-semibold text-[#0f2b1e]">Address:</strong><br />
+                  5050 Spanish Trail Ln.<br />
+                  Las Vegas, NV 89117
+                </p>
+                <p>
+                  <strong className="font-semibold text-[#0f2b1e]">Phone:</strong>{' '}
+                  <Link href="tel:17027663299" className="underline-offset-4 hover:underline">
+                    (702) 766-3299
+                  </Link>
+                </p>
+                <p>
+                  <strong className="font-semibold text-[#0f2b1e]">Email:</strong>{' '}
+                  <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">
+                    DrDuffySells@SpanishTrailHomes.com
+                  </Link>
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-3">
+              <Button
+                asChild
+                className="rounded-full bg-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.3em] text-white hover:bg-[#1f4a35]"
+              >
+                <Link href="tel:17027663299">
+                  Call (702) 766-3299
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e] hover:text-white"
+              >
+                <Link href={mapsDirectionsUrl} target="_blank" rel="noopener noreferrer">
+                  Get Directions
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="rounded-full border-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e] hover:text-white"
+              >
+                <Link href={gbpUrl} target="_blank" rel="noopener noreferrer">
+                  View Google Reviews
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 text-sm text-[#372a20]/85">
+              <p className="font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] mb-2">Business Hours</p>
+              <dl className="space-y-1">
+                <div className="flex justify-between">
+                  <dt>Monday - Friday</dt>
+                  <dd>8:00 AM - 6:00 PM</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt>Saturday - Sunday</dt>
+                  <dd>8:00 AM - 4:00 PM</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+          <div className="overflow-hidden rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] shadow-lg">
+            <iframe
+              title="Spanish Trail Homes Location - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1155408815076!2d-115.28609452341818!3d36.10914500736459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8bf27532cd0f3%3A0xba327d02c4e3709e!2sSpanish%20Trail%20Country%20Club!5e0!3m2!1sen!2sus!4v1731191452004!5m2!1sen!2sus"
+              className="h-[400px] w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </section>

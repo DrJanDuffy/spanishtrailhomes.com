@@ -98,6 +98,7 @@ export default function SpanishTrailHomesForSalePage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
+              { label: 'Buyers', href: '/buyers' },
               { label: 'Spanish Trail Homes for Sale' },
             ]}
           />

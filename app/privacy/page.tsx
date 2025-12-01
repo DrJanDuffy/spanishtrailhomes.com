@@ -149,6 +149,7 @@ function HeroSection() {
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="privacy-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Homes privacy policy for Dr. Janet Duffy real estate services in Las Vegas"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -232,7 +233,7 @@ function DataUsageSection() {
             variant="outline"
             className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
           >
-            <Link href="/spanish-trail-insights">See client advisory insights</Link>
+            <Link href="/spanish-trail-insights">See Spanish Trail market insights and client advisory</Link>
           </Button>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">

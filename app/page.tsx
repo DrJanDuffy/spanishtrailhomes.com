@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { Button } from '@/components/ui/button'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
@@ -172,6 +173,11 @@ export default function HomePage() {
   return (
     <SiteShell>
       <HeroSection />
+      <div className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-4">
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
+        </div>
+      </div>
       <RealScoutSection
         id="bhhs-listings"
         title="Berkshire Hathaway Listings in Spanish Trail"
@@ -212,6 +218,7 @@ function HeroSection() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89117"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/80"
         priority
         sizes="(max-width: 1024px) 100vw, 1280px"
@@ -293,7 +300,7 @@ function IntroSection() {
             variant="link"
             className="justify-start px-0 text-xs uppercase tracking-[0.3em] text-primary"
           >
-            <Link href="/guest-info#map">View Directions & Map</Link>
+            <Link href="/guest-info#map">View Directions to Spanish Trail Country Club in Las Vegas</Link>
           </Button>
         </div>
       </div>

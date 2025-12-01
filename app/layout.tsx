@@ -230,4 +230,5 @@ gtag('config', 'G-X68WWN997N', {
         </ThemeProvider>
       </body>
     </html>
-  ))
+  )
+}

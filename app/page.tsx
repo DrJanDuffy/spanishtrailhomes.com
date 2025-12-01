@@ -481,6 +481,36 @@ const exploreCards = [
     href: '/spanish-trail-insights',
   },
   {
+    title: 'Buy Spanish Trail Homes',
+    description: 'Complete buyer guide with concierge tours, financing strategy, and neighborhood insights.',
+    href: '/buyers',
+  },
+  {
+    title: 'Sell Your Spanish Trail Home',
+    description: 'Expert seller services with market analysis, staging guidance, and premium positioning.',
+    href: '/sellers',
+  },
+  {
+    title: 'Spanish Trail Homes for Sale',
+    description: 'Browse current listings of luxury guard-gated homes in Las Vegas 89117.',
+    href: '/spanish-trail-homes-for-sale-las-vegas',
+  },
+  {
+    title: 'Spanish Trail Community',
+    description: 'Explore the guard-gated community, amenities, and lifestyle at Spanish Trail Country Club.',
+    href: '/communities/spanish-trail',
+  },
+  {
+    title: 'Townhomes & Villas',
+    description: 'Discover lock-and-leave Spanish Trail townhomes and villas perfect for second-home owners.',
+    href: '/spanish-trail-townhomes-villas',
+  },
+  {
+    title: 'Southwest Las Vegas Luxury',
+    description: 'Premium homes in southwest Las Vegas with guard-gated security and golf course access.',
+    href: '/spanish-trail-southwest-las-vegas-luxury-homes',
+  },
+  {
     title: 'Luxury Neighborhood Comparisons',
     description: 'Compare Spanish Trail with The Ridges, Summit Club, and other guard-gated Las Vegas enclaves.',
     href: '/las-vegas-luxury-neighborhoods',
@@ -489,6 +519,26 @@ const exploreCards = [
     title: 'Club Lifestyle & Amenities',
     description: 'See dining, wellness, and event programming inside the 50,000 sq. ft. clubhouse.',
     href: '/club#lifestyle',
+  },
+  {
+    title: 'About Dr. Janet Duffy',
+    description: 'Learn about Dr. Duffy\'s expertise, credentials, and concierge approach to Spanish Trail real estate.',
+    href: '/about',
+  },
+  {
+    title: 'Awards & Recognition',
+    description: 'View Dr. Janet Duffy\'s professional achievements and industry recognition.',
+    href: '/awards',
+  },
+  {
+    title: 'Membership Information',
+    description: 'Explore Spanish Trail Country Club membership categories, benefits, and lifestyle opportunities.',
+    href: '/membership',
+  },
+  {
+    title: 'Guest Information',
+    description: 'Planning a visit? Get directions, etiquette guidelines, and guest access information.',
+    href: '/guest-info',
   },
 ]
 
@@ -506,7 +556,7 @@ function ExploreFurtherSection() {
             planning, and neighborhood comparisons.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {exploreCards.map((card) => (
             <Link
               key={card.title}

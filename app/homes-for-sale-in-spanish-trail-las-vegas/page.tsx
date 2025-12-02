@@ -124,10 +124,10 @@ const homesForSaleFaqSchema = {
 }
 
 const webPageSchema = createWebPageSchema({
-  title: 'Homes for Sale in Spanish Trail - Las Vegas',
+  name: 'Homes for Sale in Spanish Trail - Las Vegas',
   description:
     'Browse homes for sale in Spanish Trail, Las Vegas. Elegant single-family homes, grand estates, luxury villas in a guard-gated golf community with 27-hole championship course.',
-  url: pageUrl,
+  path: '/homes-for-sale-in-spanish-trail-las-vegas',
 })
 
 export default function HomesForSaleInSpanishTrailLasVegasPage() {

@@ -292,7 +292,7 @@ function PhilosophySection() {
             },
             {
               title: 'Guide through complex situations',
-              description: 'Navigate sensitive transitions with clarity and confidence, whether it's a move, divorce, or investment.',
+              description: 'Navigate sensitive transitions with clarity and confidence, whether it\'s a move, divorce, or investment.',
             },
             {
               title: 'Identify hidden opportunities',

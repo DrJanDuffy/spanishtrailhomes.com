@@ -183,7 +183,7 @@ function HeroSection() {
           Homes for Sale in Spanish Trail - Las Vegas
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          Discover elegant single-family homes, grand estates, and luxury villas in Spanish Trail—Las Vegas\'s premier guard-gated golf community. From sophisticated residences starting at 2,024 square feet to expansive estates spanning 19,149 square feet, find your perfect home in this 27-hole championship golf paradise.
+          Discover elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail—Las Vegas\'s premier guard-gated golf community. From sophisticated golf community homes starting at 2,024 square feet to expansive golf course estates spanning 19,149 square feet, find your perfect Las Vegas golf course home in this 27-hole championship golf paradise.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button

@@ -22,7 +22,7 @@ const aboutFaq = [
   {
     question: 'What credentials and awards has Dr. Janet Duffy received?',
     answer:
-      'Dr. Duffy holds a Ph.D. in Organizational Leadership and is a Certified Luxury Marketing Specialist (CLHMS). She has been recognized as Berkshire Hathaway HomeServices Chairman\'s Circle Gold (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
+      'Dr. Duffy holds a Ph.D. in Organizational Leadership and is a Certified Luxury Marketing Specialist (CLHMS). She has been recognized as Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
   },
   {
     question: 'How does Dr. Duffy\'s research background benefit clients?',
@@ -82,7 +82,7 @@ const aboutPersonSchema = {
     'National Association of REALTORS®',
   ],
   award: [
-    "2025 Berkshire Hathaway HomeServices Chairman's Circle Gold",
+    "2025 Berkshire Hathaway HomeServices Luxury Golf Homes",
     '2024 Las Vegas REALTORS® Top 25 Luxury Producer',
     '2023 RealScout Spanish Trail Market Expert',
   ],
@@ -113,7 +113,7 @@ const approachPillars = [
 
 const credentials = [
   'Ph.D. in Organizational Leadership – research focused on high-trust advisory relationships',
-  'Berkshire Hathaway HomeServices Chairman’s Circle Gold (top 2% network-wide)',
+  'Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide)',
   'Institute for Luxury Home Marketing member & Certified Luxury Marketing Specialist (CLHMS)',
   'RealScout Spanish Trail Market Expert (2023–present)',
   'Frequent panelist for Las Vegas luxury market outlooks and guard-gated community briefings',

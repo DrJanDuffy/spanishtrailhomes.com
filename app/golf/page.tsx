@@ -86,7 +86,7 @@ const golfFaqSchema = {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/golf'
 const golfPageDescription =
-  'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and plan your next round at Spanish Trail Country Club.'
+  'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and explore golf course homes for sale near the Spanish Trail Country Club. Plan your next round and find luxury golf community homes in Las Vegas.'
 
 const golfWebPageSchema = createWebPageSchema({
   name: 'Golf Experience | Spanish Trail Country Club',

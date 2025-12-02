@@ -11,7 +11,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/buyers'
 const buyersPageDescription =
-  'Plan your Spanish Trail home purchase with Dr. Janet Duffy—concierge tours, real-time listings, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers.'
+  'Plan your Spanish Trail golf course home purchase with Dr. Janet Duffy—concierge tours, real-time golf community homes for sale, negotiation strategy, and club lifestyle insights tailored to Las Vegas buyers seeking golf course properties.'
 
 const buyersWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Home Buyer Guide | Dr. Janet Duffy',
@@ -88,8 +88,8 @@ export const metadata: Metadata = {
   openGraph: {
     url: pageUrl,
     title: 'Spanish Trail Buyer Services | Dr. Janet Duffy',
-    description:
-      'Explore Spanish Trail homes with personalized search, gated access coordination, and negotiation strategy from Dr. Janet Duffy, Berkshire Hathaway HomeServices.',
+      description:
+        'Explore Las Vegas golf course homes for sale in Spanish Trail with personalized search, gated access coordination, and negotiation strategy from Dr. Janet Duffy, Berkshire Hathaway HomeServices.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Buyer Roadmap',
@@ -131,8 +131,8 @@ export default function BuyersPage() {
       <RealScoutSection
         id="spanish-trail-active-listings"
         eyebrow="Live Listings"
-        title="See Spanish Trail homes for sale right now"
-        description="Filter by price, home style, and guard-gated enclave. Receive instant alerts when new Spanish Trail matches hit the market."
+        title="Las Vegas Golf Course Homes for Sale in Spanish Trail"
+        description="Browse golf course properties for sale, filter by price, home style, and guard-gated enclave. Receive instant alerts when new Spanish Trail golf course homes hit the market."
         priceMin="500000"
         propertyTypes=",SFR,CONDO"
       />
@@ -162,7 +162,7 @@ function HeroSection() {
           Your Spanish Trail Buyer Roadmap Starts Here
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail balances lush fairways, 24-hour guard gates, and effortless Strip access—delivering a refined Las Vegas lifestyle for primary residents, second-home owners, and investors. I study each of the eleven enclaves daily, debrief fellow listing agents, and monitor RealScout demand signals so you can act decisively the moment the right home appears.
+          Spanish Trail balances lush fairways, 24-hour guard gates, and effortless Strip access—delivering a refined Las Vegas lifestyle for primary residents, second-home owners, and investors seeking golf course homes for sale. I study each of the eleven enclaves daily, debrief fellow listing agents, and monitor RealScout demand signals so you can act decisively the moment the right golf community home appears.
         </p>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Whether you are relocating, upgrading, or adding to a portfolio, our collaboration starts with clarity. We define must-haves, map budget to financing, and design a tour strategy that respects your calendar and privacy. My concierge team coordinates the details: guard gate access, club introductions, and vetted vendor support before and after closing.

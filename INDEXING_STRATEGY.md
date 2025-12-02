@@ -111,3 +111,4 @@ Common reasons for "Discovered - currently not indexed":
 **Status: ✅ TECHNICAL SETUP COMPLETE**
 **Next Step: Request indexing in Google Search Console**
 
+

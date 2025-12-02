@@ -13,7 +13,7 @@ import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
-  'Explore Spanish Trail homes for sale, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse listings, market data, and neighborhood guides tailored to Las Vegas 89117.'
+  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89117.'
 
 const homeWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   openGraph: {
     url: pageUrl,
     title: 'Spanish Trail Luxury Homes & Market Intelligence',
-    description:
-      'Get guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
+      description:
+        'Get Las Vegas golf course homes for sale, guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Homes',
@@ -56,8 +56,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes & Club Lifestyle by Dr. Janet Duffy',
-    description:
-      'Track Spanish Trail listings, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Janet Duffy.',
+      description:
+        'Track Spanish Trail golf community homes for sale, Las Vegas golf course homes, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Janet Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes',
@@ -234,7 +234,7 @@ function HeroSection() {
             Spanish Trail Homes in Las Vegas 89117
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
-            Guard-gated living west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail listings, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
+            Guard-gated golf community homes for sale west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail golf course homes, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -270,7 +270,7 @@ function IntroSection() {
             Spanish Trail spans Tropicana Avenue, Rainbow Boulevard, and Hacienda Avenue, just west of I-215. The 640-acre master plan pairs 24/7 security with shimmering lakes, tree-lined fairways, and resort amenities—all minutes from UnCommons, The Bend, and Spring Valley essentials.
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
-            As one of Las Vegas's original private golf communities, Spanish Trail attracts primary residents and second-home owners alike. Expect daily conveniences—Whole Foods, Trader Joe's, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.
+            As one of Las Vegas's original private golf communities, Spanish Trail attracts primary residents and second-home owners seeking golf community homes for sale. Expect daily conveniences—Whole Foods, Trader Joe's, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.
           </p>
           <div className="pt-4">
             <Button
@@ -492,12 +492,12 @@ const exploreCards = [
   },
   {
     title: 'Spanish Trail Homes for Sale',
-    description: 'Browse current listings of luxury guard-gated homes in Las Vegas 89117.',
+    description: 'Browse current listings of luxury guard-gated golf course homes for sale in Las Vegas 89117.',
     href: '/spanish-trail-homes-for-sale-las-vegas',
   },
   {
     title: 'Homes for Sale in Spanish Trail - Las Vegas',
-    description: 'Find elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail. Guard-gated golf community with diverse housing options.',
+    description: 'Find elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail. Guard-gated golf community homes with diverse housing options and golf course access.',
     href: '/homes-for-sale-in-spanish-trail-las-vegas',
   },
   {
@@ -512,7 +512,7 @@ const exploreCards = [
   },
   {
     title: 'Southwest Las Vegas Luxury',
-    description: 'Premium homes in southwest Las Vegas with guard-gated security and golf course access.',
+    description: 'Premium golf course homes for sale in southwest Las Vegas with guard-gated security and championship golf course access.',
     href: '/spanish-trail-southwest-las-vegas-luxury-homes',
   },
   {

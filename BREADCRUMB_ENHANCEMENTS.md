@@ -228,3 +228,4 @@ All breadcrumbs automatically generate schema.org BreadcrumbList markup:
 
 **Expected Result:** Google Search Console should detect all 32+ pages with valid breadcrumbs after next crawl cycle.
 
+

@@ -15,7 +15,7 @@ const awardsPageDescription =
 const recognitionTimeline = [
   {
     year: '2025',
-    title: "Berkshire Hathaway HomeServices Chairman's Circle Gold",
+    title: "Berkshire Hathaway HomeServices Luxury Golf Homes",
     description:
       'Top two percent of the network for closed volume, reflecting repeat and referral sellers who trusted Dr. Duffy with Spanish Trail listings.',
   },

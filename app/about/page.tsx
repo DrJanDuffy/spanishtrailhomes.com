@@ -12,7 +12,7 @@ const aboutFaq = [
   {
     question: 'What makes Dr. Janet Duffy different from other Spanish Trail real estate agents?',
     answer:
-      'Dr. Duffy brings a unique combination of academic research in organizational leadership, Berkshire Hathaway HomeServices resources, and daily Spanish Trail immersion. With a Ph.D. focused on high-trust advisory relationships, she applies data-led preparation, concierge project management, and deep club/community fluency to every transaction. Her approach translates complex market data into actionable strategy while coordinating multi-disciplinary teams with discretion.',
+      'Dr. Duffy brings a unique combination of deep Spanish Trail knowledge, Berkshire Hathaway HomeServices resources, and research-backed expertise in buyer/seller psychology. She understands the emotional and practical challenges of buying and selling, applying data-led preparation, concierge project management, and deep club/community fluency to every transaction. Her approach translates complex market data into actionable strategy while coordinating multi-disciplinary teams with discretion.',
   },
   {
     question: 'How many Spanish Trail families has Dr. Duffy worked with?',
@@ -22,12 +22,12 @@ const aboutFaq = [
   {
     question: 'What credentials and awards has Dr. Janet Duffy received?',
     answer:
-      'Dr. Duffy holds a Ph.D. in Organizational Leadership and is a Certified Luxury Marketing Specialist (CLHMS). She has been recognized as Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
+      'Dr. Duffy holds a Ph.D. in Market Research & Consumer Behavior, which informs her understanding of buyer/seller psychology and decision-making. She is a Certified Luxury Marketing Specialist (CLHMS) and has been recognized as Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These credentials and awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
   },
   {
     question: 'How does Dr. Duffy\'s research background benefit clients?',
     answer:
-      'Her doctorate research on trust-centered decision making shapes her real estate practice. Every listing launch, private tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics. This academic foundation helps clients understand not just what to do, but why—leading to more confident decisions and better long-term outcomes.',
+      'Her research background in buyer/seller psychology and decision-making shapes how she guides clients. Every listing launch, private tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics. This means you get market data analyzed with rigor, an understanding of the emotions driving your decisions, and guidance through complex situations—leading to more confident choices and better outcomes.',
   },
   {
     question: 'What concierge services does Dr. Duffy provide?',
@@ -54,7 +54,7 @@ const pageUrl = 'https://www.spanishtrailhomes.com/about'
 const aboutWebPageSchema = createWebPageSchema({
   name: 'About Dr. Janet Duffy | Spanish Trail Homes',
   description:
-    'Learn how Dr. Janet Duffy blends data, concierge service, and Berkshire Hathaway HomeServices resources to guide Spanish Trail clients.',
+    'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
   path: '/about',
   type: 'AboutPage',
 })
@@ -112,7 +112,7 @@ const approachPillars = [
 ]
 
 const credentials = [
-  'Ph.D. in Organizational Leadership – research focused on high-trust advisory relationships',
+  'Ph.D. in Market Research & Consumer Behavior – research focused on trust-based decision-making during high-stakes transactions, buyer/seller psychology, and information asymmetry in real estate',
   'Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide)',
   'Institute for Luxury Home Marketing member & Certified Luxury Marketing Specialist (CLHMS)',
   'RealScout Spanish Trail Market Expert (2023–present)',
@@ -122,15 +122,15 @@ const credentials = [
 export const metadata: Metadata = {
   title: 'About Dr. Janet Duffy | Spanish Trail Homes',
   description:
-    'Meet Dr. Janet Duffy, Berkshire Hathaway HomeServices REALTOR® and Spanish Trail community specialist delivering concierge real estate advisory.',
+    'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
   alternates: {
     canonical: getCanonicalUrl('/about'),
   },
   openGraph: {
     url: pageUrl,
     title: 'About Dr. Janet Duffy | Spanish Trail Homes',
-    description:
-      'Discover the concierge strategy and market expertise Dr. Janet Duffy brings to Spanish Trail buyers and sellers.',
+      description:
+        'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise that understands how homebuyers and sellers make decisions, combined with deep local knowledge and concierge service.',
     images: [
       createOgImageUrl({
         title: 'About Dr. Janet Duffy',
@@ -169,6 +169,7 @@ export default function AboutPage() {
         </div>
       </div>
       <StorySection />
+      <PhilosophySection />
       <ApproachSection />
       <CredentialsSection />
       <CommunitySection />
@@ -200,12 +201,10 @@ function HeroSection() {
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-28 text-center sm:py-32">
         <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Spanish Trail Homes</p>
         <h1 id="about-hero-heading" className="font-heading text-3xl leading-tight sm:text-4xl">
-          Advisory rooted in research, hospitality, and daily Spanish Trail immersion
+          Let Me Help You
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          Dr. Janet Duffy blends a doctorate in organizational leadership, Berkshire Hathaway HomeServices resources, and
-          on-the-ground market intel to help Spanish Trail clients move with confidence. From valuation prep to membership
-          introductions, every step is orchestrated with discretion and concierge care.
+          As your expert neighbor who knows every sale, every builder incentive, and every neighborhood nuance, Dr. Janet Duffy combines deep Vegas knowledge with genuine partnership. No surface-level advice. No generic recommendations. Just specific, data-driven guidance tailored to your exact situation—backed by research that understands how homebuyers and sellers make decisions.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button
@@ -234,16 +233,15 @@ function StorySection() {
         <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Background</p>
           <h2 id="story-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
-            A leadership doctorate meets Spanish Trail’s guard-gated lifestyle
+            Deep local knowledge meets research-backed expertise
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Before guiding Spanish Trail clients, Dr. Duffy built a career advising Fortune 500 leadership teams on
-            trust-centered decision making. That research now shapes her real estate practice: every <Link href="/sellers" className="text-[#0f2b1e] underline-offset-4 hover:underline">listing launch</Link>, private
-            tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics.
+            Dr. Duffy understands the psychology behind buying and selling decisions—the emotions, the pressure, the information gaps that make real estate stressful. Her research-backed approach means every <Link href="/sellers" className="text-[#0f2b1e] underline-offset-4 hover:underline">listing launch</Link>, private
+            tour, and negotiation is grounded in clarity, accountability, and thoughtfully shared analytics that help you make confident decisions.
           </p>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Daily, you'll find her inside the community—reviewing new <Link href="/buyers" className="text-[#0f2b1e] underline-offset-4 hover:underline">Spanish Trail listings</Link>, catching up with gate staff, coordinating
-            <Link href="/membership" className="text-[#0f2b1e] underline-offset-4 hover:underline"> club introductions</Link>, or previewing upcoming renovations. That boots-on-the-ground rhythm keeps clients ahead of the
+            <Link href="/membership" className="text-[#0f2b1e] underline-offset-4 hover:underline"> club introductions</Link>, or previewing upcoming renovations. That boots-on-the-ground rhythm—embodied in the "Let Me Help You" philosophy—keeps clients ahead of the
             headlines and positioned to act the moment the right opportunity appears.
           </p>
         </div>
@@ -263,6 +261,49 @@ function StorySection() {
               negotiations and relocation timelines
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function PhilosophySection() {
+  return (
+    <section className="bg-[#0f2b1e] py-20 text-[#f8f5ef] sm:py-24" aria-labelledby="philosophy-heading">
+      <div className="mx-auto max-w-6xl space-y-8 px-6">
+        <div className="space-y-4 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Brand Philosophy</p>
+          <h2 id="philosophy-heading" className="font-heading text-3xl text-white sm:text-4xl">
+            "Let Me Help You" — More Than a Tagline
+          </h2>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#f8f5ef]/85">
+            "Let Me Help You" isn't just a tagline—it's Dr. Duffy's core approach. As your expert neighbor who knows every sale, every builder incentive, and every neighborhood nuance, she combines deep Vegas knowledge with genuine partnership. No surface-level advice. No generic recommendations. Just specific, data-driven guidance tailored to your exact situation.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              title: 'Analyze market data with academic rigor',
+              description: 'Not just broker talking points, but research-backed insights that inform your decisions.',
+            },
+            {
+              title: 'Understand your decision psychology',
+              description: 'Recognize the emotions and motivations driving your buying or selling journey.',
+            },
+            {
+              title: 'Guide through complex situations',
+              description: 'Navigate sensitive transitions with clarity and confidence, whether it's a move, divorce, or investment.',
+            },
+            {
+              title: 'Identify hidden opportunities',
+              description: 'Spot trends, market cycles, and neighborhood nuances others miss.',
+            },
+          ].map((item) => (
+            <article key={item.title} className="space-y-3 rounded-3xl border border-[#1f4a35]/60 bg-[#143927] p-6 shadow-lg shadow-black/20">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f8f5ef]">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-[#f8f5ef]/80">{item.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

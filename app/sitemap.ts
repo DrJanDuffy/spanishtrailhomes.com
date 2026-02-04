@@ -24,6 +24,8 @@ const routeConfig: Array<{
   { path: '/events', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/membership', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/guest-info', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-lifestyle', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-schools', priority: 0.8, changeFrequency: 'monthly' },
   
   // Spanish Trail listing pages - high priority (these are the ones not indexed)
   { path: '/spanish-trail-guard-gated-golf-homes', priority: 0.9, changeFrequency: 'daily' },

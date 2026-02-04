@@ -28,8 +28,8 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/communities/spanish-trail',
     children: [
       { label: 'About Spanish Trail', href: '/communities/spanish-trail', group: 'Overview' },
-      { label: 'Guard-Gated Living', href: '/spanish-trail-guard-gated-golf-homes', group: 'Overview' },
-      { label: 'Location & Access', href: '/spanish-trail-custom-estate-homes-strip', group: 'Overview' },
+      { label: 'Lifestyle Guide', href: '/spanish-trail-lifestyle', group: 'Overview' },
+      { label: 'Schools', href: '/spanish-trail-schools', group: 'Overview' },
       { label: 'Club & Amenities', href: '/club', group: 'Lifestyle' },
       { label: 'Golf Course', href: '/golf', group: 'Lifestyle' },
       { label: 'Events & Dining', href: '/events', group: 'Lifestyle' },

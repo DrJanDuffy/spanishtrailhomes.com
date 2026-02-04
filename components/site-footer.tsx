@@ -24,12 +24,12 @@ export function SiteFooter() {
       heading: 'Community & Club',
       links: [
         { label: 'About Spanish Trail', href: '/communities/spanish-trail' },
+        { label: 'Lifestyle Guide', href: '/spanish-trail-lifestyle' },
+        { label: 'Schools', href: '/spanish-trail-schools' },
         { label: 'Club & Amenities', href: '/club' },
         { label: 'Championship Golf', href: '/golf' },
         { label: 'Events & Dining', href: '/events' },
         { label: 'Membership Info', href: '/membership' },
-        { label: 'Guest Information', href: '/guest-info' },
-        { label: 'Luxury Comparisons', href: '/las-vegas-luxury-neighborhoods' },
       ],
     },
     {

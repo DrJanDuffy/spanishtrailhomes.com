@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'

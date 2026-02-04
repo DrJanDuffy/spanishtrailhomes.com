@@ -15,9 +15,9 @@ export function SiteFooter() {
       links: [
         { label: 'Community Overview', href: '/communities/spanish-trail' },
         { label: 'Find Our Locations', href: '/find-our-locations' },
+        { label: 'Leave a Google Review', href: '/reviews' },
         { label: 'Address Autocomplete', href: '/address-autocomplete' },
         { label: 'Spanish Trail Amenities', href: '/club#amenities' },
-        { label: 'Event Planning', href: '/events#contact' },
       ],
     },
     {

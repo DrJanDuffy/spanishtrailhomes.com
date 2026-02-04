@@ -93,6 +93,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Connect', href: '/contact#contact-heading' },
       { label: 'Find Our Locations', href: '/find-our-locations' },
+      { label: 'Leave a Review', href: '/reviews' },
       { label: 'Address Autocomplete', href: '/address-autocomplete' },
       { label: 'Market Snapshot', href: '/contact#market-heading' },
       { label: 'FAQ', href: '/contact#faq-heading' },

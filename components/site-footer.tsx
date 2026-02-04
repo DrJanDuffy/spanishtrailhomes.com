@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
+import { CalendlyLink } from '@/components/calendly-link'
 
 export function SiteFooter() {
   const footerLinks = [
@@ -84,16 +85,36 @@ export function SiteFooter() {
               {section.heading}
             </p>
             <ul className="space-y-0 text-sm tracking-[0.2em] sm:tracking-[0.25em]">
-              {section.links.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {section.heading === 'Quick Links' ? (
+                <>
+                  <li key="book-a-tour">
+                    <CalendlyLink className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline">
+                      Book a Tour
+                    </CalendlyLink>
+                  </li>
+                  {section.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </>
+              ) : (
+                section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              )}
             </ul>
           </div>
         ))}

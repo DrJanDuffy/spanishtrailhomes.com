@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
-import { Button } from '@/components/ui/button'
+import { CalendlyInline } from '@/components/calendly-inline'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
@@ -431,8 +431,7 @@ function InquirySection() {
           Connect with our membership concierge.
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
-          Submit the form below and we will contact you within one business day.
-          Prefer to speak directly? Call{' '}
+          Schedule a call with our membership concierge using the calendar below, or call{' '}
           <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
             (702) 766-3299
           </Link>{' '}
@@ -446,96 +445,9 @@ function InquirySection() {
           .
         </p>
 
-        <form className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-4 rounded-3xl border border-border/60 bg-background/80 p-6 text-left shadow-lg sm:grid-cols-2 sm:p-8">
-          <div className="flex flex-col gap-2">
-            <label htmlFor="firstName" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              First Name
-            </label>
-            <input
-              id="firstName"
-              name="firstName"
-              type="text"
-              placeholder="First Name"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="lastName" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Last Name
-            </label>
-            <input
-              id="lastName"
-              name="lastName"
-              type="text"
-              placeholder="Last Name"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="name@email.com"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Phone
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="(702) 000-0000"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <div className="sm:col-span-2 flex flex-col gap-2">
-            <label htmlFor="interest" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Area of Interest
-            </label>
-            <select
-              id="interest"
-              name="interest"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Select an option
-              </option>
-              <option>Full Golf Membership</option>
-              <option>Young Executive Membership</option>
-              <option>Social & Lifestyle Membership</option>
-              <option>Corporate Golf Membership</option>
-            </select>
-          </div>
-          <div className="sm:col-span-2 flex flex-col gap-2">
-            <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="Share preferred dates for a tour, interests, or referrals."
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <div className="sm:col-span-2">
-            <Button className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
-              Submit Inquiry
-            </Button>
-          </div>
-        </form>
+        <div className="mx-auto w-full max-w-3xl rounded-3xl border border-border/60 bg-background/80 p-4 shadow-lg sm:p-6">
+          <CalendlyInline height={700} minWidth={320} className="w-full" />
+        </div>
       </div>
     </section>
   )

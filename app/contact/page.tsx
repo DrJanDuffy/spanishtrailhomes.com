@@ -4,6 +4,8 @@ import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
+import { CalendlyInline } from '@/components/calendly-inline'
+import { CalendlyLink } from '@/components/calendly-link'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
@@ -22,7 +24,7 @@ const contactWebPageSchema = createWebPageSchema({
     potentialAction: [
       {
         '@type': 'ContactAction',
-        target: `${pageUrl}#contact-form`,
+        target: `${pageUrl}#schedule`,
         name: 'Request Spanish Trail Consultation',
       },
       {
@@ -171,12 +173,15 @@ function HeroSection() {
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
             <Link href="tel:17027663299">Call or Text (702) 766-3299</Link>
           </Button>
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full border border-[#f8f5ef]/60 bg-white px-8 py-3 text-xs font-medium uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
+            Book a Tour
+          </CalendlyLink>
           <Button
             asChild
             variant="outline"
             className="rounded-full border-[#f8f5ef]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#f8f5ef] hover:bg-white/10"
           >
-            <Link href="#contact-form">Request a Strategy Session</Link>
+            <Link href="#schedule">Request a Strategy Session</Link>
           </Button>
         </div>
         <HeroSearchWidget theme="dark" />
@@ -349,10 +354,10 @@ function NeighborhoodFitSection() {
 
 function ContactCTASection() {
   return (
-    <section id="contact-form" className="bg-[#f8f2e7] py-12 sm:py-20" aria-labelledby="contact-heading">
+    <section id="schedule" className="bg-[#f8f2e7] py-12 sm:py-20" aria-labelledby="contact-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="contact-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
-          Let\'s align your Spanish Trail move with this week\'s data
+          Let&apos;s align your Spanish Trail move with this week&apos;s data
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1fr]">
           <div className="space-y-4 text-base leading-relaxed text-[#372a20]/85">
@@ -363,91 +368,18 @@ function ContactCTASection() {
               Buyers receive curated previews, weekly absorption reports, and private-network alerts before listings surface publicly. Sellers get a pricing road map, concierge prep plan, and real-time feedback from every showing.
             </p>
             <p>
-              Call or text (702) 766-3299 for time-sensitive questions. Prefer email? Send details to <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> and I\'ll reply within the business day.
+              Call or text (702) 766-3299 for time-sensitive questions. Prefer email? Send details to <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> and I&apos;ll reply within the business day.
             </p>
+            <div className="space-y-2 text-sm text-[#372a20]/80">
+              <p>
+                📞 Direct: <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
+              </p>
+              <p>📧 Email: <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link></p>
+            </div>
           </div>
-          <form className="grid grid-cols-1 gap-4 rounded-2xl border border-[#d8cdbf] bg-white p-4 shadow-lg shadow-primary/10 text-left sm:grid-cols-2 sm:rounded-3xl sm:p-8">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                placeholder="First & Last Name"
-                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="name@email.com"
-                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
-                Phone
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                placeholder="(702) 000-0000"
-                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label htmlFor="timeline" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
-                Timeline
-              </label>
-              <select
-                id="timeline"
-                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
-                defaultValue=""
-                required
-              >
-                <option value="" disabled>
-                  Select timeline
-                </option>
-                <option>0-3 Months</option>
-                <option>3-6 Months</option>
-                <option>6-12 Months</option>
-                <option>Research Phase</option>
-              </select>
-            </div>
-            <div className="sm:col-span-2 flex flex-col gap-2">
-              <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
-                Your Goals & Questions
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                placeholder="Share neighborhood preferences, home features, and timing."
-                className="min-h-[120px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
-              />
-            </div>
-            <div className="sm:col-span-2">
-              <Button type="submit" className="touch-target min-h-[48px] w-full rounded-full py-3 text-sm uppercase tracking-[0.4em] min-[640px]:min-h-[44px]">
-                Send Message to Dr. Jan Duffy
-              </Button>
-            </div>
-            <p className="sm:col-span-2 text-xs text-[#6f5237]/80">
-              By submitting, you agree to receive updates from Dr. Jan Duffy. You can unsubscribe anytime.
-            </p>
-          </form>
-        </div>
-
-        <div className="mt-10 space-y-2 text-sm text-[#372a20]/80">
-          <p>
-            📞 Direct: <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
-          </p>
-          <p>📧 Email: <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link></p>
+          <div className="min-w-0 rounded-2xl border border-[#d8cdbf] bg-white p-4 shadow-lg shadow-primary/10 sm:rounded-3xl sm:p-6">
+            <CalendlyInline height={700} minWidth={320} className="w-full" />
+          </div>
         </div>
       </div>
     </section>

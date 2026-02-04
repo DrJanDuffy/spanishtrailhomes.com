@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { CalendlyLink } from '@/components/calendly-link'
 import { RealScoutSection } from '@/components/realscout-section'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { SiteShell } from '@/components/site-shell'
@@ -174,6 +175,9 @@ function HeroSection() {
           >
             <Link href="#spanish-trail-active-listings">Explore Listings</Link>
           </Button>
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full border border-[#f8f5ef]/60 bg-white px-8 py-3 text-xs font-medium uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
+            Book a Tour
+          </CalendlyLink>
           <Button
             asChild
             variant="outline"
@@ -511,6 +515,9 @@ function BuyerCTASection() {
           . Share your desired move-in timeline, must-have features, and any confidentiality requests—I will deliver a personalized buyer plan within one business day.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-xs font-medium uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
+            Book a Tour
+          </CalendlyLink>
           <Button
             asChild
             className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]"

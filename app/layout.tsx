@@ -197,6 +197,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://d1buiexcd5gara.cloudfront.net" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X68WWN997N"
@@ -219,6 +221,14 @@ gtag('config', 'G-X68WWN997N', {
         />
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}
+        </Script>
+        <Script
+          id="calendly-widget"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+        />
+        <Script id="calendly-badge-init" strategy="afterInteractive">
+          {`(function(){function init(){if(window.Calendly){window.Calendly.initBadgeWidget({url:'https://calendly.com/drjanduffy/showing',text:'Book a Tour',color:'#0069ff',textColor:'#ffffff',branding:true});return;}setTimeout(init,50);}if(document.readyState==='complete')init();else window.addEventListener('load',init);})();`}
         </Script>
       </head>
       <body

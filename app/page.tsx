@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 
 import { Button } from '@/components/ui/button'
+import { CalendlyLink } from '@/components/calendly-link'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
@@ -625,6 +626,9 @@ function CTASection() {
           Schedule a private tour, explore current listings, or request a valuation for your Spanish Trail residence—our concierge team is ready to assist.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-xs font-medium uppercase tracking-[0.4em] text-[#0f2b1e] hover:bg-[#f1eadd]">
+            Book a Tour
+          </CalendlyLink>
           <Button
             asChild
             className="rounded-full bg-white px-7 py-3 text-xs uppercase tracking-[0.4em] text-[#0f2b1e] hover:bg-[#f1eadd]"

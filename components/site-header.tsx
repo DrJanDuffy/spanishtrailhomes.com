@@ -7,6 +7,7 @@ import { ChevronDown, Menu, Phone, X } from 'lucide-react'
 
 import { NAV_ITEMS } from '@/lib/navigation'
 import { Button } from '@/components/ui/button'
+import { CalendlyLink } from '@/components/calendly-link'
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -29,6 +30,7 @@ export function SiteHeader() {
           </div>
           <div className="flex items-center gap-3">
             <span className="uppercase">Represented by Dr. Jan Duffy · Berkshire Hathaway HomeServices</span>
+            <CalendlyLink className="rounded-full border border-primary-foreground/40 bg-transparent px-4 py-1 text-[0.7rem] uppercase tracking-[0.35em] hover:bg-primary-foreground hover:text-primary" />
             <Button
               asChild
               size="sm"
@@ -109,6 +111,7 @@ export function SiteHeader() {
                 Call (702) 766-3299
               </Link>
             </Button>
+            <CalendlyLink className="rounded-full bg-[#0f2b1e] px-6 py-2 text-xs font-medium uppercase tracking-[0.32em] text-white hover:bg-[#0c2118]" />
             <Button
               asChild
               variant="secondary"
@@ -175,6 +178,7 @@ export function SiteHeader() {
             })}
 
             <div className="mt-6 flex flex-col gap-3 pt-4">
+              <CalendlyLink className="touch-target flex min-h-[48px] w-full items-center justify-center rounded-full bg-[#0f2b1e] px-6 py-3 text-sm font-medium uppercase tracking-[0.32em] text-white hover:bg-[#0c2118] sm:min-h-[44px] sm:w-auto" />
               <Button
                 asChild
                 variant="secondary"

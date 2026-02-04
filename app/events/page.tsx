@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
-import { Button } from '@/components/ui/button'
+import { CalendlyInline } from '@/components/calendly-inline'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
@@ -453,88 +453,12 @@ function ContactSection() {
           >
             events@spanishtrailhomes.com
           </Link>
-          . Prefer online inquiries? Complete the form and our planners will respond
-          within one business day.
+          . Or schedule a showing with Dr. Jan Duffy using the calendar below.
         </p>
 
-        <form className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-4 rounded-3xl border border-border/60 bg-background/80 p-6 text-left shadow-lg sm:grid-cols-2 sm:p-8">
-          <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="First & Last Name"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="name@email.com"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              required
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Phone
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="(702) 000-0000"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="eventType" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Event Type
-            </label>
-            <select
-              id="eventType"
-              name="eventType"
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Select an option
-              </option>
-              <option>Wedding</option>
-              <option>Private Celebration</option>
-              <option>Corporate Event</option>
-              <option>Golf Outing</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div className="sm:col-span-2 flex flex-col gap-2">
-            <label htmlFor="details" className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-              Event Details
-            </label>
-            <textarea
-              id="details"
-              name="details"
-              rows={4}
-              placeholder="Share preferred dates, guest count, and special requests."
-              className="rounded-lg border border-border/60 bg-background px-3 py-2 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <div className="sm:col-span-2">
-            <Button className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
-              Submit Request
-            </Button>
-          </div>
-        </form>
+        <div className="mx-auto w-full max-w-3xl rounded-3xl border border-border/60 bg-background/80 p-4 shadow-lg sm:p-6">
+          <CalendlyInline height={700} minWidth={320} className="w-full" />
+        </div>
       </div>
     </section>
   )

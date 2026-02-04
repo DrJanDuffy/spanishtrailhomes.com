@@ -6,6 +6,7 @@ import React, { createElement } from 'react'
 import type { HTMLAttributes } from 'react'
 
 import { Breadcrumbs } from '@/components/breadcrumbs'
+import { CalendlyLink } from '@/components/calendly-link'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
@@ -496,6 +497,9 @@ function CallToActionSection() {
           with your desired timeline and any confidentiality considerations. I am honored to guide Spanish Trail homeowners through seamless, profitable transitions—always with discretion, integrity, and a commitment to exceeding expectations.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-xs font-medium uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
+            Book a Tour
+          </CalendlyLink>
           <Button
             asChild
             className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]"

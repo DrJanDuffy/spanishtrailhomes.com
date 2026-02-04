@@ -11,7 +11,21 @@ const pageUrl = 'https://www.spanishtrailhomes.com/find-our-locations'
 const pageDescription =
   'Find Spanish Trail Homes locations. Add a custom map of our store locations to your website. Get started at no cost—choose your locations and add the map to your site.'
 
-const storeLocations = [
+type StoreLocation = {
+  name: string
+  address: string
+  city: string
+  state: string
+  zip: string
+  phone: string
+  email: string
+  hours: string
+  mapEmbedUrl: string
+  directionsUrl: string
+  gbpUrl: string
+}
+
+const storeLocations: StoreLocation[] = [
   {
     name: 'Spanish Trail Country Club',
     address: '5050 Spanish Trail Ln',
@@ -89,7 +103,9 @@ export const metadata: Metadata = {
   },
 }
 
-const steps = [
+type StepItem = { title: string; description: string }
+
+const steps: StepItem[] = [
   {
     title: 'Get started at no cost',
     description:
@@ -169,7 +185,7 @@ function HeroSection() {
   )
 }
 
-function GetStartedSection({ steps }: { steps: typeof steps }) {
+function GetStartedSection({ steps }: { steps: StepItem[] }) {
   return (
     <section
       className="bg-white py-20 sm:py-24"
@@ -214,7 +230,7 @@ function GetStartedSection({ steps }: { steps: typeof steps }) {
 function ChooseLocationsSection({
   locations,
 }: {
-  locations: typeof storeLocations
+  locations: StoreLocation[]
 }) {
   return (
     <section
@@ -273,7 +289,7 @@ function MapAndActionsSection({
   gbpUrl,
   mapsDirectionsUrl,
 }: {
-  location: (typeof storeLocations)[0]
+  location: StoreLocation
   gbpUrl: string
   mapsDirectionsUrl: string
 }) {

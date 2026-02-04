@@ -238,7 +238,7 @@ function ReviewLinkSection() {
               readOnly
               value={reviewLink}
               className="flex-1 rounded-lg border border-[#d8cdbf] bg-white px-4 py-3 text-sm font-mono outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
-              onClick={(e) => (e.target as HTMLInputElement).select()}
+              aria-label="Review link URL"
             />
             <Button
               asChild
@@ -250,7 +250,7 @@ function ReviewLinkSection() {
             </Button>
           </div>
           <p className="mt-4 text-sm text-[#372a20]/70">
-            Click the link or copy it to share via email, text, or social media.
+            Select the link (e.g. triple-click) to copy, or click the button to open the review form.
           </p>
         </div>
       </div>

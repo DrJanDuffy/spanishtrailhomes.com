@@ -428,10 +428,10 @@ function InquirySection() {
           id="inquiry-heading"
           className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
         >
-          Book Your Membership Consultation
+          Buying or Selling in Spanish Trail?
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
-          Select a time below to speak with Dr. Jan Duffy about Spanish Trail membership options, home availability, and the application process.
+          Select a time below to speak with Dr. Jan Duffy about homes for sale in Spanish Trail, current market values, and how club membership transfers work when buying or selling.
         </p>
 
         <div className="mx-auto w-full max-w-3xl rounded-3xl border border-border/60 bg-background/80 p-4 shadow-lg sm:p-6">

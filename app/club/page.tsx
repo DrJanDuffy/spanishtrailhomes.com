@@ -14,31 +14,31 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const clubNarratives = [
   {
-    title: 'Immersive Club Lifestyle for Members and Residents',
+    title: 'Club Lifestyle for Members and Residents',
     paragraphs: [
-      'Spanish Trail Country Club has evolved into a social sanctuary where every day carries a sense of occasion. Morning routines begin in the fitness pavilion with personal trainers, Pilates reformers, and spa-level locker rooms. By lunchtime, executives and creatives gather on the terrace for strategy sessions overlooking the Lakes nine. Evenings can mean wine-pairing dinners, cigar tastings on the veranda, or kids splashing in the pool while parents enjoy sunset cocktails. Dr. Jan Duffy introduces new members to these rhythms before they move in, ensuring their calendar is populated with meaningful experiences from day one.',
-      'Because the club sits within a master-planned, guard-gated community, members benefit from a built-in support system. Concierge teams coordinate airport transportation, book tee times, and secure reservations at partner restaurants across Summerlin and the Strip. Residents credit Spanish Trail with creating a safe, connected environment where neighbors quickly become friends; Dr. Duffy understands this cultural fabric and guides buyers toward homes that align with their preferred pace and social circles.'
+      'Spanish Trail Country Club has evolved into a social sanctuary where every day carries a sense of occasion. Morning routines begin in the fitness pavilion with personal trainers, Pilates reformers, and spa-level locker rooms. By lunchtime, executives and creatives gather on the terrace for strategy sessions overlooking the Lakes nine. Evenings can mean wine-pairing dinners, cigar tastings on the veranda, or kids splashing in the pool while parents enjoy sunset cocktails.',
+      'Because the club sits within a master-planned, guard-gated community, members benefit from a built-in support system. Concierge teams coordinate airport transportation, book tee times, and secure reservations at partner restaurants across Summerlin and the Strip. Residents credit Spanish Trail with creating a safe, connected environment where neighbors quickly become friends. Dr. Duffy helps buyers find homes that align with their preferred pace and social circles.'
     ],
   },
   {
     title: 'Programming that Elevates Every Generation',
     paragraphs: [
-      'Spanish Trail Country Club’s programming committee curates activations for all ages. Young families enjoy junior golf academies, swim instruction, and themed holiday festivals that embrace Las Vegas flair. Professionals tap into networking breakfasts, speaker panels featuring hospitality leaders, and elegant member trips to Napa and Pebble Beach. Retirees appreciate weekday tennis mixers, art workshops, and philanthropic initiatives that support local schools. Each program is designed to ensure members discover value beyond the fairways, reinforcing Spanish Trail’s position as the social heartbeat of west Las Vegas.',
-      'Dr. Duffy maintains close relationships with committee chairs, so she can introduce incoming members to interest groups before they finalize a home purchase. This concierge matchmaking helps families find their community quickly and gives them insight into the club’s long-range vision—including facility enhancements, sustainability initiatives, and new dining concepts. Understanding this forward momentum helps buyers view Spanish Trail not only as a property investment but as an enduring lifestyle commitment.'
+      'Spanish Trail Country Club\'s programming committee curates activations for all ages. Young families enjoy junior golf academies, swim instruction, and themed holiday festivals that embrace Las Vegas flair. Professionals tap into networking breakfasts, speaker panels featuring hospitality leaders, and elegant member trips to Napa and Pebble Beach. Retirees appreciate weekday tennis mixers, art workshops, and philanthropic initiatives that support local schools.',
+      'Each program is designed to ensure members discover value beyond the fairways, reinforcing Spanish Trail\'s position as the social heartbeat of west Las Vegas. Understanding this forward momentum helps buyers view Spanish Trail not only as a property investment but as an enduring lifestyle commitment.'
     ],
   },
   {
     title: 'Culinary and Wellness Innovations',
     paragraphs: [
-      'The culinary team at Spanish Trail Country Club merges Las Vegas sophistication with approachable comfort. Seasonal menus highlight locally sourced ingredients, chef’s-table pop-ups explore global flavors, and wine stewards curate pairings from boutique vineyards. Members can grab a post-round espresso in the café, host clients in private dining rooms, or order bespoke catering for in-home celebrations. Wellness offerings mirror this attention to detail: spa therapists specialize in sports recovery, nutrition coaches create personalized plans, and the gym features cutting-edge technology for biometric tracking.',
-      'Homebuyers often evaluate club amenities with the same scrutiny they apply to interior finishes. Dr. Duffy guides clients through tastings, introduces them to spa directors, and outlines membership tiers that unlock exclusive culinary events. She also coordinates off-site partnerships—think VIP seating at Allegiant Stadium or collaborations with luxury resorts—that extend the Spanish Trail experience throughout Las Vegas.'
+      'The culinary team at Spanish Trail Country Club merges Las Vegas sophistication with approachable comfort. Seasonal menus highlight locally sourced ingredients, chef\'s-table pop-ups explore global flavors, and wine stewards curate pairings from boutique vineyards. Members can grab a post-round espresso in the cafe, host clients in private dining rooms, or order bespoke catering for in-home celebrations.',
+      'Wellness offerings mirror this attention to detail: spa therapists specialize in sports recovery, nutrition coaches create personalized plans, and the gym features cutting-edge technology for biometric tracking. Homebuyers often evaluate club amenities with the same scrutiny they apply to interior finishes—Dr. Duffy helps buyers understand how these amenities factor into Spanish Trail living.'
     ],
   },
   {
     title: 'Events, Philanthropy, and Community Impact',
     paragraphs: [
-      'Spanish Trail Country Club hosts a robust calendar of fundraisers and galas that benefit organizations such as Opportunity Village, local schools, and military families. Members volunteer time, donate auction items, and leverage professional networks to amplify each initiative. The club’s ballroom, with panoramic Strip views, transforms into a glittering backdrop for black-tie affairs, while the fairways accommodate charity golf tournaments that draw regional sponsors.',
-      'Dr. Duffy encourages clients to view membership as a platform for influence. She pairs philanthropic-minded families with committees, arranges introductions to club leadership, and spotlights Spanish Trail homes that offer the entertaining spaces necessary for hosting pre-event gatherings. This blend of luxury and purpose defines Spanish Trail’s enduring appeal and demonstrates why the community attracts discerning buyers year after year.'
+      'Spanish Trail Country Club hosts a robust calendar of fundraisers and galas that benefit organizations such as Opportunity Village, local schools, and military families. Members volunteer time, donate auction items, and leverage professional networks to amplify each initiative. The club\'s ballroom, with panoramic Strip views, transforms into a glittering backdrop for black-tie affairs, while the fairways accommodate charity golf tournaments that draw regional sponsors.',
+      'This blend of luxury and purpose defines Spanish Trail\'s enduring appeal and demonstrates why the community attracts discerning buyers year after year. Dr. Duffy helps buyers find homes with entertaining spaces that support an active social calendar.'
     ],
   },
 ]
@@ -47,27 +47,27 @@ const clubFaq = [
   {
     question: 'Do you need to own a home in Spanish Trail to join the club?',
     answer:
-      'Homeownership is not required to become a member, though many residents choose to live within the gates for convenience. Prospective members can explore trial memberships or sponsor arrangements to experience the club before purchasing. Dr. Jan Duffy guides clients through membership interviews, explains current initiation structures, and pairs newcomers with ambassadors who reflect their interests.',
+      'Homeownership is not required to become a member, though many residents choose to live within the gates for convenience. Prospective members can explore trial memberships or sponsor arrangements to experience the club before purchasing. As your real estate agent, Dr. Jan Duffy can introduce you to the membership director to learn about current options.',
   },
   {
     question: 'How far in advance should weddings or galas be booked?',
     answer:
-      'Prime dates—particularly fall weekends and New Year’s celebrations—often book 12 to 18 months in advance. Dr. Duffy collaborates with the club’s events team to secure preferred timelines and ensure clients have access to trusted photographers, florists, and planners. Her relationships often unlock creative solutions, such as weekday sunset ceremonies or multi-day golf-and-gala experiences.',
+      'Prime dates—particularly fall weekends and New Year\'s celebrations—often book 12 to 18 months in advance. Contact the club\'s events team directly to secure preferred timelines and discuss catering, decor, and vendor recommendations.',
   },
   {
     question: 'What are the most popular golf programs for new members?',
     answer:
-      'New members gravitate toward professional coaching packages, nine-and-dine evenings, and mixed-team tournaments that foster camaraderie. Junior academies and ladies’ leagues fill quickly each season. Dr. Duffy introduces golfers to head professionals so they can discuss equipment fittings, lesson availability, and cross-club reciprocal play before finalizing membership plans.',
+      'New members gravitate toward professional coaching packages, nine-and-dine evenings, and mixed-team tournaments that foster camaraderie. Junior academies and ladies\' leagues fill quickly each season. Contact the golf pro shop for program details and availability.',
   },
   {
     question: 'Can members reserve private workspace or meeting rooms?',
     answer:
-      'Yes. The clubhouse features flexible meeting suites equipped with high-speed connectivity, presentation technology, and catering options. Members use these spaces for board meetings, podcast recordings, or remote-work sessions between rounds. Dr. Duffy shares availability calendars and booking protocols so clients can integrate the clubhouse into their professional routines.',
+      'Yes. The clubhouse features flexible meeting suites equipped with high-speed connectivity, presentation technology, and catering options. Members use these spaces for board meetings, podcast recordings, or remote-work sessions between rounds. Contact the club for availability and booking.',
   },
   {
     question: 'How does the club support families with children?',
     answer:
-      'Spanish Trail offers supervised kids’ clubs, seasonal camps, swim teams, and teen socials curated by youth programming specialists. Parents appreciate the safe environment, dedicated staff, and ability to enjoy adult-only events knowing their children are engaged nearby. Dr. Duffy provides schedules, tuition details, and insider tips—such as enrolling early for summer programs—to help families plan ahead.',
+      'Spanish Trail offers supervised kids\' clubs, seasonal camps, swim teams, and teen socials curated by youth programming specialists. Parents appreciate the safe environment, dedicated staff, and ability to enjoy adult-only events knowing their children are engaged nearby. Contact the club for program schedules and enrollment.',
   },
 ]
 
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Club Life at Spanish Trail Country Club',
     description:
-      'Discover clubhouse amenities, dining venues, and curated social experiences with Dr. Jan Duffy at Spanish Trail Country Club.',
+      'Discover clubhouse amenities, dining venues, and curated social experiences at Spanish Trail Country Club.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Club Lifestyle',
@@ -145,11 +145,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Club Life | Spanish Trail Country Club',
     description:
-      'Uncover luxury amenities, dining, and events at Spanish Trail Country Club guided by Dr. Jan Duffy.',
+      'Uncover luxury amenities, dining, and events at Spanish Trail Country Club.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Country Club',
-        subtitle: 'Member lifestyle curated by Dr. Jan Duffy',
+        subtitle: 'Member lifestyle in Las Vegas',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -169,7 +169,7 @@ export default function ClubPage() {
         id="club-listings"
         eyebrow="Featured Homes"
         title="Spanish Trail Residences Moments from the Clubhouse"
-        description="Preview active listings within the guard-gated community—ideal for members seeking proximity to the clubhouse, sports complex, and event venues."
+        description="Preview active listings within the guard-gated community—ideal for buyers seeking proximity to the clubhouse, sports complex, and event venues."
         priceMin="600000"
         propertyTypes=",SFR,CONDO"
       />
@@ -252,7 +252,7 @@ function ClubHistory() {
             every gathering.
           </p>
           <p className="text-base leading-relaxed">
-            The clubhouse’s glass-lined architecture captures mountain horizons,
+            The clubhouse&apos;s glass-lined architecture captures mountain horizons,
             while interior spaces—from the grand ballroom to intimate lounges—are
             curated for everything from milestone celebrations to relaxed
             conversations after a round.
@@ -262,7 +262,7 @@ function ClubHistory() {
             variant="outline"
             className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
           >
-            <Link href="/membership#inquiry">Schedule a Club Tour</Link>
+            <Link href="/membership#inquiry">Schedule a Consultation</Link>
           </Button>
         </div>
 
@@ -359,7 +359,7 @@ function ClubNarrativesSection() {
             Signature experiences that define Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Spanish Trail Country Club blends legacy with innovation. These narratives—curated by Dr. Jan Duffy—showcase the programming, culinary direction, and social connections that make membership unparalleled in Las Vegas.
+            Spanish Trail Country Club blends legacy with innovation. These narratives showcase the programming, culinary direction, and social connections that make membership appealing to home buyers considering Spanish Trail.
           </p>
         </div>
 
@@ -410,7 +410,7 @@ function LifestyleSection() {
             asChild
             className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
           >
-            <Link href="/membership">Discover Membership Options</Link>
+            <Link href="/membership">Learn About Membership</Link>
           </Button>
         </div>
 
@@ -441,10 +441,10 @@ function ClubFAQSection() {
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Club FAQ</p>
           <h2 id="club-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Your questions about Spanish Trail Country Club, answered
+            Common questions about Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            From membership requirements to event planning logistics, Dr. Jan Duffy provides clear guidance so you can navigate Spanish Trail’s offerings with ease.
+            Information about club amenities and membership to help home buyers understand Spanish Trail living.
           </p>
         </div>
 
@@ -493,7 +493,7 @@ function TestimonialsHighlight() {
               className="flex h-full flex-col justify-between rounded-3xl border border-border/60 bg-card/90 p-6 shadow-sm"
             >
               <blockquote className="text-base leading-relaxed text-muted-foreground">
-                “{testimonial.quote}”
+                &quot;{testimonial.quote}&quot;
               </blockquote>
               <figcaption className="mt-6 text-sm font-semibold text-primary">
                 {testimonial.name}
@@ -505,4 +505,3 @@ function TestimonialsHighlight() {
     </section>
   )
 }
-

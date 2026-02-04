@@ -61,7 +61,7 @@ const guestFaq = [
   {
     question: 'Where should rideshares pick up and drop off?',
     answer:
-      'Rideshares should check in at the gatehouse, then proceed to the clubhouse valet circle for drop-off and pick-up. If you are staying at a Spanish Trail home, confirm the exact address and gate instructions with your host. Dr. Duffy supplies custom maps and QR codes for guests planning multiple stops.',
+      'Rideshares should check in at the gatehouse, then proceed to the clubhouse valet circle for drop-off and pick-up. If you are staying at a Spanish Trail home, confirm the exact address and gate instructions with your host.',
   },
   {
     question: 'How do I schedule a property tour during my visit?',

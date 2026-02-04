@@ -13,7 +13,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 const pageUrl = 'https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas'
 
 export const metadata: Metadata = {
-  title: 'Homes for Sale in Spanish Trail - Las Vegas | Dr. Janet Duffy',
+  title: 'Homes for Sale in Spanish Trail - Las Vegas | Dr. Jan Duffy',
   description:
     'Find homes for sale in Spanish Trail, Las Vegas. Guard-gated golf community with elegant single-family homes, grand estates, luxury villas, and 27-hole championship golf course. Browse current listings and schedule private tours.',
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Homes for Sale in Spanish Trail - Las Vegas | Dr. Janet Duffy',
+    title: 'Homes for Sale in Spanish Trail - Las Vegas | Dr. Jan Duffy',
     description:
       'Discover elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail, Las Vegas. Guard-gated golf community with 27-hole championship course.',
     images: [
@@ -76,7 +76,7 @@ const homesForSaleFaq = [
   {
     question: 'What is the price range for homes for sale in Spanish Trail?',
     answer:
-      'Homes for sale in Spanish Trail, Las Vegas range from approximately $818K for townhomes and villas to over $2M+ for custom estates. The median listing price is around $818K-$835K, with luxury golf course properties typically priced between $1.2M-$1.5M. Custom estates with Strip views and double-gated privacy can exceed $2M. Dr. Janet Duffy provides current market data and comparative analysis for homes matching your criteria.',
+      'Homes for sale in Spanish Trail, Las Vegas range from approximately $818K for townhomes and villas to over $2M+ for custom estates. The median listing price is around $818K-$835K, with luxury golf course properties typically priced between $1.2M-$1.5M. Custom estates with Strip views and double-gated privacy can exceed $2M. Dr. Jan Duffy provides current market data and comparative analysis for homes matching your criteria.',
   },
   {
     question: 'Where is Spanish Trail located in Las Vegas?',
@@ -91,12 +91,12 @@ const homesForSaleFaq = [
   {
     question: 'How many homes with pools are for sale in Spanish Trail?',
     answer:
-      'Currently, there are approximately 60 homes with pools for sale in Spanish Trail, Las Vegas, at various price points. These properties range from updated villas with plunge pools to custom estates with resort-style pools and spa features. Many homes for sale include pool resurfacing, Baja shelves, LED landscape lighting, and outdoor entertainment areas. Dr. Janet Duffy can help you find pool homes matching your preferences and lifestyle.',
+      'Currently, there are approximately 60 homes with pools for sale in Spanish Trail, Las Vegas, at various price points. These properties range from updated villas with plunge pools to custom estates with resort-style pools and spa features. Many homes for sale include pool resurfacing, Baja shelves, LED landscape lighting, and outdoor entertainment areas. Dr. Jan Duffy can help you find pool homes matching your preferences and lifestyle.',
   },
   {
     question: 'Are there homes for sale in specific Spanish Trail neighborhoods?',
     answer:
-      'Yes, homes for sale in Spanish Trail are organized into distinct neighborhoods including Links at Spanish Trail (2,000-4,800 sq. ft.), Islands at Spanish Trail, Estates, Estates West, Springs, Villas, Patios, Courtyards, Gardens, and other enclaves. Each neighborhood offers unique characteristics, lot sizes, HOA fees, and architectural styles. Dr. Janet Duffy specializes in matching buyers with the right Spanish Trail neighborhood based on lifestyle preferences, budget, and desired amenities.',
+      'Yes, homes for sale in Spanish Trail are organized into distinct neighborhoods including Links at Spanish Trail (2,000-4,800 sq. ft.), Islands at Spanish Trail, Estates, Estates West, Springs, Villas, Patios, Courtyards, Gardens, and other enclaves. Each neighborhood offers unique characteristics, lot sizes, HOA fees, and architectural styles. Dr. Jan Duffy specializes in matching buyers with the right Spanish Trail neighborhood based on lifestyle preferences, budget, and desired amenities.',
   },
   {
     question: 'What makes Spanish Trail different from other Las Vegas luxury communities?',
@@ -106,7 +106,7 @@ const homesForSaleFaq = [
   {
     question: 'Can I tour homes for sale in Spanish Trail before buying?',
     answer:
-      'Absolutely. Dr. Janet Duffy coordinates private tours of homes for sale in Spanish Trail, including guard gate access, same-day showings, and evening lighting checks. Tours can be scheduled within 48 hours, and Dr. Duffy provides insider knowledge about each neighborhood, renovation considerations, golf course views, and community amenities. Contact her at (702) 766-3299 to schedule a personalized tour of Spanish Trail homes matching your criteria.',
+      'Absolutely. Dr. Jan Duffy coordinates private tours of homes for sale in Spanish Trail, including guard gate access, same-day showings, and evening lighting checks. Tours can be scheduled within 48 hours, and Dr. Duffy provides insider knowledge about each neighborhood, renovation considerations, golf course views, and community amenities. Contact her at (702) 766-3299 to schedule a personalized tour of Spanish Trail homes matching your criteria.',
   },
 ]
 
@@ -442,9 +442,9 @@ function BuyingProcessSection() {
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">Working with Dr. Janet Duffy</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">Working with Dr. Jan Duffy</h3>
             <p className="text-base leading-relaxed text-[#372a20]/85">
-              When searching for homes for sale in Spanish Trail, Dr. Janet Duffy provides expert guidance throughout the entire buying process. With over 30 years of experience and 500+ Spanish Trail transactions, she offers insider knowledge about each neighborhood, pricing trends, and off-market opportunities.
+              When searching for homes for sale in Spanish Trail, Dr. Jan Duffy provides expert guidance throughout the entire buying process. With over 30 years of experience and 500+ Spanish Trail transactions, she offers insider knowledge about each neighborhood, pricing trends, and off-market opportunities.
             </p>
             <p className="text-base leading-relaxed text-[#372a20]/85">
               Dr. Duffy coordinates private tours, guard gate access, <Link href="/membership" className="text-[#0f2b1e] underline-offset-4 hover:underline">club membership introductions</Link>, and provides comprehensive market analysis to ensure you make informed decisions when purchasing homes for sale in Spanish Trail.
@@ -514,7 +514,7 @@ function CTASection() {
           Ready to Find Your Perfect Home in Spanish Trail?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Connect with Dr. Janet Duffy to explore homes for sale in Spanish Trail, Las Vegas. Get access to current listings, private tours, and expert guidance throughout your home buying journey.
+          Connect with Dr. Jan Duffy to explore homes for sale in Spanish Trail, Las Vegas. Get access to current listings, private tours, and expert guidance throughout your home buying journey.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button

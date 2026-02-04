@@ -19,7 +19,7 @@ const accessibilitySchema = {
   url: pageUrl,
   provider: {
     '@type': 'RealEstateAgent',
-    name: 'Dr. Janet Duffy',
+    name: 'Dr. Jan Duffy',
     areaServed: 'Spanish Trail, Las Vegas, Nevada',
     parentOrganization: {
       '@type': 'Organization',
@@ -162,7 +162,7 @@ function CommitmentSection() {
             Accessibility is integral to Spanish Trail client service
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Dr. Janet Duffy works alongside Berkshire Hathaway HomeServices Nevada Properties to ensure digital assets meet the
+            Dr. Jan Duffy works alongside Berkshire Hathaway HomeServices Nevada Properties to ensure digital assets meet the
             same level of concierge attention provided during property tours, listing preparations, and relocation support.
           </p>
         </div>
@@ -344,7 +344,7 @@ function ContactSection() {
           Need immediate accessibility support?
         </h2>
         <p className="mt-6 text-base leading-relaxed text-[#f8f5ef]/85">
-          Contact Dr. Janet Duffy or Berkshire Hathaway HomeServices Nevada Properties to request accommodations, schedule a
+          Contact Dr. Jan Duffy or Berkshire Hathaway HomeServices Nevada Properties to request accommodations, schedule a
           personalized consultation, or receive property information in an alternate format.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm uppercase tracking-[0.3em] text-[#f8f5ef]">

@@ -16,7 +16,7 @@ const clubNarratives = [
   {
     title: 'Immersive Club Lifestyle for Members and Residents',
     paragraphs: [
-      'Spanish Trail Country Club has evolved into a social sanctuary where every day carries a sense of occasion. Morning routines begin in the fitness pavilion with personal trainers, Pilates reformers, and spa-level locker rooms. By lunchtime, executives and creatives gather on the terrace for strategy sessions overlooking the Lakes nine. Evenings can mean wine-pairing dinners, cigar tastings on the veranda, or kids splashing in the pool while parents enjoy sunset cocktails. Dr. Janet Duffy introduces new members to these rhythms before they move in, ensuring their calendar is populated with meaningful experiences from day one.',
+      'Spanish Trail Country Club has evolved into a social sanctuary where every day carries a sense of occasion. Morning routines begin in the fitness pavilion with personal trainers, Pilates reformers, and spa-level locker rooms. By lunchtime, executives and creatives gather on the terrace for strategy sessions overlooking the Lakes nine. Evenings can mean wine-pairing dinners, cigar tastings on the veranda, or kids splashing in the pool while parents enjoy sunset cocktails. Dr. Jan Duffy introduces new members to these rhythms before they move in, ensuring their calendar is populated with meaningful experiences from day one.',
       'Because the club sits within a master-planned, guard-gated community, members benefit from a built-in support system. Concierge teams coordinate airport transportation, book tee times, and secure reservations at partner restaurants across Summerlin and the Strip. Residents credit Spanish Trail with creating a safe, connected environment where neighbors quickly become friends; Dr. Duffy understands this cultural fabric and guides buyers toward homes that align with their preferred pace and social circles.'
     ],
   },
@@ -47,7 +47,7 @@ const clubFaq = [
   {
     question: 'Do you need to own a home in Spanish Trail to join the club?',
     answer:
-      'Homeownership is not required to become a member, though many residents choose to live within the gates for convenience. Prospective members can explore trial memberships or sponsor arrangements to experience the club before purchasing. Dr. Janet Duffy guides clients through membership interviews, explains current initiation structures, and pairs newcomers with ambassadors who reflect their interests.',
+      'Homeownership is not required to become a member, though many residents choose to live within the gates for convenience. Prospective members can explore trial memberships or sponsor arrangements to experience the club before purchasing. Dr. Jan Duffy guides clients through membership interviews, explains current initiation structures, and pairs newcomers with ambassadors who reflect their interests.',
   },
   {
     question: 'How far in advance should weddings or galas be booked?',
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Club Life at Spanish Trail Country Club',
     description:
-      'Discover clubhouse amenities, dining venues, and curated social experiences with Dr. Janet Duffy at Spanish Trail Country Club.',
+      'Discover clubhouse amenities, dining venues, and curated social experiences with Dr. Jan Duffy at Spanish Trail Country Club.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Club Lifestyle',
@@ -145,11 +145,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Club Life | Spanish Trail Country Club',
     description:
-      'Uncover luxury amenities, dining, and events at Spanish Trail Country Club guided by Dr. Janet Duffy.',
+      'Uncover luxury amenities, dining, and events at Spanish Trail Country Club guided by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Country Club',
-        subtitle: 'Member lifestyle curated by Dr. Janet Duffy',
+        subtitle: 'Member lifestyle curated by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -361,7 +361,7 @@ function ClubNarrativesSection() {
             Signature experiences that define Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Spanish Trail Country Club blends legacy with innovation. These narratives—curated by Dr. Janet Duffy—showcase the programming, culinary direction, and social connections that make membership unparalleled in Las Vegas.
+            Spanish Trail Country Club blends legacy with innovation. These narratives—curated by Dr. Jan Duffy—showcase the programming, culinary direction, and social connections that make membership unparalleled in Las Vegas.
           </p>
         </div>
 
@@ -446,7 +446,7 @@ function ClubFAQSection() {
             Your questions about Spanish Trail Country Club, answered
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            From membership requirements to event planning logistics, Dr. Janet Duffy provides clear guidance so you can navigate Spanish Trail’s offerings with ease.
+            From membership requirements to event planning logistics, Dr. Jan Duffy provides clear guidance so you can navigate Spanish Trail’s offerings with ease.
           </p>
         </div>
 

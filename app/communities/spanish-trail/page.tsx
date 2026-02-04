@@ -12,7 +12,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
 const communityPageDescription =
-  'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Janet Duffy.'
+  'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Jan Duffy.'
 
 const communityWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Homes for Sale | Community Guide',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Homes & Community Overview',
     description:
-      'Tour Spanish Trail real estate, amenities, and lifestyle advantages with Dr. Janet Duffy.',
+      'Tour Spanish Trail real estate, amenities, and lifestyle advantages with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Community Guide',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes for Sale',
     description:
-      'Explore Spanish Trail homes, amenities, and buyer guides curated by Dr. Janet Duffy.',
+      'Explore Spanish Trail homes, amenities, and buyer guides curated by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes',
@@ -68,7 +68,7 @@ const communityNarratives = [
   {
     title: 'Spanish Trail Homes Market Intelligence',
     paragraphs: [
-      'Spanish Trail homes sit within one of Las Vegas’s most carefully curated guard-gated enclaves, and their value trajectory reflects both scarcity and desirability. Listing activity typically peaks in late spring before tapering off during the hottest summer weeks, yet serious buyers continue to circulate year-round thanks to the proximity to Allegiant Stadium, Harry Reid International Airport, and the Strip. Dr. Janet Duffy leverages Berkshire Hathaway HomeServices analytics to identify micro trends: which enclaves are receiving multiple offers, where price adjustments signal negotiation room, and which homes are being marketed privately through network introductions.',
+      'Spanish Trail homes sit within one of Las Vegas’s most carefully curated guard-gated enclaves, and their value trajectory reflects both scarcity and desirability. Listing activity typically peaks in late spring before tapering off during the hottest summer weeks, yet serious buyers continue to circulate year-round thanks to the proximity to Allegiant Stadium, Harry Reid International Airport, and the Strip. Dr. Jan Duffy leverages Berkshire Hathaway HomeServices analytics to identify micro trends: which enclaves are receiving multiple offers, where price adjustments signal negotiation room, and which homes are being marketed privately through network introductions.',
       'Because the community’s 11 neighborhoods were developed across several decades, pricing varies significantly depending on architectural style, lot size, and renovation level. Dr. Duffy prepares comprehensive market briefings that include sold comparables, golf frontage premiums, and upcoming infrastructure improvements. Her clients approach every Spanish Trail real estate opportunity armed with data-driven confidence, which often results in winning offers that still protect long-term equity.'
     ],
   },
@@ -99,7 +99,7 @@ const communityFaq = [
   {
     question: 'What price ranges define Spanish Trail homes in 2025?',
     answer:
-      'Spanish Trail single-family homes typically start in the mid-$700,000s for golf villas and extend beyond $5 million for custom estates with double fairway frontage. Renovated properties with modern interiors and outdoor entertainment spaces command the highest premiums. Dr. Janet Duffy provides price trend dashboards and walk-through analyses so you know exactly where each home falls within the current spectrum.',
+      'Spanish Trail single-family homes typically start in the mid-$700,000s for golf villas and extend beyond $5 million for custom estates with double fairway frontage. Renovated properties with modern interiors and outdoor entertainment spaces command the highest premiums. Dr. Jan Duffy provides price trend dashboards and walk-through analyses so you know exactly where each home falls within the current spectrum.',
   },
   {
     question: 'How do HOA assessments vary across the 11 neighborhoods?',
@@ -197,7 +197,7 @@ export default function SpanishTrailCommunityPage() {
         id="community-listings"
         eyebrow="Available Homes"
         title="Spanish Trail Homes on the Market Now"
-        description="Browse the latest guard-gated inventory across the Estates, Villas, and golf villa enclaves. Use filters to zero in on square footage, lot size, or renovation level, then schedule a private showing with Dr. Janet Duffy."
+        description="Browse the latest guard-gated inventory across the Estates, Villas, and golf villa enclaves. Use filters to zero in on square footage, lot size, or renovation level, then schedule a private showing with Dr. Jan Duffy."
         priceMin="0"
         propertyTypes=",SFR,CONDO"
       />
@@ -354,7 +354,7 @@ function NarrativesSection() {
             Deeper guidance for buying and selling Spanish Trail homes
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Janet Duffy combines concierge-level service with years of data-backed experience. These briefings help you understand what drives value inside the guard gates, how to craft winning offers, and which lifestyle perks elevate daily living.
+            Dr. Jan Duffy combines concierge-level service with years of data-backed experience. These briefings help you understand what drives value inside the guard gates, how to craft winning offers, and which lifestyle perks elevate daily living.
           </p>
         </div>
 
@@ -461,7 +461,7 @@ function CommunityFAQSection() {
             Key questions about purchasing in Spanish Trail
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Buyers and sellers often share similar questions when navigating a guard-gated market. These insights from Dr. Janet Duffy provide immediate clarity and pave the way for confident negotiations.
+            Buyers and sellers often share similar questions when navigating a guard-gated market. These insights from Dr. Jan Duffy provide immediate clarity and pave the way for confident negotiations.
           </p>
         </div>
 

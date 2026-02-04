@@ -15,7 +15,7 @@ const guestNarratives = [
   {
     title: 'Preparing for Arrival at Spanish Trail',
     paragraphs: [
-      'Guests begin their Spanish Trail experience at the gated entry, where security teams confirm host details and provide directions to the clubhouse. Plan to arrive 20 minutes prior to your reservation to allow for valet service and a brief orientation. Dr. Janet Duffy recommends sharing your license plate information in advance and highlighting any accessibility needs so the concierge team can prepare assistance. This thoughtful approach ensures every arrival feels relaxed and tailored to your visit.',
+      'Guests begin their Spanish Trail experience at the gated entry, where security teams confirm host details and provide directions to the clubhouse. Plan to arrive 20 minutes prior to your reservation to allow for valet service and a brief orientation. Dr. Jan Duffy recommends sharing your license plate information in advance and highlighting any accessibility needs so the concierge team can prepare assistance. This thoughtful approach ensures every arrival feels relaxed and tailored to your visit.',
       'If you are considering Spanish Trail homes while visiting, Dr. Duffy can coordinate property previews that align with your itinerary. Many guests schedule tours between brunch and afternoon tee times, giving them an authentic feel for daily life within the community.'
     ],
   },
@@ -66,7 +66,7 @@ const guestFaq = [
   {
     question: 'How do I schedule a property tour during my visit?',
     answer:
-      'Reach out to Dr. Janet Duffy at (702) 766-3299 or via the concierge team. She will tailor a tour around your schedule, highlighting Spanish Trail homes that match your lifestyle. Expect curated packets with market data, neighborhood insights, and membership information to support your decision-making.',
+      'Reach out to Dr. Jan Duffy at (702) 766-3299 or via the concierge team. She will tailor a tour around your schedule, highlighting Spanish Trail homes that match your lifestyle. Expect curated packets with market data, neighborhood insights, and membership information to support your decision-making.',
   },
 ]
 
@@ -233,7 +233,7 @@ function DirectionsSection() {
             at the security gate and inform the attendant of your host or event.
           </p>
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>5050 Spanish Trail Ln. Las Vegas, NV 89117</p>
+            <p>5050 Spanish Trail Ln, Las Vegas, NV 89113</p>
             <p>Gate access available via Tropicana Ave. or Hacienda Ave.</p>
             <p>Allow extra travel time during peak weekend hours.</p>
           </div>
@@ -241,7 +241,7 @@ function DirectionsSection() {
 
         <div className="overflow-hidden rounded-3xl border border-border/60 bg-card shadow-lg">
           <iframe
-            title="Spanish Trail Country Club Map - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
+            title="Spanish Trail Country Club Map - 5050 Spanish Trail Ln, Las Vegas, NV 89113"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1155408815076!2d-115.28609452341818!3d36.10914500736459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8bf27532cd0f3%3A0xba327d02c4e3709e!2sSpanish%20Trail%20Country%20Club!5e0!3m2!1sen!2sus!4v1731191452004!5m2!1sen!2sus"
             className="h-[360px] w-full border-0"
             loading="lazy"
@@ -263,7 +263,7 @@ function GuestNarrativesSection() {
             Make the most of your time inside Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            These briefings from Dr. Janet Duffy help guests navigate arrival protocols, clubhouse etiquette, and amenity access. Use them to design an itinerary that feels effortless and luxurious.
+            These briefings from Dr. Jan Duffy help guests navigate arrival protocols, clubhouse etiquette, and amenity access. Use them to design an itinerary that feels effortless and luxurious.
           </p>
         </div>
 

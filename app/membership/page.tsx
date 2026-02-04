@@ -14,7 +14,7 @@ const membershipNarratives = [
   {
     title: 'Membership Pathways and Onboarding',
     paragraphs: [
-      'Spanish Trail Country Club offers a refined onboarding experience that aligns with the expectations of discerning members. Prospective applicants meet with membership directors to review category options, from full golf to young executive, corporate, or social. Background interviews focus on community engagement and shared values, ensuring the club’s welcoming culture remains intact. Dr. Janet Duffy prepares clients with application timelines, sponsor recommendations, and financial planning resources so the process feels effortless.',
+      'Spanish Trail Country Club offers a refined onboarding experience that aligns with the expectations of discerning members. Prospective applicants meet with membership directors to review category options, from full golf to young executive, corporate, or social. Background interviews focus on community engagement and shared values, ensuring the club’s welcoming culture remains intact. Dr. Jan Duffy prepares clients with application timelines, sponsor recommendations, and financial planning resources so the process feels effortless.',
       'Once accepted, new members are paired with ambassadors who coordinate clubhouse tours, golf shop introductions, and dinner reservations. They also receive curated invitations to upcoming events, making it easy to integrate into the social fabric. Dr. Duffy’s concierge follow-up covers everything from locker assignments to introducing family members to youth programs, ensuring the entire household feels at home.'
     ],
   },
@@ -45,7 +45,7 @@ const membershipFaq = [
   {
     question: 'What documentation is required for membership applications?',
     answer:
-      'Applications generally include completed forms, letters of introduction from current members, and financial statements. Background checks may also be conducted to maintain the club’s secure environment. Dr. Janet Duffy assists applicants in assembling materials, coordinating sponsor meetings, and tracking key deadlines so the process progresses smoothly.',
+      'Applications generally include completed forms, letters of introduction from current members, and financial statements. Background checks may also be conducted to maintain the club’s secure environment. Dr. Jan Duffy assists applicants in assembling materials, coordinating sponsor meetings, and tracking key deadlines so the process progresses smoothly.',
   },
   {
     question: 'Are memberships transferable when selling a Spanish Trail home?',
@@ -122,7 +122,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Membership Options',
     description:
-      'Evaluate membership categories, benefits, and concierge services at Spanish Trail Country Club with Dr. Janet Duffy.',
+      'Evaluate membership categories, benefits, and concierge services at Spanish Trail Country Club with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Membership',
@@ -135,7 +135,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Membership | Spanish Trail Country Club',
     description:
-      'View Spanish Trail membership tiers, pricing insights, and concierge benefits curated by Dr. Janet Duffy.',
+      'View Spanish Trail membership tiers, pricing insights, and concierge benefits curated by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Membership Concierge',
@@ -285,7 +285,7 @@ function MembershipNarrativesSection() {
             Navigate every stage of Spanish Trail membership with confidence
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Janet Duffy demystifies application steps, programming options, and real estate synergies. These narratives outline the strategies she shares with discerning clients relocating to Spanish Trail or upgrading their existing membership tier.
+            Dr. Jan Duffy demystifies application steps, programming options, and real estate synergies. These narratives outline the strategies she shares with discerning clients relocating to Spanish Trail or upgrading their existing membership tier.
           </p>
         </div>
 

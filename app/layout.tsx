@@ -30,10 +30,10 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
-    name: 'Spanish Trail Homes | Dr. Janet Duffy',
+    name: 'Spanish Trail | Homes By Dr. Jan Duffy',
     image: createOgImageUrl({
       title: 'Spanish Trail Homes & Country Club',
-      subtitle: 'Guard-gated Las Vegas luxury real estate by Dr. Janet Duffy',
+      subtitle: 'Guard-gated Las Vegas luxury real estate by Dr. Jan Duffy',
       eyebrow: 'SpanishTrailHomes.com',
     }),
     url: siteUrl,
@@ -41,16 +41,17 @@ const structuredData = [
     email: 'DrDuffySells@SpanishTrailHomes.com',
     priceRange: '$$$',
     areaServed: [
+      'Las Vegas, NV 89117, USA',
       'Spanish Trail, Las Vegas, NV',
       'Summerlin, Las Vegas, NV',
       'Spring Valley, Las Vegas, NV',
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5050 Spanish Trail Ln.',
+      streetAddress: '5050 Spanish Trail Ln',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
-      postalCode: '89117',
+      postalCode: '89113',
       addressCountry: 'US',
     },
     geo: {
@@ -61,23 +62,12 @@ const structuredData = [
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-        ],
-        opens: '08:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '09:00',
         closes: '18:00',
       },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Saturday', 'Sunday'],
-        opens: '08:00',
-        closes: '16:00',
-      },
     ],
+    accessibilityFeature: ['Wheelchair accessible parking lot', 'Wheelchair accessible entrance'],
     sameAs: [
       'https://www.facebook.com/spanishtrailhomes',
       'https://www.instagram.com/spanishtrailhomes',
@@ -105,7 +95,7 @@ const structuredData = [
           '@type': 'Person',
           name: 'Verified Client',
         },
-        reviewBody: 'Dr. Janet Duffy provided exceptional service throughout our Spanish Trail home purchase. Her expertise and attention to detail made the entire process seamless.',
+        reviewBody: 'Dr. Jan Duffy provided exceptional service throughout our Spanish Trail home purchase. Her expertise and attention to detail made the entire process seamless.',
         datePublished: '2024-12-01',
       },
     ],
@@ -130,7 +120,7 @@ export const metadata: Metadata = {
     template: '%s | Spanish Trail Homes',
   },
   description:
-    'Spanish Trail Homes by Dr. Janet Duffy offers guard-gated real estate, membership insights, and private club amenities minutes from the Las Vegas Strip.',
+    'Spanish Trail | Homes By Dr. Jan Duffy—your trusted local real estate expert for Spanish Trail, Las Vegas. Precise market updates, buy and sell with confidence. Specializing in the Spanish Trail community with unparalleled insights and swift, successful sales.',
   keywords: [
     'Spanish Trail homes',
     'Las Vegas luxury real estate',
@@ -141,11 +131,11 @@ export const metadata: Metadata = {
     'Las Vegas golf course homes for sale',
     'golf course properties for sale',
     'golf course homes for sale',
-    'Dr. Janet Duffy real estate',
+    'Dr. Jan Duffy real estate',
   ],
   category: 'Real Estate',
   applicationName: 'Spanish Trail Homes',
-  authors: [{ name: 'Dr. Janet Duffy' }],
+  authors: [{ name: 'Dr. Jan Duffy' }],
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
@@ -154,16 +144,16 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: 'Spanish Trail Homes | Private Club Living in Las Vegas',
     description:
-      'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Janet Duffy.',
+      'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Jan Duffy.',
     siteName: 'Spanish Trail Homes',
-    images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Janet Duffy' })],
+    images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Jan Duffy' })],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes | Private Club in Las Vegas',
     description:
-      'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Janet Duffy.',
+      'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Jan Duffy.',
     images: [createOgImageUrl({ title: 'Spanish Trail Homes', subtitle: 'Luxury guard-gated homes and club expertise', eyebrow: 'SpanishTrailHomes.com' })],
   },
   robots: {

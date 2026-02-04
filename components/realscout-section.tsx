@@ -17,7 +17,7 @@ export function RealScoutSection({
   title = 'Spanish Trail Listings Updated Daily',
   description = (
     <>
-      Explore active Spanish Trail homes curated through Berkshire Hathaway HomeServices. Filter by price range, property style, and connect with Dr. Janet Duffy for private tours or off-market opportunities.
+      Explore active Spanish Trail homes curated through Berkshire Hathaway HomeServices. Filter by price range, property style, and connect with Dr. Jan Duffy for private tours or off-market opportunities.
     </>
   ),
   priceMin = '0',

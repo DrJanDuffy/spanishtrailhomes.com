@@ -10,7 +10,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/privacy'
 const privacyPageDescription =
-  'Review how Dr. Janet Duffy and Berkshire Hathaway HomeServices Nevada Properties collect, use, and safeguard your information when you visit SpanishTrailHomes.com.'
+  'Review how Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties collect, use, and safeguard your information when you visit SpanishTrailHomes.com.'
 
 const dataCategories = [
   {
@@ -34,7 +34,7 @@ const dataUses = [
   {
     label: 'Deliver personalized property insights',
     description:
-      'Dr. Janet Duffy prepares market briefs, guard-gate availability notices, and RealScout alerts tailored to Spanish Trail buyers and sellers.',
+      'Dr. Jan Duffy prepares market briefs, guard-gate availability notices, and RealScout alerts tailored to Spanish Trail buyers and sellers.',
   },
   {
     label: 'Coordinate client services and referrals',
@@ -55,7 +55,7 @@ const privacySchema = {
   url: pageUrl,
   publisher: {
     '@type': 'RealEstateAgent',
-    name: 'Dr. Janet Duffy',
+    name: 'Dr. Jan Duffy',
     parentOrganization: {
       '@type': 'Organization',
       name: 'Berkshire Hathaway HomeServices Nevada Properties',
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'SpanishTrailHomes.com Privacy Policy',
     description:
-      'Learn how your personal information is protected when you work with Dr. Janet Duffy for Spanish Trail real estate.',
+      'Learn how your personal information is protected when you work with Dr. Jan Duffy for Spanish Trail real estate.',
     images: [
       createOgImageUrl({
         title: 'Privacy Policy',
@@ -149,7 +149,7 @@ function HeroSection() {
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="privacy-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1575517111478-7f6afd0973db?q=80&auto=format&fit=crop&w=2000"
-        alt="Spanish Trail Homes privacy policy for Dr. Janet Duffy real estate services in Las Vegas"
+        alt="Spanish Trail Homes privacy policy for Dr. Jan Duffy real estate services in Las Vegas"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -160,7 +160,7 @@ function HeroSection() {
           Transparency over how your information is protected
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Dr. Janet Duffy and Berkshire Hathaway HomeServices Nevada Properties safeguard personal data to align with Nevada
+          Dr. Jan Duffy and Berkshire Hathaway HomeServices Nevada Properties safeguard personal data to align with Nevada
           real estate statutes, fair housing regulations, and client confidentiality expectations.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -391,7 +391,7 @@ function ContactSection() {
           Questions about data practices or privacy rights?
         </h2>
         <p className="mt-6 text-base leading-relaxed text-[#f8f5ef]/85">
-          Reach out to Dr. Janet Duffy or the Berkshire Hathaway HomeServices Nevada Properties compliance team for assistance
+          Reach out to Dr. Jan Duffy or the Berkshire Hathaway HomeServices Nevada Properties compliance team for assistance
           with privacy requests, data corrections, or opt-out confirmations.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm uppercase tracking-[0.3em] text-[#f8f5ef]">

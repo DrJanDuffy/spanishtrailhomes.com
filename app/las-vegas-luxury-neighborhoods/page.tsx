@@ -83,7 +83,7 @@ const luxuryNeighborhoodsFaqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Janet Duffy',
+  title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Jan Duffy',
   description:
     'Compare Spanish Trail with top Las Vegas luxury communities including The Ridges, Red Rock Country Club, and The Summit Club.',
   alternates: {
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Compare Las Vegas Luxury Neighborhoods',
     description:
-      'Evaluate Spanish Trail alongside The Ridges, Red Rock Country Club, and more. Guidance by Dr. Janet Duffy, Berkshire Hathaway HomeServices.',
+      'Evaluate Spanish Trail alongside The Ridges, Red Rock Country Club, and more. Guidance by Dr. Jan Duffy, Berkshire Hathaway HomeServices.',
     images: [
       createOgImageUrl({
         title: 'Las Vegas Luxury Comparisons',
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Janet Duffy',
+    title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Jan Duffy',
     description:
       'See how Spanish Trail stacks up against The Ridges, Red Rock CC, Spanish Hills, and The Summit Club.',
     images: [
@@ -137,7 +137,7 @@ export default function LuxuryNeighborhoodComparisonsPage() {
             Compare Las Vegas Luxury Neighborhoods
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-            Evaluate Spanish Trail alongside premier west valley enclaves. Dr. Janet Duffy highlights lifestyle
+            Evaluate Spanish Trail alongside premier west valley enclaves. Dr. Jan Duffy highlights lifestyle
             differences, club programming, and investment considerations so you can pinpoint the community that fits best.
           </p>
           <div className="flex flex-wrap justify-center gap-3">

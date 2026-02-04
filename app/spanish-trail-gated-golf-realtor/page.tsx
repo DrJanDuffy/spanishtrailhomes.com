@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-gated-golf-realtor'
 
 export const metadata: Metadata = {
-  title: 'Gated Golf Community Spanish Trail Las Vegas Realtor | Dr. Janet Duffy',
+  title: 'Gated Golf Community Spanish Trail Las Vegas Realtor | Dr. Jan Duffy',
   description:
-    'Partner with Dr. Janet Duffy, Berkshire Hathaway luxury advisor and Spanish Trail gated golf community expert. Concierge buying, market intel, and club integration.',
+    'Partner with Dr. Jan Duffy, Berkshire Hathaway luxury advisor and Spanish Trail gated golf community expert. Concierge buying, market intel, and club integration.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-gated-golf-realtor'),
   },
@@ -33,20 +33,20 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Gated Golf Community Realtor',
     description:
-      'Discover how Dr. Janet Duffy helps buyers and sellers leverage Spanish Trail’s guard gates, golf amenities, and luxury positioning.',
+      'Discover how Dr. Jan Duffy helps buyers and sellers leverage Spanish Trail’s guard gates, golf amenities, and luxury positioning.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Gated Golf Realtor',
-        subtitle: 'Luxury representation by Dr. Janet Duffy',
+        subtitle: 'Luxury representation by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Gated Golf Realtor | Dr. Janet Duffy',
+    title: 'Spanish Trail Gated Golf Realtor | Dr. Jan Duffy',
     description:
-      'Concierge representation for Spanish Trail gated golf homes—timing, negotiation, and membership access guided by Dr. Janet Duffy.',
+      'Concierge representation for Spanish Trail gated golf homes—timing, negotiation, and membership access guided by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Realtor',
@@ -401,7 +401,7 @@ function ConnectSection() {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Janet</Link>
+            <Link href="/contact">Connect with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#gated-golf-realtor-listings">View homes</Link>

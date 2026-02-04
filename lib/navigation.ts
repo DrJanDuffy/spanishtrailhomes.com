@@ -92,6 +92,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/contact',
     children: [
       { label: 'Connect', href: '/contact#contact-heading' },
+      { label: 'Find Our Locations', href: '/find-our-locations' },
       { label: 'Market Snapshot', href: '/contact#market-heading' },
       { label: 'FAQ', href: '/contact#faq-heading' },
       { label: 'Awards & Recognition', href: '/awards' },

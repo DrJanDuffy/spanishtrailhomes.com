@@ -35,7 +35,7 @@ const marketReportFaq = [
   {
     question: 'How often is the Spanish Trail Market Report updated?',
     answer:
-      'The market report is refreshed every Friday with the latest pricing trends, absorption rates, and inventory data from Berkshire Hathaway HomeServices, RealScout buyer activity, and private broker feedback. Dr. Janet Duffy personally compiles this data to ensure accuracy and relevance for buyers and sellers making timely decisions.',
+      'The market report is refreshed every Friday with the latest pricing trends, absorption rates, and inventory data from Berkshire Hathaway HomeServices, RealScout buyer activity, and private broker feedback. Dr. Jan Duffy personally compiles this data to ensure accuracy and relevance for buyers and sellers making timely decisions.',
   },
   {
     question: 'What key metrics should I focus on when reviewing the market report?',
@@ -73,9 +73,9 @@ const marketReportFaqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Market Report | Dr. Janet Duffy',
+  title: 'Spanish Trail Market Report | Dr. Jan Duffy',
   description:
-    'Review current Spanish Trail housing stats, featured listings, and RealScout-powered search insights curated by Dr. Janet Duffy.',
+    'Review current Spanish Trail housing stats, featured listings, and RealScout-powered search insights curated by Dr. Jan Duffy.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-market-report'),
   },
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Real Estate Market Report',
     description:
-      'Track pricing trends, absorption rates, and featured Spanish Trail listings updated by Dr. Janet Duffy of Berkshire Hathaway HomeServices.',
+      'Track pricing trends, absorption rates, and featured Spanish Trail listings updated by Dr. Jan Duffy of Berkshire Hathaway HomeServices.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Market Report',
@@ -105,13 +105,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Market Report | Dr. Janet Duffy',
+    title: 'Spanish Trail Market Report | Dr. Jan Duffy',
     description:
-      'Stay ahead of Spanish Trail real estate trends with updated stats, featured listings, and concierge advisory from Dr. Janet Duffy.',
+      'Stay ahead of Spanish Trail real estate trends with updated stats, featured listings, and concierge advisory from Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Market Intelligence',
-        subtitle: 'Data-driven advisory by Dr. Janet Duffy',
+        subtitle: 'Data-driven advisory by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -128,7 +128,7 @@ export default function SpanishTrailMarketReportPage() {
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
             Monitor real-time pricing, active inventory, and demand signals across Spanish Trail&apos;s eleven guard-gated
-            neighborhoods. Insights are refreshed weekly by Dr. Janet Duffy to support confident purchase and listing
+            neighborhoods. Insights are refreshed weekly by Dr. Jan Duffy to support confident purchase and listing
             decisions.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -198,7 +198,7 @@ function MarketHighlightsSection() {
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Updated every Friday from Berkshire Hathaway HomeServices data, RealScout buyer activity, and private broker
-              feedback gathered by Dr. Janet Duffy.
+              feedback gathered by Dr. Jan Duffy.
             </p>
           </div>
           <Button
@@ -331,7 +331,7 @@ function ReportingCTASection() {
           Need a custom valuation or pricing strategy?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Receive a personalized equity review, staged listing plan, or weekly buyer demand digest crafted by Dr. Janet
+          Receive a personalized equity review, staged listing plan, or weekly buyer demand digest crafted by Dr. Jan Duffy
           Duffy. Share your goals and preferred timeline to get started.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

@@ -11,10 +11,10 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
-  'Spanish Trail luxury homes in Las Vegas. Dr. Janet Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $812,500 median. Call/text (702) 766-3299.'
+  'Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $812,500 median. Call/text (702) 766-3299.'
 
 const contactWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
+  name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
   description: contactPageDescription,
   path: '/contact',
   type: 'ContactPage',
@@ -35,19 +35,19 @@ const contactWebPageSchema = createWebPageSchema({
 })
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
+  title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
   description: contactPageDescription,
   alternates: {
     canonical: getCanonicalUrl('/contact'),
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
+    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
     description:
-      'Connect with Dr. Janet Duffy for Spanish Trail luxury homes, current market data, and private club lifestyle guidance.',
+      'Connect with Dr. Jan Duffy for Spanish Trail luxury homes, current market data, and private club lifestyle guidance.',
     images: [
       createOgImageUrl({
-        title: 'Connect with Dr. Janet Duffy',
+        title: 'Connect with Dr. Jan Duffy',
         subtitle: 'Spanish Trail strategy sessions & private tours',
         eyebrow: 'Contact • SpanishTrailHomes.com',
       }),
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy',
+    title: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
     description:
-      'Schedule a Spanish Trail strategy session with Dr. Janet Duffy—luxury guard-gated golf community specialist.',
+      'Schedule a Spanish Trail strategy session with Dr. Jan Duffy—luxury guard-gated golf community specialist.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Consultation',
@@ -85,7 +85,7 @@ const faqContent = [
       "Spanish Trail has 11 sub-neighborhoods including Villas at Spanish Trail, Patios at Spanish Trail, and Estate homes behind secondary gates. Each has distinct character, price points, and HOA fees ($180-$425/month). Which lifestyle appeals to you?",
   },
   {
-    question: 'How quickly can I schedule a consultation with Dr. Janet Duffy?',
+    question: 'How quickly can I schedule a consultation with Dr. Jan Duffy?',
     answer:
       'Dr. Duffy maintains a 24-hour concierge response cadence. Typically, consultations can be scheduled within 48 hours, though same-day availability may be possible for urgent transactions. Contact via phone at (702) 766-3299 or email DrDuffySells@SpanishTrailHomes.com to coordinate a time that works with your schedule.',
   },
@@ -123,7 +123,7 @@ export default function ContactPage() {
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
-              { label: 'Contact Dr. Janet Duffy' },
+              { label: 'Contact Dr. Jan Duffy' },
             ]}
           />
         </div>
@@ -157,7 +157,7 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="contact-hero-heading">
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 text-center">
         <h1 id="contact-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Las Vegas Real Estate Expert | Dr. Janet Duffy
+          Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Spanish Trail's median value sits at $812,500 as of November 2025, reflecting strong demand for guard-gated golf community living. Well-positioned listings continue to attract competitive offers, with golf-view properties and updated interiors commanding premium pricing.
@@ -434,11 +434,11 @@ function ContactCTASection() {
             </div>
             <div className="sm:col-span-2">
               <Button type="submit" className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
-                Send Message to Dr. Janet
+                Send Message to Dr. Jan Duffy
               </Button>
             </div>
             <p className="sm:col-span-2 text-xs text-[#6f5237]/80">
-              By submitting, you agree to receive updates from Dr. Janet Duffy. You can unsubscribe anytime.
+              By submitting, you agree to receive updates from Dr. Jan Duffy. You can unsubscribe anytime.
             </p>
           </form>
         </div>
@@ -456,16 +456,16 @@ function ContactCTASection() {
 
 function GBPIntegrationSection() {
   const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
-  const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89117'
+  const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89113'
   
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="gbp-heading">
       <div className="mx-auto max-w-6xl px-6">
         <h2 id="gbp-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
-          Visit Spanish Trail Homes | Dr. Janet Duffy
+          Visit Spanish Trail | Homes By Dr. Jan Duffy
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Located at Spanish Trail Country Club in Las Vegas. Connect with Dr. Janet Duffy for luxury real estate consultations and private tours.
+          Located at Spanish Trail Country Club in Las Vegas. Connect with Dr. Jan Duffy for luxury real estate consultations and private tours.
         </p>
         
         <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -475,8 +475,8 @@ function GBPIntegrationSection() {
               <div className="space-y-3 text-base leading-relaxed text-[#372a20]/85">
                 <p>
                   <strong className="font-semibold text-[#0f2b1e]">Address:</strong><br />
-                  5050 Spanish Trail Ln.<br />
-                  Las Vegas, NV 89117
+                  5050 Spanish Trail Ln<br />
+                  Las Vegas, NV 89113
                 </p>
                 <p>
                   <strong className="font-semibold text-[#0f2b1e]">Phone:</strong>{' '}
@@ -526,12 +526,12 @@ function GBPIntegrationSection() {
               <p className="font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] mb-2">Business Hours</p>
               <dl className="space-y-1">
                 <div className="flex justify-between">
-                  <dt>Monday - Friday</dt>
-                  <dd>8:00 AM - 6:00 PM</dd>
+                  <dt>Sunday - Saturday</dt>
+                  <dd>9:00 AM - 6:00 PM</dd>
                 </div>
-                <div className="flex justify-between">
-                  <dt>Saturday - Sunday</dt>
-                  <dd>8:00 AM - 4:00 PM</dd>
+                <div className="mt-2 pt-2 border-t border-[#d8cdbf]">
+                  <dt className="font-semibold text-[#0f2b1e]">Special hours</dt>
+                  <dd>Feb 16, 2026 (Washington&apos;s Birthday): 10:00 AM - 6:00 PM</dd>
                 </div>
               </dl>
             </div>
@@ -539,7 +539,7 @@ function GBPIntegrationSection() {
           
           <div className="overflow-hidden rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] shadow-lg">
             <iframe
-              title="Spanish Trail Homes Location - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
+              title="Spanish Trail Homes Location - 5050 Spanish Trail Ln, Las Vegas, NV 89113"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.1155408815076!2d-115.28609452341818!3d36.10914500736459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8bf27532cd0f3%3A0xba327d02c4e3709e!2sSpanish%20Trail%20Country%20Club!5e0!3m2!1sen!2sus!4v1731191452004!5m2!1sen!2sus"
               className="h-[400px] w-full border-0"
               loading="lazy"

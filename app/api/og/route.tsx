@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   const subtitle = decodeParam(
     searchParams,
     'subtitle',
-    'Guard-gated Las Vegas real estate by Dr. Janet Duffy'
+    'Guard-gated Las Vegas real estate by Dr. Jan Duffy'
   )
   const eyebrow = decodeParam(searchParams, 'eyebrow', 'SpanishTrailHomes.com')
 
@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
           <div style={{ fontSize: 32, opacity: 0.9, maxWidth: 900 }}>{subtitle}</div>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 26, opacity: 0.8 }}>
-          <div>Dr. Janet Duffy</div>
+          <div>Dr. Jan Duffy</div>
           <div>Berkshire Hathaway HomeServices</div>
         </div>
       </div>

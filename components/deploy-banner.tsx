@@ -79,7 +79,7 @@ export default function DeployBanner() {
               <div className="flex flex-col gap-1 flex-1">
                 <div className="text-sm text-muted-foreground">
                   Discover curated Spanish Trail listings and concierge representation from
-                  Dr. Janet Duffy of Berkshire Hathaway HomeServices.
+                  Dr. Jan Duffy of Berkshire Hathaway HomeServices.
                 </div>
               </div>
 

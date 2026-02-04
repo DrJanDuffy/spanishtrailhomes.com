@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-guard-gated-golf-homes'
 
 export const metadata: Metadata = {
-  title: 'Guard-Gated Golf Community Homes in Spanish Trail | Dr. Janet Duffy',
+  title: 'Guard-Gated Golf Community Homes in Spanish Trail | Dr. Jan Duffy',
   description:
-    'Tour guard-gated Spanish Trail golf homes with Dr. Janet Duffy. Explore 24/7 security, golf membership tiers, villa vs. estate enclaves, and curated buyer strategies.',
+    'Tour guard-gated Spanish Trail golf homes with Dr. Jan Duffy. Explore 24/7 security, golf membership tiers, villa vs. estate enclaves, and curated buyer strategies.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-guard-gated-golf-homes'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Guard-Gated Golf Community Homes in Spanish Trail',
     description:
-      'Understand Spanish Trail guard gates, golf lifestyle, and vetted listings with Dr. Janet Duffy—Las Vegas luxury real estate advisor.',
+      'Understand Spanish Trail guard gates, golf lifestyle, and vetted listings with Dr. Jan Duffy—Las Vegas luxury real estate advisor.',
     images: [
       createOgImageUrl({
         title: 'Guard-Gated Golf Homes',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Guard-Gated Golf Homes | Spanish Trail',
     description:
-      'Security walkthroughs, golf privileges, and premium listings in Spanish Trail\'s guard-gated golf community. Work with Dr. Janet Duffy.',
+      'Security walkthroughs, golf privileges, and premium listings in Spanish Trail\'s guard-gated golf community. Work with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Guard-Gated Homes',
@@ -422,11 +422,11 @@ function ContactCTASection() {
           Ready to experience Spanish Trail security firsthand?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Reach Dr. Janet Duffy directly at <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> for call or text support. Request a guard-gated tour itinerary, golf pairing, or membership briefing tailored to your moving timeline.
+          Reach Dr. Jan Duffy directly at <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> for call or text support. Request a guard-gated tour itinerary, golf pairing, or membership briefing tailored to your moving timeline.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Janet</Link>
+            <Link href="/contact">Connect with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#guard-gated-golf-listings">See listings</Link>

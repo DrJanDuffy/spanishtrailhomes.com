@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-southwest-las-vegas-luxury-homes'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Southwest Las Vegas Luxury Homes | Dr. Janet Duffy',
+  title: 'Spanish Trail Southwest Las Vegas Luxury Homes | Dr. Jan Duffy',
   description:
-    'Explore Southwest Las Vegas luxury living within Spanish Trail. Guard-gated estates, villas, and curated neighborhood comparisons with Dr. Janet Duffy.',
+    'Explore Southwest Las Vegas luxury living within Spanish Trail. Guard-gated estates, villas, and curated neighborhood comparisons with Dr. Jan Duffy.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-southwest-las-vegas-luxury-homes'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Southwest Las Vegas Luxury Homes in Spanish Trail',
     description:
-      'Compare Spanish Trail to other Southwest Las Vegas luxury enclaves. Discover estates, amenities, and buyer strategy with Dr. Janet Duffy.',
+      'Compare Spanish Trail to other Southwest Las Vegas luxury enclaves. Discover estates, amenities, and buyer strategy with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Southwest Las Vegas Luxury',

@@ -13,9 +13,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Janet Duffy',
+  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
   description:
-    'Browse Spanish Trail homes for sale in Las Vegas with Dr. Janet Duffy. Guard-gated golf community, 27-hole course, custom estates, villas, and real-time market data.',
+    'Browse Spanish Trail homes for sale in Las Vegas with Dr. Jan Duffy. Guard-gated golf community, 27-hole course, custom estates, villas, and real-time market data.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-homes-for-sale-las-vegas'),
   },
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
-      'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Janet Duffy—Las Vegas luxury golf community specialist.',
+      'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Jan Duffy—Las Vegas luxury golf community specialist.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes for Sale',
-        subtitle: 'Active listings & concierge tours with Dr. Janet Duffy',
+        subtitle: 'Active listings & concierge tours with Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Homes for Sale in Las Vegas',
     description:
-      'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Janet Duffy. Live market data and private tours available.',
+      'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Jan Duffy. Live market data and private tours available.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Listings',
@@ -139,7 +139,7 @@ function HeroSection() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
-            <Link href="/contact">Talk with Dr. Janet</Link>
+            <Link href="/contact">Talk with Dr. Jan Duffy</Link>
           </Button>
           <Button
             asChild
@@ -422,7 +422,7 @@ function ContactCTASection() {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Contact Dr. Janet</Link>
+            <Link href="/contact">Contact Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#homes-for-sale-listings">Browse Listings</Link>

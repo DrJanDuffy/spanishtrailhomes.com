@@ -44,6 +44,7 @@ const routeConfig: Array<{
   // About and contact - medium-high priority
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/find-our-locations', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/awards', priority: 0.7, changeFrequency: 'monthly' },
   
   // Legal pages - lower priority

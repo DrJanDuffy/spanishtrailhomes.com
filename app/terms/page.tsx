@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'SpanishTrailHomes.com Terms of Use',
     description:
-      'Learn about authorized use, intellectual property, and disclaimers for SpanishTrailHomes.com, operated by Dr. Janet Duffy.',
+      'Learn about authorized use, intellectual property, and disclaimers for SpanishTrailHomes.com, operated by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Terms of Use',
@@ -124,7 +124,7 @@ function HeroSection() {
           Understand the legal framework for SpanishTrailHomes.com
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          These terms outline how Dr. Janet Duffy, a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, offers
+          These terms outline how Dr. Jan Duffy, a REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, offers
           digital resources, MLS data, and advisory content for Spanish Trail clientele.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -158,7 +158,7 @@ function AgreementSection() {
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             By accessing or using SpanishTrailHomes.com you acknowledge the authority of Berkshire Hathaway HomeServices Nevada
-            Properties and Dr. Janet Duffy to provide real estate information, and you agree to comply with the terms set forth
+            Properties and Dr. Jan Duffy to provide real estate information, and you agree to comply with the terms set forth
             on this page.
           </p>
         </div>
@@ -268,7 +268,7 @@ function IntellectualPropertySection() {
           </h2>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
             All text, photography, video, and branding elements are the property of Berkshire Hathaway HomeServices Nevada
-            Properties, Dr. Janet Duffy, or licensed vendors.
+            Properties, Dr. Jan Duffy, or licensed vendors.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -303,7 +303,7 @@ function LiabilitySection() {
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
             SpanishTrailHomes.com is provided on an “as is” basis. While best efforts are made to ensure accuracy, neither Dr.
-            Janet Duffy nor Berkshire Hathaway HomeServices Nevada Properties warrant uninterrupted or error-free access.
+            Dr. Jan Duffy nor Berkshire Hathaway HomeServices Nevada Properties warrant uninterrupted or error-free access.
           </p>
         </div>
         <ul className="space-y-4 text-sm leading-relaxed text-muted-foreground">
@@ -393,7 +393,7 @@ function ContactSection() {
           Need clarification or a formal document?
         </h2>
         <p className="mt-6 text-base leading-relaxed text-[#f8f5ef]/85">
-          Contact Dr. Janet Duffy or the Berkshire Hathaway HomeServices Nevada Properties compliance team to request written
+          Contact Dr. Jan Duffy or the Berkshire Hathaway HomeServices Nevada Properties compliance team to request written
           copies, confirm listing permissions, or ask about MLS data usage.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm uppercase tracking-[0.3em] text-[#f8f5ef]">

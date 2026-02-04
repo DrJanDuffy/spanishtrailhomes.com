@@ -13,17 +13,17 @@ import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
-  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Janet Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89117.'
+  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89117.'
 
 const homeWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
+  name: 'Spanish Trail Homes for Sale | Dr. Jan Duffy',
   description: homePageDescription,
   path: '/',
   type: 'CollectionPage',
   extra: {
     about: {
       '@type': 'RealEstateAgent',
-      name: 'Dr. Janet Duffy',
+      name: 'Dr. Jan Duffy',
       url: pageUrl,
       areaServed: 'Spanish Trail, Las Vegas, Nevada',
     },
@@ -35,7 +35,7 @@ const homeBreadcrumbSchema = createBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale | Dr. Janet Duffy',
+  title: 'Spanish Trail Homes for Sale | Dr. Jan Duffy',
   description: homePageDescription,
   alternates: {
     canonical: getCanonicalUrl('/'),
@@ -44,20 +44,20 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Luxury Homes & Market Intelligence',
       description:
-        'Get Las Vegas golf course homes for sale, guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Janet Duffy, Las Vegas luxury real estate advisor.',
+        'Get Las Vegas golf course homes for sale, guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Jan Duffy, Las Vegas luxury real estate advisor.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Homes',
-        subtitle: 'Market intelligence & club lifestyle by Dr. Janet Duffy',
+        subtitle: 'Market intelligence & club lifestyle by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Homes & Club Lifestyle by Dr. Janet Duffy',
+    title: 'Spanish Trail Homes & Club Lifestyle by Dr. Jan Duffy',
       description:
-        'Track Spanish Trail golf community homes for sale, Las Vegas golf course homes, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Janet Duffy.',
+        'Track Spanish Trail golf community homes for sale, Las Vegas golf course homes, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes',
@@ -94,7 +94,7 @@ const homeFaq = [
   {
     question: 'How competitive is the current market for Spanish Trail homes?',
     answer:
-      'Inventory in Spanish Trail remains limited, with many properties selling within the first two weeks when they are priced correctly. Dr. Janet Duffy prepares buyers with lender introductions, appraisal strategies, and neighborhood intel so they can move decisively. Her Berkshire Hathaway HomeServices network also uncovers private offerings and upcoming listings that never hit public portals, giving clients a competitive advantage.',
+      'Inventory in Spanish Trail remains limited, with many properties selling within the first two weeks when they are priced correctly. Dr. Jan Duffy prepares buyers with lender introductions, appraisal strategies, and neighborhood intel so they can move decisively. Her Berkshire Hathaway HomeServices network also uncovers private offerings and upcoming listings that never hit public portals, giving clients a competitive advantage.',
   },
   {
     question: 'Which Spanish Trail neighborhoods are best for full-time residents versus seasonal owners?',
@@ -181,7 +181,7 @@ export default function HomePage() {
       <RealScoutSection
         id="bhhs-listings"
         title="Berkshire Hathaway Listings in Spanish Trail"
-        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market introductions, connect with Dr. Janet Duffy."
+        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market introductions, connect with Dr. Jan Duffy."
         priceMin="500000"
         priceMax="600000"
       />
@@ -234,7 +234,7 @@ function HeroSection() {
             Spanish Trail Homes in Las Vegas 89117
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
-            Guard-gated golf community homes for sale west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail golf course homes, real-time market shifts, and neighborhood insights curated by Dr. Janet Duffy.
+            Guard-gated golf community homes for sale west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail golf course homes, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
@@ -396,7 +396,7 @@ function MarketPreviewSection() {
               Track Spanish Trail performance in real time
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Dr. Janet Duffy refreshes pricing, absorption, and buyer activity every week. Here are the metrics we&apos;re
+              Dr. Jan Duffy refreshes pricing, absorption, and buyer activity every week. Here are the metrics we&apos;re
               watching most closely this month.
             </p>
           </div>
@@ -526,13 +526,13 @@ const exploreCards = [
     href: '/club#lifestyle',
   },
   {
-    title: 'About Dr. Janet Duffy',
+    title: 'About Dr. Jan Duffy',
     description: 'Learn about Dr. Duffy\'s expertise, credentials, and concierge approach to Spanish Trail real estate.',
     href: '/about',
   },
   {
     title: 'Awards & Recognition',
-    description: 'View Dr. Janet Duffy\'s professional achievements and industry recognition.',
+    description: 'View Dr. Jan Duffy\'s professional achievements and industry recognition.',
     href: '/awards',
   },
   {
@@ -595,7 +595,7 @@ function FAQSection() {
             Answers to the most frequent Spanish Trail real estate questions
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Buyers and sellers trust Dr. Janet Duffy to navigate the nuances of guard-gated transactions. These answers provide clarity on timing, pricing, and strategy so you can move forward with confidence. Need deeper insight? Book a private consultation for guidance tailored to your goals.
+            Buyers and sellers trust Dr. Jan Duffy to navigate the nuances of guard-gated transactions. These answers provide clarity on timing, pricing, and strategy so you can move forward with confidence. Need deeper insight? Book a private consultation for guidance tailored to your goals.
           </p>
         </div>
 
@@ -654,7 +654,7 @@ function AdvancedSearchSection() {
             Customize your Spanish Trail home search in seconds
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Filter by price point, property style, and lifestyle amenities using our advanced RealScout experience. Save favorites, request tours, or alert Dr. Janet Duffy when the perfect Spanish Trail property appears.
+            Filter by price point, property style, and lifestyle amenities using our advanced RealScout experience. Save favorites, request tours, or alert Dr. Jan Duffy when the perfect Spanish Trail property appears.
           </p>
         </div>
         <div className="mt-10 flex justify-center">

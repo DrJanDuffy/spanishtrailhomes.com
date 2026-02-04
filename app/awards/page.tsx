@@ -10,7 +10,7 @@ import { HeroBackground } from '@/components/hero-background'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/awards'
 const awardsPageDescription =
-  'See recent awards, professional memberships, and press highlights that validate Dr. Janet Duffy’s Spanish Trail real estate leadership.'
+  'See recent awards, professional memberships, and press highlights that validate Dr. Jan Duffy’s Spanish Trail real estate leadership.'
 
 const recognitionTimeline = [
   {
@@ -116,7 +116,7 @@ const awardsSchema = {
 const professionalProfileSchema = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
-  name: 'Dr. Janet Duffy',
+  name: 'Dr. Jan Duffy',
   url: pageUrl,
   areaServed: 'Spanish Trail, Las Vegas, Nevada',
   brand: {
@@ -138,14 +138,14 @@ const professionalProfileSchema = {
 }
 
 const awardsWebPageSchema = createWebPageSchema({
-  name: 'Awards & Recognition | Dr. Janet Duffy',
+  name: 'Awards & Recognition | Dr. Jan Duffy',
   description: awardsPageDescription,
   path: '/awards',
   type: 'AboutPage',
   extra: {
     about: {
       '@type': 'Person',
-      name: 'Dr. Janet Duffy',
+      name: 'Dr. Jan Duffy',
       jobTitle: 'REALTOR®',
       worksFor: {
         '@type': 'Organization',
@@ -156,33 +156,33 @@ const awardsWebPageSchema = createWebPageSchema({
 })
 
 export const metadata: Metadata = {
-  title: 'Awards & Recognition | Dr. Janet Duffy',
+  title: 'Awards & Recognition | Dr. Jan Duffy',
   description: awardsPageDescription,
   alternates: {
     canonical: getCanonicalUrl('/awards'),
   },
   openGraph: {
     url: pageUrl,
-    title: 'Dr. Janet Duffy | Awards & Recognition',
+    title: 'Dr. Jan Duffy | Awards & Recognition',
     description:
       'Review Berkshire Hathaway honors, RealScout achievements, and professional memberships that support Spanish Trail clients.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Awards & Recognition',
-        subtitle: 'Dr. Janet Duffy • Berkshire Hathaway HomeServices',
+        subtitle: 'Dr. Jan Duffy • Berkshire Hathaway HomeServices',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Janet Duffy | Awards & Recognition',
+    title: 'Dr. Jan Duffy | Awards & Recognition',
     description:
       'Spanish Trail-focused REALTOR® with Berkshire Hathaway honors, luxury marketing credentials, and media features.',
     images: [
       createOgImageUrl({
         title: 'Awards & Recognition',
-        subtitle: 'Spanish Trail leadership by Dr. Janet Duffy',
+        subtitle: 'Spanish Trail leadership by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -236,7 +236,7 @@ function HeroSection() {
           Recognition earned in Spanish Trail’s guard-gated market
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          Dr. Janet Duffy blends academic rigor, Berkshire Hathaway HomeServices resources, and hyper-local intelligence to
+          Dr. Jan Duffy blends academic rigor, Berkshire Hathaway HomeServices resources, and hyper-local intelligence to
           guide Spanish Trail buyers and sellers. Explore credentials that protect your equity and negotiation outcome.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
@@ -411,7 +411,7 @@ function AdvisoryCTASection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="advisory-cta-heading">
       <div className="mx-auto max-w-4xl rounded-3xl border border-border/40 bg-[#0f2b1e] px-8 py-16 text-center text-[#f8f5ef] shadow-xl shadow-primary/20">
-        <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Work With Dr. Janet Duffy</p>
+        <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Work With Dr. Jan Duffy</p>
         <h2 id="advisory-cta-heading" className="mt-4 font-heading text-3xl leading-tight sm:text-4xl">
           Align awards-level expertise with your Spanish Trail move
         </h2>

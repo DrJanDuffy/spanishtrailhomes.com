@@ -15,7 +15,7 @@ const eventsNarratives = [
   {
     title: 'Designing Signature Celebrations',
     paragraphs: [
-      'Spanish Trail Country Club approaches every celebration as a bespoke experience. Event stylists collaborate with clients to curate themes, floral artistry, lighting installations, and culinary journeys that rival five-star resorts. Whether it is an intimate anniversary dinner or a corporate gala welcoming hundreds, the planning team choreographs each touchpoint to reflect the host’s story. Dr. Janet Duffy connects clients with in-demand vendors—photographers, entertainment specialists, and experiential designers—whose work complements the club’s elevated aesthetic.',
+      'Spanish Trail Country Club approaches every celebration as a bespoke experience. Event stylists collaborate with clients to curate themes, floral artistry, lighting installations, and culinary journeys that rival five-star resorts. Whether it is an intimate anniversary dinner or a corporate gala welcoming hundreds, the planning team choreographs each touchpoint to reflect the host’s story. Dr. Jan Duffy connects clients with in-demand vendors—photographers, entertainment specialists, and experiential designers—whose work complements the club’s elevated aesthetic.',
       'Because the clubhouse sits within a private, guard-gated community, hosts appreciate the seamless guest arrival process: valet greets attendees, concierge guides them to reserved spaces, and the events team executes behind the scenes so the host can genuinely enjoy the night. Dr. Duffy provides checklists, timeline templates, and budgeting tools that help clients navigate decisions confidently, from custom stationery to late-night lounge activations.'
     ],
   },
@@ -46,7 +46,7 @@ const eventsFaq = [
   {
     question: 'How far in advance should I reserve Spanish Trail for a wedding?',
     answer:
-      'Prime dates—particularly spring and fall weekends—book 12 to 18 months ahead. Dr. Janet Duffy collaborates with the club’s event managers to identify openings, secure holds, and design planning timelines that keep couples on track. She also recommends preferred vendors that align with the club’s service standards.',
+      'Prime dates—particularly spring and fall weekends—book 12 to 18 months ahead. Dr. Jan Duffy collaborates with the club’s event managers to identify openings, secure holds, and design planning timelines that keep couples on track. She also recommends preferred vendors that align with the club’s service standards.',
   },
   {
     question: 'Can non-members host events at Spanish Trail Country Club?',
@@ -98,7 +98,7 @@ const eventsWebPageSchema = createWebPageSchema({
       name: 'Spanish Trail Country Club',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5050 Spanish Trail Ln.',
+        streetAddress: '5050 Spanish Trail Ln',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89113',
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Events at Spanish Trail Country Club',
     description:
-      'Plan weddings, galas, and corporate gatherings with Spanish Trail’s concierge team and Dr. Janet Duffy.',
+      'Plan weddings, galas, and corporate gatherings with Spanish Trail’s concierge team and Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Events',
@@ -144,7 +144,7 @@ export const metadata: Metadata = {
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Event Concierge',
-        subtitle: 'Plan unforgettable celebrations with Dr. Janet Duffy',
+        subtitle: 'Plan unforgettable celebrations with Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -401,7 +401,7 @@ function EventsNarrativesSection() {
             How Spanish Trail brings every celebration to life
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Janet Duffy partners with Spanish Trail’s events team to deliver extraordinary experiences. These narratives outline the planning insights, hospitality touches, and extended-stay conveniences available to hosts.
+            Dr. Jan Duffy partners with Spanish Trail’s events team to deliver extraordinary experiences. These narratives outline the planning insights, hospitality touches, and extended-stay conveniences available to hosts.
           </p>
         </div>
 
@@ -550,7 +550,7 @@ function EventsFAQSection() {
             Planning answers for Spanish Trail celebrations
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Use these responses to build your planning timeline and align expectations with the club’s capabilities. Dr. Janet Duffy remains available for personalized strategy sessions tailored to your event goals.
+            Use these responses to build your planning timeline and align expectations with the club’s capabilities. Dr. Jan Duffy remains available for personalized strategy sessions tailored to your event goals.
           </p>
         </div>
 

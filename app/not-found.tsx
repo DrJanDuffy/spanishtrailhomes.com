@@ -75,7 +75,7 @@ export default function NotFound() {
                 Spanish Trail Community
               </Link>
               <Link href="/about" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">
-                About Dr. Janet Duffy
+                About Dr. Jan Duffy
               </Link>
             </nav>
           </div>

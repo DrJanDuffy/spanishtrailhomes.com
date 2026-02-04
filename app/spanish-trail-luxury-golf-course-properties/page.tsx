@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
 export const metadata: Metadata = {
-  title: 'Luxury Golf Course Properties Spanish Trail Las Vegas | Dr. Janet Duffy',
+  title: 'Luxury Golf Course Properties Spanish Trail Las Vegas | Dr. Jan Duffy',
   description:
-    'Explore luxury golf course homes in Spanish Trail with Dr. Janet Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
+    'Explore luxury golf course homes in Spanish Trail with Dr. Jan Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-luxury-golf-course-properties'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Luxury Golf Course Properties | Spanish Trail Las Vegas',
     description:
-      'See Spanish Trail luxury golf course estates, renovation trends, and buyer strategies guided by Dr. Janet Duffy.',
+      'See Spanish Trail luxury golf course estates, renovation trends, and buyer strategies guided by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf Estate Collection',
@@ -46,11 +46,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Luxury Golf Course Properties',
     description:
-      'Discover premier golf frontage homes, lakeside vistas, and custom estates with Dr. Janet Duffy in Spanish Trail.',
+      'Discover premier golf frontage homes, lakeside vistas, and custom estates with Dr. Jan Duffy in Spanish Trail.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Golf Homes',
-        subtitle: 'Premier fairway estates by Dr. Janet Duffy',
+        subtitle: 'Premier fairway estates by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -426,7 +426,7 @@ function LuxuryCTASection() {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Consult with Dr. Janet</Link>
+            <Link href="/contact">Consult with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#luxury-golf-properties">Browse listings</Link>

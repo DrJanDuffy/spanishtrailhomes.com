@@ -4,9 +4,9 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 export function SiteFooter() {
   const footerLinks = [
     {
-      heading: 'About Dr. Janet Duffy',
+      heading: 'About Dr. Jan Duffy',
       links: [
-        { label: 'Meet Janet Duffy', href: '/about' },
+        { label: 'Meet Dr. Jan Duffy', href: '/about' },
         { label: 'Awards & Recognition', href: '/awards' },
       ],
     },
@@ -14,6 +14,7 @@ export function SiteFooter() {
       heading: 'Quick Links',
       links: [
         { label: 'Community Overview', href: '/communities/spanish-trail' },
+        { label: 'Find Our Locations', href: '/find-our-locations' },
         { label: 'Spanish Trail Amenities', href: '/club#amenities' },
         { label: 'Event Planning', href: '/events#contact' },
       ],
@@ -44,7 +45,7 @@ export function SiteFooter() {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-6 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1 text-xs uppercase tracking-[0.35em]">
             <p className="text-[#cbb8a6]">Berkshire Hathaway HomeServices Nevada Properties</p>
-            <p>Dr. Janet Duffy · Luxury Real Estate Advisor</p>
+            <p>Dr. Jan Duffy · Luxury Real Estate Advisor</p>
             <Link href="tel:17027663299" className="hover:text-[#be9956] hover:underline">
               (702) 766-3299 · DrDuffySells@SpanishTrailHomes.com
             </Link>
@@ -70,10 +71,10 @@ export function SiteFooter() {
             Spanish Trail Country Club
           </p>
           <p className="font-[var(--font-playfair)] text-2xl tracking-[0.08em]">
-            5050 Spanish Trail Ln. Las Vegas, NV 89117
+            5050 Spanish Trail Ln, Las Vegas, NV 89113
           </p>
           <p className="text-sm text-[#efe5d8]">
-            Guard-gated golf living minutes from the Strip, represented exclusively by Berkshire Hathaway HomeServices agent Dr. Janet Duffy.
+            Guard-gated golf living minutes from the Strip, represented exclusively by Berkshire Hathaway HomeServices agent Dr. Jan Duffy.
           </p>
         </div>
         {footerLinks.map((section) => (
@@ -100,7 +101,7 @@ export function SiteFooter() {
       <div className="border-t border-[#be9956]/30 bg-[#36271f]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-8 text-sm text-[#e5d7c8] md:flex-row md:items-center md:justify-between">
           <div className="space-y-2 leading-relaxed">
-            <p>Equal Housing Opportunity · Dr. Janet Duffy | Spanish Trail Homes REALTOR® S.0197614.LLC</p>
+            <p>Equal Housing Opportunity · Dr. Jan Duffy | Spanish Trail Homes REALTOR® S.0197614.LLC</p>
             <p>
               © {new Date().getFullYear()} Spanish Trail Country Club. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of HomeServices of America, Inc.® Equal Housing Opportunity.
             </p>

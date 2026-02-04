@@ -10,7 +10,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const aboutFaq = [
   {
-    question: 'What makes Dr. Janet Duffy different from other Spanish Trail real estate agents?',
+    question: 'What makes Dr. Jan Duffy different from other Spanish Trail real estate agents?',
     answer:
       'Dr. Duffy brings a unique combination of deep Spanish Trail knowledge, Berkshire Hathaway HomeServices resources, and research-backed expertise in buyer/seller psychology. She understands the emotional and practical challenges of buying and selling, applying data-led preparation, concierge project management, and deep club/community fluency to every transaction. Her approach translates complex market data into actionable strategy while coordinating multi-disciplinary teams with discretion.',
   },
@@ -20,7 +20,7 @@ const aboutFaq = [
       'Dr. Duffy has advised over 500 Spanish Trail families across purchases, sales, and long-range planning. Her daily presence inside the community—reviewing listings, coordinating with gate staff, and previewing renovations—keeps clients ahead of market headlines and positioned to act when the right opportunity appears.',
   },
   {
-    question: 'What credentials and awards has Dr. Janet Duffy received?',
+    question: 'What credentials and awards has Dr. Jan Duffy received?',
     answer:
       'Dr. Duffy holds a Ph.D. in Market Research & Consumer Behavior, which informs her understanding of buyer/seller psychology and decision-making. She is a Certified Luxury Marketing Specialist (CLHMS) and has been recognized as Berkshire Hathaway HomeServices Luxury Golf Homes (top 2% network-wide), Las Vegas REALTORS® Top 25 Luxury Producer, and RealScout Spanish Trail Market Expert. These credentials and awards reflect consistent client outcomes and a commitment to Spanish Trail\'s reputation as Las Vegas\'s premier guard-gated enclave.',
   },
@@ -52,9 +52,9 @@ const aboutFaqSchema = {
 const pageUrl = 'https://www.spanishtrailhomes.com/about'
 
 const aboutWebPageSchema = createWebPageSchema({
-  name: 'About Dr. Janet Duffy | Spanish Trail Homes',
+  name: 'About Dr. Jan Duffy | Spanish Trail Homes',
   description:
-    'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
+    'Meet Dr. Jan Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
   path: '/about',
   type: 'AboutPage',
 })
@@ -62,7 +62,7 @@ const aboutWebPageSchema = createWebPageSchema({
 const aboutPersonSchema = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
-  name: 'Dr. Janet Duffy',
+  name: 'Dr. Jan Duffy',
   url: pageUrl,
   image: 'https://www.spanishtrailhomes.com/images/janet-duffy.jpg',
   jobTitle: 'REALTOR® | Berkshire Hathaway HomeServices Nevada Properties',
@@ -120,20 +120,20 @@ const credentials = [
 ]
 
 export const metadata: Metadata = {
-  title: 'About Dr. Janet Duffy | Spanish Trail Homes',
+  title: 'About Dr. Jan Duffy | Spanish Trail Homes',
   description:
-    'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
+    'Meet Dr. Jan Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise in buyer/seller psychology combined with deep local knowledge and concierge service—helping you make confident decisions.',
   alternates: {
     canonical: getCanonicalUrl('/about'),
   },
   openGraph: {
     url: pageUrl,
-    title: 'About Dr. Janet Duffy | Spanish Trail Homes',
+    title: 'About Dr. Jan Duffy | Spanish Trail Homes',
       description:
-        'Meet Dr. Janet Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise that understands how homebuyers and sellers make decisions, combined with deep local knowledge and concierge service.',
+        'Meet Dr. Jan Duffy, luxury real estate advisor serving Spanish Trail. Research-backed expertise that understands how homebuyers and sellers make decisions, combined with deep local knowledge and concierge service.',
     images: [
       createOgImageUrl({
-        title: 'About Dr. Janet Duffy',
+        title: 'About Dr. Jan Duffy',
         subtitle: 'Spanish Trail REALTOR® • Concierge advisory',
         eyebrow: 'SpanishTrailHomes.com',
       }),
@@ -141,12 +141,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Dr. Janet Duffy | Spanish Trail Homes',
+    title: 'About Dr. Jan Duffy | Spanish Trail Homes',
     description:
-      'Learn how Dr. Janet Duffy combines data, club insights, and concierge service for Spanish Trail clients.',
+      'Learn how Dr. Jan Duffy combines data, club insights, and concierge service for Spanish Trail clients.',
     images: [
       createOgImageUrl({
-        title: 'Meet Dr. Janet Duffy',
+        title: 'Meet Dr. Jan Duffy',
         subtitle: 'Spanish Trail real estate leadership',
         eyebrow: 'SpanishTrailHomes.com',
       }),
@@ -193,7 +193,7 @@ function HeroSection() {
     <header className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="about-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&auto=format&fit=crop&w=2000"
-        alt="Dr. Janet Duffy - Spanish Trail real estate agent and luxury home specialist in Las Vegas"
+        alt="Dr. Jan Duffy - Spanish Trail real estate agent and luxury home specialist in Las Vegas"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1200px"
       />
@@ -204,7 +204,7 @@ function HeroSection() {
           Let Me Help You
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          As your expert neighbor who knows every sale, every builder incentive, and every neighborhood nuance, Dr. Janet Duffy combines deep Vegas knowledge with genuine partnership. No surface-level advice. No generic recommendations. Just specific, data-driven guidance tailored to your exact situation—backed by research that understands how homebuyers and sellers make decisions.
+          As your expert neighbor who knows every sale, every builder incentive, and every neighborhood nuance, Dr. Jan Duffy combines deep Vegas knowledge with genuine partnership. No surface-level advice. No generic recommendations. Just specific, data-driven guidance tailored to your exact situation—backed by research that understands how homebuyers and sellers make decisions.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button
@@ -419,9 +419,9 @@ function AboutFAQSection() {
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="about-faq-heading">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">About Dr. Janet Duffy FAQ</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">About Dr. Jan Duffy FAQ</p>
           <h2 id="about-faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
-            Frequently asked questions about working with Dr. Janet Duffy
+            Frequently asked questions about working with Dr. Jan Duffy
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Learn more about Dr. Duffy's approach, credentials, and how she helps Spanish Trail clients achieve their real estate goals.
@@ -447,7 +447,7 @@ function CTASection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="about-cta-heading">
       <div className="mx-auto max-w-4xl rounded-3xl border border-border/60 bg-[#0f2b1e] px-8 py-16 text-center text-[#f8f5ef] shadow-xl shadow-primary/20">
-        <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Work With Dr. Janet Duffy</p>
+        <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Work With Dr. Jan Duffy</p>
         <h2 id="about-cta-heading" className="mt-4 font-heading text-3xl leading-tight sm:text-4xl">
           Let's design the next chapter of your Spanish Trail story
         </h2>

@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-private-golf-course-homes'
 
 export const metadata: Metadata = {
-  title: 'Private Golf Course Homes Spanish Trail | Dr. Janet Duffy',
+  title: 'Private Golf Course Homes Spanish Trail | Dr. Jan Duffy',
   description:
-    'Secure private golf course homes in Spanish Trail with Dr. Janet Duffy. Explore memberships, course-front estates, and concierge buyer services.',
+    'Secure private golf course homes in Spanish Trail with Dr. Jan Duffy. Explore memberships, course-front estates, and concierge buyer services.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-private-golf-course-homes'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Private Golf Course Homes in Spanish Trail',
     description:
-      'Robert Trent Jones Jr. golf, private club perks, and curated course-front homes in Spanish Trail. Guided by Dr. Janet Duffy.',
+      'Robert Trent Jones Jr. golf, private club perks, and curated course-front homes in Spanish Trail. Guided by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf Course Homes',
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Private Golf Homes | Dr. Janet Duffy',
+    title: 'Spanish Trail Private Golf Homes | Dr. Jan Duffy',
     description:
-      'Tour Spanish Trail’s private golf course residences, memberships, and lifestyle advantages with Dr. Janet Duffy.',
+      'Tour Spanish Trail’s private golf course residences, memberships, and lifestyle advantages with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Private Golf Homes',
@@ -411,7 +411,7 @@ function CTASection() {
           Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll curate course-front opportunities, membership insights, and a closing roadmap tailored to your handicap and lifestyle.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Janet</Link>
+            <Link href="/contact">Connect with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#private-golf-course-homes">Explore listings</Link>

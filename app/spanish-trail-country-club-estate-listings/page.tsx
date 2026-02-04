@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Country Club Estate Listings | Dr. Janet Duffy',
+  title: 'Spanish Trail Country Club Estate Listings | Dr. Jan Duffy',
   description:
-    'Browse Spanish Trail Country Club estate listings with Dr. Janet Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
+    'Browse Spanish Trail Country Club estate listings with Dr. Jan Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-country-club-estate-listings'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Country Club Estate Listings',
     description:
-      'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Janet Duffy.',
+      'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Estate Listings',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Country Club Estates',
-        subtitle: 'Concierge representation by Dr. Janet Duffy',
+        subtitle: 'Concierge representation by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -403,7 +403,7 @@ function CTASection() {
           Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll curate estate listings, share private releases, and coordinate a personalized tour itinerary.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Janet</Link>
+            <Link href="/contact">Connect with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#country-club-estate-listings">See estate listings</Link>

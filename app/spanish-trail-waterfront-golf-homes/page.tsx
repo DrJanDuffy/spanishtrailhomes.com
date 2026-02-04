@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-waterfront-golf-homes'
 
 export const metadata: Metadata = {
-  title: 'Waterfront Golf Course Homes Spanish Trail | Dr. Janet Duffy',
+  title: 'Waterfront Golf Course Homes Spanish Trail | Dr. Jan Duffy',
   description:
-    'Discover Spanish Trail waterfront golf course homes with Dr. Janet Duffy. Lakeside patios, golf frontage, and concierge buying expertise.',
+    'Discover Spanish Trail waterfront golf course homes with Dr. Jan Duffy. Lakeside patios, golf frontage, and concierge buying expertise.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-waterfront-golf-homes'),
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Waterfront Golf Homes in Spanish Trail',
     description:
-      'Explore Spanish Trail’s lakeside golf homes—tranquil water views, private club amenities, and bespoke service from Dr. Janet Duffy.',
+      'Explore Spanish Trail’s lakeside golf homes—tranquil water views, private club amenities, and bespoke service from Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Waterfront Homes',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Spanish Trail Waterfront Golf Homes',
     description:
-      'Premier waterfront golf properties in Spanish Trail curated by Dr. Janet Duffy. View listings, amenities, and buying strategies.',
+      'Premier waterfront golf properties in Spanish Trail curated by Dr. Jan Duffy. View listings, amenities, and buying strategies.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Waterfront Golf Homes',
@@ -406,7 +406,7 @@ function CTASection() {
           Contact <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll deliver a custom shortlist, arrange view-focused tours, and guide you through every step.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
-            <Link href="/contact">Connect with Dr. Janet</Link>
+            <Link href="/contact">Connect with Dr. Jan Duffy</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-full border-[#0f2b1e]/60 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10">
             <Link href="#waterfront-golf-homes">View listings</Link>

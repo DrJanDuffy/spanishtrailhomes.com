@@ -23,7 +23,7 @@ const insightsFaq = [
   {
     question: 'How often are Spanish Trail Insights updated?',
     answer:
-      'Insights are refreshed weekly based on new listings, sales activity, club programming updates, and market shifts. Dr. Janet Duffy shares these observations through briefings that reflect on-the-ground research and real-time buyer behavior patterns. Subscribe to receive updates via email or follow along on the website.',
+      'Insights are refreshed weekly based on new listings, sales activity, club programming updates, and market shifts. Dr. Jan Duffy shares these observations through briefings that reflect on-the-ground research and real-time buyer behavior patterns. Subscribe to receive updates via email or follow along on the website.',
   },
   {
     question: 'What topics do the insights cover?',
@@ -61,9 +61,9 @@ const insightsFaqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Real Estate Insights | Dr. Janet Duffy',
+  title: 'Spanish Trail Real Estate Insights | Dr. Jan Duffy',
   description:
-    'Deep-dive analysis of Spanish Trail homes, lifestyle, renovations, and financing tips curated by Dr. Janet Duffy for discerning buyers and sellers.',
+    'Deep-dive analysis of Spanish Trail homes, lifestyle, renovations, and financing tips curated by Dr. Jan Duffy for discerning buyers and sellers.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-insights'),
   },
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Insights & Advisory',
     description:
-      'Explore data-backed commentary on Spanish Trail real estate, amenities, and strategy from Dr. Janet Duffy of Berkshire Hathaway HomeServices.',
+      'Explore data-backed commentary on Spanish Trail real estate, amenities, and strategy from Dr. Jan Duffy of Berkshire Hathaway HomeServices.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Insights',
@@ -93,9 +93,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Real Estate Insights | Dr. Janet Duffy',
+    title: 'Spanish Trail Real Estate Insights | Dr. Jan Duffy',
     description:
-      'Get deep-dive analysis on Spanish Trail real estate trends, renovations, and club lifestyle from Dr. Janet Duffy.',
+      'Get deep-dive analysis on Spanish Trail real estate trends, renovations, and club lifestyle from Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Advisory',
@@ -115,7 +115,7 @@ export default function SpanishTrailInsightsPage() {
             Spanish Trail Insights & Advisory
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-            Access the same research and concierge guidance Dr. Janet Duffy shares with Spanish Trail clients—covering
+            Access the same research and concierge guidance Dr. Jan Duffy shares with Spanish Trail clients—covering
             market momentum, lifestyle trends, renovation priorities, and strategic financing moves.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -154,7 +154,7 @@ export default function SpanishTrailInsightsPage() {
         id="spanish-trail-insight-search"
         eyebrow="Search in Sync"
         title="Pair insights with real-time listings"
-        description="Set up alert-driven searches for Spanish Trail enclaves—Dr. Janet Duffy overlays these insights on every property you consider."
+        description="Set up alert-driven searches for Spanish Trail enclaves—Dr. Jan Duffy overlays these insights on every property you consider."
         priceMin="500000"
         propertyTypes=",SFR,CONDO"
       />
@@ -323,7 +323,7 @@ function InsightsCTASection() {
           Ready to apply these insights to your move?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Share your timing, budget, and desired lifestyle. Dr. Janet Duffy will translate these insights into a tailored
+          Share your timing, budget, and desired lifestyle. Dr. Jan Duffy will translate these insights into a tailored
           action plan—whether you&apos;re buying, selling, or investing in Spanish Trail.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

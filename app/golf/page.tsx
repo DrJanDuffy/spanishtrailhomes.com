@@ -16,7 +16,7 @@ const golfNarratives = [
   {
     title: 'Course Conditions and Seasonal Strategy',
     paragraphs: [
-      'Spanish Trail’s 27 holes reward players who understand how the desert seasons impact turf, wind, and shot selection. Overseed schedules typically wrap in early fall, delivering emerald-green fairways and receptive greens just in time for peak golf tourism. Winter mornings can be crisp, so members often schedule tee times mid-morning to catch warming sunlight while enjoying the dramatic contrast of snow-dusted Spring Mountains. Dr. Janet Duffy shares a monthly golf intelligence report outlining hole locations, slope speeds, and tournament calendars so buyers know exactly how the club plays across the year.',
+      'Spanish Trail’s 27 holes reward players who understand how the desert seasons impact turf, wind, and shot selection. Overseed schedules typically wrap in early fall, delivering emerald-green fairways and receptive greens just in time for peak golf tourism. Winter mornings can be crisp, so members often schedule tee times mid-morning to catch warming sunlight while enjoying the dramatic contrast of snow-dusted Spring Mountains. Dr. Jan Duffy shares a monthly golf intelligence report outlining hole locations, slope speeds, and tournament calendars so buyers know exactly how the club plays across the year.',
       'During the summer, early tee times offer cooler temperatures and the best chance to experience the Sunrise nine’s signature water features without afternoon winds. Conditioning remains stellar thanks to expert agronomy teams, and Spanish Trail’s double-sided range stays open with misting fans and shaded hitting bays. Dr. Duffy connects new members to golf staff who manage private lockers, club storage, and caddie scheduling so their transition into club life is seamless.'
     ],
   },
@@ -47,7 +47,7 @@ const golfFaq = [
   {
     question: 'How do tee times work for members and their guests?',
     answer:
-      'Members can book tee times up to seven days in advance using the Spanish Trail mobile app or by contacting the golf shop. Peak morning times typically fill first, especially on weekends and during major events. Dr. Janet Duffy shares best practices for coordinating guest play, including dress code guidelines, pace-of-play expectations, and gratuity norms for caddies and forecaddies.',
+      'Members can book tee times up to seven days in advance using the Spanish Trail mobile app or by contacting the golf shop. Peak morning times typically fill first, especially on weekends and during major events. Dr. Jan Duffy shares best practices for coordinating guest play, including dress code guidelines, pace-of-play expectations, and gratuity norms for caddies and forecaddies.',
   },
   {
     question: 'Are there reciprocal privileges with other clubs?',
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Golf Experience',
     description:
-      'Discover the Sunrise, Lakes, and Canyon nines, practice facilities, and golf programming with Dr. Janet Duffy.',
+      'Discover the Sunrise, Lakes, and Canyon nines, practice facilities, and golf programming with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf',
@@ -132,7 +132,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Golf at Spanish Trail Country Club',
     description:
-      'Plan your next round at Spanish Trail’s 27 championship holes with insights from Dr. Janet Duffy.',
+      'Plan your next round at Spanish Trail’s 27 championship holes with insights from Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Golf Club',
@@ -360,7 +360,7 @@ function GolfNarrativesSection() {
             How Spanish Trail elevates every round, every season
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Janet Duffy partners with the golf team to deliver real-time updates on course conditions, instruction opportunities, and lifestyle offerings. These narratives help prospective members and homeowners appreciate the depth of Spanish Trail’s golf culture.
+            Dr. Jan Duffy partners with the golf team to deliver real-time updates on course conditions, instruction opportunities, and lifestyle offerings. These narratives help prospective members and homeowners appreciate the depth of Spanish Trail’s golf culture.
           </p>
         </div>
 

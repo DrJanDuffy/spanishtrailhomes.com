@@ -16,10 +16,10 @@ type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/sellers'
 const sellersPageDescription =
-  'Discover how Dr. Janet Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.'
+  'Discover how Dr. Jan Duffy helps Spanish Trail homeowners price, prepare, and market for premium offers. Home valuations, concierge prep, marketing strategy, and closing roadmap.'
 
 const sellersWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
+  name: 'Spanish Trail Home Seller Guide | Dr. Jan Duffy',
   description: sellersPageDescription,
   path: '/sellers',
   type: 'CollectionPage',
@@ -29,7 +29,7 @@ const sellersWebPageSchema = createWebPageSchema({
       serviceType: 'Spanish Trail Listing Representation',
       provider: {
         '@type': 'RealEstateAgent',
-        name: 'Dr. Janet Duffy',
+        name: 'Dr. Jan Duffy',
         areaServed: 'Spanish Trail, Las Vegas, Nevada',
       },
       areaServed: 'Spanish Trail, Las Vegas, Nevada',
@@ -87,7 +87,7 @@ const faqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Home Seller Guide | Dr. Janet (Jan) Duffy',
+  title: 'Spanish Trail Home Seller Guide | Dr. Jan Duffy',
   description: sellersPageDescription,
   alternates: {
     canonical: getCanonicalUrl('/sellers'),
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Spanish Trail Home Seller Guide',
     description:
-      'Maximize your equity with Dr. Janet Duffy’s Spanish Trail seller strategy—precision pricing, concierge prep, luxury marketing, and RealScout-powered valuation tools.',
+      'Maximize your equity with Dr. Jan Duffy’s Spanish Trail seller strategy—precision pricing, concierge prep, luxury marketing, and RealScout-powered valuation tools.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Seller Blueprint',
@@ -118,13 +118,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Seller Strategy by Dr. Janet Duffy',
+    title: 'Spanish Trail Seller Strategy by Dr. Jan Duffy',
     description:
-      'Sell your Spanish Trail home with a proven valuation, preparation, and marketing roadmap. Schedule a private strategy session with Dr. Janet Duffy.',
+      'Sell your Spanish Trail home with a proven valuation, preparation, and marketing roadmap. Schedule a private strategy session with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Seller Strategy',
-        subtitle: 'Equity planning & negotiation by Dr. Janet Duffy',
+        subtitle: 'Equity planning & negotiation by Dr. Jan Duffy',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],

@@ -28,7 +28,7 @@ export function SiteHeader() {
             </Link>
           </div>
           <div className="flex items-center gap-3">
-            <span className="uppercase">Represented by Dr. Janet Duffy · Berkshire Hathaway HomeServices</span>
+            <span className="uppercase">Represented by Dr. Jan Duffy · Berkshire Hathaway HomeServices</span>
             <Button
               asChild
               size="sm"
@@ -48,7 +48,7 @@ export function SiteHeader() {
                 Berkshire Hathaway HomeServices
               </p>
               <p className="font-[var(--font-playfair)] text-2xl font-semibold tracking-[0.1em] text-[#0f2b1e]">
-                Dr. Janet Duffy · Spanish Trail
+                Dr. Jan Duffy · Spanish Trail
               </p>
             </div>
           </Link>

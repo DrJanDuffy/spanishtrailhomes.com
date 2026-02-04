@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
+import { trackPhoneClick } from '@/lib/analytics'
 import { CalendlyLink } from '@/components/calendly-link'
 
 export function SiteFooter() {

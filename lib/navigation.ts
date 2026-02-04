@@ -29,11 +29,14 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'About Spanish Trail', href: '/communities/spanish-trail', group: 'Overview' },
       { label: 'Lifestyle Guide', href: '/spanish-trail-lifestyle', group: 'Overview' },
+      { label: 'Architecture & Styles', href: '/spanish-trail-architecture', group: 'Overview' },
       { label: 'Schools', href: '/spanish-trail-schools', group: 'Overview' },
-      { label: 'Club & Amenities', href: '/club', group: 'Lifestyle' },
-      { label: 'Golf Course', href: '/golf', group: 'Lifestyle' },
-      { label: 'Events & Dining', href: '/events', group: 'Lifestyle' },
-      { label: 'Membership Info', href: '/membership', group: 'Lifestyle' },
+      { label: 'HOA Guide', href: '/spanish-trail-hoa-guide', group: 'Overview' },
+      { label: 'Club & Amenities', href: '/club', group: 'Amenities' },
+      { label: 'Golf Course', href: '/golf', group: 'Amenities' },
+      { label: 'Tennis Center', href: '/spanish-trail-tennis', group: 'Amenities' },
+      { label: 'Fitness Center', href: '/spanish-trail-fitness', group: 'Amenities' },
+      { label: 'Pools', href: '/spanish-trail-pools', group: 'Amenities' },
     ],
   },
   {

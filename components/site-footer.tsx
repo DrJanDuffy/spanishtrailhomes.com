@@ -25,11 +25,12 @@ export function SiteFooter() {
       links: [
         { label: 'About Spanish Trail', href: '/communities/spanish-trail' },
         { label: 'Lifestyle Guide', href: '/spanish-trail-lifestyle' },
+        { label: 'Architecture & Styles', href: '/spanish-trail-architecture' },
         { label: 'Schools', href: '/spanish-trail-schools' },
-        { label: 'Club & Amenities', href: '/club' },
-        { label: 'Championship Golf', href: '/golf' },
-        { label: 'Events & Dining', href: '/events' },
-        { label: 'Membership Info', href: '/membership' },
+        { label: 'HOA Guide', href: '/spanish-trail-hoa-guide' },
+        { label: 'Golf Course', href: '/golf' },
+        { label: 'Tennis Center', href: '/spanish-trail-tennis' },
+        { label: 'Fitness & Pools', href: '/spanish-trail-fitness' },
       ],
     },
     {

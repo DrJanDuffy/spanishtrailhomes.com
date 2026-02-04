@@ -26,6 +26,11 @@ const routeConfig: Array<{
   { path: '/guest-info', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/spanish-trail-lifestyle', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/spanish-trail-schools', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-tennis', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-fitness', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-pools', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-architecture', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/spanish-trail-hoa-guide', priority: 0.8, changeFrequency: 'monthly' },
   
   // Spanish Trail listing pages - high priority (these are the ones not indexed)
   { path: '/spanish-trail-guard-gated-golf-homes', priority: 0.9, changeFrequency: 'daily' },

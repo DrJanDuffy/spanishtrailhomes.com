@@ -86,7 +86,7 @@ const golfFaqSchema = {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/golf'
 const golfPageDescription =
-  'Tour the three 9-hole courses designed by Robert Trent Jones Jr., review the scorecard, and explore golf course homes for sale near the Spanish Trail Country Club. Plan your next round and find luxury golf community homes in Las Vegas.'
+  'Tour the three 9-hole courses designed by Robert Trent Jones Jr. featuring lakes, waterfalls, streams, and 120 bunkers across all-grass terrain. Review the scorecard and explore golf course homes for sale near Spanish Trail Country Club in Las Vegas.'
 
 const golfWebPageSchema = createWebPageSchema({
   name: 'Golf Experience | Spanish Trail Country Club',
@@ -207,8 +207,7 @@ function GolfHero() {
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           Robert Trent Jones Jr. designed each nine to challenge strategy, ball
-          striking, and creativity—paired with postcard views of Red Rock Canyon
-          and the Las Vegas Strip.
+          striking, and creativity. The all-grass terrain features lakes, waterfalls, and streams throughout, along with 120 bunkers to offer a challenge at every hole—all with postcard views of Red Rock Canyon and the Las Vegas Strip.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button className="rounded-full px-7 py-3 text-xs uppercase tracking-[0.4em]" asChild>
@@ -494,9 +493,7 @@ function GuestInformation() {
             Planning a visit? Let us curate your round.
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Guests must be accompanied by a member or receive authorization from
-            our golf staff. Please review pace-of-play expectations, dress code,
-            and arrival instructions prior to your visit.
+            The golf course was originally private but is now open for non-members to play as well as members. Guests can arrange tee times through the golf shop or be accompanied by a member. Please review pace-of-play expectations, dress code, and arrival instructions prior to your visit.
           </p>
           <Button
             asChild

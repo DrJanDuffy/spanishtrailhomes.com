@@ -26,12 +26,12 @@ export const golfCourses = [
 ]
 
 export const amenities = [
-  'Private 50,000 sq. ft. clubhouse',
-  'Elegant dining & wine cellar',
-  'Aquatic center with junior Olympic pool',
-  'State-of-the-art fitness pavilion',
-  'Five lighted tennis courts & pickleball',
-  'Full social calendar for members & guests',
+  'Private 50,000 square-foot clubhouse with event spaces',
+  'The Bar & Grill dining with 7-day-a-week service',
+  'Two aquatic centers with resort-style pools and spas',
+  'State-of-the-art fitness facility with trainers',
+  'Twelve lighted tennis courts and pickleball',
+  'Bridge club, wine society, and full social calendar',
 ]
 
 export const testimonials = [

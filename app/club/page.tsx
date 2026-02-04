@@ -218,9 +218,7 @@ function ClubHero() {
           unwind.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
-          A 50,000 square foot clubhouse, panoramic Strip sunsets, and a calendar
-          of destination-worthy experiences—all within the privacy of Spanish
-          Trail Country Club.
+          A 50,000 square-foot clubhouse provides members with a fitness facility, two aquatic centers, twelve lighted tennis courts, and event spaces throughout. Enjoy panoramic Strip sunsets and a calendar of destination-worthy experiences—all within the privacy of Spanish Trail Country Club.
         </p>
       </div>
       <HeroSearchWidget theme="dark" />

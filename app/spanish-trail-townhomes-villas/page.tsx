@@ -162,6 +162,9 @@ function LifestyleSection() {
           Lock-and-leave living in a 27-hole private club community
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
+          Spanish Trail's townhomes tend to be clustered around lakes on the golf course, creating peaceful, parklike settings unlike anything else in Las Vegas. It isn't unusual to see residents feeding the ducks and geese that share the property—a serene atmosphere that's only 15 minutes from the Strip.
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           Villa and townhome residents benefit from the same 24/7 guard service, golf access, and wellness programming Spanish Trail is known for—without the upkeep of a larger estate. Many owners split time between Las Vegas, Southern California, and coastal escapes, trusting the HOA and security team to watch over their homes year-round.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

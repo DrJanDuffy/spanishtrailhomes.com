@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
+import { WidgetLoadingOverlay } from '@/components/widget-loading-overlay'
+
 interface RealScoutSectionProps {
   id?: string
   eyebrow?: string
@@ -49,7 +51,7 @@ export function RealScoutSection({
             {description}
           </p>
         </div>
-        <div className="mt-12 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-xl shadow-primary/10">
+        <div className="relative mt-12 min-h-[280px] rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-xl shadow-primary/10">
           <realscout-office-listings
             agent-encoded-id="QWdlbnQtMjI1MDUw"
             sort-order="NEWEST"
@@ -58,6 +60,7 @@ export function RealScoutSection({
             price-min={priceMin}
             price-max={priceMax}
           />
+          <WidgetLoadingOverlay selector="realscout-office-listings" message="Loading listings…" />
         </div>
       </div>
     </section>

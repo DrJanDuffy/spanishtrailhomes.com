@@ -48,7 +48,7 @@ export function SiteFooter() {
           <div className="space-y-2 text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em]">
             <p className="text-[#cbb8a6]">Berkshire Hathaway HomeServices Nevada Properties</p>
             <p>Dr. Jan Duffy · Luxury Real Estate Advisor</p>
-            <Link href="tel:17027663299" className="touch-target inline-flex min-h-[44px] items-center hover:text-[#be9956] hover:underline">
+            <Link href="tel:17027663299" className="touch-target inline-flex min-h-[44px] items-center hover:text-[#be9956] hover:underline" onClick={() => trackPhoneClick('footer')}>
               (702) 766-3299 · DrDuffySells@SpanishTrailHomes.com
             </Link>
           </div>
@@ -87,9 +87,9 @@ export function SiteFooter() {
             <ul className="space-y-0 text-sm tracking-[0.2em] sm:tracking-[0.25em]">
               {section.heading === 'Quick Links' ? (
                 <>
-                  <li key="book-a-tour">
-                    <CalendlyLink className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline">
-                      Book a Tour
+                  <li key="book-showing">
+                    <CalendlyLink className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline" ctaText="Book Showing" ctaLocation="footer">
+                      Book Showing
                     </CalendlyLink>
                   </li>
                   {section.links.map((link) => (

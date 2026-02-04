@@ -52,6 +52,64 @@ export const featuredListings = [
   },
 ]
 
+/** 6 featured listings for preview above RealScout widget (update weekly). */
+export const featuredListingsPreview = [
+  {
+    address: '8330 Carmel Ridge Court',
+    price: '$1,095,000',
+    beds: 3,
+    baths: 3,
+    mls: '2733586',
+    href: 'https://bhhsnv.com/single-family/glv/2733586/8330-carmel-ridge-court-las-vegas-nv-89113',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    address: '7283 Mission Hills Drive',
+    price: '$630,000',
+    beds: 2,
+    baths: 2,
+    mls: '2732075',
+    href: 'https://bhhsnv.com/condo-townhouse/glv/2732075/7283-mission-hills-drive-las-vegas-nv-89113',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    address: '22 Burning Tree Court',
+    price: '$2,590,000',
+    beds: 4,
+    baths: 5,
+    mls: '2732026',
+    href: 'https://bhhsnv.com/single-family/glv/2732026/22-burning-tree-court-las-vegas-nv-89113',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    address: '5120 Cactus Garden Dr',
+    price: '$725,000',
+    beds: 4,
+    baths: 3,
+    mls: '2731000',
+    href: 'https://bhhsnv.com/',
+    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    address: '5080 Lakes Course Dr',
+    price: '$589,000',
+    beds: 3,
+    baths: 2,
+    mls: '2730999',
+    href: 'https://bhhsnv.com/',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop&q=80',
+  },
+  {
+    address: '5150 Springs Way',
+    price: '$699,000',
+    beds: 3,
+    baths: 2.5,
+    mls: '2730998',
+    href: 'https://bhhsnv.com/',
+    image: 'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=400&h=300&fit=crop&q=80',
+  },
+]
+
 export const localEssentials = [
   {
     title: 'Private & Charter Schools',

@@ -1,0 +1,25 @@
+---
+description: Next.js 15 App Router, SEO, and research-first protocol
+alwaysApply: true
+---
+
+# Next.js 15 & SEO
+
+## Stack
+
+- Next.js 15 App Router, React, TypeScript, shadcn/ui, Tailwind CSS
+- Prefer Server Components; use `'use client'` only for interactivity (useState, hooks, browser APIs)
+- Dynamic routes: `params` is a Promise in Next.js 15 — `const { slug } = await params`
+
+## Research-first
+
+- Search official docs (Next.js, Vercel, Google) before implementing
+- Check for breaking changes (Next.js 15 differs from 14)
+- Red flags: `pages/` patterns, `getStaticProps`/`getServerSideProps`, sitemap returning `loc` instead of `url`, missing `export default` on App Router pages
+
+## SEO / GBP
+
+- Localized title, meta description, H1 per page
+- Sitemap: add new routes in `app/sitemap.ts` with priority and changeFrequency
+- Schema: LocalBusiness on layout; WebPage/FAQPage etc. per page as needed
+- Internal links: localized anchor text; image alt text includes location/service

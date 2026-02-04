@@ -96,6 +96,8 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Google Business Profile', href: '/google-business-profile' },
       { label: 'Leave a Review', href: '/reviews' },
       { label: 'Address Autocomplete', href: '/address-autocomplete' },
+      { label: 'Amenity Map', href: '/amenity-map' },
+      { label: 'Directions', href: '/directions' },
       { label: 'Market Snapshot', href: '/contact#market-heading' },
       { label: 'FAQ', href: '/contact#faq-heading' },
       { label: 'Awards & Recognition', href: '/awards' },

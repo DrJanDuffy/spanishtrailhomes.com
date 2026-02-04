@@ -1,7 +1,5 @@
 'use client'
 
-import Script from 'next/script'
-
 import { cn } from '@/lib/utils'
 
 type RealScoutSimpleSearchWidgetProps = {
@@ -15,11 +13,6 @@ export function RealScoutSimpleSearchWidget({
 }: RealScoutSimpleSearchWidgetProps = {}) {
   return (
     <>
-      <Script
-        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-        type="module"
-        strategy="afterInteractive"
-      />
       <style jsx global>{`
         realscout-simple-search {
           --rs-ss-font-primary-color: #000000;

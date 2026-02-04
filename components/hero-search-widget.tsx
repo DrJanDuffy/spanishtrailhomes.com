@@ -1,8 +1,7 @@
 'use client'
 
-import Script from 'next/script'
-
 import { cn } from '@/lib/utils'
+import { WidgetLoadingOverlay } from '@/components/widget-loading-overlay'
 
 type HeroSearchWidgetProps = {
   theme?: 'light' | 'dark'
@@ -17,11 +16,6 @@ export function HeroSearchWidget({ theme = 'dark', className }: HeroSearchWidget
 
   return (
     <>
-      <Script
-        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-        type="module"
-        strategy="afterInteractive"
-      />
       <style jsx global>{`
         realscout-simple-search {
           --rs-ss-font-primary-color: #000000;
@@ -31,8 +25,9 @@ export function HeroSearchWidget({ theme = 'dark', className }: HeroSearchWidget
         }
       `}</style>
       <div className="mx-auto mt-8 flex w-full justify-center">
-        <div className={cn('w-full max-w-xl rounded-3xl border p-6', cardStyles, className)}>
+        <div className={cn('relative min-h-[120px] w-full max-w-xl rounded-3xl border p-6', cardStyles, className)}>
           <realscout-simple-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-simple-search>
+          <WidgetLoadingOverlay selector="realscout-simple-search" message="Loading search…" timeout={4000} />
         </div>
       </div>
     </>

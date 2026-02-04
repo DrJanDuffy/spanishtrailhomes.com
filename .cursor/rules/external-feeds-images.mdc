@@ -1,0 +1,13 @@
+---
+description: External feeds/APIs — preserve and display images; CSP img-src
+globs: "**/*feed*.ts,**/*feed*.tsx,**/market-insights*,**/api/**/market*"
+alwaysApply: false
+---
+
+# External Feeds & APIs: Images
+
+- Extract image URLs from external content (e.g. first image in description/CDATA or API `image`/`thumbnail`)
+- Add optional `image?: string` to parsed/typed items and component props
+- When `image` is present, render with `loading="lazy"`, descriptive `alt`, and optional link to source
+- CSP: ensure `img-src` allows the image domain (e.g. `https:` or specific host)
+- Next.js: add remote host to `images.remotePatterns` in config, or use plain `<img>` for third-party images

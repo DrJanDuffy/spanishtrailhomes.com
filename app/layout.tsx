@@ -3,6 +3,8 @@ import { Playfair_Display, Lato } from 'next/font/google'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
+import { CalendlyEventListener } from '@/components/calendly-event-listener'
+import { FloatingCalendlyButton } from '@/components/floating-calendly-button'
 import './globals.css'
 import { createOgImageUrl, structuredDataSiteUrl, getCanonicalUrl } from '@/lib/structuredData'
 
@@ -217,7 +219,7 @@ gtag('config', 'G-X68WWN997N', {
           id="realscout-widget"
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}
@@ -226,10 +228,18 @@ gtag('config', 'G-X68WWN997N', {
           id="calendly-widget"
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="afterInteractive"
+          onLoad={() => {
+            if (typeof window !== 'undefined' && window.Calendly) {
+              window.Calendly.initBadgeWidget({
+                url: 'https://calendly.com/drjanduffy/showing',
+                text: 'Book a Tour',
+                color: '#0069ff',
+                textColor: '#ffffff',
+                branding: true,
+              })
+            }
+          }}
         />
-        <Script id="calendly-badge-init" strategy="afterInteractive">
-          {`(function(){function init(){if(window.Calendly){window.Calendly.initBadgeWidget({url:'https://calendly.com/drjanduffy/showing',text:'Book a Tour',color:'#0069ff',textColor:'#ffffff',branding:true});return;}setTimeout(init,50);}if(document.readyState==='complete')init();else window.addEventListener('load',init);})();`}
-        </Script>
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
@@ -244,8 +254,10 @@ gtag('config', 'G-X68WWN997N', {
           disableTransitionOnChange
           storageKey="theme"
         >
+          <CalendlyEventListener />
           <DeployBanner />
           {children}
+          <FloatingCalendlyButton />
         </ThemeProvider>
       </body>
     </html>

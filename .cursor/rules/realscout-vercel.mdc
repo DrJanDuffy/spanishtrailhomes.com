@@ -1,0 +1,23 @@
+---
+description: RealScout widget and Vercel build/deploy
+globs: "**/next.config.*,**/layout.tsx,**/realscout*.tsx,components/**/*.tsx"
+alwaysApply: false
+---
+
+# RealScout & Vercel
+
+## RealScout
+
+- Two domains required in CSP: script from `em.realscout.com`, API from `www.realscout.com` — both in `script-src` and `connect-src` in `next.config.ts`
+- Load script once globally in root layout via `<Script>`
+- Use `dangerouslySetInnerHTML` for widget components; don't load script multiple times
+
+## Vercel + DNS
+
+- Prefer `vercel build` (or `vercel --prod`) for production builds over local `pnpm build`
+- When using Vercel, don't proxy through Cloudflare (orange cloud) — use DNS only (gray cloud) to avoid SSL conflicts
+
+## IDX/MLS
+
+- Always display MLS disclaimer and listing attribution
+- Don't modify `/components/idx/*` without explicit approval

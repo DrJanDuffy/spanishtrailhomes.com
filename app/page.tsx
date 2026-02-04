@@ -4,6 +4,7 @@ import Script from 'next/script'
 
 import { Button } from '@/components/ui/button'
 import { CalendlyLink } from '@/components/calendly-link'
+import { TrackedSmsLink } from '@/components/tracked-sms-link'
 import { SiteShell } from '@/components/site-shell'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
@@ -11,6 +12,10 @@ import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { marketHighlights, neighborhoodSpotlights } from '@/lib/spanishTrailContent'
 import { createBreadcrumbSchema, createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
 import { HeroBackground } from '@/components/hero-background'
+import { FeaturedListings } from '@/components/featured-listings'
+import { PropertyLightboxProvider, PropertyLightboxTrigger } from '@/components/property-lightbox'
+import { TestimonialCarousel } from '@/components/testimonial-carousel'
+import { TourCTAStrip } from '@/components/tour-cta-strip'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
@@ -173,28 +178,32 @@ const homeResourceSchema = {
 export default function HomePage() {
   return (
     <SiteShell>
-      <HeroSection />
-      <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
+      <PropertyLightboxProvider>
+        <HeroSection />
+        <div className="bg-white">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
+            <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
+          </div>
         </div>
-      </div>
-      <RealScoutSection
+        <RealScoutSection
         id="bhhs-listings"
         title="Berkshire Hathaway Listings in Spanish Trail"
-        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market introductions, connect with Dr. Jan Duffy."
+        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market tours—schedule a showing with Dr. Jan Duffy."
         priceMin="500000"
         priceMax="600000"
       />
+        <TourCTAStrip />
       <AdvancedSearchSection />
       <IntroSection />
       <StatsSection />
       <NeighborhoodSpotlightsSection />
       <MarketPreviewSection />
+      <TestimonialCarousel />
       <InsightsPreviewSection />
       <ExploreFurtherSection />
       <FAQSection />
       <CTASection />
+      </PropertyLightboxProvider>
       <Script id="home-breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeBreadcrumbSchema)}
       </Script>
@@ -239,18 +248,13 @@ function HeroSection() {
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
-          <Button
-            asChild
-            className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em] shadow-md shadow-primary/25"
-          >
-            <Link href="#bhhs-listings">See What’s New</Link>
-          </Button>
+          <PropertyLightboxTrigger openFrom="hero" variant="primary" className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em] shadow-md shadow-primary/25" />
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-[#0d3b2c]/60 bg-background/95 px-8 py-3 text-xs uppercase tracking-[0.4em] text-[#0d3b2c] shadow-md shadow-primary/10 hover:bg-[#0d3b2c]/10"
+            className="rounded-full border-white/40 bg-background/95 px-6 py-2 text-xs uppercase tracking-[0.4em] text-primary-foreground shadow-md shadow-primary/10 hover:bg-white/20"
           >
-            <Link href="/contact">Plan a Private Tour</Link>
+            <Link href="#bhhs-listings">See What’s New</Link>
           </Button>
         </div>
         <HeroSearchWidget theme="dark" />
@@ -596,8 +600,23 @@ function FAQSection() {
             Answers to the most frequent Spanish Trail real estate questions
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Buyers and sellers trust Dr. Jan Duffy to navigate the nuances of guard-gated transactions. These answers provide clarity on timing, pricing, and strategy so you can move forward with confidence. Need deeper insight? Book a private consultation for guidance tailored to your goals.
+            Buyers and sellers trust Dr. Jan Duffy to navigate the nuances of guard-gated transactions. These answers provide clarity on timing, pricing, and strategy so you can move forward with confidence. Book a tour to see inside, or text your question.
           </p>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-[#0f2b1e] px-8 py-3 text-base font-semibold text-white shadow-md hover:bg-[#0f2b1e]/90" ctaText="Book Tour to See Inside" ctaLocation="faq">
+            Book Tour to See Inside
+          </CalendlyLink>
+          <Button
+            asChild
+            variant="outline"
+            className="rounded-full border-[#0f2b1e]/60 px-6 py-2 text-sm font-medium text-[#0f2b1e] hover:bg-[#0f2b1e]/10"
+          >
+            <TrackedSmsLink intent="question" href="sms:7027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
+              Text Your Question: 702-766-3299
+            </TrackedSmsLink>
+          </Button>
         </div>
 
         <div className="mt-12 space-y-10">
@@ -623,22 +642,25 @@ function CTASection() {
           Ready to explore Spanish Trail homes?
         </h2>
         <p className="text-base leading-relaxed text-primary-foreground">
-          Schedule a private tour, explore current listings, or request a valuation for your Spanish Trail residence—our concierge team is ready to assist.
+          Book a tour to see inside, text your question, or request a valuation for your Spanish Trail residence.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-xs font-medium uppercase tracking-[0.4em] text-[#0f2b1e] hover:bg-[#f1eadd]">
-            Book a Tour
+          <CalendlyLink className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-semibold text-[#0f2b1e] shadow-md hover:bg-[#f1eadd]" ctaText="Book Tour to See Inside" ctaLocation="footer">
+            Book Tour to See Inside
           </CalendlyLink>
           <Button
             asChild
-            className="rounded-full bg-white px-7 py-3 text-xs uppercase tracking-[0.4em] text-[#0f2b1e] hover:bg-[#f1eadd]"
+            variant="outline"
+            className="rounded-full border-[#f8f5ef]/70 bg-transparent px-6 py-2 text-sm font-medium text-[#f8f5ef] hover:bg-white/10"
           >
-            <Link href="/contact">Schedule Consultation</Link>
+            <TrackedSmsLink intent="question" href="sms:7027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
+              Text Your Question: 702-766-3299
+            </TrackedSmsLink>
           </Button>
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-[#f8f5ef]/70 bg-transparent px-7 py-3 text-xs uppercase tracking-[0.4em] text-[#f8f5ef] hover:bg-white/10"
+            className="rounded-full border-[#f8f5ef]/70 bg-transparent px-6 py-2 text-sm font-medium text-[#f8f5ef] hover:bg-white/10"
           >
             <Link href="/sellers">Get a Valuation</Link>
           </Button>
@@ -661,7 +683,8 @@ function AdvancedSearchSection() {
             Filter by price point, property style, and lifestyle amenities using our advanced RealScout experience. Save favorites, request tours, or alert Dr. Jan Duffy when the perfect Spanish Trail property appears.
           </p>
         </div>
-        <div className="mt-10 flex justify-center">
+        <FeaturedListings />
+        <div id="realscout-advanced-search" className="mt-12 flex justify-center">
           <div className="w-full max-w-lg rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10">
             <realscout-advanced-search agent-encoded-id="QWdlbnQtMjI1MDUw"></realscout-advanced-search>
           </div>

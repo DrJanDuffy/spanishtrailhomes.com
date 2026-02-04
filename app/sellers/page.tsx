@@ -135,7 +135,6 @@ export const metadata: Metadata = {
 export default function SellersPage() {
   return (
     <SiteShell>
-      <Script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" strategy="afterInteractive" />
       <style dangerouslySetInnerHTML={{ __html: realScoutHomeValueStyles }} />
       <main>
         <HeroSection />

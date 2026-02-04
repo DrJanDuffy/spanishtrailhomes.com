@@ -1,0 +1,53 @@
+---
+description: Next.js security and dependency management for Vercel deployments
+globs: package.json,pnpm-lock.yaml
+alwaysApply: false
+---
+
+# Next.js Security & Dependency Management
+
+## Critical: Security Vulnerabilities
+
+When Vercel blocks a deployment due to vulnerable Next.js:
+1. **Always upgrade to the latest patched version** (check npm: `npm view next versions`)
+2. **Use pnpm.overrides** in package.json to force version resolution
+3. **Delete pnpm-lock.yaml** so Vercel regenerates with correct version
+
+```json
+// package.json - add this to force Next.js version
+{
+  "pnpm": {
+    "overrides": {
+      "next": "^15.5.9"
+    }
+  }
+}
+```
+
+## Version Pinning Rules
+
+| Package | Strategy | Example |
+|---------|----------|---------|
+| `next` | Caret (^) for patches | `"^15.5.9"` |
+| `react` | Exact | `"19.1.0"` |
+| `react-dom` | Exact (match react) | `"19.1.0"` |
+
+## When pnpm Unavailable Locally
+
+If `pnpm` is not in PATH on Windows:
+1. Add `pnpm.overrides` to package.json
+2. Delete `pnpm-lock.yaml` 
+3. Vercel will regenerate lockfile during build
+
+**Never** manually edit pnpm-lock.yaml version strings - integrity hashes won't match.
+
+## Before Committing package.json Changes
+
+- [ ] Check for CVEs: `npm audit` or search https://security.snyk.io/
+- [ ] Verify Next.js version is not on Vercel blocklist
+- [ ] Ensure pnpm.overrides matches dependencies.next version
+
+## CVE Reference
+
+Known blocked versions (as of Feb 2026):
+- Next.js < 15.5.9: CVE-2025-66478, CVE-2025-55184, CVE-2025-55183

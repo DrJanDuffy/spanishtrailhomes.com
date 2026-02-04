@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import Script from 'next/script'
 
 import { SiteShell } from '@/components/site-shell'
+import { Button } from '@/components/ui/button'
 import { CalendlyInline } from '@/components/calendly-inline'
 import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'

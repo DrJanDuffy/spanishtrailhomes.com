@@ -75,25 +75,39 @@ export function SiteHeader() {
 
                   {hasChildren && activeFlyout === item.label ? (
                     <div
-                      className="absolute left-1/2 mt-4 w-[28rem] -translate-x-1/2 rounded-3xl border border-[#d8cdbf]/60 bg-white p-6 shadow-xl shadow-primary/10"
+                      className="absolute left-1/2 mt-4 w-64 -translate-x-1/2 rounded-2xl border border-[#d8cdbf]/60 bg-white py-4 shadow-xl shadow-primary/10"
                       onMouseEnter={() => setActiveFlyout(item.label)}
                       onMouseLeave={() => setActiveFlyout(null)}
                     >
-                      <div className="grid grid-cols-2 gap-6 text-sm">
-                        {(item.children ?? []).map((child) => (
-                          <div key={child.label} className="space-y-2">
-                            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-secondary">
-                              {child.label}
+                      {/* Group items by their group property */}
+                      {(() => {
+                        const groups = (item.children ?? []).reduce((acc, child) => {
+                          const groupName = child.group || 'Links'
+                          if (!acc[groupName]) acc[groupName] = []
+                          acc[groupName].push(child)
+                          return acc
+                        }, {} as Record<string, typeof item.children>)
+                        
+                        return Object.entries(groups).map(([groupName, children], groupIndex) => (
+                          <div key={groupName} className={groupIndex > 0 ? 'mt-3 border-t border-border/40 pt-3' : ''}>
+                            <p className="px-4 pb-2 text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                              {groupName}
                             </p>
-                            <Link
-                              href={child.href}
-                              className="inline-flex text-[0.78rem] leading-relaxed text-[#4d5c55] hover:text-[#0f2b1e] hover:underline"
-                            >
-                              Visit {child.label}
-                            </Link>
+                            <div className="flex flex-col">
+                              {(children ?? []).map((child) => (
+                                <Link
+                                  key={child.label}
+                                  href={child.href}
+                                  className="px-4 py-1.5 text-sm text-[#1f2a24] hover:bg-[#f5f3ef] hover:text-secondary"
+                                  onClick={() => setActiveFlyout(null)}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
                           </div>
-                        ))}
-                      </div>
+                        ))
+                      })()}
                     </div>
                   ) : null}
                 </div>
@@ -156,16 +170,32 @@ export function SiteHeader() {
                   </div>
                   {hasChildren && activeFlyout === item.label ? (
                     <div className="space-y-0 pb-3 pl-2">
-                      {(item.children ?? []).map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="touch-target flex min-h-[44px] items-center py-2 text-sm uppercase tracking-[0.2em] text-[#4d5c55] hover:text-secondary hover:underline"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {(() => {
+                        const groups = (item.children ?? []).reduce((acc, child) => {
+                          const groupName = child.group || 'Links'
+                          if (!acc[groupName]) acc[groupName] = []
+                          acc[groupName].push(child)
+                          return acc
+                        }, {} as Record<string, typeof item.children>)
+                        
+                        return Object.entries(groups).map(([groupName, children], groupIndex) => (
+                          <div key={groupName} className={groupIndex > 0 ? 'mt-2 border-t border-border/30 pt-2' : ''}>
+                            <p className="py-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                              {groupName}
+                            </p>
+                            {(children ?? []).map((child) => (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                className="touch-target flex min-h-[44px] items-center py-2 text-sm uppercase tracking-[0.2em] text-[#4d5c55] hover:text-secondary hover:underline"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ))
+                      })()}
                     </div>
                   ) : null}
                 </div>

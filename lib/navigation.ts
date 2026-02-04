@@ -2,105 +2,58 @@ export type NavItem = {
   label: string
   href: string
   children?: NavItem[]
+  /** Optional group label for organizing dropdown items */
+  group?: string
 }
 
 export const NAV_ITEMS: NavItem[] = [
   {
+    label: 'Homes',
+    href: '/spanish-trail-homes-for-sale-las-vegas',
+    children: [
+      // Property Types
+      { label: 'All Homes for Sale', href: '/spanish-trail-homes-for-sale-las-vegas', group: 'Browse' },
+      { label: 'Estate Homes', href: '/spanish-trail-country-club-estate-listings', group: 'Browse' },
+      { label: 'Townhomes & Villas', href: '/spanish-trail-townhomes-villas', group: 'Browse' },
+      { label: 'Golf Course Homes', href: '/spanish-trail-luxury-golf-course-properties', group: 'Browse' },
+      { label: 'Waterfront Homes', href: '/spanish-trail-waterfront-golf-homes', group: 'Browse' },
+      // Market Info
+      { label: 'Market Report', href: '/spanish-trail-market-report', group: 'Research' },
+      { label: 'Market Insights', href: '/spanish-trail-insights', group: 'Research' },
+      { label: 'Compare Neighborhoods', href: '/las-vegas-luxury-neighborhoods', group: 'Research' },
+    ],
+  },
+  {
     label: 'Community',
     href: '/communities/spanish-trail',
     children: [
-      { label: 'Overview', href: '/communities/spanish-trail' },
-      { label: 'Amenities', href: '/communities/spanish-trail#amenities-heading' },
-      { label: 'Benefits', href: '/communities/spanish-trail#benefits-heading' },
-      { label: 'Contact', href: '/communities/spanish-trail#contact-heading' },
-      { label: 'Homes for Sale', href: '/spanish-trail-homes-for-sale-las-vegas' },
-    ],
-  },
-  {
-    label: 'Buyers',
-    href: '/spanish-trail-homes-for-sale-las-vegas',
-    children: [
-      { label: 'Homes for Sale', href: '/spanish-trail-homes-for-sale-las-vegas' },
-      { label: 'Guard-Gated Golf Homes', href: '/spanish-trail-guard-gated-golf-homes' },
-      { label: 'Luxury Golf Course Estates', href: '/spanish-trail-luxury-golf-course-properties' },
-      { label: 'Custom Estates Near Strip', href: '/spanish-trail-custom-estate-homes-strip' },
-      { label: 'Townhomes & Villas', href: '/spanish-trail-townhomes-villas' },
-      { label: 'Gated Golf Realtor', href: '/spanish-trail-gated-golf-realtor' },
-      { label: 'Southwest Luxury Homes', href: '/spanish-trail-southwest-las-vegas-luxury-homes' },
-      { label: 'Private Golf Course Homes', href: '/spanish-trail-private-golf-course-homes' },
-      { label: 'Estate Listings', href: '/spanish-trail-country-club-estate-listings' },
-      { label: 'Waterfront Golf Homes', href: '/spanish-trail-waterfront-golf-homes' },
-      { label: 'Market Report', href: '/spanish-trail-market-report' },
-      { label: 'Insights', href: '/spanish-trail-insights' },
-      { label: 'Luxury Comparisons', href: '/las-vegas-luxury-neighborhoods' },
-    ],
-  },
-  {
-    label: 'Club',
-    href: '/club',
-    children: [
-      { label: 'Amenities', href: '/club#amenities' },
-      { label: 'History', href: '/club#history' },
-      { label: 'Lifestyle', href: '/club#lifestyle' },
-    ],
-  },
-  {
-    label: 'Golf',
-    href: '/golf',
-    children: [
-      { label: 'Course Tour', href: '/golf#course-tour' },
-      { label: 'Scorecard', href: '/golf#scorecard' },
-      { label: 'Guest Info', href: '/guest-info' },
-    ],
-  },
-  {
-    label: 'Events',
-    href: '/events',
-    children: [
-      { label: 'Weddings', href: '/events#weddings' },
-      { label: 'Private Events', href: '/events#private-events' },
-      { label: 'Golf Outings', href: '/events#golf-outings' },
-    ],
-  },
-  {
-    label: 'Membership',
-    href: '/membership',
-    children: [
-      { label: 'Schedule Tour', href: '/membership#inquiry' },
-    ],
-  },
-  {
-    label: 'Guest Info',
-    href: '/guest-info',
-    children: [
-      { label: 'Directions', href: '/guest-info#map' },
-      { label: 'Etiquette', href: '/guest-info#etiquette' },
-      { label: 'Contact', href: '/guest-info#contact-heading' },
+      { label: 'About Spanish Trail', href: '/communities/spanish-trail', group: 'Overview' },
+      { label: 'Guard-Gated Living', href: '/spanish-trail-guard-gated-golf-homes', group: 'Overview' },
+      { label: 'Location & Access', href: '/spanish-trail-custom-estate-homes-strip', group: 'Overview' },
+      { label: 'Club & Amenities', href: '/club', group: 'Lifestyle' },
+      { label: 'Golf Course', href: '/golf', group: 'Lifestyle' },
+      { label: 'Events & Dining', href: '/events', group: 'Lifestyle' },
+      { label: 'Membership Info', href: '/membership', group: 'Lifestyle' },
     ],
   },
   {
     label: 'About',
     href: '/about',
     children: [
-      { label: 'Meet Dr. Duffy', href: '/about#story-heading' },
-      { label: 'Advisory Approach', href: '/about#approach-heading' },
-      { label: 'Credentials', href: '/about#credentials-heading' },
+      { label: 'Meet Dr. Jan Duffy', href: '/about', group: 'Your Agent' },
+      { label: 'Awards & Recognition', href: '/awards', group: 'Your Agent' },
+      { label: 'Client Reviews', href: '/reviews', group: 'Your Agent' },
+      { label: 'Buyers Guide', href: '/buyers', group: 'Resources' },
+      { label: 'Sellers Guide', href: '/sellers', group: 'Resources' },
     ],
   },
   {
     label: 'Contact',
     href: '/contact',
     children: [
-      { label: 'Connect', href: '/contact#contact-heading' },
-      { label: 'Find Our Locations', href: '/find-our-locations' },
-      { label: 'Google Business Profile', href: '/google-business-profile' },
-      { label: 'Leave a Review', href: '/reviews' },
-      { label: 'Address Autocomplete', href: '/address-autocomplete' },
-      { label: 'Amenity Map', href: '/amenity-map' },
-      { label: 'Directions', href: '/directions' },
-      { label: 'Market Snapshot', href: '/contact#market-heading' },
-      { label: 'FAQ', href: '/contact#faq-heading' },
-      { label: 'Awards & Recognition', href: '/awards' },
+      { label: 'Get in Touch', href: '/contact', group: 'Connect' },
+      { label: 'Office Location', href: '/find-our-locations', group: 'Connect' },
+      { label: 'Guest Information', href: '/guest-info', group: 'Connect' },
     ],
   },
 ]

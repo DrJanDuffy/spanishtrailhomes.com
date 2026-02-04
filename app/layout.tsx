@@ -3,6 +3,7 @@ import { Playfair_Display, Lato } from 'next/font/google'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
+import { CalendlyBadgeScript } from '@/components/calendly-badge-script'
 import { CalendlyEventListener } from '@/components/calendly-event-listener'
 import { FloatingCalendlyButton } from '@/components/floating-calendly-button'
 import './globals.css'
@@ -224,22 +225,7 @@ gtag('config', 'G-X68WWN997N', {
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}
         </Script>
-        <Script
-          id="calendly-widget"
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-          onLoad={() => {
-            if (typeof window !== 'undefined' && window.Calendly) {
-              window.Calendly.initBadgeWidget({
-                url: 'https://calendly.com/drjanduffy/showing',
-                text: 'Book a Tour',
-                color: '#0069ff',
-                textColor: '#ffffff',
-                branding: true,
-              })
-            }
-          }}
-        />
+        <CalendlyBadgeScript />
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}

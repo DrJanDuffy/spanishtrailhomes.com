@@ -213,12 +213,12 @@ function MembershipSection() {
         </div>
         <aside className="space-y-4 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10 text-sm text-[#372a20]/80">
           <h3 className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0f2b1e]">
-            Membership concierge includes</h3>
+            Dr. Duffy helps buyers understand</h3>
           <ul className="space-y-3">
-            <li>• Initiation fee updates and payment structure guidance</li>
-            <li>• Introductory rounds and golf shop fittings</li>
-            <li>• Family program overview (junior golf, camps, clinics)</li>
-            <li>• Event calendar briefings so you plan seasons effectively</li>
+            <li>• Overview of membership categories and typical costs</li>
+            <li>• Introduction to the club membership director</li>
+            <li>• How membership factors into your home buying budget</li>
+            <li>• Coordination between closing date and membership timing</li>
           </ul>
         </aside>
       </div>
@@ -366,7 +366,7 @@ function BuyerProcessSection() {
             {
               title: '3. Closing & onboarding',
               detail:
-                'I negotiate favorable terms, manage inspections, and coordinate membership applications so you start enjoying the course immediately after closing.',
+                'I negotiate favorable terms, manage inspections, and introduce you to the membership director so you can start the club application process around your closing date.',
             },
           ].map((item) => (
             <article key={item.title} className="space-y-3 rounded-3xl border border-[#1f4a35]/60 bg-[#143927] p-6 shadow-lg shadow-black/20 text-sm leading-relaxed">

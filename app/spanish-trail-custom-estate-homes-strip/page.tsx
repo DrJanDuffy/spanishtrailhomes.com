@@ -377,7 +377,7 @@ function CaseStudiesSection() {
           {[{
             title: 'Mission Hills private sale',
             detail:
-              'A 9,200 sq. ft. estate with Strip skyline views sold off-market at $3.1M after a curated twilight tour. We negotiated designer furniture and coordinated membership transfers before listing paperwork finalized.',
+              'A 9,200 sq. ft. estate with Strip skyline views sold off-market at $3.1M after a curated twilight tour. We negotiated designer furniture and provided membership guidance to the buyer before closing.',
           },
           {
             title: 'Islands waterfront retreat',

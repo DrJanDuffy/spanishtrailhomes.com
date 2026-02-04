@@ -12,60 +12,60 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const membershipNarratives = [
   {
-    title: 'Membership Pathways and Onboarding',
+    title: 'Understanding Membership When Buying',
     paragraphs: [
-      'Spanish Trail Country Club offers a refined onboarding experience that aligns with the expectations of discerning members. Prospective applicants meet with membership directors to review category options, from full golf to young executive, corporate, or social. Background interviews focus on community engagement and shared values, ensuring the club’s welcoming culture remains intact. Dr. Jan Duffy prepares clients with application timelines, sponsor recommendations, and financial planning resources so the process feels effortless.',
-      'Once accepted, new members are paired with ambassadors who coordinate clubhouse tours, golf shop introductions, and dinner reservations. They also receive curated invitations to upcoming events, making it easy to integrate into the social fabric. Dr. Duffy’s concierge follow-up covers everything from locker assignments to introducing family members to youth programs, ensuring the entire household feels at home.'
+      'Spanish Trail Country Club offers several membership categories—from full golf to young executive, corporate, or social. As your real estate agent, Dr. Jan Duffy helps you understand how membership works before you purchase a home. She explains the different tiers, typical initiation fees, and monthly dues so you can factor these costs into your budget alongside your home purchase.',
+      'When you buy a Spanish Trail home, membership is not automatic—you apply separately through the club. Dr. Duffy can introduce you to the membership director and explain the application timeline so you can coordinate club access with your closing date.'
     ],
   },
   {
-    title: 'Lifestyle Programming for Every Membership Tier',
+    title: 'Membership Categories at a Glance',
     paragraphs: [
-      'Full golf members enjoy unlimited tee times, a bustling tournament slate, and reciprocal privileges across a network of premier clubs. Social and lifestyle members love access to dining venues, wine tastings, and a calendar of fashion showcases, speaker series, and philanthropic initiatives. Young executive members benefit from progressive dues, mentorship mixers, and professional development workshops. Regardless of tier, wellness offerings—fitness classes, spa therapy, and nutrition coaching—deliver everyday luxury.',
-      'Dr. Duffy helps clients evaluate which membership aligns with their schedule and budget. She provides sample itineraries, highlights popular gatherings, and outlines add-on programs such as locker service or personal training packages. Her proactive guidance ensures every member extracts maximum value from their investment.'
+      'Full golf members enjoy unlimited tee times across all 27 holes, tournament access, and reciprocal privileges at partner clubs. Social and lifestyle members access dining, tennis, pools, fitness, and the full social calendar without golf privileges. Young executive memberships offer reduced initiation fees for members under 40. Corporate memberships allow businesses to designate multiple users for client entertainment.',
+      'Dr. Duffy provides an overview of each category so home buyers can evaluate which tier fits their lifestyle. She recommends contacting the club directly for current pricing and availability, and can facilitate that introduction.'
     ],
   },
   {
-    title: 'Real Estate Synergy with Membership Goals',
+    title: 'Membership Transfers When Selling',
     paragraphs: [
-      'Many members choose to own Spanish Trail homes because proximity enhances every aspect of club life. Residents can cart to morning tee times, host after-hours events on their patios, or pause midday for spa appointments without navigating city traffic. Dr. Duffy pairs club prospects with listings that complement their routines—estates with casitas for multi-generational living, villas with minimal maintenance for frequent travelers, or homes near specific gates for convenient commutes.',
-      'She also advises on lender programs designed for luxury buyers, including portfolio loans and cross-collateralization strategies that leverage existing assets. Her Berkshire Hathaway HomeServices partnerships provide access to insurance advisors, estate planners, and wealth managers who understand how membership integrates into broader financial goals.'
+      'Club memberships at Spanish Trail are personal—they do not transfer automatically with a home sale. However, sellers sometimes negotiate to cover a portion of the buyer\'s initiation fee as part of the transaction. Dr. Duffy has experience structuring these arrangements and can advise both buyers and sellers on common practices.',
+      'For sellers who are club members, Dr. Duffy explains your options: you may resign your membership, retain it if purchasing elsewhere in Spanish Trail, or explore the club\'s policies on membership holds. She coordinates with the club\'s membership office to ensure a smooth transition.'
     ],
   },
   {
-    title: 'Community Impact and Philanthropy',
+    title: 'Why Membership Enhances Home Value',
     paragraphs: [
-      'Spanish Trail members are deeply involved in the Las Vegas community, supporting charities through galas, golf tournaments, and volunteer events. The club’s foundations contribute to schools, military families, and local nonprofits. Membership therefore offers a platform to amplify personal philanthropy and network with changemakers. Dr. Duffy connects civic-minded clients with committees where they can immediately make a difference.',
-      'Her team also coordinates with media partners and marketing experts who showcase charitable initiatives, ensuring fundraising events reach the audiences they deserve. This full-circle approach illustrates how membership extends beyond recreation to meaningful community leadership.'
+      'Proximity to world-class amenities is a key selling point for Spanish Trail homes. Residents can cart to morning tee times, walk to the tennis center, or enjoy poolside dining without leaving the community. Buyers who value an active country club lifestyle often pay a premium for homes near the clubhouse or with golf course views.',
+      'Dr. Duffy helps buyers find homes that match their intended use of club amenities—whether that\'s daily golf access, tennis and fitness focus, or primarily social and dining benefits. For sellers, she highlights membership benefits in marketing materials to attract buyers seeking this lifestyle.'
     ],
   },
 ]
 
 const membershipFaq = [
   {
-    question: 'What documentation is required for membership applications?',
+    question: 'How does membership work when buying a Spanish Trail home?',
     answer:
-      'Applications generally include completed forms, letters of introduction from current members, and financial statements. Background checks may also be conducted to maintain the club’s secure environment. Dr. Jan Duffy assists applicants in assembling materials, coordinating sponsor meetings, and tracking key deadlines so the process progresses smoothly.',
+      'Club membership is separate from home ownership—buying a home does not automatically include membership. Dr. Jan Duffy explains the membership options and typical costs so you can budget accordingly. She can introduce you to the club\'s membership director to start your application process.',
   },
   {
     question: 'Are memberships transferable when selling a Spanish Trail home?',
     answer:
-      'Memberships are personal and not automatically transferable with a home sale. However, some sellers negotiate initiation fees or introductions as part of contract terms. Dr. Duffy outlines best practices and liaises with the membership office to craft agreements that benefit both parties.',
+      'Memberships are personal and do not automatically transfer with a home sale. However, sellers sometimes negotiate to cover a portion of the buyer\'s initiation fee as part of the transaction. Dr. Duffy has experience structuring these arrangements for both buyers and sellers.',
   },
   {
     question: 'How do dues differ between membership categories?',
     answer:
-      'Full golf memberships carry the highest dues, reflecting extensive course access and tournament programming. Social and young executive memberships offer lower monthly investments while still providing access to dining, fitness, and social events. Dr. Duffy provides updated fee schedules, payment options, and examples of annual spending so clients can budget confidently.',
+      'Full golf memberships carry the highest dues, reflecting extensive course access and tournament programming. Social and young executive memberships offer lower monthly investments while still providing access to dining, fitness, and social events. Contact the club directly for current pricing—Dr. Duffy can facilitate that introduction.',
   },
   {
-    question: 'Can corporate memberships include multiple designees?',
+    question: 'Does Dr. Duffy represent the club or home buyers/sellers?',
     answer:
-      'Yes. Corporate memberships allow companies to name several designees who can host clients, attend events, and leverage meeting spaces. Dr. Duffy works with businesses to tailor packages that align with branding, client hospitality goals, and HR benefits.',
+      'Dr. Duffy is a real estate agent representing home buyers and sellers in Spanish Trail—not the club itself. She provides information about membership to help clients understand the full cost of Spanish Trail living and can introduce you to the club\'s membership team for official applications and pricing.',
   },
   {
-    question: 'What support exists for members relocating from out of state?',
+    question: 'What should I budget for beyond the home purchase?',
     answer:
-      'The club provides relocation assistance through concierge introductions to schools, service providers, and regional partners. Dr. Duffy arranges neighborhood tours, recommends interior designers and moving specialists, and supplies city guides highlighting healthcare, shopping, and entertainment options. Her concierge model ensures Spanish Trail membership feels like an immediate home base in Las Vegas.',
+      'Beyond the home price, Spanish Trail buyers should consider HOA fees (separate from club membership), club initiation fees if joining, and monthly club dues. Dr. Duffy provides estimates for these costs so you can make informed decisions, though she recommends verifying current rates directly with the HOA and club.',
   },
 ]
 
@@ -84,10 +84,10 @@ const membershipFaqSchema = {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/membership'
 const membershipPageDescription =
-  'Discover golf, social, and corporate membership options at Spanish Trail Country Club. Request information or schedule a tour.'
+  'Learn about Spanish Trail Country Club membership options when buying or selling a home. Dr. Jan Duffy explains how membership works for home buyers and sellers.'
 
 const membershipWebPageSchema = createWebPageSchema({
-  name: 'Membership | Spanish Trail Country Club',
+  name: 'Spanish Trail Membership Guide for Home Buyers & Sellers',
   description: membershipPageDescription,
   path: '/membership',
   type: 'CollectionPage',
@@ -95,16 +95,12 @@ const membershipWebPageSchema = createWebPageSchema({
     about: {
       '@type': 'Organization',
       name: 'Spanish Trail Country Club',
-      memberOf: {
-        '@type': 'Organization',
-        name: 'Berkshire Hathaway HomeServices Nevada Properties',
-      },
     },
   },
 })
 
 export const metadata: Metadata = {
-  title: 'Membership | Spanish Trail Country Club',
+  title: 'Spanish Trail Membership Guide | For Home Buyers & Sellers',
   description: membershipPageDescription,
   alternates: { canonical: getCanonicalUrl('/membership') },
   robots: {
@@ -120,26 +116,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Membership Options',
+    title: 'Spanish Trail Membership Guide for Home Buyers',
     description:
-      'Evaluate membership categories, benefits, and concierge services at Spanish Trail Country Club with Dr. Jan Duffy.',
+      'Understand membership options, costs, and transfers when buying or selling a Spanish Trail home. Real estate guidance from Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Membership',
-        subtitle: 'Golf • Social • Corporate pathways',
+        subtitle: 'Guide for home buyers & sellers',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Membership | Spanish Trail Country Club',
+    title: 'Spanish Trail Membership Guide',
     description:
-      'View Spanish Trail membership tiers, pricing insights, and concierge benefits curated by Dr. Jan Duffy.',
+      'Learn how club membership works when buying or selling a Spanish Trail home.',
     images: [
       createOgImageUrl({
-        title: 'Spanish Trail Membership Concierge',
-        subtitle: 'Tailored onboarding & lifestyle insights',
+        title: 'Spanish Trail Membership',
+        subtitle: 'For home buyers & sellers',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -153,7 +149,7 @@ const membershipOptions = [
   },
   {
     title: 'Young Executive Membership',
-    copy: 'Exclusive pricing and programming for members under 40, including mentorship programs and networking events.',
+    copy: 'Reduced initiation fees for members under 40, including mentorship programs and networking events.',
   },
   {
     title: 'Corporate Golf Membership',
@@ -171,14 +167,14 @@ export default function MembershipPage() {
       <MembershipHero />
       <div className="bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
-          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Membership' }]} />
+          <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Membership Guide' }]} />
         </div>
       </div>
       <RealScoutSection
         id="membership-listings"
-        eyebrow="Member-Favorite Homes"
-        title="Residences that Complement Spanish Trail Membership"
-        description="Evaluate active listings suited for primary residents and second-home members—featuring proximity to the clubhouse, wellness center, and tennis complex."
+        eyebrow="Homes for Sale"
+        title="Spanish Trail Homes with Club Access"
+        description="Browse homes for sale in Spanish Trail. Dr. Duffy helps you understand membership options and costs as part of your home buying process."
         priceMin="500000"
         propertyTypes=",SFR,CONDO"
       />
@@ -213,17 +209,16 @@ function MembershipHero() {
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-accent">
-          Membership
+          Membership Guide
         </p>
         <h1
           id="membership-hero-heading"
           className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
-          A private club community curated for golfers, families, and tastemakers.
+          Understanding Spanish Trail Club Membership
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
-          Unlock championship golf, vibrant social programming, and concierge-level
-          service minutes from the Las Vegas Strip.
+          Learn how country club membership works when buying or selling a home in Spanish Trail. Dr. Jan Duffy explains your options as a real estate agent—not a club representative.
         </p>
       </div>
       <HeroSearchWidget theme="dark" />
@@ -241,17 +236,16 @@ function OfferingsSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Membership Offerings
+            Membership Categories
           </p>
           <h2
             id="offerings-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Tailored access, shared excellence.
+            Club membership options at Spanish Trail
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Select the experience that fits your lifestyle—each membership includes
-            dedicated concierge support and invites to our signature events.
+            Spanish Trail offers several membership tiers. Understanding these options helps you budget for the full cost of Spanish Trail living. Contact the club directly for current pricing and availability.
           </p>
         </div>
 
@@ -280,12 +274,12 @@ function MembershipNarrativesSection() {
     <section className="bg-white py-20 sm:py-24" aria-labelledby="membership-narratives-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Membership Journey</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Real Estate Guidance</p>
           <h2 id="membership-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Navigate every stage of Spanish Trail membership with confidence
+            What home buyers and sellers need to know about membership
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Jan Duffy demystifies application steps, programming options, and real estate synergies. These narratives outline the strategies she shares with discerning clients relocating to Spanish Trail or upgrading their existing membership tier.
+            As your real estate agent, Dr. Jan Duffy helps you understand how club membership factors into buying or selling a Spanish Trail home. She provides guidance on membership—but for official applications and pricing, you work directly with the club.
           </p>
         </div>
 
@@ -323,32 +317,30 @@ function ValueHighlights() {
             id="value-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Legacy-level membership with modern advantages.
+            Club amenities that enhance home value
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Enjoy reciprocal privileges across premier clubs, members-only travel,
-            curated experiences in partnership with Las Vegas luxury brands, and
-            personalized service that anticipates every need.
+            Spanish Trail&apos;s world-class amenities attract buyers seeking an active country club lifestyle. Understanding these amenities helps sellers market their homes and helps buyers find the right fit.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
           {[
             {
-              title: 'Concierge Team',
-              copy: 'Dedicated ambassadors coordinate tee times, dining reservations, and event planning.',
+              title: '27-Hole Golf Course',
+              copy: 'Robert Trent Jones Jr. design with lakes, waterfalls, and 120 bunkers.',
             },
             {
-              title: 'Member Travel',
-              copy: 'Exclusive golf trips and wine-country experiences hosted by Spanish Trail professionals.',
+              title: '12 Tennis Courts',
+              copy: 'Lighted courts, pro shop, and professional instruction.',
             },
             {
-              title: 'Wellness Access',
-              copy: 'Fitness pavilion, spa partnerships, and holistic programming curated for members.',
+              title: 'Two Aquatic Centers',
+              copy: 'Resort-style pools, heated spas, and swim programs.',
             },
             {
-              title: 'Community Impact',
-              copy: 'Philanthropic initiatives and charitable tournaments led by our members.',
+              title: '50,000 SF Clubhouse',
+              copy: 'Dining, fitness, social events, and member services.',
             },
           ].map((item) => (
             <div
@@ -379,23 +371,21 @@ function YoungExecutiveSection() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-5">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-            Young Executive
+            Young Executive Program
           </p>
           <h2
             id="young-executive-heading"
             className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
-            Designed for emerging leaders in Las Vegas.
+            Reduced initiation for members under 40
           </h2>
           <p className="text-base leading-relaxed text-muted-foreground">
-            Enjoy progressive dues, mentorship events with established members, and
-            professional networking mixers that accelerate your growth on and off the
-            course.
+            Spanish Trail offers a young executive membership with reduced initiation fees for members under 40. This makes country club living more accessible for younger buyers. Contact the club directly for current eligibility and pricing.
           </p>
           <div className="space-y-3 text-sm text-muted-foreground">
-            <p>• Member referral incentives and flexible payment options</p>
-            <p>• Monthly executive roundtables and speaker series</p>
-            <p>• Couples leagues and young-family programming</p>
+            <p>• Progressive dues structure as you advance in age</p>
+            <p>• Full access to golf, tennis, pools, and dining</p>
+            <p>• Networking events with established members</p>
           </div>
         </div>
 
@@ -447,11 +437,11 @@ function MembershipFAQSection() {
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="membership-faq-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Membership FAQ</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Frequently Asked Questions</p>
           <h2 id="membership-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Frequently asked questions from future members</h2>
+            Membership questions from home buyers and sellers</h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Use these insights to streamline your application, plan financial commitments, and integrate into the Spanish Trail community faster.
+            Common questions Dr. Duffy receives about how club membership works when buying or selling a Spanish Trail home.
           </p>
         </div>
 
@@ -469,4 +459,3 @@ function MembershipFAQSection() {
     </section>
   )
 }
-

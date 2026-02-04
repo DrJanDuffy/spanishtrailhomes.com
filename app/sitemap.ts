@@ -45,6 +45,7 @@ const routeConfig: Array<{
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/find-our-locations', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/google-business-profile', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/reviews', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/address-autocomplete', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/awards', priority: 0.7, changeFrequency: 'monthly' },

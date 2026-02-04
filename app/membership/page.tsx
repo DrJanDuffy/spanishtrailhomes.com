@@ -422,27 +422,16 @@ function InquirySection() {
     >
       <div className="mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-          Request Information
+          Schedule a Consultation
         </p>
         <h2
           id="inquiry-heading"
           className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
         >
-          Connect with our membership concierge.
+          Book Your Membership Consultation
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
-          Schedule a call with our membership concierge using the calendar below, or call{' '}
-          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
-            (702) 766-3299
-          </Link>{' '}
-          or email{' '}
-          <Link
-            href="mailto:membership@spanishtrailhomes.com"
-            className="text-primary underline-offset-4 hover:underline"
-          >
-            membership@spanishtrailhomes.com
-          </Link>
-          .
+          Select a time below to speak with Dr. Jan Duffy about Spanish Trail membership options, home availability, and the application process.
         </p>
 
         <div className="mx-auto w-full max-w-3xl rounded-3xl border border-border/60 bg-background/80 p-4 shadow-lg sm:p-6">

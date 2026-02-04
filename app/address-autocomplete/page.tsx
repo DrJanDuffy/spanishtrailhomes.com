@@ -196,7 +196,7 @@ function BenefitsSection({ benefits }: { benefits: BenefitItem[] }) {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="benefits-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="benefits-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -237,7 +237,7 @@ function HowItWorksSection({ steps }: { steps: StepItem[] }) {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="how-it-works-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">
           Simple integration
         </p>
@@ -283,7 +283,7 @@ function LiveDemoSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="demo-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="demo-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -406,7 +406,7 @@ function getComponent(place, type) {
       className="bg-[#1a1a1a] py-20 sm:py-24 text-white"
       aria-labelledby="code-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="code-heading"
           className="font-[var(--font-playfair)] text-2xl sm:text-3xl"
@@ -451,7 +451,7 @@ function RealEstateUseCaseSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="real-estate-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="real-estate-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"

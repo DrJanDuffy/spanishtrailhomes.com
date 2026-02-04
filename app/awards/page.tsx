@@ -194,7 +194,7 @@ export default function AwardsPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -262,7 +262,7 @@ function HeroSection() {
 function RecognitionTimelineSection() {
   return (
     <section id="recognition-timeline" className="bg-white py-20 sm:py-24" aria-labelledby="recognition-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Award History</p>
           <h2 id="recognition-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
@@ -300,7 +300,7 @@ function ProfessionalMembershipsSection() {
       className="bg-[#0f2b1e] py-20 text-[#f8f5ef] sm:py-24"
       aria-labelledby="memberships-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Memberships & Designations</p>
           <h2 id="memberships-heading" className="font-heading text-3xl text-white sm:text-4xl">
@@ -330,7 +330,7 @@ function ProfessionalMembershipsSection() {
 function PressHighlightsSection() {
   return (
     <section id="press-highlights" className="bg-white py-20 sm:py-24" aria-labelledby="press-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Press & Thought Leadership</p>
@@ -372,7 +372,7 @@ function PressHighlightsSection() {
 function ClientImpactSection() {
   return (
     <section id="client-impact" className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="impact-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Client Outcomes</p>

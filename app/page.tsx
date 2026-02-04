@@ -174,7 +174,7 @@ export default function HomePage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
         </div>
       </div>
@@ -345,7 +345,7 @@ function StatsSection() {
 function NeighborhoodSpotlightsSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="neighborhood-spotlights-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Home Buyer Spotlight</p>
           <h2 id="neighborhood-spotlights-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
@@ -388,7 +388,7 @@ function NeighborhoodSpotlightsSection() {
 function MarketPreviewSection() {
   return (
     <section className="border-y border-border/40 bg-white" aria-labelledby="market-preview-heading">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Snapshot</p>
@@ -434,7 +434,7 @@ const insightHighlights = [
 function InsightsPreviewSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="insights-preview-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Strategy & Advisory</p>
           <h2 id="insights-preview-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
@@ -550,7 +550,7 @@ const exploreCards = [
 function ExploreFurtherSection() {
   return (
     <section className="bg-[#f9f4eb] py-20 sm:py-24" aria-labelledby="explore-further-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Deeper resources</p>
           <h2 id="explore-further-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
@@ -588,7 +588,7 @@ function ExploreFurtherSection() {
 function FAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Homes FAQ</p>
         <h2 id="faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
@@ -647,7 +647,7 @@ function CTASection() {
 function AdvancedSearchSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="advanced-search-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4 text-center sm:mx-auto">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Tailored Search</p>
           <h2 id="advanced-search-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">

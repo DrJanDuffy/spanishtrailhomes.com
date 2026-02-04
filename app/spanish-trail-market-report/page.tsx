@@ -150,7 +150,7 @@ export default function SpanishTrailMarketReportPage() {
         <HeroSearchWidget theme="dark" />
       </header>
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -189,7 +189,7 @@ function MarketHighlightsSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="market-highlights-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Indicators</p>
@@ -234,7 +234,7 @@ function FeaturedListingsSection() {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="featured-listings-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Featured Inventory</p>
@@ -294,7 +294,7 @@ function FeaturedListingsSection() {
 function MarketReportFAQSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="market-report-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Market Report FAQ</p>
           <h2 id="market-report-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">

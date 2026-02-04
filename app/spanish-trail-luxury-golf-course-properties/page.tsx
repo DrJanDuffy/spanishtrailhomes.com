@@ -93,7 +93,7 @@ export default function LuxuryGolfCoursePropertiesPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-[#f8f2e7]">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function MarketSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="luxury-market-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="luxury-market-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Current luxury golf market intelligence (November 2025)
         </h2>
@@ -227,7 +227,7 @@ function ViewPremiumSection() {
 function ArchitectureSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="architecture-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="architecture-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Architectural styles and design stories in Spanish Trail luxury
         </h2>
@@ -269,7 +269,7 @@ function ArchitectureSection() {
 function IndoorOutdoorSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="indoor-outdoor-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="indoor-outdoor-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Indoor-outdoor living essentials for golf-front estates
         </h2>
@@ -318,7 +318,7 @@ function IndoorOutdoorSection() {
 function BuyerJourneySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="buyer-journey-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="buyer-journey-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Concierge journey for luxury golf buyers
         </h2>
@@ -397,7 +397,7 @@ function InvestmentSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="luxury-golf-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="luxury-golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail luxury golf FAQs
         </h2>
@@ -417,7 +417,7 @@ function FAQSection() {
 function LuxuryCTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="luxury-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="luxury-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Let’s unlock your ideal Spanish Trail golf estate
         </h2>

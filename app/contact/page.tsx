@@ -119,7 +119,7 @@ export default function ContactPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -188,7 +188,7 @@ function HeroSection() {
 function ExpertiseSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="expertise-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="expertise-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Spanish Trail Guard-Gated Golf Community Expert
         </h2>
@@ -226,7 +226,7 @@ function ExpertiseSection() {
 function GolfLifestyleSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="golf-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="golf-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Championship 27-Hole Golf Course Lifestyle
         </h2>
@@ -256,7 +256,7 @@ function GolfLifestyleSection() {
 function LuxuryInventorySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="luxury-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="luxury-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Luxury Estates, Villas & Golf Course Homes
         </h2>
@@ -286,7 +286,7 @@ function LuxuryInventorySection() {
 function MarketSnapshotSection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="market-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="market-heading" className="font-[var(--font-playfair)] text-2xl leading-tight sm:text-3xl">
           Current Spanish Trail Market: $812,500 Median (November 2025)
         </h2>
@@ -314,7 +314,7 @@ function MarketSnapshotSection() {
 function NeighborhoodFitSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="neighborhood-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="neighborhood-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           11 Neighborhoods, 1,200+ Homes—Which Fits You?
         </h2>
@@ -349,8 +349,8 @@ function NeighborhoodFitSection() {
 
 function ContactCTASection() {
   return (
-    <section id="contact-form" className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="contact-heading">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contact-form" className="bg-[#f8f2e7] py-12 sm:py-20" aria-labelledby="contact-heading">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="contact-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Let\'s align your Spanish Trail move with this week\'s data
         </h2>
@@ -366,7 +366,7 @@ function ContactCTASection() {
               Call or text (702) 766-3299 for time-sensitive questions. Prefer email? Send details to <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> and I\'ll reply within the business day.
             </p>
           </div>
-          <form className="grid grid-cols-1 gap-4 rounded-3xl border border-[#d8cdbf] bg-white p-6 shadow-lg shadow-primary/10 text-left sm:grid-cols-2 sm:p-8">
+          <form className="grid grid-cols-1 gap-4 rounded-2xl border border-[#d8cdbf] bg-white p-4 shadow-lg shadow-primary/10 text-left sm:grid-cols-2 sm:rounded-3xl sm:p-8">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6f5237]">
                 Name
@@ -375,7 +375,7 @@ function ContactCTASection() {
                 id="name"
                 type="text"
                 placeholder="First & Last Name"
-                className="rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-3 py-2 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
+                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
                 required
               />
             </div>
@@ -387,7 +387,7 @@ function ContactCTASection() {
                 id="email"
                 type="email"
                 placeholder="name@email.com"
-                className="rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-3 py-2 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
+                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
                 required
               />
             </div>
@@ -399,7 +399,7 @@ function ContactCTASection() {
                 id="phone"
                 type="tel"
                 placeholder="(702) 000-0000"
-                className="rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-3 py-2 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
+                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -408,7 +408,7 @@ function ContactCTASection() {
               </label>
               <select
                 id="timeline"
-                className="rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-3 py-2 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
+                className="min-h-[48px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20 min-[640px]:min-h-0 min-[640px]:py-2"
                 defaultValue=""
                 required
               >
@@ -429,11 +429,11 @@ function ContactCTASection() {
                 id="message"
                 rows={4}
                 placeholder="Share neighborhood preferences, home features, and timing."
-                className="rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-3 py-2 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
+                className="min-h-[120px] rounded-lg border border-[#d8cdbf] bg-[#fdf9f3] px-4 py-3 text-sm outline-none focus:border-[#0f2b1e] focus:ring-2 focus:ring-[#0f2b1e]/20"
               />
             </div>
             <div className="sm:col-span-2">
-              <Button type="submit" className="w-full rounded-full py-3 text-xs uppercase tracking-[0.4em]">
+              <Button type="submit" className="touch-target min-h-[48px] w-full rounded-full py-3 text-sm uppercase tracking-[0.4em] min-[640px]:min-h-[44px]">
                 Send Message to Dr. Jan Duffy
               </Button>
             </div>
@@ -460,7 +460,7 @@ function GBPIntegrationSection() {
   
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="gbp-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="gbp-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Visit Spanish Trail | Homes By Dr. Jan Duffy
         </h2>
@@ -556,7 +556,7 @@ function GBPIntegrationSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="faq-heading" className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl">
           Spanish Trail Homes Questions Answered
         </h2>

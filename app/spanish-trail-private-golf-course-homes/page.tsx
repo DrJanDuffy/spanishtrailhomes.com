@@ -93,7 +93,7 @@ export default function PrivateGolfCourseHomesPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-[#f8f2e7]">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function CourseOverviewSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="course-overview-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="course-overview-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           The anatomy of Spanish Trail’s 27-hole private golf experience
         </h2>
@@ -229,7 +229,7 @@ function MembershipSection() {
 function ViewSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="view-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="view-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Maximizing views and privacy on the course</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -266,7 +266,7 @@ function ViewSection() {
 function LifestyleSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="golf-lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="golf-lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Living the Spanish Trail golf lifestyle</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -303,7 +303,7 @@ function LifestyleSection() {
 function RenovationSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="renovation-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="renovation-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Renovating course-front homes with HOA confidence</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -383,7 +383,7 @@ function BuyerProcessSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="private-golf-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="private-golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail private golf FAQs
         </h2>
@@ -403,7 +403,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="private-golf-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="private-golf-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Ready to live on Spanish Trail’s private fairways?
         </h2>

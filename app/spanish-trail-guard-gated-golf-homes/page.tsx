@@ -93,7 +93,7 @@ export default function GuardGatedGolfHomesPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -156,7 +156,7 @@ function HeroSection() {
 function SecuritySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="security-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="security-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           What 24/7 Spanish Trail security looks like in practice
         </h2>
@@ -237,7 +237,7 @@ function GateComparisonSection() {
 function LifestyleSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Guard-gated living meets championship golf and wellness
         </h2>
@@ -279,7 +279,7 @@ function LifestyleSection() {
 function BuyerStrategySection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="strategy-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="strategy-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Buyer strategy: how we secure the right home behind the gates
         </h2>
@@ -321,7 +321,7 @@ function BuyerStrategySection() {
 function MembershipSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="membership-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="membership-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Aligning guard-gated living with Spanish Trail membership options
         </h2>
@@ -397,7 +397,7 @@ function TestimonialsSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="guard-gated-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="guard-gated-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Guard-gated Spanish Trail FAQs
         </h2>
@@ -417,7 +417,7 @@ function FAQSection() {
 function ContactCTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="guard-gated-contact-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="guard-gated-contact-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Ready to experience Spanish Trail security firsthand?
         </h2>

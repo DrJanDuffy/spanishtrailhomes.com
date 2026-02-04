@@ -147,7 +147,7 @@ export default function GuestInfoPage() {
     <SiteShell>
       <GuestHero />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Guest Information' }]} />
         </div>
       </div>
@@ -256,7 +256,7 @@ function DirectionsSection() {
 function GuestNarrativesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="guest-narratives-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Visitor Experience</p>
         <h2 id="guest-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
@@ -293,7 +293,7 @@ function EtiquetteSection() {
       className="border-y border-border/60 bg-card/80"
       aria-labelledby="etiquette-heading"
     >
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Club Etiquette
@@ -394,7 +394,7 @@ function LocalEssentialsSection() {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="local-essentials-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Beyond the gates</p>
           <h2
@@ -514,7 +514,7 @@ function ContactSection() {
 function GuestFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="guest-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Guest FAQ</p>
         <h2 id="guest-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">

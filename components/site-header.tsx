@@ -20,7 +20,7 @@ export function SiteHeader() {
   return (
     <header className="relative z-30 w-full">
       <div className="hidden border-b border-border/80 bg-[#2f3d35] text-primary-foreground md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 text-xs tracking-[0.35em]">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs tracking-[0.35em] sm:px-6">
           <div className="flex items-center gap-3">
             <Phone className="size-3.5" aria-hidden />
             <Link href="tel:17027663299" className="hover:underline">
@@ -41,13 +41,13 @@ export function SiteHeader() {
       </div>
 
       <div className="border-b border-border/60 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
-          <Link href="/" aria-label="Spanish Trail Country Club home" className="group">
-            <div className="text-left">
-              <p className="text-[0.65rem] uppercase tracking-[0.45em] text-muted-foreground group-hover:text-secondary">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
+          <Link href="/" aria-label="Spanish Trail Country Club home" className="group min-w-0 flex-1">
+            <div className="text-left min-w-0">
+              <p className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground group-hover:text-secondary sm:text-[0.65rem] sm:tracking-[0.45em]">
                 Berkshire Hathaway HomeServices
               </p>
-              <p className="font-[var(--font-playfair)] text-2xl font-semibold tracking-[0.1em] text-[#0f2b1e]">
+              <p className="font-[var(--font-playfair)] text-lg font-semibold tracking-[0.08em] text-[#0f2b1e] sm:text-2xl sm:tracking-[0.1em]">
                 Dr. Jan Duffy · Spanish Trail
               </p>
             </div>
@@ -121,7 +121,7 @@ export function SiteHeader() {
           <button
             type="button"
             aria-label="Toggle navigation menu"
-            className="inline-flex items-center justify-center rounded-full border border-border/60 p-2 lg:hidden"
+            className="touch-target inline-flex shrink-0 items-center justify-center rounded-full border border-border/60 p-2 lg:hidden"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
             {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -130,17 +130,17 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen ? (
-        <div className="border-t border-border/60 bg-background/98 px-6 py-8 lg:hidden">
-          <div className="flex flex-col gap-6">
+        <div className="border-t border-border/60 bg-background/98 px-4 py-6 sm:px-6 sm:py-8 lg:hidden safe-area-padding">
+          <div className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => {
               const hasChildren = !!item.children?.length
 
               return (
-                <div key={item.label} className="space-y-3">
-                  <div className="flex items-center justify-between">
+                <div key={item.label} className="border-b border-border/40 last:border-0">
+                  <div className="flex min-h-[44px] items-center justify-between gap-3 py-2">
                     <Link
                       href={item.href}
-                      className="text-sm font-semibold uppercase tracking-[0.32em] text-[#0f2b1e] hover:underline"
+                      className="touch-target flex min-h-[44px] flex-1 items-center text-sm font-semibold uppercase tracking-[0.2em] text-[#0f2b1e] hover:underline sm:tracking-[0.32em]"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -149,20 +149,20 @@ export function SiteHeader() {
                       <button
                         type="button"
                         aria-label={`Toggle ${item.label} links`}
-                        className="rounded-full border border-border/60 p-1"
+                        className="touch-target flex shrink-0 items-center justify-center rounded-full border border-border/60 p-2"
                         onClick={() => toggleFlyout(item.label)}
                       >
-                        <ChevronDown className={`size-4 transition-transform ${activeFlyout === item.label ? 'rotate-180' : ''}`} aria-hidden />
+                        <ChevronDown className={`size-5 transition-transform ${activeFlyout === item.label ? 'rotate-180' : ''}`} aria-hidden />
                       </button>
                     ) : null}
                   </div>
                   {hasChildren && activeFlyout === item.label ? (
-                    <div className="space-y-2 pl-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                    <div className="space-y-0 pb-3 pl-2">
                       {(item.children ?? []).map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-1 transition-colors text-[#4d5c55] hover:text-secondary hover:underline"
+                          className="touch-target flex min-h-[44px] items-center py-2 text-sm uppercase tracking-[0.2em] text-[#4d5c55] hover:text-secondary hover:underline"
                           onClick={() => setMobileOpen(false)}
                         >
                           {child.label}
@@ -174,20 +174,20 @@ export function SiteHeader() {
               )
             })}
 
-            <div className="flex flex-col gap-3 pt-4">
+            <div className="mt-6 flex flex-col gap-3 pt-4">
               <Button
                 asChild
                 variant="secondary"
-                className="rounded-full bg-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.32em] text-white hover:bg-[#0c2118]"
+                className="touch-target min-h-[48px] w-full rounded-full bg-[#0f2b1e] px-6 py-3 text-sm uppercase tracking-[0.32em] text-white hover:bg-[#0c2118] sm:min-h-[44px] sm:w-auto"
               >
                 <Link href="/contact">Speak with Dr. Duffy</Link>
               </Button>
-              <Button asChild variant="link" className="justify-start px-0 text-xs uppercase tracking-[0.32em]">
+              <Button asChild variant="link" className="touch-target min-h-[44px] justify-start px-0 text-sm uppercase tracking-[0.32em]">
                 <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails" target="_blank" rel="noopener noreferrer">
                   View Listings
                 </Link>
               </Button>
-              <Button asChild variant="link" className="justify-start px-0 text-xs uppercase tracking-[0.32em] text-muted-foreground">
+              <Button asChild variant="link" className="touch-target min-h-[44px] justify-start px-0 text-sm uppercase tracking-[0.32em] text-muted-foreground">
                 <Link href="tel:17027663299">Call (702) 766-3299</Link>
               </Button>
             </div>

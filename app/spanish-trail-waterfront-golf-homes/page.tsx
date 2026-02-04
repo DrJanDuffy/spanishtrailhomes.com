@@ -93,7 +93,7 @@ export default function WaterfrontGolfHomesPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -156,7 +156,7 @@ function HeroSection() {
 function HighlightsSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="waterfront-highlights-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="waterfront-highlights-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Why waterfront golf homes are Spanish Trail’s crown jewels
         </h2>
@@ -227,7 +227,7 @@ function ViewExperienceSection() {
 function DesignSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="waterfront-design-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="waterfront-design-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Interior design ideas for waterfront golf homes</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -271,7 +271,7 @@ function DesignSection() {
 function LifestyleSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="waterfront-lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="waterfront-lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Waterfront living tailored to how you unwind</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -308,7 +308,7 @@ function LifestyleSection() {
 function InvestmentSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="waterfront-investment-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="waterfront-investment-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Investment outlook for waterfront golf homes</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -380,7 +380,7 @@ function BuyerProcessSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="waterfront-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="waterfront-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail waterfront golf FAQs</h2>
         <div className="mt-10 space-y-6">
@@ -399,7 +399,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="waterfront-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="waterfront-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Let’s unlock a Spanish Trail waterfront home</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">

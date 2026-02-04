@@ -81,7 +81,7 @@ export default function TermsPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -150,7 +150,7 @@ function HeroSection() {
 function AgreementSection() {
   return (
     <section id="agreement" className="bg-white py-20 sm:py-24" aria-labelledby="agreement-heading">
-      <div className="mx-auto max-w-6xl px-6 space-y-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Agreement Overview</p>
           <h2 id="agreement-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
@@ -183,7 +183,7 @@ function AgreementSection() {
 function AuthorizedUseSection() {
   return (
     <section id="authorized-use" className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="authorized-use-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Authorized Use</p>
@@ -260,7 +260,7 @@ function IntellectualPropertySection() {
       className="bg-[#0f2b1e] py-20 text-[#f8f5ef] sm:py-24"
       aria-labelledby="intellectual-property-heading"
     >
-      <div className="mx-auto max-w-6xl px-6 space-y-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Intellectual Property</p>
           <h2 id="intellectual-property-heading" className="font-heading text-3xl text-white sm:text-4xl">

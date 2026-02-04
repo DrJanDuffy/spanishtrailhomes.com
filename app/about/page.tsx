@@ -159,7 +159,7 @@ export default function AboutPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -417,7 +417,7 @@ function CommunitySection() {
 function AboutFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="about-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">About Dr. Jan Duffy FAQ</p>
           <h2 id="about-faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">

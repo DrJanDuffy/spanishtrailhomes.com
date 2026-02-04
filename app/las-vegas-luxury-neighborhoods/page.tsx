@@ -159,7 +159,7 @@ export default function LuxuryNeighborhoodComparisonsPage() {
         <HeroSearchWidget theme="dark" />
       </header>
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -188,7 +188,7 @@ function ComparisonGridSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="comparison-grid-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">West Valley Highlights</p>
           <h2
@@ -221,7 +221,7 @@ function ComparisonGridSection() {
 function RelocationChecklistSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="relocation-checklist-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Relocation Checklist</p>
@@ -302,7 +302,7 @@ function SpanishTrailPositioningSection() {
 function LuxuryNeighborhoodsFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="luxury-neighborhoods-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Luxury Neighborhood Comparison FAQ</p>
           <h2 id="luxury-neighborhoods-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">

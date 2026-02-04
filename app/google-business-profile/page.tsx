@@ -238,7 +238,7 @@ function BusinessInfoSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="business-info-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             <h2
@@ -373,7 +373,7 @@ function ProfileFeaturesSection({ features }: { features: ProfileFeature[] }) {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="features-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="features-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -415,7 +415,7 @@ function ReviewsHighlightSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="reviews-highlight-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">
@@ -490,7 +490,7 @@ function ConnectSection() {
       className="bg-[#0f2b1e] py-20 sm:py-24 text-white"
       aria-labelledby="connect-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="connect-heading"
           className="font-[var(--font-playfair)] text-2xl sm:text-3xl"
@@ -570,7 +570,7 @@ function FAQSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="faq-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="faq-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"

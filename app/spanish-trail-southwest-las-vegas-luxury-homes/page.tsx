@@ -93,7 +93,7 @@ export default function SouthwestLasVegasLuxuryHomesPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function OverviewSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="overview-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="overview-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Southwest Las Vegas luxury from inside the guard gates
         </h2>
@@ -235,7 +235,7 @@ function ComparisonSection() {
 function LifestyleSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="southwest-lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="southwest-lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Southwest Las Vegas lifestyle advantages
         </h2>
@@ -274,7 +274,7 @@ function LifestyleSection() {
 function CommuterSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="commuter-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="commuter-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Commute times that keep your schedule agile
         </h2>
@@ -303,7 +303,7 @@ function CommuterSection() {
 function SchoolSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="school-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="school-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Education and enrichment nearby</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -378,7 +378,7 @@ function BuyerStrategySection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="southwest-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="southwest-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Southwest Las Vegas luxury FAQs
         </h2>
@@ -398,7 +398,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="southwest-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="southwest-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Explore Southwest Las Vegas luxury with Dr. Jan
         </h2>

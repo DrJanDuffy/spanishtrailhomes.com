@@ -170,7 +170,7 @@ export default function MembershipPage() {
     <SiteShell>
       <MembershipHero />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Membership' }]} />
         </div>
       </div>
@@ -238,7 +238,7 @@ function OfferingsSection() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="offerings-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Membership Offerings
@@ -278,7 +278,7 @@ function OfferingsSection() {
 function MembershipNarrativesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="membership-narratives-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Membership Journey</p>
           <h2 id="membership-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
@@ -544,7 +544,7 @@ function InquirySection() {
 function MembershipFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="membership-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Membership FAQ</p>
           <h2 id="membership-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">

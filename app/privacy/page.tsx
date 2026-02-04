@@ -118,7 +118,7 @@ export default function PrivacyPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -186,7 +186,7 @@ function HeroSection() {
 function DataCollectionSection() {
   return (
     <section id="data-collection" className="bg-white py-20 sm:py-24" aria-labelledby="data-collection-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Information Collected</p>
           <h2 id="data-collection-heading" className="font-heading text-3xl text-foreground sm:text-4xl">
@@ -216,7 +216,7 @@ function DataCollectionSection() {
 function DataUsageSection() {
   return (
     <section id="data-usage" className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="data-usage-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-3xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">How Data Is Used</p>
@@ -286,7 +286,7 @@ function CookieSection() {
 function InformationSharingSection() {
   return (
     <section id="information-sharing" className="bg-[#0f2b1e] py-20 text-[#f8f5ef] sm:py-24" aria-labelledby="sharing-heading">
-      <div className="mx-auto max-w-6xl px-6 space-y-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Information Sharing</p>
           <h2 id="sharing-heading" className="font-heading text-3xl text-white sm:text-4xl">

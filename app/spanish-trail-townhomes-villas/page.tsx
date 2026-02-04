@@ -93,7 +93,7 @@ export default function SpanishTrailTownhomesVillasPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function LifestyleSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="townhome-lifestyle-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="townhome-lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Lock-and-leave living in a 27-hole private club community
         </h2>
@@ -238,7 +238,7 @@ function EnclaveComparisonSection() {
 function HOASection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="hoa-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="hoa-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Understanding HOA coverage and financial health
         </h2>
@@ -277,7 +277,7 @@ function HOASection() {
 function DesignSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="design-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="design-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Interior upgrades buyers crave in 2025
         </h2>
@@ -326,7 +326,7 @@ function DesignSection() {
 function BuyerJourneySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="buyer-journey-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="buyer-journey-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Step-by-step concierge path to your Spanish Trail villa
         </h2>
@@ -397,7 +397,7 @@ function ResidentStoriesSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="townhome-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="townhome-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail villa buyer FAQs
         </h2>
@@ -417,7 +417,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="townhome-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="townhome-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Ready to tour Spanish Trail villas?
         </h2>

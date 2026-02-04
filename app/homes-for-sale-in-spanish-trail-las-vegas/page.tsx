@@ -135,7 +135,7 @@ export default function HomesForSaleInSpanishTrailLasVegasPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -209,7 +209,7 @@ function HeroSection() {
 function OverviewSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="overview-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-6">
           <h2 id="overview-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
             Homes for Sale in Spanish Trail - Las Vegas\'s Premier Guard-Gated Community
@@ -254,7 +254,7 @@ function PropertyTypesSection() {
 
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="property-types-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="property-types-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
           Types of Homes for Sale in Spanish Trail
         </h2>
@@ -285,7 +285,7 @@ function PropertyTypesSection() {
 function LocationAndAmenitiesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="location-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div className="space-y-6">
             <h2 id="location-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
@@ -341,7 +341,7 @@ function LocationAndAmenitiesSection() {
 function MarketDataSection() {
   return (
     <section className="bg-[#0f2b1e] py-20 text-[#f8f5ef] sm:py-24" aria-labelledby="market-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="market-heading" className="font-heading text-3xl text-[#f8f5ef] sm:text-4xl">
           Current Market Data for Homes for Sale in Spanish Trail
         </h2>
@@ -405,7 +405,7 @@ function NeighborhoodsSection() {
 
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="neighborhoods-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="neighborhoods-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail Neighborhoods with Homes for Sale
         </h2>
@@ -436,7 +436,7 @@ function NeighborhoodsSection() {
 function BuyingProcessSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="buying-process-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="buying-process-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">
           Your Guide to Buying Homes for Sale in Spanish Trail
         </h2>
@@ -480,7 +480,7 @@ function BuyingProcessSection() {
 function HomesForSaleFAQSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Frequently Asked Questions</p>
           <h2 id="faq-heading" className="font-heading text-3xl text-[#1f2a24] sm:text-4xl">

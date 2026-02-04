@@ -214,7 +214,7 @@ function ReviewLinkSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="review-link-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="review-link-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -264,7 +264,7 @@ function BenefitsSection({ benefits }: { benefits: BenefitItem[] }) {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="benefits-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">
           Why reviews matter
         </p>
@@ -303,7 +303,7 @@ function QRCodeSection() {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="qr-code-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
           <div>
             <h2
@@ -425,7 +425,7 @@ function ShareSection() {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="share-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="share-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -461,7 +461,7 @@ function BestPracticesSection({ bestPractices }: { bestPractices: BestPracticeIt
       className="bg-white py-20 sm:py-24"
       aria-labelledby="best-practices-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="best-practices-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -507,7 +507,7 @@ function NegativeReviewsSection() {
       className="bg-[#1a1a1a] py-20 sm:py-24 text-white"
       aria-labelledby="negative-reviews-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="negative-reviews-heading"
           className="font-[var(--font-playfair)] text-2xl sm:text-3xl"

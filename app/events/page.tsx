@@ -156,7 +156,7 @@ export default function EventsPage() {
     <SiteShell>
       <EventsHero />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Events' }]} />
         </div>
       </div>
@@ -224,7 +224,7 @@ function WeddingsSection() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="weddings-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-5">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -346,7 +346,7 @@ function GolfOutingsSection() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="golf-outings-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-5">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -394,7 +394,7 @@ function GolfOutingsSection() {
 function EventsNarrativesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="events-narratives-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Event Strategy</p>
           <h2 id="events-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
@@ -543,7 +543,7 @@ function ContactSection() {
 function EventsFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="events-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Events FAQ</p>
           <h2 id="events-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">

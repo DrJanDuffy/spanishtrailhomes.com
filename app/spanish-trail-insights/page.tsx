@@ -137,7 +137,7 @@ export default function SpanishTrailInsightsPage() {
         <HeroSearchWidget theme="dark" />
       </header>
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -174,7 +174,7 @@ function InsightBriefingsSection() {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="insight-briefings-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Deep Dive Briefings</p>
           <h2
@@ -213,7 +213,7 @@ function InsightBriefingsSection() {
 function NeighborhoodSpotlightSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="insight-neighborhoods-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-3">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Neighborhood Playbook</p>
@@ -257,7 +257,7 @@ function NeighborhoodSpotlightSection() {
 function AdvisoryServicesSection() {
   return (
     <section className="bg-[#ebe0d3] py-20 sm:py-24" aria-labelledby="advisory-services-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Advisory Services</p>
           <h2
@@ -289,7 +289,7 @@ function AdvisoryServicesSection() {
 function InsightsFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="insights-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights FAQ</p>
           <h2 id="insights-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">

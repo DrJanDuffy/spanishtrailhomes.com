@@ -10,10 +10,10 @@ type SiteShellProps = {
 
 export function SiteShell({ children }: SiteShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen w-full min-w-0 flex-col bg-background text-foreground">
       <SiteTopBar />
       <SiteHeader />
-      <main id="main-content" tabIndex={-1} className="flex flex-1 flex-col focus:outline-none">
+      <main id="main-content" tabIndex={-1} className="flex min-w-0 flex-1 flex-col focus:outline-none w-full">
         {children}
       </main>
       <SiteFooter />

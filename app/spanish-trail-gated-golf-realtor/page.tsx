@@ -93,7 +93,7 @@ export default function SpanishTrailGatedGolfRealtorPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-[#f8f2e7]">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function ValueSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="value-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="value-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           What sets my Spanish Trail representation apart
         </h2>
@@ -235,7 +235,7 @@ function ExpertiseSection() {
 function DataSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="data-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="data-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Real-time data, not outdated reports
         </h2>
@@ -266,7 +266,7 @@ function DataSection() {
 function ConciergeSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="concierge-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="concierge-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Concierge services tailored to gated golf buyers
         </h2>
@@ -305,7 +305,7 @@ function ConciergeSection() {
 function SellerSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="seller-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="seller-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Representing Spanish Trail sellers with precision
         </h2>
@@ -372,7 +372,7 @@ function TestimonialsSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="gated-golf-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="gated-golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail realtor FAQs
         </h2>
@@ -392,7 +392,7 @@ function FAQSection() {
 function ConnectSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="gated-golf-connect-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="gated-golf-connect-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Let’s plan your Spanish Trail move
         </h2>

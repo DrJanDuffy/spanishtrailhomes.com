@@ -161,7 +161,7 @@ export default function ClubPage() {
     <SiteShell>
       <ClubHero />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Club' }]} />
         </div>
       </div>
@@ -315,7 +315,7 @@ function AmenitiesHighlights() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="amenities-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Amenities
@@ -354,7 +354,7 @@ function AmenitiesHighlights() {
 function ClubNarrativesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="club-narratives-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Inside the Club</p>
           <h2 id="club-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
@@ -439,7 +439,7 @@ function LifestyleSection() {
 function ClubFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="club-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Club FAQ</p>
           <h2 id="club-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
@@ -471,7 +471,7 @@ function TestimonialsHighlight() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="club-testimonials-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Member Stories

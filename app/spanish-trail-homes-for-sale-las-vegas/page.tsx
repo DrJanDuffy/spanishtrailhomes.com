@@ -94,7 +94,7 @@ export default function SpanishTrailHomesForSalePage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -158,7 +158,7 @@ function HeroSection() {
 function MarketOverviewSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="market-overview-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="market-overview-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Current Spanish Trail market snapshot (November 2025)
         </h2>
@@ -247,7 +247,7 @@ function BuyingExperienceSection() {
 function NeighborhoodHighlightsSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="neighborhood-highlights-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="neighborhood-highlights-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Top Spanish Trail neighborhoods for today’s buyers
         </h2>
@@ -330,7 +330,7 @@ function HomeDesignSection() {
 function FinancingSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="financing-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="financing-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Financing and negotiation strategies that win
         </h2>
@@ -393,7 +393,7 @@ function TourProcessSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail buyer FAQs
         </h2>
@@ -413,7 +413,7 @@ function FAQSection() {
 function ContactCTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="contact-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="contact-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Ready to explore Spanish Trail homes?
         </h2>

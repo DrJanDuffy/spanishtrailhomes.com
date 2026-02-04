@@ -154,7 +154,7 @@ export default function GolfPage() {
     <SiteShell>
       <GolfHero />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Golf' }]} />
         </div>
       </div>
@@ -231,7 +231,7 @@ function CourseTour() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="course-tour-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">
@@ -353,7 +353,7 @@ function ExperienceDetails() {
 function GolfNarrativesSection() {
   return (
     <section className="bg-white py-20 sm:py-24" aria-labelledby="golf-narratives-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf Insights</p>
           <h2 id="golf-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
@@ -390,7 +390,7 @@ function ScorecardSection() {
       className="bg-background py-20 sm:py-24"
       aria-labelledby="scorecard-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-4">
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">
             Scorecard
@@ -450,7 +450,7 @@ function ScorecardSection() {
 function GolfFAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="golf-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf FAQ</p>
           <h2 id="golf-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">

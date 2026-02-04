@@ -93,7 +93,7 @@ export default function CountryClubEstateListingsPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function MarketSnapshotSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="estate-market-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-market-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Estate market snapshot (November 2025)
         </h2>
@@ -187,7 +187,7 @@ function MarketSnapshotSection() {
 function EnclaveSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="estate-enclave-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-enclave-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Estate enclaves within Spanish Trail Country Club
         </h2>
@@ -230,7 +230,7 @@ function EnclaveSection() {
 function ArchitectureSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="estate-architecture-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-architecture-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Architecture and design opportunities
         </h2>
@@ -268,7 +268,7 @@ function ArchitectureSection() {
 function AmenitiesSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="estate-amenities-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-amenities-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Estate-level amenities homeowners expect</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -312,7 +312,7 @@ function AmenitiesSection() {
 function SellerSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="estate-seller-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-seller-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Selling an estate? Here’s how I position it for success.</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
@@ -377,7 +377,7 @@ function CaseStudySection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="estate-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail estate FAQs</h2>
         <div className="mt-10 space-y-6">
@@ -396,7 +396,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="estate-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="estate-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Discuss Spanish Trail estate opportunities</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">

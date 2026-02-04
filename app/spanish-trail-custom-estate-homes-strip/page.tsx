@@ -93,7 +93,7 @@ export default function CustomEstateHomesStripPage() {
     <SiteShell>
       <HeroSection />
       <div className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-4">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4">
           <Breadcrumbs
             items={[
               { label: 'Home', href: '/' },
@@ -157,7 +157,7 @@ function HeroSection() {
 function ProximitySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="proximity-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="proximity-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Estate privacy with Strip convenience
         </h2>
@@ -196,7 +196,7 @@ function ProximitySection() {
 function EstateProfilesSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="estate-profiles-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-profiles-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Signature Spanish Trail estate profiles
         </h2>
@@ -239,7 +239,7 @@ function EstateProfilesSection() {
 function DesignHighlightsSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="design-highlights-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="design-highlights-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Design signatures defining Spanish Trail estates in 2025
         </h2>
@@ -281,7 +281,7 @@ function DesignHighlightsSection() {
 function EntertainingSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="entertaining-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="entertaining-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Entertaining like a Strip headliner from your Spanish Trail estate
         </h2>
@@ -330,7 +330,7 @@ function EntertainingSection() {
 function TourLogisticsSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="tour-logistics-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="tour-logistics-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           How we tour Spanish Trail estates with precision
         </h2>
@@ -401,7 +401,7 @@ function CaseStudiesSection() {
 function FAQSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="custom-estate-faq-heading">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="custom-estate-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail custom estate FAQs
         </h2>
@@ -421,7 +421,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="custom-estate-cta-heading">
-      <div className="mx-auto max-w-6xl px-6 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 text-center">
         <h2 id="custom-estate-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Your Strip-adjacent estate search starts here
         </h2>

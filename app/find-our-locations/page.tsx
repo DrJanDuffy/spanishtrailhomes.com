@@ -191,7 +191,7 @@ function GetStartedSection({ steps }: { steps: StepItem[] }) {
       className="bg-white py-20 sm:py-24"
       aria-labelledby="get-started-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="get-started-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -237,7 +237,7 @@ function ChooseLocationsSection({
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="choose-locations-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">
           Our locations
         </p>
@@ -299,7 +299,7 @@ function MapAndActionsSection({
       className="bg-white py-20 sm:py-24"
       aria-labelledby="map-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="map-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"
@@ -395,7 +395,7 @@ function AddMapSection() {
       className="bg-[#f8f2e7] py-20 sm:py-24"
       aria-labelledby="add-map-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2
           id="add-map-heading"
           className="font-[var(--font-playfair)] text-2xl text-[#1f2a24] sm:text-3xl"

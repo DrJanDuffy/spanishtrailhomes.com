@@ -14,31 +14,31 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const eventsNarratives = [
   {
-    title: 'Designing Signature Celebrations',
+    title: 'Signature Celebrations at Spanish Trail',
     paragraphs: [
-      'Spanish Trail Country Club approaches every celebration as a bespoke experience. Event stylists collaborate with clients to curate themes, floral artistry, lighting installations, and culinary journeys that rival five-star resorts. Whether it is an intimate anniversary dinner or a corporate gala welcoming hundreds, the planning team choreographs each touchpoint to reflect the host’s story. Dr. Jan Duffy connects clients with in-demand vendors—photographers, entertainment specialists, and experiential designers—whose work complements the club’s elevated aesthetic.',
-      'Because the clubhouse sits within a private, guard-gated community, hosts appreciate the seamless guest arrival process: valet greets attendees, concierge guides them to reserved spaces, and the events team executes behind the scenes so the host can genuinely enjoy the night. Dr. Duffy provides checklists, timeline templates, and budgeting tools that help clients navigate decisions confidently, from custom stationery to late-night lounge activations.'
+      'Spanish Trail Country Club approaches every celebration as a bespoke experience. Event stylists collaborate with clients to curate themes, floral artistry, lighting installations, and culinary journeys that rival five-star resorts. Whether it is an intimate anniversary dinner or a corporate gala welcoming hundreds, the planning team choreographs each touchpoint to reflect the host\'s story.',
+      'Because the clubhouse sits within a private, guard-gated community, hosts appreciate the seamless guest arrival process: valet greets attendees, concierge guides them to reserved spaces, and the events team executes behind the scenes so the host can genuinely enjoy the night. Contact the club\'s events team directly to begin planning your celebration.'
     ],
   },
   {
-    title: 'Weddings with Las Vegas Glamour and Garden Romance',
+    title: 'Weddings with Las Vegas Glamour',
     paragraphs: [
-      'Spanish Trail weddings capture the best of Las Vegas: the drama of skyline views paired with the serenity of palm-lined lakes. Couples often exchange vows on the Lakes Course lawn before transitioning to cocktail hour on the terrace, where the Strip twinkles in the background. Indoors, the ballroom adapts to grand stages, choreographed first dances, and immersive décor that astonishes guests. Dr. Duffy ensures couples understand ceremony logistics, from coordinating with gatehouse security for vendor access to arranging guest shuttles from hospitality partners along the Strip.',
-      'Her advisory support extends to weekend itineraries. She connects couples with trusted officiants, beauty teams, and rehearsal dinner venues, while also highlighting Spanish Trail homes ideal for hosting family gatherings. Because many couples inquire about future residency after experiencing the community, Dr. Duffy provides tours tailored to newlyweds who envision owning Spanish Trail real estate.'
+      'Spanish Trail weddings capture the best of Las Vegas: the drama of skyline views paired with the serenity of palm-lined lakes. Couples often exchange vows on the Lakes Course lawn before transitioning to cocktail hour on the terrace, where the Strip twinkles in the background. Indoors, the ballroom adapts to grand stages, choreographed first dances, and immersive decor that astonishes guests.',
+      'Many couples who host weddings at Spanish Trail later inquire about purchasing homes in the community. Dr. Jan Duffy provides property tours tailored to newlyweds who envision owning Spanish Trail real estate, highlighting homes ideal for hosting family gatherings and entertaining.'
     ],
   },
   {
-    title: 'Corporate and Charity Events with Strategic Impact',
+    title: 'Corporate and Charity Events',
     paragraphs: [
-      'Businesses rely on Spanish Trail Country Club for product launches, executive retreats, and investor summits. Boardrooms feature advanced audiovisual technology, while outdoor spaces provide creative environments for breakouts or immersive brand activations. Charity organizers love the combination of tournament-ready golf, gala venues, and donor stewardship lounges. Dr. Duffy offers insights into sponsorship packages, silent auction strategies, and storytelling moments that help organizations exceed fundraising targets.',
-      'She also leverages Berkshire Hathaway HomeServices relationships to introduce corporate clients to local influencers, media partners, and service providers. From branded gifting suites to curated culinary pairings, Dr. Duffy ensures events stay aligned with brand values and leave a lasting impression on attendees.'
+      'Businesses rely on Spanish Trail Country Club for product launches, executive retreats, and investor summits. Boardrooms feature advanced audiovisual technology, while outdoor spaces provide creative environments for breakouts or immersive brand activations. Charity organizers love the combination of tournament-ready golf, gala venues, and donor stewardship lounges.',
+      'Contact the club\'s events team for information about corporate packages, venue availability, and catering options.'
     ],
   },
   {
-    title: 'Extended-Stay and Hospitality Coordination',
+    title: 'Homes for Entertaining',
     paragraphs: [
-      'Hosting out-of-town guests? Spanish Trail’s concierge team partners with luxury resorts, transportation services, and entertainment venues to craft memorable itineraries beyond the gates. Clients can reserve tee times, spa appointments, or VIP tickets to headline shows and sporting events. Dr. Duffy layers in personal touches such as welcome baskets placed inside Spanish Trail homes, curated restaurant reservations, and private tours of the community for guests exploring a move to Las Vegas.',
-      'She also coordinates with the club’s culinary leadership to design farewell brunches, day-after poolside gatherings, and chef-led tastings that extend the celebration. These elevated touches resonate with hosts who expect flawless execution from start to finish.'
+      'Hosting events at Spanish Trail often inspires guests to explore homeownership in the community. Dr. Duffy helps event hosts and guests find homes with entertaining spaces—motor courts for arrivals, grand living rooms for receptions, outdoor kitchens for casual gatherings, and guest casitas for extended-stay visitors.',
+      'If you\'re considering purchasing a Spanish Trail home that supports your entertaining lifestyle, contact Dr. Jan Duffy at (702) 766-3299 to schedule a property tour.'
     ],
   },
 ]
@@ -47,27 +47,27 @@ const eventsFaq = [
   {
     question: 'How far in advance should I reserve Spanish Trail for a wedding?',
     answer:
-      'Prime dates—particularly spring and fall weekends—book 12 to 18 months ahead. Dr. Jan Duffy collaborates with the club’s event managers to identify openings, secure holds, and design planning timelines that keep couples on track. She also recommends preferred vendors that align with the club’s service standards.',
+      'Prime dates—particularly spring and fall weekends—book 12 to 18 months ahead. Contact the club\'s events team directly to check availability and secure your preferred date.',
   },
   {
     question: 'Can non-members host events at Spanish Trail Country Club?',
     answer:
-      'Yes. Non-members can host events with sponsorship from a member or through direct booking with the club’s catering department. Dr. Duffy facilitates introductions, explains deposit requirements, and ensures hosts understand support services—from valet to audiovisual technicians—available throughout the planning process.',
+      'Yes. Non-members can host events with sponsorship from a member or through direct booking with the club\'s catering department. Contact the events team for deposit requirements and available support services.',
   },
   {
     question: 'What spaces are available for corporate meetings?',
     answer:
-      'Spanish Trail offers boardrooms, classroom-style suites, outdoor terraces, and the main ballroom. Each space includes high-speed connectivity, presentation technology, and culinary options tailored to corporate needs. Dr. Duffy walks clients through floor plans and recommends setups that encourage collaboration and brand storytelling.',
+      'Spanish Trail offers boardrooms, classroom-style suites, outdoor terraces, and the main ballroom. Each space includes high-speed connectivity, presentation technology, and culinary options tailored to corporate needs. Contact the club for floor plans and setup options.',
   },
   {
     question: 'Does the club accommodate cultural or fusion celebrations?',
     answer:
-      'Absolutely. The culinary and planning teams excel at creating menus and experiences that honor cultural traditions. From South Asian baraats to Latin-inspired receptions, the club collaborates with families to incorporate rituals, décor, and entertainment that feel authentic. Dr. Duffy shares examples and coordinates tastings to fine-tune every detail.',
+      'Absolutely. The culinary and planning teams excel at creating menus and experiences that honor cultural traditions. From South Asian baraats to Latin-inspired receptions, the club collaborates with families to incorporate rituals, decor, and entertainment that feel authentic.',
   },
   {
-    question: 'How can I showcase Spanish Trail homes to guests during an event?',
+    question: 'How can I tour Spanish Trail homes after attending an event?',
     answer:
-      'Many hosts schedule private property tours or open-house style gatherings for interested guests. Dr. Duffy arranges bespoke itineraries that highlight available Spanish Trail homes, explains membership pathways, and provides professional guidance for anyone considering a purchase. It is an effortless way to extend hospitality and share the community with loved ones.',
+      'Many event guests become interested in Spanish Trail real estate after experiencing the community. Dr. Jan Duffy arranges property tours that highlight available homes, explains membership pathways, and provides professional guidance for anyone considering a purchase. Contact her at (702) 766-3299.',
   },
 ]
 
@@ -128,11 +128,11 @@ export const metadata: Metadata = {
     url: pageUrl,
     title: 'Events at Spanish Trail Country Club',
     description:
-      'Plan weddings, galas, and corporate gatherings with Spanish Trail’s concierge team and Dr. Jan Duffy.',
+      'Plan weddings, galas, and corporate gatherings at Spanish Trail Country Club in Las Vegas.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Events',
-        subtitle: 'Weddings • Galas • Golf Outings',
+        subtitle: 'Weddings - Galas - Golf Outings',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -144,8 +144,8 @@ export const metadata: Metadata = {
       'Discover bespoke planning for weddings, private celebrations, and golf outings at Spanish Trail Country Club.',
     images: [
       createOgImageUrl({
-        title: 'Spanish Trail Event Concierge',
-        subtitle: 'Plan unforgettable celebrations with Dr. Jan Duffy',
+        title: 'Spanish Trail Events',
+        subtitle: 'Celebrate at Spanish Trail',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -199,7 +199,7 @@ function EventsHero() {
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
       <div className="mx-auto max-w-5xl px-6 py-28 text-primary-foreground sm:py-40">
         <p className="text-xs uppercase tracking-[0.5em] text-accent">
-          Weddings & Events
+          Weddings &amp; Events
         </p>
         <h1
           id="events-hero-heading"
@@ -252,7 +252,7 @@ function WeddingsSection() {
               asChild
               className="rounded-full px-6 py-2 text-xs uppercase tracking-[0.3em]"
             >
-              <Link href="#contact">Request Wedding Consultation</Link>
+              <Link href="#contact">Request Wedding Information</Link>
             </Button>
           </div>
 
@@ -325,7 +325,7 @@ function PrivateEventsSection() {
           <p className="text-base leading-relaxed text-muted-foreground">
             Our event professionals manage floorplans, timelines, curated menus,
             and production so you can focus on hosting. Choose from formal ballrooms,
-            intimate wine cellar dinners, or poolside soirées.
+            intimate wine cellar dinners, or poolside soirees.
           </p>
           <Button
             asChild
@@ -397,12 +397,12 @@ function EventsNarrativesSection() {
     <section className="bg-white py-20 sm:py-24" aria-labelledby="events-narratives-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Event Strategy</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Event Venues</p>
           <h2 id="events-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             How Spanish Trail brings every celebration to life
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Dr. Jan Duffy partners with Spanish Trail’s events team to deliver extraordinary experiences. These narratives outline the planning insights, hospitality touches, and extended-stay conveniences available to hosts.
+            Spanish Trail&apos;s events team delivers extraordinary experiences. Contact the club directly for planning support, and contact Dr. Jan Duffy if you&apos;re interested in purchasing a home in the community.
           </p>
         </div>
 
@@ -434,27 +434,23 @@ function ContactSection() {
     >
       <div className="mx-auto max-w-4xl space-y-6 px-6 py-20 text-center">
         <p className="text-xs uppercase tracking-[0.5em] text-secondary">
-          Begin Planning
+          Interested in Spanish Trail Real Estate?
         </p>
         <h2
           id="contact-heading"
           className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
         >
-          Share your vision with our events team.
+          Schedule a property tour with Dr. Jan Duffy
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
-          Call{' '}
+          Many event guests become interested in Spanish Trail homes after experiencing the community. Call{' '}
           <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
             (702) 766-3299
           </Link>{' '}
-          or email{' '}
-          <Link
-            href="mailto:events@spanishtrailhomes.com"
-            className="text-primary underline-offset-4 hover:underline"
-          >
-            events@spanishtrailhomes.com
-          </Link>
-          . Or schedule a showing with Dr. Jan Duffy using the calendar below.
+          or use the calendar below to schedule a home tour.
+        </p>
+        <p className="text-sm text-muted-foreground">
+          <strong>For event planning:</strong> Contact the club&apos;s events team directly.
         </p>
 
         <div className="mx-auto w-full max-w-3xl rounded-3xl border border-border/60 bg-background/80 p-4 shadow-lg sm:p-6">
@@ -470,12 +466,12 @@ function EventsFAQSection() {
     <section className="bg-[#f8f2e7] py-20 sm:py-24" aria-labelledby="events-faq-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
-          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Events FAQ</p>
+          <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Events FAQ</p>
           <h2 id="events-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Planning answers for Spanish Trail celebrations
+            Common questions about Spanish Trail events
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
-            Use these responses to build your planning timeline and align expectations with the club’s capabilities. Dr. Jan Duffy remains available for personalized strategy sessions tailored to your event goals.
+            Contact the club directly for event planning inquiries. Contact Dr. Jan Duffy for real estate questions.
           </p>
         </div>
 
@@ -493,4 +489,3 @@ function EventsFAQSection() {
     </section>
   )
 }
-

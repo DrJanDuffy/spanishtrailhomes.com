@@ -8,31 +8,49 @@ import { CalendlyLink } from '@/components/calendly-link'
 export function SiteFooter() {
   const footerLinks = [
     {
-      heading: 'About Dr. Jan Duffy',
+      heading: 'Homes for Sale',
       links: [
-        { label: 'Meet Dr. Jan Duffy', href: '/about' },
-        { label: 'Awards & Recognition', href: '/awards' },
+        { label: 'All Spanish Trail Homes', href: '/spanish-trail-homes-for-sale-las-vegas' },
+        { label: 'Estate Listings', href: '/spanish-trail-country-club-estate-listings' },
+        { label: 'Golf Course Properties', href: '/spanish-trail-luxury-golf-course-properties' },
+        { label: 'Townhomes & Villas', href: '/spanish-trail-townhomes-villas' },
+        { label: 'Waterfront Homes', href: '/spanish-trail-waterfront-golf-homes' },
+        { label: 'Guard-Gated Homes', href: '/spanish-trail-guard-gated-golf-homes' },
+        { label: 'Custom Estates', href: '/spanish-trail-custom-estate-homes-strip' },
+        { label: 'Private Golf Homes', href: '/spanish-trail-private-golf-course-homes' },
       ],
     },
     {
-      heading: 'Quick Links',
+      heading: 'Community & Club',
       links: [
-        { label: 'Community Overview', href: '/communities/spanish-trail' },
-        { label: 'Find Our Locations', href: '/find-our-locations' },
-        { label: 'Google Business Profile', href: '/google-business-profile' },
-        { label: 'Leave a Google Review', href: '/reviews' },
-        { label: 'Spanish Trail Amenities', href: '/club#amenities' },
+        { label: 'About Spanish Trail', href: '/communities/spanish-trail' },
+        { label: 'Club & Amenities', href: '/club' },
+        { label: 'Championship Golf', href: '/golf' },
+        { label: 'Events & Dining', href: '/events' },
+        { label: 'Membership Info', href: '/membership' },
+        { label: 'Guest Information', href: '/guest-info' },
+        { label: 'Luxury Comparisons', href: '/las-vegas-luxury-neighborhoods' },
       ],
     },
     {
       heading: 'Market Resources',
       links: [
-        {
-          label: 'Spanish Trail Market Report',
-          href: 'https://searchforaffordablehomes.com/neighborhood/83/spanish-trails',
-        },
-        { label: 'Home Valuation Request', href: '/sellers' },
+        { label: 'Market Report', href: '/spanish-trail-market-report' },
+        { label: 'Market Insights', href: '/spanish-trail-insights' },
+        { label: 'Home Valuation', href: '/sellers' },
         { label: 'Buyer Consultation', href: '/buyers' },
+        { label: 'Southwest Luxury Homes', href: '/spanish-trail-southwest-las-vegas-luxury-homes' },
+      ],
+    },
+    {
+      heading: 'About & Contact',
+      links: [
+        { label: 'Meet Dr. Jan Duffy', href: '/about' },
+        { label: 'Awards & Recognition', href: '/awards' },
+        { label: 'Client Reviews', href: '/reviews' },
+        { label: 'Contact Us', href: '/contact' },
+        { label: 'Office Location', href: '/find-our-locations' },
+        { label: 'Google Business Profile', href: '/google-business-profile' },
       ],
     },
   ]
@@ -70,54 +88,41 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-12 lg:grid-cols-4">
-        <div className="space-y-3 min-w-0">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-12 lg:grid-cols-5">
+        <div className="space-y-4 min-w-0 sm:col-span-2 lg:col-span-1">
           <p className="text-xs uppercase tracking-[0.3em] text-[#cbb8a6] sm:tracking-[0.4em]">
             Spanish Trail Country Club
           </p>
-          <p className="font-[var(--font-playfair)] text-xl tracking-[0.06em] sm:text-2xl sm:tracking-[0.08em]">
-            5050 Spanish Trail Ln, Las Vegas, NV 89113
+          <p className="font-[var(--font-playfair)] text-lg tracking-[0.06em] sm:text-xl sm:tracking-[0.08em]">
+            5050 Spanish Trail Ln<br />Las Vegas, NV 89113
           </p>
           <p className="text-sm leading-relaxed text-[#efe5d8]">
-            Guard-gated golf living minutes from the Strip, represented exclusively by Berkshire Hathaway HomeServices agent Dr. Jan Duffy.
+            Guard-gated golf living minutes from the Strip.
           </p>
+          <CalendlyLink 
+            className="touch-target inline-flex min-h-[44px] items-center rounded-full border border-[#be9956] px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#be9956] transition-colors hover:bg-[#be9956] hover:text-[#352922]" 
+            ctaText="Book a Showing" 
+            ctaLocation="footer"
+          >
+            Book a Showing
+          </CalendlyLink>
         </div>
         {footerLinks.map((section) => (
           <div key={section.heading} className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#be9956] sm:tracking-[0.35em]">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#be9956] sm:tracking-[0.3em]">
               {section.heading}
             </p>
-            <ul className="space-y-0 text-sm tracking-[0.2em] sm:tracking-[0.25em]">
-              {section.heading === 'Quick Links' ? (
-                <>
-                  <li key="book-showing">
-                    <CalendlyLink className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline" ctaText="Book Showing" ctaLocation="footer">
-                      Book Showing
-                    </CalendlyLink>
-                  </li>
-                  {section.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </>
-              ) : (
-                section.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="touch-target flex min-h-[44px] items-center transition-colors hover:text-[#be9956] hover:underline"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              )}
+            <ul className="space-y-0 text-sm tracking-[0.15em] sm:tracking-[0.2em]">
+              {section.links.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="touch-target flex min-h-[40px] items-center text-[#e5d7c8] transition-colors hover:text-[#be9956] hover:underline"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         ))}

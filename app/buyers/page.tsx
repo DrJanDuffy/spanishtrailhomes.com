@@ -48,7 +48,7 @@ const faqContent = [
   {
     question: 'What financing strategies help buyers win inside Spanish Trail?',
     answer:
-      'Upfront underwriting, flexible earnest money deposits, and appraisal-gap coverage are your strongest tools in 2025. My preferred lending partners craft custom scenarios—jumbo, portfolio, bridge, or cross-collateral—so we can tailor each offer to seller priorities while protecting your cash flow.',
+      'Upfront underwriting, flexible earnest money deposits, and appraisal-gap coverage are your strongest tools in 2026. My preferred lending partners craft custom scenarios—jumbo, portfolio, bridge, or cross-collateral—so we can tailor each offer to seller priorities while protecting your cash flow.',
   },
   {
     question: 'Do you assist with inspections and vendor coordination?',
@@ -164,7 +164,7 @@ function HeroSection() {
           Your Spanish Trail Buyer Roadmap Starts Here
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail balances lush fairways, 24-hour guard gates, and effortless Strip access—delivering a refined Las Vegas lifestyle for primary residents, second-home owners, and investors seeking golf course homes for sale. I study each of the eleven enclaves daily, debrief fellow listing agents, and monitor RealScout demand signals so you can act decisively the moment the right golf community home appears.
+          Spanish Trail balances lush fairways, 24-hour guard gates, and effortless Strip access—delivering a refined Las Vegas lifestyle for primary residents, second-home owners, and investors seeking golf course homes for sale. With deep expertise across all 11 neighborhoods and 1,200+ homes—from villas and townhomes to custom golf-course estates—I study each enclave daily, debrief fellow listing agents, and monitor RealScout demand signals so you can act decisively the moment the right golf community home appears.
         </p>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Whether you are relocating, upgrading, or adding to a portfolio, our collaboration starts with clarity. We define must-haves, map budget to financing, and design a tour strategy that respects your calendar and privacy. My concierge team coordinates the details: guard gate access, club introductions, and vetted vendor support before and after closing.

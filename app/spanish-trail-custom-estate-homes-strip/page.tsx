@@ -241,7 +241,7 @@ function DesignHighlightsSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="design-highlights-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="design-highlights-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Design signatures defining Spanish Trail estates in 2025
+          Design signatures defining Spanish Trail estates in 2026
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           Luxury buyers expect more than square footage. My design brief breaks down the finishes, technology, and amenities that deliver the wow factor—both for daily life and future resale.

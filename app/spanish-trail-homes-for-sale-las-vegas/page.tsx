@@ -224,7 +224,7 @@ function BuyingExperienceSection() {
             <li className="flex gap-3">
               <span className="mt-1 inline-block size-2 rounded-full bg-[#0f2b1e]" aria-hidden />
               <span>
-                Offer strategy: When 8330 Carmel Ridge Court drew two cash offers last week, we knew that $30K above ask wasn’t enough—view premiums still matter in 2025.
+                Offer strategy: When 8330 Carmel Ridge Court drew two cash offers last week, we knew that $30K above ask wasn’t enough—view premiums still matter in 2026.
               </span>
             </li>
           </ul>
@@ -291,7 +291,7 @@ function HomeDesignSection() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
           <h2 id="home-design-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-            Architecture, finishes, and renovation trends in 2025
+            Architecture, finishes, and renovation trends in 2026
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Buyers continue to prioritize modernized kitchens, spa bathrooms, and multi-gen suites, yet Spanish Trail’s charm lies in its timeless architecture—vaulted ceilings, courtyards, and tree-framed patios. Here’s what to watch for:

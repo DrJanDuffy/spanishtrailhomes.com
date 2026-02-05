@@ -83,7 +83,7 @@ const communityNarratives = [
     title: 'Architecture, Design Trends, and Renovation Insights',
     paragraphs: [
       'Spanish Trail real estate showcases architectural variety: Tuscan-inspired estates with stone accents, contemporary villas with sleek rooflines, and courtyard homes that wrap around sparkling pools. Many properties feature mature landscaping rarely found in newer Las Vegas communities. Buyers interested in customization benefit from Dr. Duffy’s vetted roster of architects, designers, and craftsmen who understand the Architectural Review Committee’s guidelines and can fast-track approvals for outdoor kitchens, casitas, or wellness suites.',
-      'Renovation priorities in 2025 include energy-efficient windows, whole-home automation, and spa bathrooms with steam showers. Dr. Duffy advises on which upgrades matter most for resale versus lifestyle enjoyment. She also coordinates pre-purchase inspections that evaluate roof age, pool equipment, and golf course setbacks, ensuring her clients avoid unexpected costs and secure Spanish Trail homes that align with their long-term plans.'
+      'Renovation priorities in 2026 include energy-efficient windows, whole-home automation, and spa bathrooms with steam showers. Dr. Duffy advises on which upgrades matter most for resale versus lifestyle enjoyment. She also coordinates pre-purchase inspections that evaluate roof age, pool equipment, and golf course setbacks, ensuring her clients avoid unexpected costs and secure Spanish Trail homes that align with their long-term plans.'
     ],
   },
   {
@@ -97,7 +97,7 @@ const communityNarratives = [
 
 const communityFaq = [
   {
-    question: 'What price ranges define Spanish Trail homes in 2025?',
+    question: 'What price ranges define Spanish Trail homes in 2026?',
     answer:
       'Spanish Trail single-family homes typically start in the mid-$700,000s for golf villas and extend beyond $5 million for custom estates with double fairway frontage. Renovated properties with modern interiors and outdoor entertainment spaces command the highest premiums. Dr. Jan Duffy provides price trend dashboards and walk-through analyses so you know exactly where each home falls within the current spectrum.',
   },

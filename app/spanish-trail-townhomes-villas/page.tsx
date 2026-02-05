@@ -282,7 +282,7 @@ function DesignSection() {
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="design-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="design-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Interior upgrades buyers crave in 2025
+          Interior upgrades buyers crave in 2026
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           Villas and townhomes are evolving with contemporary finishes that rival custom estates—think chef kitchens, wellness suites, and tech-forward comforts.

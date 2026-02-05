@@ -74,6 +74,12 @@ export default function NotFound() {
               <Link href="/communities/spanish-trail" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">
                 Spanish Trail Community
               </Link>
+              <Link href="/neighborhoods" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">
+                Neighborhoods
+              </Link>
+              <Link href="/relocation" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">
+                Relocation
+              </Link>
               <Link href="/about" className="text-muted-foreground hover:text-foreground underline-offset-4 hover:underline">
                 About Dr. Jan Duffy
               </Link>

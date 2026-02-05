@@ -80,7 +80,7 @@ const faqContent = [
   {
     question: 'Is Spanish Trail a good investment?',
     answer:
-      'The market remains strong and stable in 2025. Guard-gated security, championship golf course amenities, and proximity to the Strip (15 minutes) create consistent demand. I track weekly sales activity to ensure you get fair market value. Let\'s discuss your investment timeline.',
+      'The market remains strong and stable in 2026. Guard-gated security, championship golf course amenities, and proximity to the Strip (15 minutes) create consistent demand. I track weekly sales activity to ensure you get fair market value. Let\'s discuss your investment timeline.',
   },
   {
     question: 'What neighborhoods are in Spanish Trail?',
@@ -330,7 +330,7 @@ function NeighborhoodFitSection() {
             {
               title: 'Estate Homes behind secondary gates',
               detail:
-                'Gated-within-gated privacy, grand motor courts, and entertainer yards. Seeing 3–4 showings per week right now—our busiest luxury cadence of 2025.',
+                'Gated-within-gated privacy, grand motor courts, and entertainer yards. Seeing 3–4 showings per week right now—our busiest luxury cadence of 2026.',
             },
             {
               title: 'Villas at Spanish Trail',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect } from 'react'
+import Link from 'next/link'
 import { featuredListingsPreview } from '@/lib/spanishTrailContent'
 import { cn } from '@/lib/utils'
 import {
@@ -9,12 +10,8 @@ import {
   trackRealscoutSignupFromPreview,
 } from '@/lib/analytics'
 
-const REALSCOUT_WIDGET_ID = 'realscout-advanced-search'
-
-function scrollToRealScoutWidget() {
-  const el = document.getElementById(REALSCOUT_WIDGET_ID)
-  el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-}
+/** Dr. Jan Duffy RealScout search – all featured listing clicks go here. */
+const REALSCOUT_LISTINGS_URL = 'https://searchforaffordablehomes.com/neighborhood/83/spanish-trails'
 
 function listingTypeFromHref(href: string): string {
   if (href.includes('single-family')) return 'estate'
@@ -34,12 +31,10 @@ export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps)
 
   const handleCardClick = useCallback((listing: (typeof featuredListingsPreview)[0]) => {
     trackFeaturedListingClick(listing.price, listingTypeFromHref(listing.href))
-    scrollToRealScoutWidget()
   }, [])
 
   const handleCtaClick = useCallback(() => {
     trackRealscoutSignupFromPreview('featured_grid')
-    scrollToRealScoutWidget()
   }, [])
 
   return (
@@ -48,7 +43,15 @@ export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps)
         Featured Spanish Trail Listings
       </h3>
       <p className="mt-2 text-base text-[#372a20]/85">
-        View {activeListings} more properties with free search account
+        <Link
+          href={REALSCOUT_LISTINGS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleCtaClick}
+          className="text-[#0f2b1e] underline-offset-4 hover:underline"
+        >
+          View {activeListings} more properties with free search account
+        </Link>
       </p>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
@@ -57,11 +60,13 @@ export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps)
             key={listing.mls}
             className="group relative overflow-hidden rounded-xl border border-[#d8cdbf] bg-white shadow-md transition-shadow hover:shadow-xl"
           >
-            <button
-              type="button"
+            <Link
+              href={REALSCOUT_LISTINGS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => handleCardClick(listing)}
               className="flex w-full flex-col text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0f2b1e] focus-visible:ring-offset-2"
-              aria-label={`View details for Spanish Trail home at ${listing.address} for ${listing.price}`}
+              aria-label={`View Spanish Trail homes with Dr. Jan Duffy – ${listing.address} ${listing.price}`}
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-[#e8e4dc]">
                 <img
@@ -95,7 +100,7 @@ export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps)
                 </p>
                 <p className="mt-0.5 text-xs text-[#372a20]/70">{listing.mls}</p>
               </div>
-            </button>
+            </Link>
             {/* Schema.org RealEstateListing per card */}
             <script
               type="application/ld+json"
@@ -128,16 +133,18 @@ export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps)
       </div>
 
       <div className="mt-8">
-        <button
-          type="button"
+        <Link
+          href={REALSCOUT_LISTINGS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={handleCtaClick}
           className={cn(
-            'w-full rounded-full bg-[#0f2b1e] px-6 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#0f2b1e]/90 focus-visible:ring-2 focus-visible:ring-[#0f2b1e] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[280px]',
+            'inline-flex w-full items-center justify-center rounded-full bg-[#0f2b1e] px-6 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#0f2b1e]/90 focus-visible:ring-2 focus-visible:ring-[#0f2b1e] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[280px]',
           )}
-          aria-label="Search all Spanish Trail homes and create free account"
+          aria-label="Search all Spanish Trail homes with Dr. Jan Duffy RealScout"
         >
           Search All Spanish Trail Homes →
-        </button>
+        </Link>
       </div>
     </div>
   )

@@ -10,7 +10,6 @@ import {
 } from '@/lib/analytics'
 
 const REALSCOUT_WIDGET_ID = 'realscout-advanced-search'
-const MORE_COUNT = 68
 
 function scrollToRealScoutWidget() {
   const el = document.getElementById(REALSCOUT_WIDGET_ID)
@@ -23,7 +22,12 @@ function listingTypeFromHref(href: string): string {
   return 'listing'
 }
 
-export function FeaturedListings() {
+type FeaturedListingsProps = {
+  /** Active listing count from market stats; used for "View X more properties" copy. */
+  activeListings?: number
+}
+
+export function FeaturedListings({ activeListings = 72 }: FeaturedListingsProps) {
   useEffect(() => {
     trackFeaturedListingView(featuredListingsPreview.length)
   }, [])
@@ -44,7 +48,7 @@ export function FeaturedListings() {
         Featured Spanish Trail Listings
       </h3>
       <p className="mt-2 text-base text-[#372a20]/85">
-        View {MORE_COUNT} more properties with free search account
+        View {activeListings} more properties with free search account
       </p>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">

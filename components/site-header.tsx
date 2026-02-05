@@ -46,7 +46,7 @@ export function SiteHeader() {
                 Berkshire Hathaway HomeServices
               </p>
               <p className="font-[var(--font-playfair)] text-lg font-semibold tracking-[0.08em] text-[#0f2b1e] sm:text-2xl sm:tracking-[0.1em]">
-                Dr. Jan Duffy · Spanish Trail
+                Spanish Trail | Homes By Dr. Jan Duffy
               </p>
             </div>
           </Link>

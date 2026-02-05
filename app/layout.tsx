@@ -188,7 +188,7 @@ export const metadata: Metadata = {
     'Dr. Jan Duffy real estate',
   ],
   category: 'Real Estate',
-  applicationName: 'Spanish Trail Homes',
+  applicationName: 'Spanish Trail | Homes By Dr. Jan Duffy',
   authors: [{ name: 'Dr. Jan Duffy' }],
   alternates: {
     canonical: getCanonicalUrl('/'),

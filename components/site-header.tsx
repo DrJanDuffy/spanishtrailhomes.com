@@ -21,23 +21,6 @@ export function SiteHeader() {
 
   return (
     <header className="relative z-30 w-full">
-      <div className="hidden border-b border-border/80 bg-[#2f3d35] text-primary-foreground md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs tracking-[0.35em] sm:px-6">
-          <div className="flex items-center gap-3">
-            <Phone className="size-3.5" aria-hidden />
-            <Link href="tel:+17027663299" className="hover:underline" onClick={() => trackPhoneClick('header')}>
-              (702) 766-3299
-            </Link>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="uppercase">Represented by Dr. Jan Duffy · Berkshire Hathaway HomeServices</span>
-            <CalendlyLink className="rounded-full border border-primary-foreground/40 bg-transparent px-4 py-1 text-[0.7rem] uppercase tracking-[0.35em] hover:bg-primary-foreground hover:text-primary" ctaText="Book a Tour" ctaLocation="header">
-              Book a Tour
-            </CalendlyLink>
-          </div>
-        </div>
-      </div>
-
       <div className="border-b border-border/60 bg-white/90 backdrop-blur">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
           <Link href="/" aria-label="Spanish Trail Country Club home" className="group min-w-0 flex-1">

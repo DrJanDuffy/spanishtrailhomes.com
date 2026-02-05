@@ -245,9 +245,6 @@ function HeroSection() {
 
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
-          <p className="text-xs uppercase tracking-[0.5em] text-accent">
-            Spanish Trail | Homes By Dr. Jan Duffy
-          </p>
           <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
             Your Future Home Awaits.
           </h1>

@@ -25,7 +25,7 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-xs tracking-[0.35em] sm:px-6">
           <div className="flex items-center gap-3">
             <Phone className="size-3.5" aria-hidden />
-            <Link href="tel:17027663299" className="hover:underline" onClick={() => trackPhoneClick('header')}>
+            <Link href="tel:+17027663299" className="hover:underline" onClick={() => trackPhoneClick('header')}>
               (702) 766-3299
             </Link>
           </div>
@@ -117,7 +117,7 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-4 lg:flex">
             <Link
-              href="tel:17027663299"
+              href="tel:+17027663299"
               className="inline-flex items-center gap-2 rounded-full border border-[#0f2b1e]/40 px-6 py-2 text-xs font-medium uppercase tracking-[0.28em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10"
               aria-label="Call 702-766-3299"
               onClick={() => trackPhoneClick('header')}
@@ -207,7 +207,7 @@ export function SiteHeader() {
                 Book a Tour
               </CalendlyLink>
               <Link
-                href="tel:17027663299"
+                href="tel:+17027663299"
                 className="touch-target flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-[#0f2b1e]/40 px-6 py-3 text-sm font-medium uppercase tracking-[0.28em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10 sm:min-h-[44px] sm:w-auto"
                 aria-label="Call 702-766-3299"
                 onClick={() => trackPhoneClick('header')}

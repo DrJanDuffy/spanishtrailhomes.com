@@ -17,7 +17,7 @@ export default function NewProjectPage() {
     <div className="min-h-dvh bg-[#f8f2e7] px-6 py-16">
       <div className="mx-auto max-w-2xl rounded-3xl border border-[#d8cdbf] bg-white p-8 shadow-lg shadow-primary/10">
         <div className="space-y-4 text-center">
-          <h1 className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h1 className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Create a New v0 Project
           </h1>
           <p className="text-base leading-relaxed text-[#372a20]/85">

@@ -244,14 +244,14 @@ Add error handling for map loading failures:
 **Current:**
 ```typescript
 const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
-const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89117'
+const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89113'
 ```
 
 **Suggestion:** Extract to constants file:
 ```typescript
 // lib/constants.ts
 export const GBP_URL = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
-export const BUSINESS_ADDRESS = '5050 Spanish Trail Ln., Las Vegas, NV 89117'
+export const BUSINESS_ADDRESS = '5050 Spanish Trail Ln., Las Vegas, NV 89113'
 export const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(BUSINESS_ADDRESS)}`
 ```
 

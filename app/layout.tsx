@@ -29,26 +29,28 @@ const lato = Lato({
   fallback: ['system-ui', 'sans-serif'],
 })
 
+const gbpDescription =
+  'Dr. Jan Duffy specializes exclusively in Spanish Trail, a guard-gated golf community in Las Vegas, Nevada. With deep expertise across all 11 neighborhoods and over 1,200 homes, Dr. Duffy provides precise market data, neighborhood-level pricing insights, and personalized guidance for buyers and sellers. From luxury estates and golf course properties to villas and single-story living, Spanish Trail offers one of Southern Nevada\'s most sought-after lifestyles built around a championship 27-hole golf course. Whether you\'re exploring the community for the first time or preparing to sell, you get a local specialist who knows Spanish Trail inside and out.'
+
 const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     name: 'Spanish Trail | Homes By Dr. Jan Duffy',
+    description: gbpDescription,
     image: createOgImageUrl({
       title: 'Spanish Trail Homes & Country Club',
       subtitle: 'Guard-gated Las Vegas luxury real estate by Dr. Jan Duffy',
       eyebrow: 'SpanishTrailHomes.com',
     }),
     url: siteUrl,
-    telephone: '+1-702-766-3299',
+    telephone: '+17027663299',
     email: 'DrDuffySells@SpanishTrailHomes.com',
     priceRange: '$$$',
-    areaServed: [
-      'Las Vegas, NV 89117, USA',
-      'Spanish Trail, Las Vegas, NV',
-      'Summerlin, Las Vegas, NV',
-      'Spring Valley, Las Vegas, NV',
-    ],
+    areaServed: {
+      '@type': 'Place',
+      name: 'Spanish Trail, Las Vegas, NV 89113',
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: '5050 Spanish Trail Ln',
@@ -74,10 +76,59 @@ const structuredData = [
     sameAs: [
       'https://www.facebook.com/spanishtrailhomes',
       'https://www.instagram.com/spanishtrailhomes',
-      'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true',
+      'https://www.linkedin.com/company/spanishtrailhomes',
       'https://www.youtube.com/@spanishtrailhomes',
       'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
     ],
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: 'Veteran-Owned',
+        value: 'Yes',
+      },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Real Estate Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Buying Agent Services',
+            description:
+              'Exclusive buyer representation across all 11 Spanish Trail neighborhoods with neighborhood matching, market data, and full transaction coordination.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: "Seller's Agent Services",
+            description:
+              'Neighborhood-level pricing, professional marketing, and complete transaction management for Spanish Trail home sellers.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Market Analysis and Home Valuation',
+            description:
+              'Detailed market analysis rooted in neighborhood-specific data, inventory levels, and buyer demand trends within Spanish Trail.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Relocation and Out-of-State Buyer Support',
+            description:
+              'Virtual tours, neighborhood comparisons, and remote transaction coordination for buyers relocating to Spanish Trail from out of state.',
+          },
+        },
+      ],
+    },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
@@ -119,7 +170,7 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Spanish Trail Country Club | Private Club in Las Vegas',
+    default: 'Spanish Trail | Homes By Dr. Jan Duffy',
     template: '%s | Spanish Trail Homes',
   },
   description:
@@ -145,16 +196,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Spanish Trail Homes | Private Club Living in Las Vegas',
+    title: 'Spanish Trail | Homes By Dr. Jan Duffy',
     description:
       'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Jan Duffy.',
-    siteName: 'Spanish Trail Homes',
+    siteName: 'Spanish Trail | Homes By Dr. Jan Duffy',
     images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Jan Duffy' })],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Homes | Private Club in Las Vegas',
+    title: 'Spanish Trail | Homes By Dr. Jan Duffy',
     description:
       'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Jan Duffy.',
     images: [createOgImageUrl({ title: 'Spanish Trail Homes', subtitle: 'Luxury guard-gated homes and club expertise', eyebrow: 'SpanishTrailHomes.com' })],

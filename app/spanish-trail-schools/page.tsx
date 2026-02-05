@@ -320,7 +320,7 @@ function CTASection() {
           Find the perfect family home in Spanish Trail
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Dr. Jan Duffy specializes in helping families find Spanish Trail homes that meet their school preferences, lifestyle needs, and budget. Call <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to start your search.
+          Dr. Jan Duffy specializes in helping families find Spanish Trail homes that meet their school preferences, lifestyle needs, and budget. Call <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to start your search.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

@@ -184,7 +184,7 @@ function GuestHero() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1462212210362-162e9f0ce5a1?q=80&auto=format&fit=crop&w=2000"
-        alt="Spanish Trail Country Club guest information and directions in Las Vegas 89117"
+        alt="Spanish Trail Country Club guest information and directions in Las Vegas 89113"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -195,7 +195,7 @@ function GuestHero() {
         </p>
         <h1
           id="guest-hero-heading"
-          className="mt-5 font-(--font-playfair) text-4xl leading-tight sm:text-5xl lg:text-6xl"
+          className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
           Welcome to Spanish Trail Country Club.
         </h1>
@@ -223,7 +223,7 @@ function DirectionsSection() {
           </p>
           <h2
             id="directions-heading"
-          className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+          className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Find your way to our private entrance.
           </h2>
@@ -259,7 +259,7 @@ function GuestNarrativesSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Visitor Experience</p>
-        <h2 id="guest-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="guest-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Make the most of your time inside Spanish Trail Country Club
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -300,7 +300,7 @@ function EtiquetteSection() {
           </p>
           <h2
             id="etiquette-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             A few notes to ensure every visit is exceptional.
           </h2>
@@ -361,7 +361,7 @@ function ArrivalSection() {
           </p>
           <h2
             id="arrival-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Valet, locker rooms, and on-site services.
           </h2>
@@ -399,7 +399,7 @@ function LocalEssentialsSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Beyond the gates</p>
           <h2
             id="local-essentials-heading"
-            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
           >
             Everyday essentials within minutes
           </h2>
@@ -444,22 +444,21 @@ function ContactSection() {
         </p>
         <h2
           id="guest-contact-heading"
-          className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+          className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
         >
           We are here to assist with every detail.
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
-          For additional questions, valet requests, or special accommodations, contact
-          our concierge team at{' '}
-          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
+          For questions about visiting Spanish Trail, scheduling a tour, or coordinating with the club, contact Dr. Jan Duffy at{' '}
+          <Link href="tel:+17027663299" className="text-primary underline-offset-4 hover:underline">
             (702) 766-3299
           </Link>{' '}
           or{' '}
           <Link
-            href="mailto:concierge@spanishtrailhomes.com"
+            href="mailto:DrDuffySells@SpanishTrailHomes.com"
             className="text-primary underline-offset-4 hover:underline"
           >
-            concierge@spanishtrailhomes.com
+            DrDuffySells@SpanishTrailHomes.com
           </Link>
           .
         </p>
@@ -517,7 +516,7 @@ function GuestFAQSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Guest FAQ</p>
-        <h2 id="guest-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="guest-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Plan every detail of your Spanish Trail visit</h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
             From gatehouse etiquette to property tours, these answers keep you prepared and confident during your time inside the community.

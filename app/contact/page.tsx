@@ -10,10 +10,11 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
-  'Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. $812,500 median. Call/text (702) 766-3299.'
+  `Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. ${formatMedianPrice(marketStats.median_price)} median. Call/text (702) 766-3299.`
 
 const contactWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
@@ -29,7 +30,7 @@ const contactWebPageSchema = createWebPageSchema({
       },
       {
         '@type': 'CommunicateAction',
-        target: 'tel:17027663299',
+        target: 'tel:+17027663299',
         name: 'Call (702) 766-3299',
       },
     ],
@@ -74,7 +75,7 @@ const faqContent = [
   {
     question: "What's the average price in Spanish Trail right now?",
     answer:
-      "Spanish Trail's median home value is $812,500 as of November 2025. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.",
+      `Spanish Trail's median home value is ${formatMedianPrice(marketStats.median_price)} as of ${marketStats.date_label}. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.`,
   },
   {
     question: 'Is Spanish Trail a good investment?',
@@ -162,7 +163,7 @@ function HeroSection() {
           Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail's median value sits at $812,500 as of November 2025, reflecting strong demand for guard-gated golf community living. Well-positioned listings continue to attract competitive offers, with golf-view properties and updated interiors commanding premium pricing.
+          Spanish Trail's median value sits at {formatMedianPrice(marketStats.median_price)} as of {marketStats.date_label}, reflecting strong demand for guard-gated golf community living. Well-positioned listings continue to attract competitive offers, with golf-view properties and updated interiors commanding premium pricing.
           <span className="block text-xs uppercase tracking-[0.3em] text-[#f8f5ef]/70">
             <Link href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails" className="underline-offset-4 hover:underline">
               Source: Spanish Trail Weekly Market Activity
@@ -171,7 +172,7 @@ function HeroSection() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
-            <Link href="tel:17027663299">Call or Text (702) 766-3299</Link>
+            <Link href="tel:+17027663299">Call or Text (702) 766-3299</Link>
           </Button>
           <CalendlyLink className="inline-flex items-center justify-center rounded-full border border-[#f8f5ef]/60 bg-white px-8 py-3 text-xs font-medium uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
             Book a Tour
@@ -289,19 +290,20 @@ function LuxuryInventorySection() {
 }
 
 function MarketSnapshotSection() {
+  const stats = [
+    { label: 'Median Value', value: formatMedianPrice(marketStats.median_price) },
+    { label: 'Price / Sq. Ft.', value: `$${marketStats.price_per_sqft}` },
+    { label: 'Active Listings', value: String(marketStats.active_listings) },
+    { label: 'Days on Market', value: `${marketStats.avg_days_on_market} (avg.)` },
+  ]
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="market-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="market-heading" className="font-[var(--font-playfair)] text-2xl leading-tight sm:text-3xl">
-          Current Spanish Trail Market: $812,500 Median (November 2025)
+          Current Spanish Trail Market: {formatMedianPrice(marketStats.median_price)} Median ({marketStats.date_label})
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-4">
-          {[
-            { label: 'Median Value', value: '$812,500' },
-            { label: 'Average Price / Sq. Ft.', value: '$441.15' },
-            { label: 'Active Listings', value: '70' },
-            { label: 'Days on Market', value: '60 (avg.)' },
-          ].map((stat) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="rounded-3xl border border-[#1f4a35]/60 bg-[#143927] p-6 shadow-lg shadow-black/15">
               <p className="text-xs uppercase tracking-[0.35em] text-[#d9cfc2]">{stat.label}</p>
               <p className="mt-3 font-[var(--font-playfair)] text-2xl">{stat.value}</p>
@@ -372,7 +374,7 @@ function ContactCTASection() {
             </p>
             <div className="space-y-2 text-sm text-[#372a20]/80">
               <p>
-                📞 Direct: <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
+                📞 Direct: <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>
               </p>
               <p>📧 Email: <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link></p>
             </div>
@@ -412,7 +414,7 @@ function GBPIntegrationSection() {
                 </p>
                 <p>
                   <strong className="font-semibold text-[#0f2b1e]">Phone:</strong>{' '}
-                  <Link href="tel:17027663299" className="underline-offset-4 hover:underline">
+                  <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">
                     (702) 766-3299
                   </Link>
                 </p>
@@ -430,7 +432,7 @@ function GBPIntegrationSection() {
                 asChild
                 className="rounded-full bg-[#0f2b1e] px-6 py-3 text-xs uppercase tracking-[0.3em] text-white hover:bg-[#1f4a35]"
               >
-                <Link href="tel:17027663299">
+                <Link href="tel:+17027663299">
                   Call (702) 766-3299
                 </Link>
               </Button>

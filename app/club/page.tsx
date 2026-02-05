@@ -396,7 +396,7 @@ function LifestyleSection() {
           </p>
           <h2
             id="lifestyle-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             A calendar tailored for curated connection.
           </h2>

@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { HeroBackground } from '@/components/hero-background'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas'
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'guard-gated Spanish Trail homes',
     'Spanish Trail golf course homes',
     'Spanish Trail luxury homes',
-    'homes for sale Spanish Trail 89117',
+    'homes for sale Spanish Trail 89113',
   ],
   alternates: {
     canonical: getCanonicalUrl('/homes-for-sale-in-spanish-trail-las-vegas'),
@@ -76,7 +77,7 @@ const homesForSaleFaq = [
   {
     question: 'What is the price range for homes for sale in Spanish Trail?',
     answer:
-      'Homes for sale in Spanish Trail, Las Vegas range from approximately $818K for townhomes and villas to over $2M+ for custom estates. The median listing price is around $818K-$835K, with luxury golf course properties typically priced between $1.2M-$1.5M. Custom estates with Strip views and double-gated privacy can exceed $2M. Dr. Jan Duffy provides current market data and comparative analysis for homes matching your criteria.',
+      `Homes for sale in Spanish Trail, Las Vegas range from approximately ${formatMedianPrice(marketStats.median_price)} for townhomes and villas to over $2M+ for custom estates. The median listing price is around ${formatMedianPrice(marketStats.median_price)}, with luxury golf course properties typically priced between $1.2M-$1.5M. Custom estates with Strip views and double-gated privacy can exceed $2M. Dr. Jan Duffy provides current market data and comparative analysis for homes matching your criteria.`,
   },
   {
     question: 'Where is Spanish Trail located in Las Vegas?',
@@ -91,7 +92,7 @@ const homesForSaleFaq = [
   {
     question: 'How many homes with pools are for sale in Spanish Trail?',
     answer:
-      'Currently, there are approximately 60 homes with pools for sale in Spanish Trail, Las Vegas, at various price points. These properties range from updated villas with plunge pools to custom estates with resort-style pools and spa features. Many homes for sale include pool resurfacing, Baja shelves, LED landscape lighting, and outdoor entertainment areas. Dr. Jan Duffy can help you find pool homes matching your preferences and lifestyle.',
+      `Currently, there are approximately ${marketStats.active_listings} homes with pools for sale in Spanish Trail, Las Vegas, at various price points. These properties range from updated villas with plunge pools to custom estates with resort-style pools and spa features. Many homes for sale include pool resurfacing, Baja shelves, LED landscape lighting, and outdoor entertainment areas. Dr. Jan Duffy can help you find pool homes matching your preferences and lifestyle.`,
   },
   {
     question: 'Are there homes for sale in specific Spanish Trail neighborhoods?',
@@ -346,12 +347,12 @@ function MarketDataSection() {
           Current Market Data for Homes for Sale in Spanish Trail
         </h2>
         <p className="mt-6 text-base leading-relaxed text-[#f8f5ef]/85">
-          As of November 2025, the Spanish Trail real estate market remains strong with approximately 60 homes for sale, including homes with pools. The median listing price for homes for sale in Spanish Trail is around $818K, with active inventory across all price ranges.
+          As of {marketStats.date_label}, the Spanish Trail real estate market remains strong with approximately {marketStats.active_listings} homes for sale, including homes with pools. The median listing price for homes for sale in Spanish Trail is around {formatMedianPrice(marketStats.median_price)}, with active inventory across all price ranges.
         </p>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-[#1f4a35]/80 bg-[#16402d] p-6 shadow-lg shadow-black/20">
             <p className="text-xs uppercase tracking-[0.4em] text-[#f8f5ef]/75">Median Price</p>
-            <p className="mt-4 font-heading text-3xl text-[#f8f5ef]">$818K+</p>
+            <p className="mt-4 font-heading text-3xl text-[#f8f5ef]">{formatMedianPrice(marketStats.median_price)}+</p>
             <p className="mt-2 text-sm text-[#f8f5ef]/70">Homes with pools available</p>
           </div>
           <div className="rounded-3xl border border-[#1f4a35]/80 bg-[#16402d] p-6 shadow-lg shadow-black/20">
@@ -532,7 +533,7 @@ function CTASection() {
           </Button>
         </div>
         <p className="text-sm text-[#f8f5ef]/70">
-          Call <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email{' '}
+          Call <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email{' '}
           <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">
             DrDuffySells@SpanishTrailHomes.com
           </Link>

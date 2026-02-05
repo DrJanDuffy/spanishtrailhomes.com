@@ -446,7 +446,7 @@ function CTASection() {
           Experience the Spanish Trail lifestyle
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Interested in living in the luxurious community of Spanish Trail? With stunning, spacious upscale real estate and direct access to top-rated schools and amenities, this community is perfect for families and professionals looking to settle in the Las Vegas Valley. Contact Dr. Jan Duffy at <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to explore the best of Spanish Trail today.
+          Interested in living in the luxurious community of Spanish Trail? With stunning, spacious upscale real estate and direct access to top-rated schools and amenities, this community is perfect for families and professionals looking to settle in the Las Vegas Valley. Contact Dr. Jan Duffy at <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to explore the best of Spanish Trail today.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

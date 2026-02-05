@@ -10,6 +10,7 @@ import { CalendlyLink } from '@/components/calendly-link'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 type RealScoutHomeValueProps = HTMLAttributes<HTMLElement> & {
   'agent-encoded-id': string
@@ -55,7 +56,7 @@ const faqs = [
   {
     question: 'How quickly are Spanish Trail homes attracting offers in late 2025?',
     answer:
-      'Well-presented Spanish Trail listings are averaging 18–26 days on market as of November 2025. Updated villas along the Lakes course and custom estates with Strip views continue to draw multiple offers within the first week when priced against current absorption. I monitor every guard-gated closing and real-time showing feedback so we can adjust positioning before days-on-market begins to climb.',
+      `Well-presented Spanish Trail listings are averaging ${marketStats.avg_days_on_market} days on market as of ${marketStats.date_label}. Updated villas along the Lakes course and custom estates with Strip views continue to draw multiple offers within the first week when priced against current absorption. I monitor every guard-gated closing and real-time showing feedback so we can adjust positioning before days-on-market begins to climb.`,
   },
   {
     question: 'What renovations deliver the best seller ROI inside Spanish Trail?',
@@ -172,11 +173,11 @@ function HeroSection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="sellers-hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h1 id="sellers-hero-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h1 id="sellers-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Spanish Trail Seller Blueprint: Earn Premium Offers in 2025
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Las Vegas buyers are eyeing Spanish Trail for its emerald fairways, private security, and effortless access to the Strip. As of November 2025, median sale prices inside the gates sit at $812,500, with estates above $2.1M commanding their strongest list-to-close ratios in five years. As your Berkshire Hathaway HomeServices colleague and long-time Spanish Trail specialist, I translate demand into proven strategy—balancing transparency, Fair Housing compliance, and concierge-level presentation so you can exit with confidence.
+          Las Vegas buyers are eyeing Spanish Trail for its emerald fairways, private security, and effortless access to the Strip. As of {marketStats.date_label}, median sale prices inside the gates sit at {formatMedianPrice(marketStats.median_price)}, with estates above $2.1M commanding their strongest list-to-close ratios in five years. As your Berkshire Hathaway HomeServices colleague and long-time Spanish Trail specialist, I translate demand into proven strategy—balancing transparency, Fair Housing compliance, and concierge-level presentation so you can exit with confidence.
         </p>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Whether you are relocating, rightsizing, or unlocking equity to diversify your portfolio, we start with a data-backed value range, align your desired timeline, and craft a plan that honors the distinct story of your home. My team handles the details—from HOA coordination to twilight photography—so you stay focused on your next chapter while I deliver the market response your investment deserves.
@@ -205,7 +206,7 @@ function HomeValueWidgetSection() {
   return (
     <section id="seller-valuation-widget" className="bg-white py-16 sm:py-20" aria-labelledby="home-value-heading">
       <div className="mx-auto max-w-3xl space-y-6 px-6 text-center">
-        <h2 id="home-value-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="home-value-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Start with an interactive Spanish Trail home valuation
         </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -227,7 +228,7 @@ function MarketConfidenceSection() {
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="market-confidence-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
-          <h2 id="market-confidence-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="market-confidence-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Why Spanish Trail sellers hold the upper hand right now
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -270,7 +271,7 @@ function PricingStrategySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="pricing-strategy-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="pricing-strategy-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="pricing-strategy-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Precision pricing anchored in data and narrative
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -313,7 +314,7 @@ function PreparationBlueprintSection() {
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="preparation-blueprint-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
-          <h2 id="preparation-blueprint-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="preparation-blueprint-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             A concierge preparation plan tailored to Spanish Trail standards
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -353,7 +354,7 @@ function MarketingEngineSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="marketing-engine-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="marketing-engine-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="marketing-engine-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           A marketing engine built for qualified Spanish Trail buyers
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -391,7 +392,7 @@ function TimelineAndNegotiationSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="timeline-negotiation-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="timeline-negotiation-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="timeline-negotiation-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           A transparent timeline and negotiation plan you can trust
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -434,7 +435,7 @@ function ClubAndLifestylePositioningSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="club-lifestyle-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
-          <h2 id="club-lifestyle-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="club-lifestyle-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Positioning Spanish Trail lifestyle and club benefits
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -465,7 +466,7 @@ function FAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="seller-faq-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="seller-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="seller-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail seller FAQs
         </h2>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -485,7 +486,7 @@ function CallToActionSection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="seller-cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h2 id="seller-cta-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h2 id="seller-cta-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Ready to unlock your Spanish Trail equity?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">

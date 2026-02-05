@@ -426,7 +426,7 @@ function CTASection() {
           Your Strip-adjacent estate search starts here
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll assemble a private tour schedule, vendor introductions, and security brief tailored to your move date.
+          Call or text <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll assemble a private tour schedule, vendor introductions, and security brief tailored to your move date.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

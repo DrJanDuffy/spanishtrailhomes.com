@@ -8,6 +8,7 @@ import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
@@ -66,7 +67,7 @@ const faqContent = [
   {
     question: 'How competitive is the estate market right now?',
     answer:
-      'As of November 2025, 12 estate homes are active with a median list price of $2.35M. Well-prepared properties with updated interiors average 37 days on market; off-market placements move even faster. I monitor private network releases to ensure clients act before listings go public.',
+      `As of ${marketStats.date_label}, estate homes are active with a median list price of $2.35M. Well-prepared properties with updated interiors average 37 days on market; off-market placements move even faster. I monitor private network releases to ensure clients act before listings go public.`,
   },
   {
     question: 'Can you help with renovations or turnkey preparation?',
@@ -159,7 +160,7 @@ function MarketSnapshotSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="estate-market-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="estate-market-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Estate market snapshot (November 2025)
+          Estate market snapshot ({marketStats.date_label})
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           I track every estate showing, offer, and off-market whisper inside Spanish Trail. Here’s what the data shows this month.
@@ -400,7 +401,7 @@ function CTASection() {
         <h2 id="estate-cta-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Discuss Spanish Trail estate opportunities</h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll curate estate listings, share private releases, and coordinate a personalized tour itinerary.</p>
+          Call or text <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll curate estate listings, share private releases, and coordinate a personalized tour itinerary.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
             <Link href="/contact">Connect with Dr. Jan Duffy</Link>

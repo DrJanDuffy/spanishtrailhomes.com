@@ -133,7 +133,7 @@ export default function LuxuryNeighborhoodComparisonsPage() {
     <SiteShell>
       <header className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="neighborhoods-hero">
         <div className="mx-auto max-w-4xl space-y-5 px-6 text-center">
-          <h1 id="neighborhoods-hero" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+          <h1 id="neighborhoods-hero" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
             Compare Las Vegas Luxury Neighborhoods
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
@@ -193,7 +193,7 @@ function ComparisonGridSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">West Valley Highlights</p>
           <h2
             id="comparison-grid-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             How top Las Vegas enclaves stack up
           </h2>
@@ -227,7 +227,7 @@ function RelocationChecklistSection() {
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Relocation Checklist</p>
             <h2
               id="relocation-checklist-heading"
-              className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
+              className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
             >
               What we evaluate for every client
             </h2>
@@ -260,7 +260,7 @@ function SpanishTrailPositioningSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Why Spanish Trail</p>
           <h2
             id="spanish-trail-positioning-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Positioning Spanish Trail among its peers
           </h2>
@@ -305,7 +305,7 @@ function LuxuryNeighborhoodsFAQSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Luxury Neighborhood Comparison FAQ</p>
-          <h2 id="luxury-neighborhoods-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="luxury-neighborhoods-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Frequently asked questions about comparing Las Vegas luxury communities
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -332,7 +332,7 @@ function LuxuryCTASection() {
   return (
     <section className="bg-[#0f2b1e] py-20 text-[#f8f5ef]" aria-labelledby="luxury-cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h2 id="luxury-cta-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h2 id="luxury-cta-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Let's match you with the right community
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">

@@ -62,12 +62,12 @@ This audit evaluated the website against 2025 Google Business Profile guidelines
 **Status:** FIXED — Added descriptive alt text with location/service keywords
 
 **Changes Made:**
-- Home page: "Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89117"
+- Home page: "Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89113"
 - About page: "Dr. Janet Duffy - Spanish Trail real estate agent and luxury home specialist in Las Vegas"
-- Guest info page: "Spanish Trail Country Club guest information and directions in Las Vegas 89117"
+- Guest info page: "Spanish Trail Country Club guest information and directions in Las Vegas 89113"
 - Terms page: "Spanish Trail Homes terms of use and legal information for Las Vegas real estate services"
 - Privacy page: "Spanish Trail Homes privacy policy for Dr. Janet Duffy real estate services in Las Vegas"
-- Membership page: "Spanish Trail Country Club membership information and amenities in Las Vegas 89117"
+- Membership page: "Spanish Trail Country Club membership information and amenities in Las Vegas 89113"
 - Google Maps iframe titles enhanced with full location information
 
 ---
@@ -92,7 +92,7 @@ This audit evaluated the website against 2025 Google Business Profile guidelines
 ## ✅ Already Implemented Correctly
 
 1. ✅ **Business Hours:** Present in schema openingHoursSpecification
-2. ✅ **Address:** Consistent "5050 Spanish Trail Ln., Las Vegas, NV 89117" in schema and footer
+2. ✅ **Address:** Consistent "5050 Spanish Trail Ln., Las Vegas, NV 89113" in schema and footer
 3. ✅ **Geo Coordinates:** Present in schema (latitude: 36.109145, longitude: -115.282642)
 4. ✅ **Title Tags:** All pages have localized, descriptive titles
 5. ✅ **Meta Descriptions:** All pages have unique, localized descriptions
@@ -148,7 +148,7 @@ This audit evaluated the website against 2025 Google Business Profile guidelines
 
 **Current GBP Data (Verify These Match):**
 - Business Name: [Verify in GBP]
-- Address: 5050 Spanish Trail Ln., Las Vegas, NV 89117
+- Address: 5050 Spanish Trail Ln., Las Vegas, NV 89113
 - Phone: (702) 766-3299 or +1-702-766-3299 [Verify exact format]
 - Hours: Mon-Fri 8:00-18:00, Sat-Sun 8:00-16:00
 - Rating: [Check current rating and review count]

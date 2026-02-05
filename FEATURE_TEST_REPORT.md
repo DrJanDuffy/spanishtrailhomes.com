@@ -71,7 +71,7 @@
 - ✅ Heading: "Visit Spanish Trail Homes | Dr. Janet Duffy"
 
 #### Contact Information Display
-- ✅ Address displayed: "5050 Spanish Trail Ln., Las Vegas, NV 89117"
+- ✅ Address displayed: "5050 Spanish Trail Ln., Las Vegas, NV 89113"
 - ✅ Phone link: `tel:17027663299` with display "(702) 766-3299"
 - ✅ Email link: `mailto:DrDuffySells@SpanishTrailHomes.com`
 
@@ -99,7 +99,7 @@
 
 #### Google Maps Embed
 - ✅ iframe present with proper attributes
-- ✅ Title attribute: "Spanish Trail Homes Location - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
+- ✅ Title attribute: "Spanish Trail Homes Location - 5050 Spanish Trail Ln. Las Vegas, NV 89113"
 - ✅ Google Maps embed URL correctly formatted
 - ✅ `loading="lazy"` for performance
 - ✅ `referrerPolicy="no-referrer-when-downgrade"` for security
@@ -113,7 +113,7 @@
 ### Location 1: Guest Info Page
 - **File:** `app/guest-info/page.tsx` (line 242-248)
 - ✅ iframe present
-- ✅ Title: "Spanish Trail Country Club Map - 5050 Spanish Trail Ln. Las Vegas, NV 89117"
+- ✅ Title: "Spanish Trail Country Club Map - 5050 Spanish Trail Ln. Las Vegas, NV 89113"
 - ✅ Proper styling with rounded corners
 - ✅ Lazy loading enabled
 
@@ -133,7 +133,7 @@
 ### Tested Images:
 
 1. **Home Page** (`app/page.tsx`)
-   - ✅ Alt: "Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89117"
+   - ✅ Alt: "Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89113"
    - Includes: location, property type, city, zip code
 
 2. **About Page** (`app/about/page.tsx`)
@@ -141,7 +141,7 @@
    - Includes: name, role, location
 
 3. **Guest Info Page** (`app/guest-info/page.tsx`)
-   - ✅ Alt: "Spanish Trail Country Club guest information and directions in Las Vegas 89117"
+   - ✅ Alt: "Spanish Trail Country Club guest information and directions in Las Vegas 89113"
    - Includes: business name, purpose, location
 
 4. **Terms Page** (`app/terms/page.tsx`)
@@ -153,7 +153,7 @@
    - Includes: business name, document type, agent name, location
 
 6. **Membership Page** (`app/membership/page.tsx`)
-   - ✅ Alt: "Spanish Trail Country Club membership information and amenities in Las Vegas 89117"
+   - ✅ Alt: "Spanish Trail Country Club membership information and amenities in Las Vegas 89113"
    - Includes: business name, topic, location
 
 **All images now have descriptive, keyword-rich alt text** ✅
@@ -211,10 +211,10 @@
 - ✅ Consistent across all pages
 
 ### Address
-- ✅ Schema: "5050 Spanish Trail Ln., Las Vegas, NV 89117"
-- ✅ Footer: "5050 Spanish Trail Ln. Las Vegas, NV 89117"
-- ✅ Contact page: "5050 Spanish Trail Ln., Las Vegas, NV 89117"
-- ✅ Guest info page: "5050 Spanish Trail Ln. Las Vegas, NV 89117"
+- ✅ Schema: "5050 Spanish Trail Ln., Las Vegas, NV 89113"
+- ✅ Footer: "5050 Spanish Trail Ln. Las Vegas, NV 89113"
+- ✅ Contact page: "5050 Spanish Trail Ln., Las Vegas, NV 89113"
+- ✅ Guest info page: "5050 Spanish Trail Ln. Las Vegas, NV 89113"
 - ✅ **Consistent** ✅
 
 ### Phone
@@ -273,7 +273,7 @@
 - ✅ **Consistent** ✅
 
 ### Google Maps Directions URL
-- ✅ Contact page: `https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89117`
+- ✅ Contact page: `https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89113`
 - ✅ Properly encoded address
 - ✅ Opens in new tab
 

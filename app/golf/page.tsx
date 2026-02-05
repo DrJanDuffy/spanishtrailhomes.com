@@ -200,7 +200,7 @@ function GolfHero() {
         </p>
         <h1
           id="golf-hero-heading"
-          className="mt-5 font-(--font-playfair) text-4xl leading-tight sm:text-5xl lg:text-6xl"
+          className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
           27 championship holes. Three distinct personalities. Endless ways to
           play.
@@ -238,7 +238,7 @@ function CourseTour() {
             </p>
             <h2
               id="course-tour-heading"
-              className="mt-3 font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+              className="mt-3 font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
               Three nines, each with a signature rhythm.
             </h2>
@@ -266,7 +266,7 @@ function CourseTour() {
                 <p className="text-xs uppercase tracking-[0.3em] text-secondary">
                   {course.yardage}
                 </p>
-                <h3 className="font-(--font-playfair) text-2xl text-foreground">
+                <h3 className="font-[var(--font-playfair)] text-2xl text-foreground">
                   {course.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
@@ -301,7 +301,7 @@ function ExperienceDetails() {
           </p>
           <h2
             id="experience-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Elevate every round with expert guidance.
           </h2>
@@ -355,7 +355,7 @@ function GolfNarrativesSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf Insights</p>
-          <h2 id="golf-narratives-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="golf-narratives-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             How Spanish Trail elevates every round, every season
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -396,7 +396,7 @@ function ScorecardSection() {
           </p>
           <h2
             id="scorecard-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Championship routing for every skill level.
           </h2>
@@ -452,7 +452,7 @@ function GolfFAQSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Golf FAQ</p>
-          <h2 id="golf-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="golf-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Common questions about Spanish Trail golf
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -488,7 +488,7 @@ function GuestInformation() {
           </p>
           <h2
             id="guest-info-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Planning a visit? Let us curate your round.
           </h2>

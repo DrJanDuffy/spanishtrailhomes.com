@@ -202,7 +202,7 @@ function MembershipHero() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&auto=format&fit=crop&w=2000"
-        alt="Spanish Trail Country Club membership information and amenities in Las Vegas 89117"
+        alt="Spanish Trail Country Club membership information and amenities in Las Vegas 89113"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />

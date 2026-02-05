@@ -11,8 +11,8 @@ import {
 } from '@/lib/analytics'
 
 const CALENDLY_TOUR_URL = 'https://calendly.com/drduffy/spanish-trail-showing'
-const SMS_LISTINGS = 'sms:7027663299?body=Alert%20me%20about%20new%20Spanish%20Trail%20listings'
-const SMS_SCHEDULE_TOUR = 'sms:7027663299?body=I%27d%20like%20to%20schedule%20a%20Spanish%20Trail%20home%20tour'
+const SMS_LISTINGS = 'sms:+17027663299?body=Alert%20me%20about%20new%20Spanish%20Trail%20listings'
+const SMS_SCHEDULE_TOUR = 'sms:+17027663299?body=I%27d%20like%20to%20schedule%20a%20Spanish%20Trail%20home%20tour'
 
 const PLACEHOLDER_PROPERTIES = [
   { id: '1', address: '5050 Spanish Trail Ln', price: '$649,000', beds: 3, baths: 2.5, image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop&q=80' },

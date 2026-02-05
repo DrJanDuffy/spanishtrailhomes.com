@@ -386,7 +386,7 @@ function CTASection() {
           Get complete HOA information before you buy
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Dr. Jan Duffy provides comprehensive HOA documentation for every Spanish Trail listing—fees, reserves, rules, and assessment history. Call <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> for transparent guidance.
+          Dr. Jan Duffy provides comprehensive HOA documentation for every Spanish Trail listing—fees, reserves, rules, and assessment history. Call <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> for transparent guidance.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

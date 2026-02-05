@@ -395,7 +395,7 @@ function CTASection() {
           Find a home that matches your style
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Dr. Jan Duffy understands the architectural nuances of every Spanish Trail neighborhood. Call <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to find homes that match your aesthetic preferences and lifestyle needs.
+          Dr. Jan Duffy understands the architectural nuances of every Spanish Trail neighborhood. Call <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to find homes that match your aesthetic preferences and lifestyle needs.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

@@ -335,7 +335,7 @@ function CTASection() {
           Ready for an active lifestyle?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Find a Spanish Trail home that supports your wellness goals. Contact Dr. Jan Duffy at <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to explore homes with easy access to fitness amenities.
+          Find a Spanish Trail home that supports your wellness goals. Contact Dr. Jan Duffy at <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> to explore homes with easy access to fitness amenities.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

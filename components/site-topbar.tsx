@@ -13,7 +13,7 @@ export function SiteTopBar() {
       </div>
       <div className="flex shrink-0 items-center gap-2">
         <Link
-          href="tel:17027663299"
+          href="tel:+17027663299"
           className="touch-target inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 text-xs uppercase tracking-[0.25em] underline-offset-4 transition-colors hover:underline sm:min-h-0 sm:min-w-0 sm:tracking-[0.3em]"
           aria-label="Call (702) 766-3299"
         >

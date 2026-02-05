@@ -354,7 +354,7 @@ function ContactSection() {
           >
             Email DrDuffySells@SpanishTrailHomes.com
           </Link>
-          <Link href="tel:17027663299" className="rounded-full border border-[#f8f5ef]/50 px-6 py-3 hover:bg-white/10">
+          <Link href="tel:+17027663299" className="rounded-full border border-[#f8f5ef]/50 px-6 py-3 hover:bg-white/10">
             Call (702) 766-3299
           </Link>
           <Link href="/contact" className="rounded-full border border-[#f8f5ef]/50 px-6 py-3 hover:bg-white/10">

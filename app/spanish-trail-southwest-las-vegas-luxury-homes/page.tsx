@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: [
       createOgImageUrl({
         title: 'Southwest Las Vegas Luxury',
-        subtitle: 'Why Spanish Trail leads the 89117 market',
+        subtitle: 'Why Spanish Trail leads the 89113 market',
         eyebrow: 'SpanishTrailHomes.com',
       }),
     ],
@@ -403,7 +403,7 @@ function CTASection() {
           Explore Southwest Las Vegas luxury with Dr. Jan
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Contact <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> for a tailored comparison of Spanish Trail and neighboring luxury communities.</p>
+          Contact <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> for a tailored comparison of Spanish Trail and neighboring luxury communities.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">
             <Link href="/contact">Schedule your consult</Link>

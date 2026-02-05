@@ -28,6 +28,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/communities/spanish-trail',
     children: [
       { label: 'About Spanish Trail', href: '/communities/spanish-trail', group: 'Overview' },
+      { label: 'All 11 Neighborhoods', href: '/neighborhoods', group: 'Overview' },
       { label: 'Lifestyle Guide', href: '/spanish-trail-lifestyle', group: 'Overview' },
       { label: 'Architecture & Styles', href: '/spanish-trail-architecture', group: 'Overview' },
       { label: 'Schools', href: '/spanish-trail-schools', group: 'Overview' },
@@ -44,6 +45,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/about',
     children: [
       { label: 'Meet Dr. Jan Duffy', href: '/about', group: 'Your Agent' },
+      { label: 'Media Kit', href: '/media-kit', group: 'Your Agent' },
       { label: 'Awards & Recognition', href: '/awards', group: 'Your Agent' },
       { label: 'Client Reviews', href: '/reviews', group: 'Your Agent' },
       { label: 'Buyers Guide', href: '/buyers', group: 'Resources' },
@@ -55,6 +57,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/contact',
     children: [
       { label: 'Get in Touch', href: '/contact', group: 'Connect' },
+      { label: 'Relocation & Out-of-State', href: '/relocation', group: 'Connect' },
       { label: 'Office Location', href: '/find-our-locations', group: 'Connect' },
       { label: 'Guest Information', href: '/guest-info', group: 'Connect' },
     ],

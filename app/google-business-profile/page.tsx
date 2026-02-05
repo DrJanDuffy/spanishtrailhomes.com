@@ -53,7 +53,7 @@ const localBusinessSchema = {
     gbpUrl,
     'https://www.facebook.com/spanishtrailhomes',
     'https://www.instagram.com/spanishtrailhomes',
-    'https://www.linkedin.com/company/spanish-trail-homes/',
+    'https://www.linkedin.com/company/spanishtrailhomes',
     'https://www.youtube.com/@spanishtrailhomes',
   ],
   areaServed: {
@@ -268,7 +268,7 @@ function BusinessInfoSection() {
                   <div>
                     <dt className="font-semibold text-[#0f2b1e]">Phone</dt>
                     <dd className="mt-1">
-                      <Link href="tel:17027663299" className="text-[#0f2b1e] underline underline-offset-2 hover:text-[#1f4a35]">
+                      <Link href="tel:+17027663299" className="text-[#0f2b1e] underline underline-offset-2 hover:text-[#1f4a35]">
                         (702) 766-3299
                       </Link>
                     </dd>
@@ -502,7 +502,7 @@ function ConnectSection() {
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Link
-            href="tel:17027663299"
+            href="tel:+17027663299"
             className="flex flex-col items-center rounded-2xl bg-white/10 p-6 text-center transition-colors hover:bg-white/20"
           >
             <span className="text-3xl mb-3">📞</span>

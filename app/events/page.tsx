@@ -444,7 +444,7 @@ function ContactSection() {
         </h2>
         <p className="text-base leading-relaxed text-muted-foreground">
           Many event guests become interested in Spanish Trail homes after experiencing the community. Call{' '}
-          <Link href="tel:17027663299" className="text-primary underline-offset-4 hover:underline">
+          <Link href="tel:+17027663299" className="text-primary underline-offset-4 hover:underline">
             (702) 766-3299
           </Link>{' '}
           or use the calendar below to schedule a home tour.

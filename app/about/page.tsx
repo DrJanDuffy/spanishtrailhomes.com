@@ -66,7 +66,7 @@ const aboutPersonSchema = {
   url: pageUrl,
   image: 'https://www.spanishtrailhomes.com/images/janet-duffy.jpg',
   jobTitle: 'REALTOR® | Berkshire Hathaway HomeServices Nevada Properties',
-  email: 'mailto:DrDuffySells@SpanishTrailHomes.com',
+  email: 'DrDuffySells@SpanishTrailHomes.com',
   telephone: '+1-702-766-3299',
   areaServed: [
     'Spanish Trail, Las Vegas, Nevada',
@@ -89,7 +89,7 @@ const aboutPersonSchema = {
   sameAs: [
     'https://www.facebook.com/spanishtrailhomes',
     'https://www.instagram.com/spanishtrailhomes',
-    'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true',
+    'https://www.linkedin.com/company/spanishtrailhomes',
   ],
 }
 
@@ -362,6 +362,9 @@ function CredentialsSection() {
             </li>
           ))}
         </ul>
+        <p className="text-xs uppercase tracking-[0.3em] text-[#6f5237]">
+          Veteran-Owned Business · Dr. Duffy is proud to serve Spanish Trail as a veteran-owned enterprise.
+        </p>
       </div>
     </section>
   )

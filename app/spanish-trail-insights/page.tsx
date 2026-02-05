@@ -111,7 +111,7 @@ export default function SpanishTrailInsightsPage() {
     <SiteShell>
       <header className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="insights-hero">
         <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-          <h1 id="insights-hero" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+          <h1 id="insights-hero" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
             Spanish Trail Insights & Advisory
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
@@ -179,7 +179,7 @@ function InsightBriefingsSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Deep Dive Briefings</p>
           <h2
             id="insight-briefings-heading"
-            className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
           >
             Guides for buyers, sellers, and investors
           </h2>
@@ -219,7 +219,7 @@ function NeighborhoodSpotlightSection() {
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Neighborhood Playbook</p>
             <h2
               id="insight-neighborhoods-heading"
-              className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+              className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
             >
               Compare every Spanish Trail enclave
             </h2>
@@ -262,7 +262,7 @@ function AdvisoryServicesSection() {
           <p className="text-xs uppercase tracking-[0.5em] text-secondary">Advisory Services</p>
           <h2
             id="advisory-services-heading"
-            className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl"
+            className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl"
           >
             Concierge support from offer to ownership
           </h2>
@@ -292,7 +292,7 @@ function InsightsFAQSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Spanish Trail Insights FAQ</p>
-          <h2 id="insights-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="insights-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Frequently asked questions about Spanish Trail insights
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -319,7 +319,7 @@ function InsightsCTASection() {
   return (
     <section className="bg-[#0f2b1e] py-20 text-[#f8f5ef]" aria-labelledby="insights-cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h2 id="insights-cta-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h2 id="insights-cta-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Ready to apply these insights to your move?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">

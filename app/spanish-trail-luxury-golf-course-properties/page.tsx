@@ -8,6 +8,7 @@ import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
@@ -71,7 +72,7 @@ const faqContent = [
   {
     question: 'How competitive is the luxury segment right now?',
     answer:
-      'As of November 2025, luxury golf homes ($1.5M+) are averaging 43 days on market with negotiations tightening around 3% below list price. Properties above $2.5M with full renovations and furnished packages often attract cash buyers. I monitor every showing note and agent preview so my clients move quickly without overpaying.',
+      `As of ${marketStats.date_label}, luxury golf homes ($1.5M+) are averaging ${marketStats.avg_days_on_market} days on market with negotiations tightening around 3% below list price. Properties above $2.5M with full renovations and furnished packages often attract cash buyers. I monitor every showing note and agent preview so my clients move quickly without overpaying.`,
   },
 ]
 
@@ -159,7 +160,7 @@ function MarketSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="luxury-market-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="luxury-market-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Current luxury golf market intelligence (November 2025)
+          Current luxury golf market intelligence ({marketStats.date_label})
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           I monitor every showing request, off-market whisper, and appraisal within Spanish Trail’s luxury tier. The snapshot below covers active listings above $1M, recently closed contracts, and inventory velocity by enclave so you know when to act decisively.
@@ -422,7 +423,7 @@ function LuxuryCTASection() {
           Let’s unlock your ideal Spanish Trail golf estate
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> for a bespoke preview list, drone footage, and membership introductions crafted for your timeline.
+          Call or text <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link> or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link> for a bespoke preview list, drone footage, and membership introductions crafted for your timeline.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

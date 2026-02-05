@@ -23,7 +23,7 @@ const recognitionTimeline = [
     year: '2024',
     title: 'Las Vegas REALTORS® Top 25 Luxury Producer',
     description:
-      'Recognized for multi-million dollar transactions concentrated in guard-gated golf communities across 89117 and Summerlin South.',
+      'Recognized for multi-million dollar transactions concentrated in guard-gated golf communities across 89113 and Summerlin South.',
   },
   {
     year: '2023',
@@ -131,7 +131,7 @@ const professionalProfileSchema = {
     '@type': 'PostalAddress',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
-    postalCode: '89117',
+    postalCode: '89113',
     addressCountry: 'US',
   },
   image: 'https://www.spanishtrailhomes.com/images/janet-duffy.jpg',

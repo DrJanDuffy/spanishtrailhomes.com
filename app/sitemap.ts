@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { getNeighborhoodSlugs } from '@/lib/neighborhoods'
 
 const baseUrl = 'https://www.spanishtrailhomes.com'
 
@@ -24,6 +25,8 @@ const routeConfig: Array<{
   { path: '/events', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/membership', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/guest-info', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/relocation', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/neighborhoods', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/spanish-trail-lifestyle', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/spanish-trail-schools', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/spanish-trail-tennis', priority: 0.8, changeFrequency: 'monthly' },
@@ -50,6 +53,7 @@ const routeConfig: Array<{
   
   // About and contact - medium-high priority
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/media-kit', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/find-our-locations', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/google-business-profile', priority: 0.8, changeFrequency: 'monthly' },
@@ -86,10 +90,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return date
   }
 
-  return routeConfig.map(({ path, priority, changeFrequency }) => ({
+  const staticEntries = routeConfig.map(({ path, priority, changeFrequency }) => ({
     url: `${baseUrl}${path === '/' ? '' : path}`,
     lastModified: getLastModified(path, changeFrequency),
     changeFrequency,
     priority,
   }))
+
+  const neighborhoodEntries: MetadataRoute.Sitemap = getNeighborhoodSlugs().map((slug) => {
+    const path = `/neighborhoods/${slug}`
+    return {
+      url: `${baseUrl}${path}`,
+      lastModified: getLastModified(path, 'monthly'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }
+  })
+
+  return [...staticEntries, ...neighborhoodEntries]
 }

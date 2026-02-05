@@ -21,11 +21,35 @@ export const neighborhoodSpotlights = [
   },
 ]
 
+import { marketStats, formatMedianPrice } from './marketStats'
+
+export const marketStatsExport = marketStats
+
 export const marketHighlights = [
-  { label: 'Total Listings', value: '74 Active', trend: '+', context: 'Across single-family, condo, and townhome offerings.' },
-  { label: 'Average List Price', value: '$682K', trend: '-22.15%', context: 'Month-over-month change across current inventory.' },
-  { label: 'Average Sold Price', value: '$651K', trend: '-23.92%', context: 'Latest 30-day closed sale average.' },
-  { label: 'Average Days on Market', value: '60 Days', trend: '-', context: 'Balanced pace with luxury buyer activity.' },
+  {
+    label: 'Total Listings',
+    value: `${marketStats.active_listings} Active`,
+    trend: '+',
+    context: 'Across single-family, condo, and townhome offerings.',
+  },
+  {
+    label: 'Median Price',
+    value: formatMedianPrice(marketStats.median_price),
+    trend: '-',
+    context: 'Spanish Trail guard-gated community.',
+  },
+  {
+    label: 'Price Per Sq Ft',
+    value: `$${marketStats.price_per_sqft}`,
+    trend: '-',
+    context: 'Neighborhood-level data within the gates.',
+  },
+  {
+    label: 'Average Days on Market',
+    value: `${marketStats.avg_days_on_market} Days`,
+    trend: '-',
+    context: 'Balanced pace with luxury buyer activity.',
+  },
 ]
 
 export const featuredListings = [

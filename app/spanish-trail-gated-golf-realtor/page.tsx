@@ -397,7 +397,7 @@ function ConnectSection() {
           Let’s plan your Spanish Trail move
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Call or text <Link href="tel:17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll customize your search, deliver vetted listings, and coordinate introductions behind the guard gates.
+          Call or text <Link href="tel:+17027663299" className="underline-offset-4 hover:underline">(702) 766-3299</Link>, or email <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. I’ll customize your search, deliver vetted listings, and coordinate introductions behind the guard gates.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

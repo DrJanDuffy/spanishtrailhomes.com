@@ -9,6 +9,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
@@ -62,7 +63,7 @@ const faqContent = [
   {
     question: 'How much do Spanish Trail homes cost right now?',
     answer:
-      'As of November 2025, the median Spanish Trail home value is $812,500 with an average price-per-square-foot of $355. Villas and townhomes close between $835K and $1.1M, golf course homes typically secure $1.2M–$1.5M, and custom estates stretch beyond $2M. Ask me for a tailored report for your timeline—call or text (702) 766-3299.',
+      `As of ${marketStats.date_label}, the median Spanish Trail home value is ${formatMedianPrice(marketStats.median_price)} with an average price-per-square-foot of $${marketStats.price_per_sqft}. Villas and townhomes close between $835K and $1.1M, golf course homes typically secure $1.2M–$1.5M, and custom estates stretch beyond $2M. Ask me for a tailored report for your timeline—call or text (702) 766-3299.`,
   },
   {
     question: 'How quickly are Spanish Trail homes selling?',
@@ -135,7 +136,7 @@ function HeroSection() {
           Spanish Trail Homes for Sale in Las Vegas
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          November 2025 keeps Spanish Trail in the spotlight: median value $812,500, average $355 per square foot, and 68 active listings across the 11 guard-gated neighborhoods. Well-positioned homes with refreshed interiors and golf course views continue to attract strong offers—proof that Spanish Trail remains a premium destination for discerning buyers.
+          {marketStats.date_label} keeps Spanish Trail in the spotlight: median value {formatMedianPrice(marketStats.median_price)}, average {`$${marketStats.price_per_sqft}`} per square foot, and {marketStats.active_listings} active listings across the 11 guard-gated neighborhoods. Well-positioned homes with refreshed interiors and golf course views continue to attract strong offers—proof that Spanish Trail remains a premium destination for discerning buyers.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
@@ -160,17 +161,17 @@ function MarketOverviewSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="market-overview-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="market-overview-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Current Spanish Trail market snapshot (November 2025)
+          Current Spanish Trail market snapshot ({marketStats.date_label})
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
           I refresh these numbers every Friday. Beyond the MLS data you see below, I track private showings, price reductions, and club chatter so you know whether to negotiate or lean in with a strong first offer.
         </p>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-4">
           {[
-            { label: 'Median price', value: '$812,500' },
-            { label: 'Average price / sq. ft.', value: '$355' },
-            { label: 'Active listings', value: '68' },
-            { label: 'Average DOM', value: '27 days' },
+            { label: 'Median price', value: formatMedianPrice(marketStats.median_price) },
+            { label: 'Price / sq. ft.', value: `$${marketStats.price_per_sqft}` },
+            { label: 'Active listings', value: String(marketStats.active_listings) },
+            { label: 'Average DOM', value: `${marketStats.avg_days_on_market} days` },
           ].map((stat) => (
             <div key={stat.label} className="rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 shadow-lg shadow-primary/10">
               <p className="text-xs uppercase tracking-[0.35em] text-[#6f5237]">{stat.label}</p>

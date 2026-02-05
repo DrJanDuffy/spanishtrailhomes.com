@@ -9,6 +9,7 @@ import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/buyers'
 const buyersPageDescription =
@@ -37,7 +38,7 @@ const faqContent = [
   {
     question: 'How competitive is the Spanish Trail home market right now?',
     answer:
-      'Spanish Trail listings averaged 24 days on market as of November 2025, with golf-course homes receiving offers in as little as eight days. I monitor active, pending, and private listings daily so we can anticipate new releases, price adjustments, and seller motivations before they reach wider circulation.',
+      `Spanish Trail listings averaged ${marketStats.avg_days_on_market} days on market as of ${marketStats.date_label}, with golf-course homes receiving offers in as little as eight days. I monitor active, pending, and private listings daily so we can anticipate new releases, price adjustments, and seller motivations before they reach wider circulation.`,
   },
   {
     question: 'Can I tour Spanish Trail if I am not yet a club member?',
@@ -159,7 +160,7 @@ function HeroSection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="buyers-hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h1 id="buyers-hero-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h1 id="buyers-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Your Spanish Trail Buyer Roadmap Starts Here
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
@@ -198,7 +199,7 @@ function BuyerJourneySection() {
       <div className="mx-auto max-w-6xl space-y-8 px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.35em] text-[#6f5237]">Spanish Trail Buyer Services</p>
-          <h2 id="buyer-journey-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="buyer-journey-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             A concierge buying experience tailored to your lifestyle goals
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -241,7 +242,7 @@ function MarketIntelligenceSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="market-intel-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="market-intel-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="market-intel-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Real-time market intelligence for savvy Spanish Trail buyers
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -252,7 +253,7 @@ function MarketIntelligenceSection() {
             <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">What I&apos;m watching this quarter</h3>
             <ul className="space-y-3">
               <li>
-                • Median sale price across all enclaves sits at $812,500 as of November 2025, reflecting strong demand as cash buyers return from Southern California and Arizona.
+                • Median sale price across all enclaves sits at {formatMedianPrice(marketStats.median_price)} as of {marketStats.date_label}, reflecting strong demand as cash buyers return from Southern California and Arizona.
               </li>
               <li>
                 • Homes with Strip panorama or golf trifecta views see 1.4 showings per day during launch week—timing your offer within the first 72 hours matters.
@@ -281,7 +282,7 @@ function PropertyPathwaysSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="property-pathways-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="property-pathways-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="property-pathways-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Choose your Spanish Trail property pathway
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -334,7 +335,7 @@ function ConciergePreparationSection() {
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="concierge-prep-heading">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-[1.1fr_1fr]">
         <div className="space-y-6">
-          <h2 id="concierge-prep-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="concierge-prep-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Concierge-level preparation from discovery to keys
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -374,7 +375,7 @@ function FinancingStrategySection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="financing-strategy-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="financing-strategy-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="financing-strategy-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Financing and negotiation strategies crafted for guard-gated success
         </h2>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -406,7 +407,7 @@ function TourExperienceSection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="tour-experience-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="tour-experience-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h2 id="tour-experience-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Tour Spanish Trail like an insider
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -445,7 +446,7 @@ function OfferAndClosingSection() {
   return (
     <section className="bg-white py-16 sm:py-20" aria-labelledby="offer-closing-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="offer-closing-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="offer-closing-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Seamless offers, inspections, and closings
         </h2>
         <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -484,7 +485,7 @@ function FAQSection() {
   return (
     <section className="bg-[#f8f2e7] py-16 sm:py-20" aria-labelledby="buyers-faq-heading">
       <div className="mx-auto max-w-6xl space-y-6 px-6">
-        <h2 id="buyers-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+        <h2 id="buyers-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
           Spanish Trail buyer FAQs
         </h2>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -504,7 +505,7 @@ function BuyerCTASection() {
   return (
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="buyers-cta-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
-        <h2 id="buyers-cta-heading" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+        <h2 id="buyers-cta-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
           Ready to tour Spanish Trail?
         </h2>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
@@ -536,4 +537,3 @@ function BuyerCTASection() {
     </section>
   )
 }
-

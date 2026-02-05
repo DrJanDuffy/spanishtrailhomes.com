@@ -19,7 +19,7 @@ import { TourCTAStrip } from '@/components/tour-cta-strip'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
-  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89117.'
+  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89113.'
 
 const homeWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Homes for Sale | Dr. Jan Duffy',
@@ -93,6 +93,12 @@ const overviewStats = [
     description:
       'Townhomes, villas, and custom estates—some with secondary gates for added privacy and exclusivity.',
   },
+  {
+    label: 'Homes',
+    value: '1,200+',
+    description:
+      'Diverse inventory across all 11 neighborhoods, from lock-and-leave villas to custom golf-course estates.',
+  },
 ]
 
 
@@ -120,7 +126,7 @@ const homeFaq = [
   {
     question: 'How can sellers maximize exposure for Spanish Trail listings?',
     answer:
-      'Sellers working with Dr. Duffy benefit from multi-layered marketing: Berkshire Hathaway HomeServices global syndication, hyperlocal campaigns targeting 89117 and Summerlin move-up buyers, and private preview events for Dr. Duffy’s concierge clients. In addition, she deploys analytics-driven pricing models and property-specific landing pages to capture leads around the clock—essential for Spanish Trail homes where discerning buyers often preview online before booking a showing.',
+      'Sellers working with Dr. Duffy benefit from multi-layered marketing: Berkshire Hathaway HomeServices global syndication, hyperlocal campaigns targeting 89113 and Summerlin move-up buyers, and private preview events for Dr. Duffy’s concierge clients. In addition, she deploys analytics-driven pricing models and property-specific landing pages to capture leads around the clock—essential for Spanish Trail homes where discerning buyers often preview online before booking a showing.',
   },
 ]
 
@@ -188,7 +194,7 @@ export default function HomePage() {
         <RealScoutSection
         id="bhhs-listings"
         title="Berkshire Hathaway Listings in Spanish Trail"
-        description="Curated inventory between $500K and $600K inside the 89117 guard gates. For estate homes, secondary-gated enclaves, or off-market tours—schedule a showing with Dr. Jan Duffy."
+        description="Curated inventory between $500K and $600K inside the 89113 guard gates. For estate homes, secondary-gated enclaves, or off-market tours—schedule a showing with Dr. Jan Duffy."
         priceMin="500000"
         priceMax="600000"
       />
@@ -228,7 +234,7 @@ function HeroSection() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1474926143295-7f42d6764bed?q=80&auto=format&fit=crop&w=2000"
-        alt="Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89117"
+        alt="Spanish Trail Country Club guard-gated luxury homes and golf course in Las Vegas 89113"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/55 to-[#0f2b1e]/80"
         priority
         sizes="(max-width: 1024px) 100vw, 1280px"
@@ -241,7 +247,7 @@ function HeroSection() {
             Berkshire Hathaway HomeServices Presents
           </p>
           <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
-            Spanish Trail Homes in Las Vegas 89117
+            Spanish Trail Homes in Las Vegas 89113
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
             Guard-gated golf community homes for sale west of the Las Vegas Strip with direct access to Tropicana Avenue, Rainbow Boulevard, and Spring Valley conveniences. Track new Spanish Trail golf course homes, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy.
@@ -294,7 +300,7 @@ function IntroSection() {
           <dl className="grid grid-cols-1 gap-4 text-sm text-muted-foreground">
             <div>
               <dt className="font-semibold text-foreground">Location</dt>
-              <dd>Spanish Trail, 89117 · Tropicana Ave. & Rainbow Blvd.</dd>
+              <dd>Spanish Trail, 89113 · Tropicana Ave. & Rainbow Blvd.</dd>
             </div>
             <div>
               <dt className="font-semibold text-foreground">Gate Access</dt>
@@ -325,7 +331,7 @@ function IntroSection() {
 function StatsSection() {
   return (
     <section className="border-y border-[#0b2016] bg-[#0f2b1e]" aria-label="Community highlights">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-20 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 py-20 md:grid-cols-2 lg:grid-cols-4">
         {overviewStats.map((item) => (
           <div
             key={item.label}
@@ -433,7 +439,7 @@ function MarketPreviewSection() {
 const insightHighlights = [
   'Quarterly Spanish Trail housing update and pricing intel',
   'Lifestyle briefings that showcase how residents use club amenities',
-  'Renovation, financing, and advisory guidance tailored to 89117',
+  'Renovation, financing, and advisory guidance tailored to 89113',
 ]
 
 function InsightsPreviewSection() {
@@ -497,7 +503,7 @@ const exploreCards = [
   },
   {
     title: 'Spanish Trail Homes for Sale',
-    description: 'Browse current listings of luxury guard-gated golf course homes for sale in Las Vegas 89117.',
+    description: 'Browse current listings of luxury guard-gated golf course homes for sale in Las Vegas 89113.',
     href: '/spanish-trail-homes-for-sale-las-vegas',
   },
   {
@@ -613,7 +619,7 @@ function FAQSection() {
             variant="outline"
             className="rounded-full border-[#0f2b1e]/60 px-6 py-2 text-sm font-medium text-[#0f2b1e] hover:bg-[#0f2b1e]/10"
           >
-            <TrackedSmsLink intent="question" href="sms:7027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
+            <TrackedSmsLink intent="question" href="sms:+17027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
               Text Your Question: 702-766-3299
             </TrackedSmsLink>
           </Button>
@@ -653,7 +659,7 @@ function CTASection() {
             variant="outline"
             className="rounded-full border-[#f8f5ef]/70 bg-transparent px-6 py-2 text-sm font-medium text-[#f8f5ef] hover:bg-white/10"
           >
-            <TrackedSmsLink intent="question" href="sms:7027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
+            <TrackedSmsLink intent="question" href="sms:+17027663299?body=I%20have%20a%20question%20about%20Spanish%20Trail%20homes" className="inline-flex items-center" aria-label="Text your question to 702-766-3299">
               Text Your Question: 702-766-3299
             </TrackedSmsLink>
           </Button>

@@ -123,7 +123,7 @@ export default function SpanishTrailMarketReportPage() {
     <SiteShell>
       <header className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="market-report-hero">
         <div className="mx-auto max-w-4xl space-y-5 px-6 text-center">
-          <h1 id="market-report-hero" className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl">
+          <h1 id="market-report-hero" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
             Spanish Trail Market Report
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
@@ -193,7 +193,7 @@ function MarketHighlightsSection() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-4">
             <p className="text-xs uppercase tracking-[0.5em] text-secondary">Market Indicators</p>
-            <h2 id="market-highlights-heading" className="font-(--font-playfair) text-3xl text-foreground sm:text-4xl">
+            <h2 id="market-highlights-heading" className="font-[var(--font-playfair)] text-3xl text-foreground sm:text-4xl">
               Key metrics driving Spanish Trail decisions
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -216,7 +216,7 @@ function MarketHighlightsSection() {
               className="rounded-3xl border border-border/40 bg-white p-6 shadow-lg shadow-primary/10"
             >
               <p className="text-xs uppercase tracking-[0.4em] text-secondary">{item.label}</p>
-              <p className="mt-3 font-(--font-playfair) text-2xl text-[#1f2a24]">{item.value}</p>
+              <p className="mt-3 font-[var(--font-playfair)] text-2xl text-[#1f2a24]">{item.value}</p>
               <p className="mt-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">{item.trend} change</p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.context}</p>
             </article>
@@ -240,7 +240,7 @@ function FeaturedListingsSection() {
             <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Featured Inventory</p>
             <h2
               id="featured-listings-heading"
-              className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl"
+              className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl"
             >
               Spotlight Spanish Trail listings
             </h2>
@@ -266,7 +266,7 @@ function FeaturedListingsSection() {
             >
               <div className="space-y-3">
                 <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">{listing.mls}</p>
-                <h3 className="font-(--font-playfair) text-2xl text-[#1f2a24]">
+                <h3 className="font-[var(--font-playfair)] text-2xl text-[#1f2a24]">
                   {listing.address}
                 </h3>
                 <p className="text-sm text-[#372a20]/80">{listing.type}</p>
@@ -297,7 +297,7 @@ function MarketReportFAQSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl space-y-4">
           <p className="text-xs uppercase tracking-[0.5em] text-[#6f5237]">Market Report FAQ</p>
-          <h2 id="market-report-faq-heading" className="font-(--font-playfair) text-3xl text-[#1f2a24] sm:text-4xl">
+          <h2 id="market-report-faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
             Frequently asked questions about Spanish Trail market data
           </h2>
           <p className="text-base leading-relaxed text-[#372a20]/85">
@@ -326,7 +326,7 @@ function ReportingCTASection() {
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h2
           id="reporting-cta-heading"
-          className="font-(--font-playfair) text-3xl leading-tight sm:text-4xl"
+          className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl"
         >
           Need a custom valuation or pricing strategy?
         </h2>

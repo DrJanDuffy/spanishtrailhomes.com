@@ -59,7 +59,7 @@ export function SiteFooter() {
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/spanishtrailhomes', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/spanishtrailhomes', label: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/spanish-trail-homes/?viewAsMember=true', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/spanishtrailhomes', label: 'LinkedIn' },
     { icon: Youtube, href: 'https://www.youtube.com/@spanishtrailhomes', label: 'YouTube' },
   ]
 
@@ -68,9 +68,10 @@ export function SiteFooter() {
       <div className="border-b border-[#be9956]/40 bg-[#3e3028]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 md:flex-row md:items-center md:justify-between safe-area-padding">
           <div className="space-y-2 text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em]">
+            <p className="font-semibold text-[#f8f5ef]">Spanish Trail | Homes By Dr. Jan Duffy</p>
             <p className="text-[#cbb8a6]">Berkshire Hathaway HomeServices Nevada Properties</p>
             <p>Dr. Jan Duffy · Luxury Real Estate Advisor</p>
-            <Link href="tel:17027663299" className="touch-target inline-flex min-h-[44px] items-center hover:text-[#be9956] hover:underline" onClick={() => trackPhoneClick('footer')}>
+            <Link href="tel:+17027663299" className="touch-target inline-flex min-h-[44px] items-center hover:text-[#be9956] hover:underline" onClick={() => trackPhoneClick('footer')}>
               (702) 766-3299 · DrDuffySells@SpanishTrailHomes.com
             </Link>
           </div>
@@ -96,6 +97,9 @@ export function SiteFooter() {
           </p>
           <p className="font-[var(--font-playfair)] text-lg tracking-[0.06em] sm:text-xl sm:tracking-[0.08em]">
             5050 Spanish Trail Ln<br />Las Vegas, NV 89113
+          </p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#be9956]">
+            Veteran-Owned Business
           </p>
           <p className="text-sm leading-relaxed text-[#efe5d8]">
             Guard-gated golf living minutes from the Strip.

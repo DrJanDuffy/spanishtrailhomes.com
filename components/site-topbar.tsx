@@ -7,9 +7,7 @@ export function SiteTopBar() {
   return (
     <div className="flex items-center justify-between border-b border-border/60 bg-primary px-4 py-2 text-primary-foreground sm:px-6 safe-area-padding">
       <div className="flex min-w-0 flex-1 items-center gap-2 truncate text-[0.65rem] uppercase tracking-[0.3em] sm:text-xs sm:tracking-[0.4em]">
-        <span className="truncate">Est. 1984</span>
-        <span className="hidden h-3 w-px shrink-0 bg-primary-foreground/40 sm:block" aria-hidden />
-        <span className="truncate">Private • Member-Owned</span>
+        <span className="truncate">Call for a quick quote</span>
       </div>
       <div className="flex shrink-0 items-center gap-2">
         <Link

@@ -11,7 +11,7 @@ type HeroSearchWidgetProps = {
 export function HeroSearchWidget({ theme = 'dark', className }: HeroSearchWidgetProps) {
   const cardStyles =
     theme === 'dark'
-      ? 'border-white/15 bg-white/95 shadow-xl shadow-black/20'
+      ? 'border-2 border-white/35 bg-white shadow-xl shadow-black/25 ring-1 ring-black/10'
       : 'border-[#d8cdbf] bg-[#fdf9f3] shadow-lg shadow-primary/10'
 
   return (

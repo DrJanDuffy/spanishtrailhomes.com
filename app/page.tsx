@@ -241,28 +241,35 @@ function HeroSection() {
       />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-linear-to-t from-background to-transparent sm:h-36" />
 
-      <div className="mx-auto flex min-h-0 max-w-6xl flex-col gap-6 px-4 pb-16 pt-14 text-primary-foreground sm:gap-8 sm:px-6 sm:pb-20 sm:pt-16 lg:gap-10 lg:pb-24 lg:pt-20">
+      <div className="mx-auto flex min-h-0 max-w-6xl flex-col gap-6 px-4 pb-16 pt-14 sm:gap-8 sm:px-6 sm:pb-20 sm:pt-16 lg:gap-10 lg:pb-24 lg:pt-20">
         <div className="max-w-3xl space-y-4 sm:space-y-5">
-          <h1 id="hero-heading" className="font-heading text-3xl font-semibold leading-tight tracking-[0.06em] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl xl:text-6xl">
+          <h1
+            id="hero-heading"
+            className="font-heading text-3xl font-semibold leading-tight tracking-[0.06em] text-white [text-shadow:0_1px_3px_rgb(0_0_0/35%)] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl xl:text-6xl"
+          >
             Spanish Trail Homes for Sale Las Vegas
           </h1>
-          <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
+          <p className="text-base font-medium leading-relaxed text-white/95 sm:text-lg sm:leading-relaxed [text-shadow:0_1px_2px_rgb(0_0_0/25%)]">
             From search to keys, we help you find guard-gated golf community homes for sale in Spanish Trail—luxury, functionality, and the unique beauty of the Las Vegas landscape. Track new listings, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-          <PropertyLightboxTrigger openFrom="hero" variant="primary" className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em] shadow-md shadow-primary/25" />
+          <PropertyLightboxTrigger
+            openFrom="hero"
+            variant="primary"
+            className="min-h-11 rounded-full px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] shadow-md shadow-black/20 sm:min-h-12 sm:tracking-[0.4em]"
+          />
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-white/40 bg-background/95 px-6 py-2 text-xs uppercase tracking-[0.4em] text-primary-foreground shadow-md shadow-primary/10 hover:bg-white/20"
+            className="min-h-11 rounded-full border-2 border-white bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.35em] text-[#0f2b1e] shadow-md shadow-black/15 hover:border-white hover:bg-[#eef2ef] hover:text-[#081810] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f2b1e] sm:min-h-12 sm:tracking-[0.4em]"
           >
             <Link href="#bhhs-listings">See What’s New</Link>
           </Button>
           <Button
             asChild
             variant="outline"
-            className="rounded-full border-white/40 bg-background/95 px-6 py-2 text-xs uppercase tracking-[0.4em] text-primary-foreground shadow-md shadow-primary/10 hover:bg-white/20"
+            className="min-h-11 rounded-full border-2 border-white bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.35em] text-[#0f2b1e] shadow-md shadow-black/15 hover:border-white hover:bg-[#eef2ef] hover:text-[#081810] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f2b1e] sm:min-h-12 sm:tracking-[0.4em]"
           >
             <Link href="/neighborhoods">Explore Neighborhoods</Link>
           </Button>

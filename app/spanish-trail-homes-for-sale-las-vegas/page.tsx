@@ -134,17 +134,21 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h1 id="hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Live Spanish Trail Listings, Market Snapshots & Private Tours
+          Spanish Trail MLS Listings & Market Hub — Las Vegas 89113
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          This hub is built for buyers who want{' '}
-          <strong className="font-semibold text-[#f8f5ef]">current Las Vegas 89113 inventory</strong>, weekly absorption context, and concierge showings—not a generic community overview. As of {marketStats.date_label}: median value {formatMedianPrice(marketStats.median_price)}, {`$${marketStats.price_per_sqft}`}/sq. ft., and {marketStats.active_listings} active listings across all 11 guard-gated neighborhoods. For property styles, square-footage bands, and neighborhood character, see the{' '}
+          This hub is for buyers who want{' '}
+          <strong className="font-semibold text-[#f8f5ef]">live MLS inventory in zip 89113</strong>, weekly absorption context, listing alerts, and concierge showings. As of {marketStats.date_label}: median value {formatMedianPrice(marketStats.median_price)}, {`$${marketStats.price_per_sqft}`}/sq. ft., and {marketStats.active_listings} active listings across all 11 guard-gated neighborhoods. For community lifestyle and club context, start at the{' '}
+          <Link href="/communities/spanish-trail" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+            Spanish Trail community overview
+          </Link>
+          . For property styles and enclave-by-enclave education (before you tour), use the{' '}
           <Link href="/homes-for-sale-in-spanish-trail-las-vegas" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
-            Spanish Trail property-type buyer guide
+            property-type buyer guide
           </Link>{' '}
           or browse{' '}
           <Link href="/neighborhoods" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
-            every Spanish Trail neighborhood
+            all Spanish Trail neighborhoods
           </Link>
           .
         </p>

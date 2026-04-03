@@ -150,6 +150,35 @@ export default function RelocationPage() {
           </p>
         </section>
 
+        <section className="mt-12 max-w-none" aria-labelledby="valley-comparison-heading">
+          <h2 id="valley-comparison-heading" className="font-playfair text-2xl font-semibold text-[#0f2b1e]">
+            Comparing Spanish Trail with other Las Vegas areas
+          </h2>
+          <p className="mt-4 text-[#0f2b1e]/90 leading-relaxed">
+            Dr. Jan Duffy&apos;s practice is centered on <strong>Spanish Trail</strong> (Las Vegas, NV 89113)—the guard-gated
+            golf community where she provides neighborhood-level pricing context and day-to-day transaction coordination.
+            Many relocation and move-up buyers also tour or research{' '}
+            <strong>Summerlin West</strong>, <strong>Skye Canyon</strong>, <strong>Centennial Hills</strong>,{' '}
+            <strong>Henderson</strong>, <strong>North Las Vegas</strong>, and luxury enclaves such as{' '}
+            <strong>The Ridges</strong>, <strong>Red Rock Country Club</strong>, and active-adult communities like{' '}
+            <strong>Sun City Summerlin</strong>, <strong>Del Webb</strong>, and <strong>Heritage at Stonebridge</strong>.
+            This site does <strong>not</strong> list separate offices in those areas; instead, you get honest comparison
+            education, coordination through the Berkshire Hathaway HomeServices Nevada Properties network, and referrals
+            when another specialist is the better fit.{' '}
+            <Link href="/contact" className="text-[#0f2b1e] underline underline-offset-4 hover:no-underline">
+              Contact the office
+            </Link>{' '}
+            to plan tours and next steps. For side-by-side luxury context, start with{' '}
+            <Link
+              href="/las-vegas-luxury-neighborhoods"
+              className="text-[#0f2b1e] underline underline-offset-4 hover:no-underline"
+            >
+              Las Vegas luxury neighborhood comparisons
+            </Link>
+            .
+          </p>
+        </section>
+
         <section className="mt-12 rounded-2xl border border-[#0f2b1e]/20 bg-[#f8f5ef] p-6 sm:p-8" aria-labelledby="relocation-cta">
           <h2 id="relocation-cta" className="font-playfair text-xl font-semibold text-[#0f2b1e]">
             Start Your Relocation Conversation

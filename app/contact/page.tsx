@@ -19,7 +19,7 @@ import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
 const contactPageDescription =
-  `Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy—30+ years, 500+ families. Golf community, custom estates, gated security. ${formatMedianPrice(marketStats.median_price)} median. Call/text (702) 766-3299.`
+  `Spanish Trail luxury homes in Las Vegas. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties—Spanish Trail specialist. Guard-gated golf community, custom estates & villas. Median ${formatMedianPrice(marketStats.median_price)} (${marketStats.date_label}). Call/text (702) 766-3299.`
 
 const contactWebPageSchema = createWebPageSchema({
   name: 'Spanish Trail Las Vegas Real Estate Expert | Dr. Jan Duffy',
@@ -76,38 +76,52 @@ export const metadata: Metadata = {
   },
 }
 
+/** Contact-only FAQs (pricing, investment, and neighborhood lists live on listing/guide hubs to avoid duplicate FAQPage signals). */
 const faqContent = [
   {
-    question: "What's the average price in Spanish Trail right now?",
+    question: 'How quickly can I schedule a consultation or private tour?',
     answer:
-      `Spanish Trail's median home value is ${formatMedianPrice(marketStats.median_price)} as of ${marketStats.date_label}. Custom estates range $2M+, golf course homes $1.2M-$1.5M+, and villas $835K-$1.1M. I can pull current comparables for your specific situation—call or text (702) 766-3299.`,
-  },
-  {
-    question: 'Is Spanish Trail a good investment?',
-    answer:
-      'The market remains strong and stable in 2026. Guard-gated security, championship golf course amenities, and proximity to the Strip (15 minutes) create consistent demand. I track weekly sales activity to ensure you get fair market value. Let\'s discuss your investment timeline.',
-  },
-  {
-    question: 'What neighborhoods are in Spanish Trail?',
-    answer:
-      "Spanish Trail has 11 sub-neighborhoods including Villas at Spanish Trail, Patios at Spanish Trail, and Estate homes behind secondary gates. Each has distinct character, price points, and HOA fees ($180-$425/month). Which lifestyle appeals to you?",
-  },
-  {
-    question: 'How quickly can I schedule a consultation with Dr. Jan Duffy?',
-    answer:
-      'Dr. Duffy maintains a 24-hour concierge response cadence. Typically, consultations can be scheduled within 48 hours, though same-day availability may be possible for urgent transactions. Contact via phone at (702) 766-3299 or email DrDuffySells@SpanishTrailHomes.com to coordinate a time that works with your schedule.',
+      'Dr. Duffy maintains a 24-hour response cadence. Consultations and tours are typically available within 48 hours; same-day showings may be possible when homes are accessible. Call or text (702) 766-3299 or email DrDuffySells@SpanishTrailHomes.com with your timeline.',
   },
   {
     question: 'What should I prepare for my first consultation?',
     answer:
-      'Bring your timeline, budget parameters, lifestyle priorities (golf, privacy, proximity to clubhouse), and any specific enclaves or home styles you\'re considering. Dr. Duffy will prepare current market data, comparable sales, and neighborhood insights tailored to your goals. This initial conversation helps refine your search strategy and identify the best opportunities.',
+      'Bring your timeline, budget parameters, lifestyle priorities (golf, privacy, proximity to clubhouse), and any specific enclaves or home styles you are considering. Dr. Duffy will prepare market context and next steps tailored to your goals.',
+  },
+  {
+    question: 'Where is the office, and how do parking and accessibility work?',
+    answer:
+      'Office: 5050 Spanish Trail Ln, Las Vegas, NV 89113 (Spanish Trail area, zip 89113). Wheelchair accessible entrance and parking are available—consistent with Google Business Profile. Use the map on this page or call (702) 766-3299 for directions.',
+  },
+  {
+    question: 'How do I reach Dr. Jan Duffy by phone, text, or email?',
+    answer:
+      'Phone or text (702) 766-3299; email DrDuffySells@SpanishTrailHomes.com. You can also book a tour or strategy session from the buttons above. For Google reviews and verified client feedback, use the link in the footer or on our Reviews page.',
+  },
+  {
+    question: 'Where can I read median prices, property types, and Spanish Trail neighborhood detail?',
+    answer:
+      'For live MLS search, listing alerts, and weekly stats, start at https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas. For property types, amenities, and the Las Vegas 89113 buyer guide, see https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas. All eleven enclaves are summarized at https://www.spanishtrailhomes.com/neighborhoods.',
   },
   {
     question: 'Does Dr. Duffy work with buyers and sellers outside of Spanish Trail?',
     answer:
-      'While Dr. Duffy specializes in Spanish Trail and maintains deep expertise in the guard-gated community, she also serves clients throughout southwest Las Vegas, including Summerlin, The Ridges, and other premier enclaves. Her Berkshire Hathaway HomeServices network provides comprehensive coverage across the Las Vegas Valley for relocation clients and those comparing multiple luxury communities.',
+      'Spanish Trail is the specialty and focus. For other Las Vegas Valley needs, Dr. Duffy coordinates through the Berkshire Hathaway HomeServices Nevada Properties network and referral relationships—ideal for relocation clients comparing multiple luxury communities.',
   },
 ]
+
+const contactFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqContent.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
 
 export default function ContactPage() {
   return (
@@ -139,6 +153,9 @@ export default function ContactPage() {
       <FAQSection />
       <Script id="contact-webpage-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(contactWebPageSchema)}
+      </Script>
+      <Script id="contact-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(contactFaqSchema)}
       </Script>
     </SiteShell>
   )
@@ -196,7 +213,7 @@ function ExpertiseSection() {
               I monitor every Spanish Trail closing the moment it records. Yesterday, 8330 Carmel Ridge Court—a 2,500 sq. ft. single-family home—closed at $1,095,000, roughly 8% above the community\'s median thanks to upgraded fairway views and a reimagined chef\'s kitchen.[source](https://searchforaffordablehomes.com/neighborhood/83/spanish-trails)
             </p>
             <p>
-              That real-time insight guides both sellers wanting a premium and buyers aiming to secure value without overextending. After 30 years representing 500+ Vegas families, I have walked every cul-de-sac inside the 640-acre guard gates and understand how HOA nuances, sightlines, and secondary gates impact pricing.
+              That real-time insight guides both sellers wanting a premium and buyers aiming to secure value without overextending. After decades focused on Spanish Trail—advising 500+ families across purchases, sales, and long-range planning—I have walked every cul-de-sac inside the 640-acre guard gates and understand how HOA nuances, sightlines, and secondary gates impact pricing.
             </p>
           </div>
           <div className="space-y-4 rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 shadow-lg shadow-primary/10 text-sm text-[#372a20]/80">
@@ -205,7 +222,7 @@ function ExpertiseSection() {
               <li>
                 License #S.0197614.LLC · Berkshire Hathaway HomeServices Nevada Properties
               </li>
-              <li>30+ years advising Spanish Trail owners · $127M+ lifetime volume</li>
+              <li>Decades advising Spanish Trail buyers and sellers · Weekly market tracking inside the gates</li>
               <li>Weekly Spanish Trail market tracking & private-network listing alerts</li>
               <li>
                 Google Business Profile reviews: <Link href="https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9" className="underline-offset-4 hover:underline">See verified client feedback</Link>

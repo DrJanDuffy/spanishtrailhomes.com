@@ -1,7 +1,18 @@
 /**
- * After material schema or metadata changes, spot-check in Google Rich Results Test:
- * https://www.spanishtrailhomes.com/, /contact, /spanish-trail-homes-for-sale-las-vegas, /homes-for-sale-in-spanish-trail-las-vegas, one /neighborhoods/* URL.
- * GSC: sitemap, URL Inspection, Enhancements. Monthly doc updates: https://support.google.com/webmasters/answer/6211428
+ * Post-deploy manual validation (not automated in CI):
+ *
+ * 1) Google Rich Results Test — https://search.google.com/test/rich-results — test live URLs:
+ *    - https://www.spanishtrailhomes.com/ (LocalBusiness + WebSite from root layout)
+ *    - https://www.spanishtrailhomes.com/contact (WebPage + FAQPage)
+ *    - https://www.spanishtrailhomes.com/relocation (FAQPage)
+ *    - https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas
+ *    - https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas
+ *    - one https://www.spanishtrailhomes.com/neighborhoods/* URL
+ *
+ * 2) Google Search Console (property must match www host): Sitemaps status, URL Inspection on / and /contact,
+ *    Page indexing for errors, Enhancements for structured-data warnings.
+ *
+ * 3) Monthly Search Central changelog: https://support.google.com/webmasters/answer/6211428
  */
 const siteUrl = 'https://www.spanishtrailhomes.com'
 

@@ -107,6 +107,15 @@ const structuredData = [
         value: 'Yes',
       },
     ],
+    identifier: {
+      '@type': 'PropertyValue',
+      name: 'Nevada real estate license',
+      value: 'S.0197614.LLC',
+    },
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Real Estate Services',

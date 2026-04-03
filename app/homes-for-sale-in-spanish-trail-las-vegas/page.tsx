@@ -167,13 +167,17 @@ function HeroSection() {
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-28 text-center sm:py-32">
         <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Spanish Trail Real Estate</p>
         <h1 id="hero-heading" className="font-heading text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Homes for Sale — Property Types & Neighborhood Guide (Las Vegas 89113)
+          Spanish Trail Homes for Sale: Property Types & Buyer Education (Las Vegas 89113)
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          Use this guide to understand villas, estates, fairway homes, and enclave-level differences before you shop. When you are ready for{' '}
-          <strong className="font-semibold text-[#f8f5ef]">live MLS inventory, weekly stats, and private tour logistics</strong>, open the{' '}
+          This page is a <strong className="font-semibold text-[#f8f5ef]">read-first guide</strong>—villas, estates, fairway homes, pools, and how the eleven enclaves differ—not the primary MLS search surface. When you are ready for{' '}
+          <strong className="font-semibold text-[#f8f5ef]">live listings, weekly stats, alerts, and tour coordination</strong>, use the{' '}
           <Link href="/spanish-trail-homes-for-sale-las-vegas" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
-            Spanish Trail listings and market snapshot hub
+            Spanish Trail MLS listings & market hub
+          </Link>
+          . For the full community story, see{' '}
+          <Link href="/communities/spanish-trail" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+            Spanish Trail community & club lifestyle
           </Link>
           . From roughly 2,024 sq. ft. villas to 19,000+ sq. ft. custom golf estates, Spanish Trail pairs mature landscaping with a 27-hole Robert Trent Jones Jr. course in Southwest Las Vegas.
         </p>
@@ -436,7 +440,7 @@ function BuyingProcessSection() {
           <div className="space-y-6">
             <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-[#6f5237]">Working with Dr. Jan Duffy</h3>
             <p className="text-base leading-relaxed text-[#372a20]/85">
-              When searching for homes for sale in Spanish Trail, Dr. Jan Duffy provides expert guidance throughout the entire buying process. With over 30 years of experience and 500+ Spanish Trail transactions, she offers insider knowledge about each neighborhood, pricing trends, and off-market opportunities.
+              When searching for homes for sale in Spanish Trail, Dr. Jan Duffy provides expert guidance throughout the entire buying process. With decades of experience focused on Spanish Trail and 500+ families advised in the community, she offers insider knowledge about each neighborhood, pricing trends, and off-market opportunities.
             </p>
             <p className="text-base leading-relaxed text-[#372a20]/85">
               Dr. Duffy coordinates private tours, guard gate access, <Link href="/membership" className="text-[#0f2b1e] underline-offset-4 hover:underline">club membership introductions</Link>, and provides comprehensive market analysis to ensure you make informed decisions when purchasing homes for sale in Spanish Trail.

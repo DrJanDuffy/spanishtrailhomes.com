@@ -152,9 +152,15 @@ export function SiteFooter() {
       <div className="border-t border-[#be9956]/30 bg-[#36271f]">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 text-sm leading-relaxed text-[#e5d7c8] sm:px-6 md:flex-row md:items-center md:justify-between md:py-8 safe-area-padding">
           <div className="space-y-3">
-            <p>Equal Housing Opportunity · Dr. Jan Duffy | Spanish Trail Homes REALTOR® S.0197614.LLC</p>
             <p>
-              © {new Date().getFullYear()} Spanish Trail Country Club. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service marks of HomeServices of America, Inc.® Equal Housing Opportunity.
+              Equal Housing Opportunity · Dr. Jan Duffy · Spanish Trail | Homes By Dr. Jan Duffy · REALTOR® S.0197614.LLC ·
+              Berkshire Hathaway HomeServices Nevada Properties
+            </p>
+            <p>
+              © {new Date().getFullYear()} Spanish Trail | Homes By Dr. Jan Duffy. This site is operated by Dr. Jan Duffy
+              and Berkshire Hathaway HomeServices Nevada Properties; it is not the official website of Spanish Trail Country
+              Club. Berkshire Hathaway HomeServices and the Berkshire Hathaway HomeServices symbol are registered service
+              marks of HomeServices of America, Inc.® Equal Housing Opportunity.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.3em] sm:gap-3 sm:tracking-[0.35em] md:text-sm">

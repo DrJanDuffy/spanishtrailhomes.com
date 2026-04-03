@@ -594,16 +594,16 @@ function CTASection() {
         </div>
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3 text-left">
           <div className="rounded-2xl bg-white/10 p-6 text-center">
-            <p className="font-[var(--font-playfair)] text-3xl">30+</p>
-            <p className="mt-1 text-sm text-white/70">Years of experience</p>
+            <p className="font-[var(--font-playfair)] text-3xl">Decades</p>
+            <p className="mt-1 text-sm text-white/70">Las Vegas real estate experience</p>
           </div>
           <div className="rounded-2xl bg-white/10 p-6 text-center">
             <p className="font-[var(--font-playfair)] text-3xl">500+</p>
-            <p className="mt-1 text-sm text-white/70">Families served</p>
+            <p className="mt-1 text-sm text-white/70">Spanish Trail families advised</p>
           </div>
           <div className="rounded-2xl bg-white/10 p-6 text-center">
-            <p className="font-[var(--font-playfair)] text-3xl">$127M+</p>
-            <p className="mt-1 text-sm text-white/70">Lifetime volume</p>
+            <p className="font-[var(--font-playfair)] text-3xl">11</p>
+            <p className="mt-1 text-sm text-white/70">Neighborhoods inside the gates</p>
           </div>
         </div>
       </div>

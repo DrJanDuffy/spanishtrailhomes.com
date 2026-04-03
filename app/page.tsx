@@ -129,19 +129,6 @@ const homeFaq = [
   },
 ]
 
-const homeFaqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: homeFaq.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer,
-    },
-  })),
-}
-
 const homeResourceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -218,9 +205,6 @@ export default function HomePage() {
       </Script>
       <Script id="home-resource-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeResourceSchema)}
-      </Script>
-      <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(homeFaqSchema)}
       </Script>
     </SiteShell>
   )

@@ -9,7 +9,7 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/google-business-profile'
 const pageDescription =
-  'View Dr. Jan Duffy\'s verified Google Business Profile. Spanish Trail luxury real estate expert with 30+ years experience. See reviews, business hours, location, and connect directly via Google Search and Maps.'
+  'View Dr. Jan Duffy\'s verified Google Business Profile for Spanish Trail | Homes By Dr. Jan Duffy. See reviews, business hours, office location in Las Vegas (89113), and connect via Google Search and Maps.'
 
 const gbpShareLink = 'https://share.google/QY6rXDQvBRIfM0Xps'
 const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'

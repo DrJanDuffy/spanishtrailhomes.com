@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { structuredDataSiteUrl } from '@/lib/structuredData'
 import {
   trackTestimonialView,
   trackTestimonialNavigate,
@@ -65,6 +66,12 @@ const TESTIMONIALS = [
 ]
 
 const SWIPE_THRESHOLD = 50
+
+const realEstateAgentReviewed = {
+  '@type': 'RealEstateAgent' as const,
+  name: 'Spanish Trail | Homes By Dr. Jan Duffy',
+  url: structuredDataSiteUrl,
+}
 
 export function TestimonialCarousel() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -216,6 +223,7 @@ export function TestimonialCarousel() {
               position: i + 1,
               item: {
                 '@type': 'Review',
+                itemReviewed: realEstateAgentReviewed,
                 author: { '@type': 'Person', name: t.name.replace(/^—\s*/, '').split(',')[0].trim() },
                 reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5, worstRating: 1 },
                 reviewBody: t.quote,

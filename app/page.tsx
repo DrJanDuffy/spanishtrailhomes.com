@@ -20,10 +20,10 @@ import { TourCTAStrip } from '@/components/tour-cta-strip'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
-  'Explore Spanish Trail golf community homes for sale, Las Vegas golf course homes, guard-gated amenities, and club lifestyle insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices. Browse golf course properties for sale, market data, and neighborhood guides tailored to Las Vegas 89113.'
+  'Spanish Trail homes for sale in Las Vegas, NV 89113. Guard-gated golf community with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.'
 
 const homeWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Homes for Sale | Dr. Jan Duffy',
+  name: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
   description: homePageDescription,
   path: '/',
   type: 'CollectionPage',
@@ -42,16 +42,15 @@ const homeBreadcrumbSchema = createBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale | Dr. Jan Duffy',
+  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
   description: homePageDescription,
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Luxury Homes & Market Intelligence',
-      description:
-        'Get Las Vegas golf course homes for sale, guard-gated listings, market stats, and insider guidance for Spanish Trail Country Club from Dr. Jan Duffy, Las Vegas luxury real estate advisor.',
+    title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+    description: homePageDescription,
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Luxury Homes',
@@ -62,9 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Homes & Club Lifestyle by Dr. Jan Duffy',
-      description:
-        'Track Spanish Trail golf community homes for sale, Las Vegas golf course homes, membership insights, and neighborhood comparisons with Berkshire Hathaway HomeServices specialist Dr. Jan Duffy.',
+    title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+    description: homePageDescription,
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Homes',
@@ -246,7 +244,7 @@ function HeroSection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
         <div className="max-w-3xl space-y-6">
           <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
-            Your Future Home Awaits.
+            Spanish Trail Homes for Sale Las Vegas
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
             From search to keys, we help you find guard-gated golf community homes for sale in Spanish Trail—luxury, functionality, and the unique beauty of the Las Vegas landscape. Track new listings, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices.

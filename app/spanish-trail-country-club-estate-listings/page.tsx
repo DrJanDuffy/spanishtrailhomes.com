@@ -13,9 +13,9 @@ import { marketStats } from '@/lib/marketStats'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-country-club-estate-listings'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Country Club Estate Listings | Dr. Jan Duffy',
+  title: 'Spanish Trail Country Club Estate Listings in Las Vegas | Dr. Jan Duffy',
   description:
-    'Browse Spanish Trail Country Club estate listings with Dr. Jan Duffy. Double-gated privacy, golf course frontage, and concierge-level buying guidance.',
+    'Browse Spanish Trail Country Club estate listings in Las Vegas with Dr. Jan Duffy. Double-gated privacy, golf frontage, and concierge buying guidance.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-country-club-estate-listings'),
   },
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Country Club Estate Listings',
+    title: 'Spanish Trail Country Club Estate Listings in Las Vegas',
     description:
-      'Tour custom estates within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Jan Duffy.',
+      'Tour custom estates in Las Vegas within Spanish Trail Country Club—golf frontage, casitas, and resort-scale amenities curated by Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Estate Listings',
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Country Club Estates',
+    title: 'Spanish Trail Country Club Estates in Las Vegas',
     description:
-      'Exclusive estate listings, tailored buying strategies, and club integration for Spanish Trail Country Club residents.',
+      'Exclusive Las Vegas estate listings, tailored buying strategies, and club integration for Spanish Trail Country Club.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Country Club Estates',
@@ -132,7 +132,7 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="estate-hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h1 id="estate-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Country Club Estate Listings
+          Spanish Trail Country Club Estate Listings in Las Vegas
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Spanish Trail’s estates rank among Southwest Las Vegas’s most coveted addresses—lush fairways, double-gated privacy, and grand entertaining spaces minutes from the Strip. I curate bespoke tours and negotiation playbooks so you secure an estate aligned with your lifestyle, from multi-generational living to executive entertaining.

@@ -89,7 +89,7 @@ const eventsPageDescription =
   'Host weddings, private celebrations, and golf outings at Spanish Trail Country Club with bespoke planning and panoramic Las Vegas views.'
 
 const eventsWebPageSchema = createWebPageSchema({
-  name: 'Weddings & Events | Spanish Trail Country Club',
+  name: 'Weddings & Events | Spanish Trail Country Club, Las Vegas',
   description: eventsPageDescription,
   path: '/events',
   type: 'CollectionPage',
@@ -110,7 +110,7 @@ const eventsWebPageSchema = createWebPageSchema({
 })
 
 export const metadata: Metadata = {
-  title: 'Weddings & Events | Spanish Trail Country Club',
+  title: 'Weddings & Events | Spanish Trail Country Club, Las Vegas',
   description: eventsPageDescription,
   alternates: { canonical: getCanonicalUrl('/events') },
   robots: {
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Events at Spanish Trail Country Club',
+    title: 'Weddings & Events | Spanish Trail Country Club, Las Vegas',
     description:
       'Plan weddings, galas, and corporate gatherings at Spanish Trail Country Club in Las Vegas.',
     images: [
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Weddings & Events | Spanish Trail Country Club',
+    title: 'Weddings & Events | Spanish Trail Country Club, Las Vegas',
     description:
       'Discover bespoke planning for weddings, private celebrations, and golf outings at Spanish Trail Country Club.',
     images: [
@@ -206,7 +206,7 @@ function EventsHero() {
           className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
           Celebrate life&apos;s signature moments surrounded by Spanish Trail&apos;s
-          private beauty.
+          private beauty in Las Vegas.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           From romantic ceremonies on the Lakes Course lawn to black-tie galas in

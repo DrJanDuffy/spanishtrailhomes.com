@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/'],
+        // Allow OG image route so Google can fetch og:image URLs; keep other /api/* disallowed.
+        allow: ['/', '/api/og'],
         disallow: ['/api/'],
       },
     ],

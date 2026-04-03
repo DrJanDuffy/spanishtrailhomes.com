@@ -88,6 +88,13 @@ const pageUrl = 'https://www.spanishtrailhomes.com/club'
 const clubPageDescription =
   'Explore the Spanish Trail Country Club lifestyle—clubhouse amenities, dining, fitness, tennis, and social events in Las Vegas.'
 
+/** Reviews on this page describe the country club; required for valid Review rich results. */
+const clubItemReviewed = {
+  '@type': 'Organization' as const,
+  name: 'Spanish Trail Country Club',
+  url: pageUrl,
+}
+
 const clubReviewsSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -97,6 +104,7 @@ const clubReviewsSchema = {
     name: testimonial.name,
     item: {
       '@type': 'Review',
+      itemReviewed: clubItemReviewed,
       reviewBody: testimonial.quote,
       author: {
         '@type': 'Person',

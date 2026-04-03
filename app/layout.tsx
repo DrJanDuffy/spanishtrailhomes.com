@@ -32,10 +32,13 @@ const lato = Lato({
 const gbpDescription =
   'Dr. Jan Duffy specializes exclusively in Spanish Trail, a guard-gated golf community in Las Vegas, Nevada. With deep expertise across all 11 neighborhoods and over 1,200 homes, Dr. Duffy provides precise market data, neighborhood-level pricing insights, and personalized guidance for buyers and sellers. From luxury estates and golf course properties to villas and single-story living, Spanish Trail offers one of Southern Nevada\'s most sought-after lifestyles built around a championship 27-hole golf course. Whether you\'re exploring the community for the first time or preparing to sell, you get a local specialist who knows Spanish Trail inside and out.'
 
+const localBusinessId = `${siteUrl}#localBusiness`
+
 const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
+    '@id': localBusinessId,
     name: 'Spanish Trail | Homes By Dr. Jan Duffy',
     description: gbpDescription,
     image: createOgImageUrl({
@@ -139,6 +142,7 @@ const structuredData = [
     review: [
       {
         '@type': 'Review',
+        itemReviewed: { '@id': localBusinessId },
         reviewRating: {
           '@type': 'Rating',
           ratingValue: '5',

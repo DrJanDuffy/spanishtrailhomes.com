@@ -1,0 +1,54 @@
+/**
+ * Single source of truth for Google Business Profile–aligned fields used in JSON-LD and visible NAP.
+ * Update here first, then mirror any copy-only pages if needed.
+ */
+export const GBP_LEGAL_NAME = 'Spanish Trail | Homes By Dr. Jan Duffy' as const
+
+export const GBP_PHONE_E164 = '+17027663299' as const
+export const GBP_PHONE_DISPLAY = '(702) 766-3299' as const
+export const GBP_EMAIL = 'DrDuffySells@SpanishTrailHomes.com' as const
+
+export const GBP_STREET = '5050 Spanish Trail Ln' as const
+export const GBP_LOCALITY = 'Las Vegas' as const
+export const GBP_REGION = 'NV' as const
+export const GBP_POSTAL = '89113' as const
+export const GBP_COUNTRY = 'US' as const
+
+/** Long-form GBP description (also used in LocalBusiness JSON-LD). */
+export const GBP_DESCRIPTION =
+  'Dr. Jan Duffy specializes exclusively in Spanish Trail, a guard-gated golf community in Las Vegas, Nevada. With deep expertise across all 11 neighborhoods and over 1,200 homes, Dr. Duffy provides precise market data, neighborhood-level pricing insights, and personalized guidance for buyers and sellers. From luxury estates and golf course properties to villas and single-story living, Spanish Trail offers one of Southern Nevada\'s most sought-after lifestyles built around a championship 27-hole golf course. Whether you\'re exploring the community for the first time or preparing to sell, you get a local specialist who knows Spanish Trail inside and out.'
+
+/** Service area string as shown on GBP (service area). */
+export const GBP_SERVICE_AREA_LABEL = 'Las Vegas, NV 89113, USA' as const
+
+export const GBP_MAIN_HOURS_OPENS = '09:00' as const
+export const GBP_MAIN_HOURS_CLOSES = '18:00' as const
+
+export const GBP_SAME_AS = [
+  'https://www.facebook.com/spanishtrailhomes',
+  'https://www.instagram.com/spanishtrailhomes',
+  'https://www.linkedin.com/company/spanishtrailhomes',
+  'https://www.youtube.com/@spanishtrailhomes',
+  'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
+] as const
+
+/** Geo for PostalAddress / LocalBusiness (Spanish Trail Country Club area). */
+export const GBP_GEO = {
+  latitude: 36.109145,
+  longitude: -115.282642,
+} as const
+
+/**
+ * After this instant (UTC), hide time-bound special-hours UI (e.g. Easter 2026) to avoid stale copy.
+ * Bump when adding new dated closures.
+ */
+export const GBP_PROMOTED_SPECIAL_HOURS_UNTIL_MS = Date.parse('2026-04-06T07:00:00.000Z')
+
+export function shouldShowPromotedSpecialHoursNotice(): boolean {
+  return Date.now() < GBP_PROMOTED_SPECIAL_HOURS_UNTIL_MS
+}
+
+export const GBP_EASTER_2026_CLOSURE = {
+  label: 'April 5, 2026 (Easter)',
+  detail: 'Closed',
+} as const

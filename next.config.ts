@@ -1,6 +1,9 @@
 import type { NextConfig } from 'next'
+import path from 'node:path'
 
 const nextConfig: NextConfig = {
+  // Pin tracing to this package root when a parent directory has another lockfile (avoids wrong workspace root warning).
+  outputFileTracingRoot: path.join(process.cwd()),
   async redirects() {
     return [
       { source: '/market-data', destination: '/spanish-trail-market-report', permanent: true },

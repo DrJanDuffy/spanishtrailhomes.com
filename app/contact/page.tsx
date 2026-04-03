@@ -10,6 +10,11 @@ import { RealScoutSection } from '@/components/realscout-section'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { HeroSearchWidget } from '@/components/hero-search-widget'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import {
+  GBP_EASTER_2026_CLOSURE,
+  GBP_SERVICE_AREA_LABEL,
+  shouldShowPromotedSpecialHoursNotice,
+} from '@/lib/gbp-business'
 import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/contact'
@@ -441,16 +446,23 @@ function GBPIntegrationSection() {
             </div>
             
             <div className="rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-6 text-sm text-[#372a20]/85">
-              <p className="font-semibold uppercase tracking-[0.3em] text-[#0f2b1e] mb-2">Business Hours</p>
+              <p className="mb-2 font-semibold uppercase tracking-[0.3em] text-[#0f2b1e]">Business hours</p>
+              <p className="mb-3 text-[#372a20]/90">
+                <span className="font-semibold text-[#0f2b1e]">Service area:</span> {GBP_SERVICE_AREA_LABEL}
+              </p>
               <dl className="space-y-1">
-                <div className="flex justify-between">
-                  <dt>Sunday - Saturday</dt>
-                  <dd>9:00 AM - 6:00 PM</dd>
+                <div className="flex flex-wrap justify-between gap-2">
+                  <dt>Sunday – Saturday</dt>
+                  <dd>9:00 AM – 6:00 PM</dd>
                 </div>
-                <div className="mt-2 pt-2 border-t border-[#d8cdbf]">
-                  <dt className="font-semibold text-[#0f2b1e]">Special hours</dt>
-                  <dd>Feb 16, 2026 (Washington&apos;s Birthday): 10:00 AM - 6:00 PM</dd>
-                </div>
+                {shouldShowPromotedSpecialHoursNotice() ? (
+                  <div className="mt-2 border-t border-[#d8cdbf] pt-2">
+                    <dt className="font-semibold text-[#0f2b1e]">Special hours (Google Business Profile)</dt>
+                    <dd>
+                      {GBP_EASTER_2026_CLOSURE.label}: {GBP_EASTER_2026_CLOSURE.detail}
+                    </dd>
+                  </div>
+                ) : null}
               </dl>
             </div>
           </div>

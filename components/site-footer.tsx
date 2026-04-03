@@ -4,6 +4,11 @@ import Link from 'next/link'
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 import { trackPhoneClick } from '@/lib/analytics'
 import { CalendlyLink } from '@/components/calendly-link'
+import {
+  GBP_EASTER_2026_CLOSURE,
+  GBP_SERVICE_AREA_LABEL,
+  shouldShowPromotedSpecialHoursNotice,
+} from '@/lib/gbp-business'
 
 export function SiteFooter() {
   const footerLinks = [
@@ -103,6 +108,17 @@ export function SiteFooter() {
           </p>
           <p className="text-sm leading-relaxed text-[#efe5d8]">
             Guard-gated golf living minutes from the Strip.
+          </p>
+          <p className="text-xs leading-relaxed text-[#cbb8a6]">
+            Hours: Sun–Sat 9:00 AM–6:00 PM · Service area: {GBP_SERVICE_AREA_LABEL}
+            {shouldShowPromotedSpecialHoursNotice() ? (
+              <>
+                <br />
+                <span className="text-[#efe5d8]">
+                  {GBP_EASTER_2026_CLOSURE.label}: {GBP_EASTER_2026_CLOSURE.detail}
+                </span>
+              </>
+            ) : null}
           </p>
           <CalendlyLink 
             className="touch-target inline-flex min-h-[44px] items-center rounded-full border border-[#be9956] px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#be9956] transition-colors hover:bg-[#be9956] hover:text-[#352922]" 

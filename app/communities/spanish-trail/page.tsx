@@ -248,7 +248,15 @@ function HeroSection() {
             Spanish Trail Luxury Homes for Sale
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
-            Discover a guard-gated golf enclave in Southwest Las Vegas that pairs timeless architecture with resort-level amenities, all moments from Spring Valley and the Strip.
+            Discover a guard-gated golf enclave in Southwest Las Vegas that pairs timeless architecture with resort-level amenities, all moments from Spring Valley and the Strip. Shopping inventory? Use the{' '}
+            <Link href="/spanish-trail-homes-for-sale-las-vegas" className="font-medium text-primary-foreground underline-offset-4 hover:underline">
+              live Las Vegas 89113 listings hub
+            </Link>{' '}
+            for MLS snapshots and tours, or the{' '}
+            <Link href="/homes-for-sale-in-spanish-trail-las-vegas" className="font-medium text-primary-foreground underline-offset-4 hover:underline">
+              property-type and neighborhood buyer guide
+            </Link>{' '}
+            before you filter homes by enclave.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4">

@@ -1,3 +1,8 @@
+/**
+ * After material schema or metadata changes, spot-check in Google Rich Results Test:
+ * https://www.spanishtrailhomes.com/, /contact, /spanish-trail-homes-for-sale-las-vegas, /homes-for-sale-in-spanish-trail-las-vegas, one /neighborhoods/* URL.
+ * GSC: sitemap, URL Inspection, Enhancements. Monthly doc updates: https://support.google.com/webmasters/answer/6211428
+ */
 const siteUrl = 'https://www.spanishtrailhomes.com'
 
 type BreadcrumbItem = {

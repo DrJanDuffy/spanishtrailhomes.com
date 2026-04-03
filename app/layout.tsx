@@ -8,6 +8,22 @@ import { CalendlyEventListener } from '@/components/calendly-event-listener'
 import { FloatingCalendlyButton } from '@/components/floating-calendly-button'
 import './globals.css'
 import { createOgImageUrl, structuredDataSiteUrl, getCanonicalUrl } from '@/lib/structuredData'
+import {
+  GBP_DESCRIPTION,
+  GBP_EMAIL,
+  GBP_GEO,
+  GBP_LEGAL_NAME,
+  GBP_MAIN_HOURS_CLOSES,
+  GBP_MAIN_HOURS_OPENS,
+  GBP_PHONE_E164,
+  GBP_POSTAL,
+  GBP_LOCALITY,
+  GBP_REGION,
+  GBP_SAME_AS,
+  GBP_SERVICE_AREA_LABEL,
+  GBP_STREET,
+  GBP_COUNTRY,
+} from '@/lib/gbp-business'
 
 const siteUrl = structuredDataSiteUrl
 
@@ -29,9 +45,6 @@ const lato = Lato({
   fallback: ['system-ui', 'sans-serif'],
 })
 
-const gbpDescription =
-  'Dr. Jan Duffy specializes exclusively in Spanish Trail, a guard-gated golf community in Las Vegas, Nevada. With deep expertise across all 11 neighborhoods and over 1,200 homes, Dr. Duffy provides precise market data, neighborhood-level pricing insights, and personalized guidance for buyers and sellers. From luxury estates and golf course properties to villas and single-story living, Spanish Trail offers one of Southern Nevada\'s most sought-after lifestyles built around a championship 27-hole golf course. Whether you\'re exploring the community for the first time or preparing to sell, you get a local specialist who knows Spanish Trail inside and out.'
-
 const localBusinessId = `${siteUrl}#localBusiness`
 
 /** Default SERP/social summary for routes without page-level metadata (keep in sync across description + OG + Twitter). */
@@ -43,50 +56,50 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': ['RealEstateAgent', 'LocalBusiness'],
     '@id': localBusinessId,
-    name: 'Spanish Trail | Homes By Dr. Jan Duffy',
-    description: gbpDescription,
+    name: GBP_LEGAL_NAME,
+    description: GBP_DESCRIPTION,
     image: createOgImageUrl({
       title: 'Spanish Trail Homes & Country Club',
       subtitle: 'Guard-gated Las Vegas luxury real estate by Dr. Jan Duffy',
       eyebrow: 'SpanishTrailHomes.com',
     }),
     url: siteUrl,
-    telephone: '+17027663299',
-    email: 'DrDuffySells@SpanishTrailHomes.com',
+    telephone: GBP_PHONE_E164,
+    email: GBP_EMAIL,
     priceRange: '$$$',
-    areaServed: {
-      '@type': 'Place',
-      name: 'Spanish Trail, Las Vegas, NV 89113',
-    },
+    areaServed: [
+      {
+        '@type': 'Place',
+        name: 'Spanish Trail, Las Vegas, NV 89113',
+      },
+      {
+        '@type': 'Place',
+        name: GBP_SERVICE_AREA_LABEL,
+      },
+    ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5050 Spanish Trail Ln',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89113',
-      addressCountry: 'US',
+      streetAddress: GBP_STREET,
+      addressLocality: GBP_LOCALITY,
+      addressRegion: GBP_REGION,
+      postalCode: GBP_POSTAL,
+      addressCountry: GBP_COUNTRY,
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.109145,
-      longitude: -115.282642,
+      latitude: GBP_GEO.latitude,
+      longitude: GBP_GEO.longitude,
     },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00',
-        closes: '18:00',
+        opens: GBP_MAIN_HOURS_OPENS,
+        closes: GBP_MAIN_HOURS_CLOSES,
       },
     ],
     accessibilityFeature: ['Wheelchair accessible parking lot', 'Wheelchair accessible entrance'],
-    sameAs: [
-      'https://www.facebook.com/spanishtrailhomes',
-      'https://www.instagram.com/spanishtrailhomes',
-      'https://www.linkedin.com/company/spanishtrailhomes',
-      'https://www.youtube.com/@spanishtrailhomes',
-      'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
-    ],
+    sameAs: [...GBP_SAME_AS],
     additionalProperty: [
       {
         '@type': 'PropertyValue',
@@ -136,37 +149,14 @@ const structuredData = [
         },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '25',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        itemReviewed: { '@id': localBusinessId },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Verified Client',
-        },
-        reviewBody: 'Dr. Jan Duffy provided exceptional service throughout our Spanish Trail home purchase. Her expertise and attention to detail made the entire process seamless.',
-        datePublished: '2024-12-01',
-      },
-    ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${siteUrl}#website`,
-    name: 'Spanish Trail Homes',
+    // Align primary WebSite name with GBP / LocalBusiness for one clear entity; short brand as alternateName.
+    name: GBP_LEGAL_NAME,
+    alternateName: 'Spanish Trail Homes',
     url: siteUrl,
     inLanguage: 'en-US',
     publisher: { '@id': localBusinessId },
@@ -177,12 +167,12 @@ const structuredData = [
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Spanish Trail | Homes By Dr. Jan Duffy',
+    default: GBP_LEGAL_NAME,
     template: '%s | Spanish Trail Homes',
   },
   description: rootDefaultDescription,
   category: 'Real Estate',
-  applicationName: 'Spanish Trail | Homes By Dr. Jan Duffy',
+  applicationName: GBP_LEGAL_NAME,
   authors: [{ name: 'Dr. Jan Duffy' }],
   alternates: {
     canonical: getCanonicalUrl('/'),
@@ -190,15 +180,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Spanish Trail | Homes By Dr. Jan Duffy',
+    title: GBP_LEGAL_NAME,
     description: rootDefaultDescription,
-    siteName: 'Spanish Trail | Homes By Dr. Jan Duffy',
+    siteName: GBP_LEGAL_NAME,
     images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Jan Duffy' })],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail | Homes By Dr. Jan Duffy',
+    title: GBP_LEGAL_NAME,
     description: rootDefaultDescription,
     images: [createOgImageUrl({ title: 'Spanish Trail Homes', subtitle: 'Luxury guard-gated homes and club expertise', eyebrow: 'SpanishTrailHomes.com' })],
   },
@@ -265,6 +255,7 @@ gtag('config', 'G-X68WWN997N', {
           type="module"
           strategy="afterInteractive"
         />
+        {/* LocalBusiness + WebSite JSON-LD — validate in Rich Results Test when editing structuredData above */}
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}
         </Script>

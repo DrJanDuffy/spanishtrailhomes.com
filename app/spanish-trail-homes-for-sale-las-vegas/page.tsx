@@ -14,7 +14,7 @@ import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+  title: 'Spanish Trail Homes for Sale — Las Vegas Listings & Tours | Dr. Jan Duffy',
   description:
     'Browse Spanish Trail homes for sale in Las Vegas with Dr. Jan Duffy. Guard-gated golf community, 27-hole course, custom estates, villas, and real-time market data.',
   alternates: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Homes for Sale in Las Vegas',
+    title: 'Spanish Trail Homes for Sale — Las Vegas Listings & Tours',
     description:
       'Discover guard-gated Spanish Trail listings, market data, and private tour options with Dr. Jan Duffy—Las Vegas luxury golf community specialist.',
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Homes for Sale in Las Vegas',
+    title: 'Spanish Trail Homes for Sale — Las Vegas Listings & Tours',
     description:
       'Explore Spanish Trail guard-gated golf homes, villas, and estates with Dr. Jan Duffy. Live market data and private tours available.',
     images: [
@@ -59,21 +59,22 @@ export const metadata: Metadata = {
   },
 }
 
+/** Listing-hub FAQs: alerts, tours, and MLS workflow—distinct from the property-type guide at /homes-for-sale-in-spanish-trail-las-vegas */
 const faqContent = [
   {
-    question: 'How much do Spanish Trail homes cost right now?',
+    question: 'How do I get alerts for new Spanish Trail listings in Las Vegas 89113?',
     answer:
-      `As of ${marketStats.date_label}, the median Spanish Trail home value is ${formatMedianPrice(marketStats.median_price)} with an average price-per-square-foot of $${marketStats.price_per_sqft}. Villas and townhomes close between $835K and $1.1M, golf course homes typically secure $1.2M–$1.5M, and custom estates stretch beyond $2M. Ask me for a tailored report for your timeline—call or text (702) 766-3299.`,
+      'Start with the live RealScout widget on this page—save searches by price, neighborhood, and property type so you are notified when matching homes hit the MLS. I also share a weekly PDF with pendings, price changes, and off-market whispers from the broker network so you see inventory before weekend open-house traffic. Text or call (702) 766-3299 to opt into those updates.',
   },
   {
-    question: 'How quickly are Spanish Trail homes selling?',
+    question: 'Can I schedule same-day or evening showings behind the guard gates?',
     answer:
-      'Well-prepped Spanish Trail listings are averaging 21–30 days on market, and golf-view homes can attract full-price offers within the first week. I track every closing inside the gates, so I can alert you as soon as a home in your price range or preferred enclave (Estates, Villas, Springs, Courtyards, etc.) appears.',
+      'Yes. I coordinate guard-gate clearance, listing-agent access, and time-of-day visits so you can judge light, noise, and golf-course sightlines. Same-day and twilight tours are common when homes are vacant or tenant-occupied with notice—tell me your flight or work schedule and I will build a route across your preferred enclaves.',
   },
   {
-    question: 'Do I need club membership to buy in Spanish Trail?',
+    question: 'How do you combine MLS data with private Spanish Trail market intel?',
     answer:
-      'Club membership is optional. Homeowners can choose from full golf, young executive, social, or corporate categories. I consult with buyers on membership perks, initiation fees, and how each plan matches your lifestyle—whether you play multiple rounds a week or prefer the fitness, tennis, and dining programs.',
+      `I refresh stats every week (${marketStats.date_label} snapshot on this page) and cross-check them with showing feedback, appraisal trends, and lender commentary from deals closing inside the gates. That mix helps you calibrate offer strength on golf-view homes versus interior lots—without relying on generic Las Vegas averages.`,
   },
 ]
 
@@ -133,10 +134,19 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h1 id="hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Homes for Sale in Las Vegas
+          Live Spanish Trail Listings, Market Snapshots & Private Tours
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          {marketStats.date_label} keeps Spanish Trail in the spotlight: median value {formatMedianPrice(marketStats.median_price)}, average {`$${marketStats.price_per_sqft}`} per square foot, and {marketStats.active_listings} active listings across the 11 guard-gated neighborhoods. Well-positioned homes with refreshed interiors and golf course views continue to attract strong offers—proof that Spanish Trail remains a premium destination for discerning buyers.
+          This hub is built for buyers who want{' '}
+          <strong className="font-semibold text-[#f8f5ef]">current Las Vegas 89113 inventory</strong>, weekly absorption context, and concierge showings—not a generic community overview. As of {marketStats.date_label}: median value {formatMedianPrice(marketStats.median_price)}, {`$${marketStats.price_per_sqft}`}/sq. ft., and {marketStats.active_listings} active listings across all 11 guard-gated neighborhoods. For property styles, square-footage bands, and neighborhood character, see the{' '}
+          <Link href="/homes-for-sale-in-spanish-trail-las-vegas" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+            Spanish Trail property-type buyer guide
+          </Link>{' '}
+          or browse{' '}
+          <Link href="/neighborhoods" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+            every Spanish Trail neighborhood
+          </Link>
+          .
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
@@ -396,7 +406,7 @@ function FAQSection() {
     <section className="bg-white py-16 sm:py-20" aria-labelledby="faq-heading">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 id="faq-heading" className="font-[var(--font-playfair)] text-3xl text-[#1f2a24] sm:text-4xl">
-          Spanish Trail buyer FAQs
+          Live listings, alerts & tour questions
         </h2>
         <div className="mt-10 space-y-6">
           {faqContent.map((item) => (
@@ -419,7 +429,11 @@ function ContactCTASection() {
           Ready to explore Spanish Trail homes?
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[#372a20]/85">
-          Call or text (702) 766-3299 for instant updates or to book a private tour. Prefer email? <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>.
+          Call or text (702) 766-3299 for instant updates or to book a private tour. Prefer email? <Link href="mailto:DrDuffySells@SpanishTrailHomes.com" className="underline-offset-4 hover:underline">DrDuffySells@SpanishTrailHomes.com</Link>. New to floor plans and enclaves? Read the{' '}
+          <Link href="/homes-for-sale-in-spanish-trail-las-vegas" className="font-medium text-[#0f2b1e] underline-offset-4 hover:underline">
+            Spanish Trail property-type guide
+          </Link>
+          .
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.3em]">

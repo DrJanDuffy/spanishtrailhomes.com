@@ -23,7 +23,7 @@ const homePageDescription =
   'Spanish Trail homes for sale in Las Vegas, NV 89113. Guard-gated golf community with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.'
 
 const homeWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+  name: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Las Vegas 89113 | Dr. Jan Duffy',
   description: homePageDescription,
   path: '/',
   type: 'CollectionPage',
@@ -42,14 +42,14 @@ const homeBreadcrumbSchema = createBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+  title: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Las Vegas 89113 | Dr. Jan Duffy',
   description: homePageDescription,
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+    title: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Dr. Jan Duffy',
     description: homePageDescription,
     images: [
       createOgImageUrl({
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Spanish Trail Homes for Sale in Las Vegas | Dr. Jan Duffy',
+    title: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Dr. Jan Duffy',
     description: homePageDescription,
     images: [
       createOgImageUrl({
@@ -586,13 +586,13 @@ const exploreCards = [
     href: '/sellers',
   },
   {
-    title: 'Spanish Trail Homes for Sale',
-    description: 'Browse current listings of luxury guard-gated golf course homes for sale in Las Vegas 89113.',
+    title: 'Live Listings & Market Hub (89113)',
+    description: 'MLS-backed search, weekly absorption stats, alerts, and private tour logistics for Spanish Trail—Las Vegas guard-gated golf homes.',
     href: '/spanish-trail-homes-for-sale-las-vegas',
   },
   {
-    title: 'Homes for Sale in Spanish Trail - Las Vegas',
-    description: 'Find elegant single-family homes, grand estates, and luxury villas for sale in Spanish Trail. Guard-gated golf community homes with diverse housing options and golf course access.',
+    title: 'Property Types & Neighborhood Guide',
+    description: 'Villas, estates, fairway homes, pools, and enclave-by-enclave context before you shop—then jump to the listings hub to tour.',
     href: '/homes-for-sale-in-spanish-trail-las-vegas',
   },
   {

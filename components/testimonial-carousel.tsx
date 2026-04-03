@@ -204,7 +204,7 @@ export function TestimonialCarousel() {
               onClick={handleReviewsCtaClick}
               className="inline-flex items-center gap-1 text-sm font-semibold text-[#0f2b1e] hover:underline"
             >
-              Read 50+ Five-Star Reviews
+              Read client reviews
               <span aria-hidden>→</span>
             </Link>
           </div>

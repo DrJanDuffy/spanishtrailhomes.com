@@ -177,7 +177,11 @@ function HeroSection() {
           Spanish Trail Seller Blueprint: Earn Premium Offers in 2026
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Las Vegas buyers are eyeing Spanish Trail for its emerald fairways, private security, and effortless access to the Strip. Across all 11 neighborhoods and 1,200+ homes—villas, townhomes, and custom estates—the market rewards well-positioned listings. As of {marketStats.date_label}, median sale prices inside the gates sit at {formatMedianPrice(marketStats.median_price)}, with estates above $2.1M commanding their strongest list-to-close ratios in five years. As your Berkshire Hathaway HomeServices colleague and long-time Spanish Trail specialist, I translate demand into proven strategy—balancing transparency, Fair Housing compliance, and concierge-level presentation so you can exit with confidence.
+          Las Vegas buyers are eyeing Spanish Trail for its emerald fairways, private security, and effortless access to the Strip. Across all 11 neighborhoods and 1,200+ homes—villas, townhomes, and custom estates—the market rewards well-positioned listings. As of {marketStats.date_label}, median sale prices inside the gates sit at {formatMedianPrice(marketStats.median_price)}, with estates above $2.1M commanding their strongest list-to-close ratios in five years. Review the latest{' '}
+          <Link href="/spanish-trail-market-report" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+            Spanish Trail market report
+          </Link>{' '}
+          for absorption and pricing context. As your Berkshire Hathaway HomeServices colleague and long-time Spanish Trail specialist, I translate demand into proven strategy—balancing transparency, Fair Housing compliance, and concierge-level presentation so you can exit with confidence.
         </p>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Whether you are relocating, rightsizing, or unlocking equity to diversify your portfolio, we start with a data-backed value range, align your desired timeline, and craft a plan that honors the distinct story of your home. My team handles the details—from HOA coordination to twilight photography—so you stay focused on your next chapter while I deliver the market response your investment deserves.

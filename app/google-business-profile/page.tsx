@@ -5,83 +5,39 @@ import Script from 'next/script'
 import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { Breadcrumbs } from '@/components/breadcrumbs'
-import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import {
+  createBreadcrumbSchema,
+  createOgImageUrl,
+  createWebPageSchema,
+  getCanonicalUrl,
+  structuredDataSiteUrl,
+} from '@/lib/structuredData'
+import { GBP_GOOGLE_REVIEW_URL, GBP_PROFILE_SHARE_URL } from '@/lib/gbp-business'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/google-business-profile'
 const pageDescription =
   'View Dr. Jan Duffy\'s verified Google Business Profile for Spanish Trail | Homes By Dr. Jan Duffy. See reviews, business hours, office location in Las Vegas (89113), and connect via Google Search and Maps.'
 
-const gbpShareLink = 'https://share.google/QY6rXDQvBRIfM0Xps'
-const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
-const reviewLink = 'https://g.page/r/CY-d0lUDXoT_EBI/review'
+/** Primary “view profile” link (Google share URL). Maps URL kept for schema + Maps-focused CTAs. */
+const gbpUrl = GBP_PROFILE_SHARE_URL
+const reviewLink = GBP_GOOGLE_REVIEW_URL
 const mapsDirectionsUrl = 'https://www.google.com/maps/dir/?api=1&destination=5050+Spanish+Trail+Ln,+Las+Vegas,+NV+89113'
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'RealEstateAgent',
-  '@id': 'https://www.spanishtrailhomes.com/#organization',
-  name: 'Spanish Trail | Homes By Dr. Jan Duffy',
-  description:
-    'Your trusted local real estate expert for Spanish Trail, Las Vegas. Dr. Jan Duffy provides precise market updates, helping residents buy and sell homes with confidence. Specializing in the Spanish Trail community with unparalleled insights.',
-  url: 'https://www.spanishtrailhomes.com',
-  telephone: '+1-702-766-3299',
-  email: 'DrDuffySells@SpanishTrailHomes.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '5050 Spanish Trail Ln',
-    addressLocality: 'Las Vegas',
-    addressRegion: 'NV',
-    postalCode: '89113',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 36.109145,
-    longitude: -115.282642,
-  },
-  openingHoursSpecification: [
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '09:00',
-      closes: '18:00',
-    },
-  ],
-  priceRange: '$$$',
-  image: 'https://www.spanishtrailhomes.com/og-image.png',
-  sameAs: [
-    gbpUrl,
-    'https://www.facebook.com/spanishtrailhomes',
-    'https://www.instagram.com/spanishtrailhomes',
-    'https://www.linkedin.com/company/spanishtrailhomes',
-    'https://www.youtube.com/@spanishtrailhomes',
-  ],
-  areaServed: {
-    '@type': 'City',
-    name: 'Las Vegas',
-    addressRegion: 'NV',
-  },
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'Real Estate License',
-    recognizedBy: {
-      '@type': 'Organization',
-      name: 'Nevada Real Estate Division',
-    },
-    identifier: 'S.0197614.LLC',
-  },
-  memberOf: {
-    '@type': 'Organization',
-    name: 'Berkshire Hathaway HomeServices Nevada Properties',
-  },
-}
-
+/** WebPage + BreadcrumbList only: LocalBusiness/RealEstateAgent lives in root layout (#localBusiness). */
 const webPageSchema = createWebPageSchema({
   name: 'Google Business Profile | Dr. Jan Duffy | Spanish Trail Homes',
   description: pageDescription,
   path: '/google-business-profile',
   type: 'WebPage',
+  extra: {
+    about: { '@id': `${structuredDataSiteUrl}#localBusiness` },
+  },
 })
+
+const gbpBreadcrumbSchema = createBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Google Business Profile', url: '/google-business-profile' },
+])
 
 export const metadata: Metadata = {
   title: 'Google Business Profile | Dr. Jan Duffy | Spanish Trail Homes',
@@ -148,19 +104,8 @@ const profileFeatures: ProfileFeature[] = [
 export default function GoogleBusinessProfilePage() {
   return (
     <SiteShell>
-      <Script
-        id="gbp-local-business-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(localBusinessSchema)}
-      </Script>
-      <Script
-        id="gbp-webpage-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
-        {JSON.stringify(webPageSchema)}
+      <Script id="gbp-page-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify([webPageSchema, gbpBreadcrumbSchema])}
       </Script>
 
       <Breadcrumbs

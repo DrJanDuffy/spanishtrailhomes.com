@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { structuredDataSiteUrl } from '@/lib/structuredData'
+import { GBP_GOOGLE_REVIEW_URL } from '@/lib/gbp-business'
 import {
   trackTestimonialView,
   trackTestimonialNavigate,
@@ -29,7 +30,7 @@ const TESTIMONIALS = [
     quote: "Sold in 9 days at $47K over asking. Jan's marketing and pricing strategy was perfect.",
     name: 'Robert K., Estates West Seller',
     source: 'Google Reviews',
-    sourceUrl: 'https://g.page/r/CY-d0lUDXoT_EBI/review',
+    sourceUrl: GBP_GOOGLE_REVIEW_URL,
     rating: 5,
     datePublished: '2024-10-22',
   },
@@ -49,7 +50,7 @@ const TESTIMONIALS = [
       "From first showing to closing, Jan was responsive and professional. Our Lakes Course home exceeded expectations.",
     name: 'Patricia L., Lakes Course Buyer',
     source: 'Google Reviews',
-    sourceUrl: 'https://g.page/r/CY-d0lUDXoT_EBI/review',
+    sourceUrl: GBP_GOOGLE_REVIEW_URL,
     rating: 5,
     datePublished: '2024-08-12',
   },

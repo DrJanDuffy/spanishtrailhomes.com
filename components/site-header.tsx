@@ -43,21 +43,32 @@ export function SiteHeader() {
               const hasChildren = !!item.children?.length
 
               return (
-                <div key={item.label} className="relative">
-                  <button
-                    type="button"
-                    className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-[0.32em] transition-colors hover:text-secondary ${isActive ? 'text-secondary' : 'text-[#1f2a24]'}`}
-                    onMouseEnter={() => hasChildren && setActiveFlyout(item.label)}
-                    onMouseLeave={() => hasChildren && setActiveFlyout(null)}
-                    onClick={() => (hasChildren ? toggleFlyout(item.label) : undefined)}
-                    aria-haspopup={hasChildren ? 'true' : undefined}
-                    aria-expanded={activeFlyout === item.label}
-                  >
-                    <Link href={item.href} className="hover:underline">
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => hasChildren && setActiveFlyout(item.label)}
+                  onMouseLeave={() => hasChildren && setActiveFlyout(null)}
+                >
+                  <div className="flex items-center gap-0.5">
+                    <Link
+                      href={item.href}
+                      className={`text-sm font-semibold uppercase tracking-[0.32em] transition-colors hover:text-secondary hover:underline ${isActive ? 'text-secondary' : 'text-[#1f2a24]'}`}
+                    >
                       {item.label}
                     </Link>
-                    {hasChildren ? <ChevronDown className="size-3" aria-hidden /> : null}
-                  </button>
+                    {hasChildren ? (
+                      <button
+                        type="button"
+                        className="flex items-center rounded p-0.5 text-[#1f2a24] hover:text-secondary"
+                        onClick={() => toggleFlyout(item.label)}
+                        aria-haspopup="true"
+                        aria-expanded={activeFlyout === item.label}
+                        aria-label={`${item.label} submenu`}
+                      >
+                        <ChevronDown className="size-3" aria-hidden />
+                      </button>
+                    ) : null}
+                  </div>
 
                   {hasChildren && activeFlyout === item.label ? (
                     <div

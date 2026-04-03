@@ -24,12 +24,22 @@ export const GBP_SERVICE_AREA_LABEL = 'Las Vegas, NV 89113, USA' as const
 export const GBP_MAIN_HOURS_OPENS = '09:00' as const
 export const GBP_MAIN_HOURS_CLOSES = '18:00' as const
 
+/** Google Maps short link to the business (stable; JSON-LD sameAs). */
+export const GBP_MAPS_URL = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9' as const
+
+/** Google Business Profile share link (Search / Maps profile). */
+export const GBP_PROFILE_SHARE_URL = 'https://share.google/7im0WpfO517sKomcQ' as const
+
+/** Official Google review URL (g.page) — prompts signed-in users to leave a review. */
+export const GBP_GOOGLE_REVIEW_URL = 'https://g.page/r/Ca9gwAWH5oLcEBM/review' as const
+
 export const GBP_SAME_AS = [
   'https://www.facebook.com/spanishtrailhomes',
   'https://www.instagram.com/spanishtrailhomes',
   'https://www.linkedin.com/company/spanishtrailhomes',
   'https://www.youtube.com/@spanishtrailhomes',
-  'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9',
+  GBP_MAPS_URL,
+  GBP_PROFILE_SHARE_URL,
 ] as const
 
 /** Geo for PostalAddress / LocalBusiness (Spanish Trail Country Club area). */

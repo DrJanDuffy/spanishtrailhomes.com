@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -178,12 +179,12 @@ function PropertyLightboxModal({
                 className="overflow-hidden rounded-xl border border-[#d8cdbf] bg-[#fdf9f3] shadow-sm transition-transform duration-200 hover:scale-[1.05] focus-within:scale-[1.05]"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-[#e8e4dc]">
-                  <img
+                  <Image
                     src={p.image}
-                    alt=""
-                    loading="lazy"
+                    alt={`Spanish Trail Las Vegas home example at ${p.address} — ${p.price}, ${p.beds} bed ${p.baths} bath`}
                     width={400}
                     height={300}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="h-full w-full object-cover"
                   />
                 </div>

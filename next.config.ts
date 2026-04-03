@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'd1buiexcd5gara.cloudfront.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'chart.googleapis.com',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000, // 1 year for better caching

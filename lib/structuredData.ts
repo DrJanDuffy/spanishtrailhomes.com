@@ -7,7 +7,11 @@
  *    - https://www.spanishtrailhomes.com/relocation (FAQPage)
  *    - https://www.spanishtrailhomes.com/spanish-trail-homes-for-sale-las-vegas
  *    - https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas
+ *    - https://www.spanishtrailhomes.com/google-business-profile (WebPage + BreadcrumbList; entity refs #localBusiness)
  *    - one https://www.spanishtrailhomes.com/neighborhoods/* URL
+ *
+ *    VideoObject: when a page embeds a player, add JSON-LD via createVideoObjectSchema() in this module; see
+ *    https://developers.google.com/search/docs/appearance/structured-data/video — do not emit VideoObject without an embed.
  *
  * 2) Google Search Console (property must match www host): Sitemaps status, URL Inspection on / and /contact,
  *    Page indexing for errors, Enhancements for structured-data warnings.
@@ -66,6 +70,46 @@ export const createWebPageSchema = ({ name, description, path, type = 'WebPage',
 }
 
 export const structuredDataSiteUrl = siteUrl
+
+export type VideoObjectSchemaInput = {
+  name: string
+  description: string
+  thumbnailUrl: string
+  /** ISO 8601 date the video was published (e.g. 2026-01-15) */
+  uploadDate: string
+  /** App Router path for the page that embeds the player (e.g. /about) */
+  path: string
+  contentUrl?: string
+  embedUrl?: string
+}
+
+/**
+ * VideoObject JSON-LD — use only when the same page embeds the video (e.g. YouTube iframe).
+ * @see https://developers.google.com/search/docs/appearance/structured-data/video
+ */
+export const createVideoObjectSchema = ({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  path,
+  contentUrl,
+  embedUrl,
+}: VideoObjectSchemaInput) => {
+  const pageUrl = buildAbsoluteUrl(path)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${pageUrl}#video`,
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    ...(contentUrl ? { contentUrl } : {}),
+    ...(embedUrl ? { embedUrl } : {}),
+    publisher: { '@id': `${siteUrl}#localBusiness` },
+  }
+}
 
 /**
  * Generate an absolute canonical URL for a given path

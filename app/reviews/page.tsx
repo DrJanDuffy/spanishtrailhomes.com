@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 
@@ -6,13 +7,14 @@ import { SiteShell } from '@/components/site-shell'
 import { Button } from '@/components/ui/button'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/structuredData'
+import { GBP_GOOGLE_REVIEW_URL, GBP_MAPS_URL } from '@/lib/gbp-business'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/reviews'
 const pageDescription =
   'Leave a review for Dr. Jan Duffy on Google. Reviews build trust and help our Business Profile stand out to customers on Search and Maps. Business Profiles with 5+ reviews get up to twice as many customers.'
 
-const reviewLink = 'https://g.page/r/CY-d0lUDXoT_EBI/review'
-const gbpUrl = 'https://maps.app.goo.gl/9QG1zTx5B7jG1wfP9'
+const reviewLink = GBP_GOOGLE_REVIEW_URL
+const gbpUrl = GBP_MAPS_URL
 
 const webPageSchema = createWebPageSchema({
   name: 'Leave a Google Review | Spanish Trail Homes | Dr. Jan Duffy',
@@ -344,12 +346,13 @@ function QRCodeSection() {
             <div className="rounded-3xl border border-[#d8cdbf] bg-[#fdf9f3] p-8 shadow-lg">
               {/* QR Code placeholder - using a Google Charts API generated QR code */}
               <div className="bg-white p-4 rounded-2xl">
-                <img
+                <Image
                   src={`https://chart.googleapis.com/chart?cht=qr&chl=${encodeURIComponent(reviewLink)}&chs=200x200&chld=H|0`}
-                  alt="QR code to leave a Google review for Spanish Trail Homes"
+                  alt="QR code to leave a Google review for Dr. Jan Duffy — Spanish Trail Homes, Las Vegas"
                   width={200}
                   height={200}
                   className="block"
+                  unoptimized
                 />
               </div>
               <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-[#0f2b1e]">

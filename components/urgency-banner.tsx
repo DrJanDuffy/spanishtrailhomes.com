@@ -144,27 +144,31 @@ export function UrgencyBanner() {
         aria-live="polite"
         aria-label="Market urgency"
         className={cn(
-          'sticky top-0 z-[9998] flex h-[60px] w-full items-center justify-center gap-4 bg-[#FEF3C7] px-4 py-2 text-center text-base font-semibold text-[#92400e]',
+          'relative z-20 w-full border-b border-amber-200/80 bg-[#FEF3C7] px-4 py-3 text-[#92400e] sm:px-6 sm:py-3.5',
           'animate-urgency-slide-down',
         )}
       >
-        <p className="flex-1 truncate text-center sm:flex-none">{messages[index]}</p>
-        <div className="flex shrink-0 items-center gap-2">
-          <button
-            type="button"
-            onClick={handleCtaClick}
-            className="rounded-md bg-[#0f2b1e] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#0f2b1e]/90"
-          >
-            See What&apos;s Available
-          </button>
-          <button
-            type="button"
-            onClick={handleDismiss}
-            className="rounded p-1.5 text-[#92400e]/80 hover:bg-amber-200/50 hover:text-[#92400e]"
-            aria-label="Dismiss banner"
-          >
-            <X className="size-5" />
-          </button>
+        <div className="mx-auto flex max-w-6xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <p className="min-w-0 flex-1 text-center text-sm font-semibold leading-snug sm:text-left sm:text-base">
+            {messages[index]}
+          </p>
+          <div className="flex shrink-0 items-center justify-center gap-2 sm:justify-end">
+            <button
+              type="button"
+              onClick={handleCtaClick}
+              className="rounded-full bg-[#0f2b1e] px-4 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#0f2b1e]/90 sm:px-5"
+            >
+              See What&apos;s Available
+            </button>
+            <button
+              type="button"
+              onClick={handleDismiss}
+              className="rounded-full p-2 text-[#92400e]/80 hover:bg-amber-200/60 hover:text-[#92400e]"
+              aria-label="Dismiss banner"
+            >
+              <X className="size-5" aria-hidden />
+            </button>
+          </div>
         </div>
       </div>
       {/* Schema.org Offer/availability for SEO */}

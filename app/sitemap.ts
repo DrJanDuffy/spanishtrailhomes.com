@@ -70,29 +70,13 @@ const routeConfig: Array<{
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseDate = new Date()
-  
-  // Define last modified dates based on change frequency and content type
-  const getLastModified = (path: string, changeFrequency: string): Date => {
-    const date = new Date(baseDate)
-    
-    // High-frequency pages get more recent dates
-    if (changeFrequency === 'daily') {
-      date.setDate(date.getDate() - 1) // Updated yesterday
-    } else if (changeFrequency === 'weekly') {
-      date.setDate(date.getDate() - 7) // Updated last week
-    } else if (changeFrequency === 'monthly') {
-      date.setMonth(date.getMonth() - 1) // Updated last month
-    } else {
-      date.setMonth(date.getMonth() - 3) // Updated 3 months ago for yearly pages
-    }
-    
-    return date
-  }
+  // Single build-time timestamp: Google treats inaccurate per-URL lastmod as low-signal;
+  // one honest deploy time is preferable to synthetic staggered dates.
+  const lastModified = new Date()
 
   const staticEntries = routeConfig.map(({ path, priority, changeFrequency }) => ({
     url: `${baseUrl}${path === '/' ? '' : path}`,
-    lastModified: getLastModified(path, changeFrequency),
+    lastModified,
     changeFrequency,
     priority,
   }))
@@ -101,7 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const path = `/neighborhoods/${slug}`
     return {
       url: `${baseUrl}${path}`,
-      lastModified: getLastModified(path, 'monthly'),
+      lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     }

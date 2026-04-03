@@ -43,12 +43,8 @@ export const createWebPageSchema = ({ name, description, path, type = 'WebPage',
     name,
     description,
     inLanguage: 'en-US',
-    isPartOf: {
-      '@type': 'WebSite',
-      '@id': `${siteUrl}#website`,
-      name: 'Spanish Trail Homes',
-      url: siteUrl,
-    },
+    // Reference root layout WebSite (#website); avoid duplicating WebSite properties per page.
+    isPartOf: { '@id': `${siteUrl}#website` },
     ...extra,
   }
 }

@@ -136,6 +136,13 @@ function HeroSection() {
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           Spanish Trail is the rare guard-gated enclave where resort-scale estates sit minutes from the Strip yet feel worlds away. Double gates, mature landscaping, and 27 holes of golf create a private sanctuary for executives, entertainers, and medical professionals who require easy access to Las Vegas’s business and cultural corridors. I orchestrate every element of the estate search so you can focus on design, privacy, and possibility.
         </p>
+        <p className="text-base leading-relaxed text-[#f8f5ef]/80">
+          If you are weighing{' '}
+          <Link href="/las-vegas-luxury-neighborhoods" className="underline-offset-4 hover:underline">
+            other Las Vegas luxury neighborhoods
+          </Link>
+          , Spanish Trail often wins on commute: the Tropicana gate puts Allegiant Stadium, the resort corridor, and Harry Reid International within a short drive while the community still feels like a private golf retreat—not a billboard-lined arterial.
+        </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
             <Link href="/contact">Book a private estate preview</Link>

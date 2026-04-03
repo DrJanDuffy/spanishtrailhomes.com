@@ -136,6 +136,13 @@ function HeroSection() {
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
           As a Berkshire Hathaway luxury advisor and longtime Las Vegas resident, I guide clients through every nuance of Spanish Trail’s guard-gated lifestyle—from daily market movements to membership planning. My approach blends data, discretion, and concierge service so your transition into the community feels effortless and strategic.
         </p>
+        <p className="text-base leading-relaxed text-[#f8f5ef]/80">
+          This page is for buyers and sellers who want a{' '}
+          <Link href="/spanish-trail-guard-gated-golf-homes" className="underline-offset-4 hover:underline">
+            Spanish Trail guard-gated golf home
+          </Link>{' '}
+          strategy—not a valley-wide agent learning the community on your first offer. I track ARC timelines, secondary-gate protocols, and enclave-level comps so negotiations stay grounded in how Spanish Trail actually trades.
+        </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">
             <Link href="/contact">Book a consultation</Link>

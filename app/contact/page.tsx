@@ -104,19 +104,6 @@ const faqContent = [
   },
 ]
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqContent.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: item.answer,
-    },
-  })),
-}
-
 export default function ContactPage() {
   return (
     <SiteShell>
@@ -145,9 +132,6 @@ export default function ContactPage() {
         description="Advanced filters help you pinpoint Spanish Trail homes by fairway views, secondary gates, and villa layouts."
       />
       <FAQSection />
-      <Script id="contact-faq-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(faqSchema)}
-      </Script>
       <Script id="contact-webpage-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(contactWebPageSchema)}
       </Script>

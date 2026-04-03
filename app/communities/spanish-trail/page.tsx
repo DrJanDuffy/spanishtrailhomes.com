@@ -364,6 +364,21 @@ function NarrativesSection() {
           <p className="text-base leading-relaxed text-[#372a20]/85">
             Dr. Jan Duffy combines concierge-level service with years of data-backed experience. These briefings help you understand what drives value inside the guard gates, how to craft winning offers, and which lifestyle perks elevate daily living.
           </p>
+          <p className="text-base leading-relaxed text-[#372a20]/85">
+            Related guides:{' '}
+            <Link href="/spanish-trail-custom-estate-homes-strip" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              custom estate homes near the Las Vegas Strip
+            </Link>
+            ,{' '}
+            <Link href="/spanish-trail-country-club-estate-listings" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              country club estate listings
+            </Link>
+            , and{' '}
+            <Link href="/events" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              club weddings and events
+            </Link>
+            .
+          </p>
         </div>
 
         <div className="mt-12 space-y-12">

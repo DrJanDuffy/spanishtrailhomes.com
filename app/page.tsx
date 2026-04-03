@@ -229,7 +229,7 @@ export default function HomePage() {
 function HeroSection() {
   return (
     <section
-      className="relative isolate overflow-hidden"
+      className="relative isolate overflow-x-hidden"
       aria-labelledby="hero-heading"
     >
       <HeroBackground
@@ -239,18 +239,18 @@ function HeroSection() {
         priority
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-background" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-32 bg-linear-to-t from-background to-transparent sm:h-36" />
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 text-primary-foreground sm:py-32 lg:py-40">
-        <div className="max-w-3xl space-y-6">
-          <h1 id="hero-heading" className="font-heading text-4xl font-semibold tracking-[0.08em] leading-tight sm:text-5xl lg:text-6xl">
+      <div className="mx-auto flex min-h-0 max-w-6xl flex-col gap-6 px-4 pb-16 pt-14 text-primary-foreground sm:gap-8 sm:px-6 sm:pb-20 sm:pt-16 lg:gap-10 lg:pb-24 lg:pt-20">
+        <div className="max-w-3xl space-y-4 sm:space-y-5">
+          <h1 id="hero-heading" className="font-heading text-3xl font-semibold leading-tight tracking-[0.06em] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl xl:text-6xl">
             Spanish Trail Homes for Sale Las Vegas
           </h1>
-          <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
+          <p className="text-base leading-relaxed text-primary-foreground/95 sm:text-lg">
             From search to keys, we help you find guard-gated golf community homes for sale in Spanish Trail—luxury, functionality, and the unique beauty of the Las Vegas landscape. Track new listings, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
           <PropertyLightboxTrigger openFrom="hero" variant="primary" className="rounded-full px-8 py-3 text-xs uppercase tracking-[0.4em] shadow-md shadow-primary/25" />
           <Button
             asChild
@@ -286,6 +286,21 @@ function IntroSection() {
           </p>
           <p className="text-base leading-relaxed text-muted-foreground">
             As one of Las Vegas's original private golf communities, Spanish Trail attracts primary residents and second-home owners seeking golf community homes for sale. Expect daily conveniences—Whole Foods, Trader Joe's, Downtown Summerlin—within a 10- to 15-minute radius, plus top-tier private schools moments away.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            For deeper dives, browse{' '}
+            <Link href="/spanish-trail-country-club-estate-listings" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              Spanish Trail Country Club estate listings in Las Vegas
+            </Link>
+            , work with a{' '}
+            <Link href="/spanish-trail-gated-golf-realtor" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              Spanish Trail gated golf community realtor
+            </Link>
+            , or preview how the club hosts{' '}
+            <Link href="/events" className="text-[#0f2b1e] underline-offset-4 hover:underline">
+              weddings and private events in Las Vegas
+            </Link>
+            .
           </p>
           <div className="pt-4">
             <Button

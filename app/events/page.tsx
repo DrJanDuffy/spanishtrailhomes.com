@@ -210,7 +210,11 @@ function EventsHero() {
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
           From romantic ceremonies on the Lakes Course lawn to black-tie galas in
-          our skyline-view ballroom, our planning team curates every detail.
+          our skyline-view ballroom, our planning team curates every detail. For venue contracts, catering, and member sponsorship questions, contact the club&apos;s events team directly; for Spanish Trail real estate after your event—tours, timing, and membership context—call Dr. Jan Duffy at{' '}
+          <a href="tel:+17027663299" className="underline-offset-4 hover:underline">
+            (702) 766-3299
+          </a>
+          .
         </p>
       </div>
       <HeroSearchWidget theme="dark" />

@@ -20,21 +20,24 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="relative z-30 w-full">
-      <div className="border-b border-border/60 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 sm:py-5">
-          <Link href="/" aria-label="Spanish Trail Country Club home" className="group min-w-0 flex-1">
-            <div className="text-left min-w-0">
-              <p className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground group-hover:text-secondary sm:text-[0.65rem] sm:tracking-[0.45em]">
-                Berkshire Hathaway HomeServices
-              </p>
-              <p className="font-[var(--font-playfair)] text-lg font-semibold tracking-[0.08em] text-[#0f2b1e] sm:text-2xl sm:tracking-[0.1em]">
-                Spanish Trail | Homes By Dr. Jan Duffy
-              </p>
-            </div>
-          </Link>
+    <header className="sticky top-0 z-30 w-full border-b border-border/60 bg-white/95 shadow-sm shadow-black/5 backdrop-blur-md">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-[1fr_auto] items-center gap-x-3 gap-y-2 px-4 py-3.5 sm:px-6 sm:py-4 lg:grid-cols-[minmax(0,1.05fr)_auto_minmax(0,1.05fr)] lg:gap-x-6">
+        <Link
+          href="/"
+          aria-label="Spanish Trail Country Club home"
+          className="group min-w-0 justify-self-start"
+        >
+          <div className="text-left">
+            <p className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground group-hover:text-secondary sm:text-[0.65rem] sm:tracking-[0.45em]">
+              Berkshire Hathaway HomeServices
+            </p>
+            <p className="font-[var(--font-playfair)] text-base font-semibold leading-snug tracking-[0.06em] text-[#0f2b1e] sm:text-xl sm:tracking-[0.08em] lg:text-2xl">
+              Spanish Trail | Homes By Dr. Jan Duffy
+            </p>
+          </div>
+        </Link>
 
-          <nav className="hidden items-center gap-6 lg:flex">
+          <nav className="col-start-2 row-start-1 hidden items-center justify-center gap-4 self-center lg:col-start-2 lg:flex xl:gap-6">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href
               const hasChildren = !!item.children?.length
@@ -58,7 +61,7 @@ export function SiteHeader() {
 
                   {hasChildren && activeFlyout === item.label ? (
                     <div
-                      className="absolute left-1/2 mt-4 w-64 -translate-x-1/2 rounded-2xl border border-[#d8cdbf]/60 bg-white py-4 shadow-xl shadow-primary/10"
+                      className="absolute left-1/2 z-50 mt-4 w-64 -translate-x-1/2 rounded-2xl border border-[#d8cdbf]/60 bg-white py-4 shadow-xl shadow-primary/10"
                       onMouseEnter={() => setActiveFlyout(item.label)}
                       onMouseLeave={() => setActiveFlyout(null)}
                     >
@@ -98,7 +101,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="hidden items-center gap-4 lg:flex">
+          <div className="hidden shrink-0 items-center justify-end gap-3 justify-self-end lg:col-start-3 lg:flex">
             <Link
               href="tel:+17027663299"
               className="inline-flex items-center gap-2 rounded-full border border-[#0f2b1e]/40 px-6 py-2 text-xs font-medium uppercase tracking-[0.28em] text-[#0f2b1e] hover:bg-[#0f2b1e]/10"
@@ -113,15 +116,14 @@ export function SiteHeader() {
             </CalendlyLink>
           </div>
 
-          <button
-            type="button"
-            aria-label="Toggle navigation menu"
-            className="touch-target inline-flex shrink-0 items-center justify-center rounded-full border border-border/60 p-2 lg:hidden"
-            onClick={() => setMobileOpen((prev) => !prev)}
-          >
-            {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label="Toggle navigation menu"
+          className="touch-target col-start-2 row-start-1 inline-flex shrink-0 items-center justify-center justify-self-end rounded-full border border-border/60 p-2 lg:hidden"
+          onClick={() => setMobileOpen((prev) => !prev)}
+        >
+          {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+        </button>
       </div>
 
       {mobileOpen ? (

@@ -66,7 +66,7 @@ export default function DeployBanner() {
       ) : (
         // Expanded state - full banner
         <div
-          className={`fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-md border-b border-border text-foreground ${
+          className={`relative z-40 w-full border-b border-border bg-background/95 text-foreground backdrop-blur-md ${
             isAnimating
               ? 'animate-slide-out-up'
               : isExpanding
@@ -74,16 +74,16 @@ export default function DeployBanner() {
                 : ''
           }`}
         >
-          <div className="py-3 px-4">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
-              <div className="flex flex-col gap-1 flex-1">
-                <div className="text-sm text-muted-foreground">
+          <div className="px-4 py-3.5 sm:px-6 sm:py-4">
+            <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+              <div className="min-w-0 flex-1 pt-0.5">
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-[0.9375rem]">
                   Discover curated Spanish Trail listings and concierge representation from
                   Dr. Jan Duffy of Berkshire Hathaway HomeServices.
-                </div>
+                </p>
               </div>
 
-              <div className="flex items-center gap-3 sm:flex-shrink-0">
+              <div className="flex shrink-0 flex-wrap items-center gap-2 sm:gap-3">
                 <Button variant="default" size="sm" asChild>
                   <a
                     href="https://searchforaffordablehomes.com/neighborhood/83/spanish-trails"

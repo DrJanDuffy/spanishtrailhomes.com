@@ -3,7 +3,7 @@ import { Playfair_Display, Lato } from 'next/font/google'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import DeployBanner from '../components/deploy-banner'
-import { CalendlyBadgeScript } from '@/components/calendly-badge-script'
+import { CalendlyWidgetScript } from '@/components/calendly-widget-script'
 import { CalendlyEventListener } from '@/components/calendly-event-listener'
 import { FloatingCalendlyButton } from '@/components/floating-calendly-button'
 import './globals.css'
@@ -33,6 +33,10 @@ const gbpDescription =
   'Dr. Jan Duffy specializes exclusively in Spanish Trail, a guard-gated golf community in Las Vegas, Nevada. With deep expertise across all 11 neighborhoods and over 1,200 homes, Dr. Duffy provides precise market data, neighborhood-level pricing insights, and personalized guidance for buyers and sellers. From luxury estates and golf course properties to villas and single-story living, Spanish Trail offers one of Southern Nevada\'s most sought-after lifestyles built around a championship 27-hole golf course. Whether you\'re exploring the community for the first time or preparing to sell, you get a local specialist who knows Spanish Trail inside and out.'
 
 const localBusinessId = `${siteUrl}#localBusiness`
+
+/** Default SERP/social summary for routes without page-level metadata (keep in sync across description + OG + Twitter). */
+const rootDefaultDescription =
+  'Spanish Trail guard-gated homes, Las Vegas NV 89113. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties—listings and local guidance.'
 
 const structuredData = [
   {
@@ -161,13 +165,12 @@ const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteUrl}#website`,
     name: 'Spanish Trail Homes',
     url: siteUrl,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/search?query={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
+    inLanguage: 'en-US',
+    publisher: { '@id': localBusinessId },
+    // No SearchAction: Google requires a working on-site search URL; this site has no /search route.
   },
 ]
 
@@ -177,20 +180,7 @@ export const metadata: Metadata = {
     default: 'Spanish Trail | Homes By Dr. Jan Duffy',
     template: '%s | Spanish Trail Homes',
   },
-  description:
-    'Spanish Trail | Homes By Dr. Jan Duffy—your trusted local real estate expert for Spanish Trail, Las Vegas. Precise market updates, buy and sell with confidence. Specializing in the Spanish Trail community with unparalleled insights and swift, successful sales.',
-  keywords: [
-    'Spanish Trail homes',
-    'Las Vegas luxury real estate',
-    'Spanish Trail Country Club',
-    'guard gated communities Las Vegas',
-    'golf course homes Las Vegas',
-    'golf community homes for sale',
-    'Las Vegas golf course homes for sale',
-    'golf course properties for sale',
-    'golf course homes for sale',
-    'Dr. Jan Duffy real estate',
-  ],
+  description: rootDefaultDescription,
   category: 'Real Estate',
   applicationName: 'Spanish Trail | Homes By Dr. Jan Duffy',
   authors: [{ name: 'Dr. Jan Duffy' }],
@@ -201,8 +191,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteUrl,
     title: 'Spanish Trail | Homes By Dr. Jan Duffy',
-    description:
-      'Explore Spanish Trail homes for sale, golf membership opportunities, and concierge-level amenities guided by Dr. Jan Duffy.',
+    description: rootDefaultDescription,
     siteName: 'Spanish Trail | Homes By Dr. Jan Duffy',
     images: [createOgImageUrl({ title: 'Spanish Trail Homes & Club Lifestyle', subtitle: 'Guard-gated Las Vegas real estate by Dr. Jan Duffy' })],
     locale: 'en_US',
@@ -210,8 +199,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Spanish Trail | Homes By Dr. Jan Duffy',
-    description:
-      'Find Spanish Trail Country Club homes, membership details, and private events support with Dr. Jan Duffy.',
+    description: rootDefaultDescription,
     images: [createOgImageUrl({ title: 'Spanish Trail Homes', subtitle: 'Luxury guard-gated homes and club expertise', eyebrow: 'SpanishTrailHomes.com' })],
   },
   robots: {
@@ -280,7 +268,7 @@ gtag('config', 'G-X68WWN997N', {
         <Script id="schema-structured-data" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(structuredData)}
         </Script>
-        <CalendlyBadgeScript />
+        <CalendlyWidgetScript />
       </head>
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}

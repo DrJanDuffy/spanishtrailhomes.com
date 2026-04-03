@@ -77,7 +77,9 @@ export function FloatingCalendlyButton() {
   }, [pathname])
 
   const hideOnContact = pathname === '/contact'
-  const showFAB = mounted && !hideOnContact && !hideDueToAppointment
+  /** Homepage: header + hero CTAs already include Book a Tour; skip FAB to avoid stacking with listing widgets. */
+  const hideOnHome = pathname === '/'
+  const showFAB = mounted && !hideOnContact && !hideOnHome && !hideDueToAppointment
 
   if (!showFAB) return null
 

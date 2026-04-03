@@ -1,14 +1,10 @@
 import Link from 'next/link'
 import { Home, Search, Phone } from 'lucide-react'
 import { Metadata } from 'next'
-import { getCanonicalUrl } from '@/lib/structuredData'
 
 export const metadata: Metadata = {
   title: 'Page Not Found | Spanish Trail Homes',
   description: 'The page you are looking for could not be found. Explore Spanish Trail homes, club amenities, and real estate services.',
-  alternates: {
-    canonical: getCanonicalUrl('/404'),
-  },
   robots: {
     index: false,
     follow: true,

@@ -32,6 +32,16 @@ const comparisonHighlights = [
     insight:
       'Custom-view estates perched above the valley. Complimentary pairing with Spanish Trail for cross-shopping larger lots and Strip panoramas.',
   },
+  {
+    name: 'Summerlin golf & country-club corridor',
+    insight:
+      'If you are searching “golf courses in Summerlin” or a “Summerlin country club,” you are usually looking at master-planned Summerlin west of Spanish Trail—Bear’s Best at The Ridges, TPC Summerlin, and clubs near Downtown Summerlin. Spanish Trail is not inside the Summerlin master plan; it sits in southwest Las Vegas (Spring Valley, 89113) with its own private 27-hole Spanish Trail Country Club. Dr. Duffy lines up same-day tours so geography, dues, and commute match what you expect.',
+  },
+  {
+    name: 'Spanish Oaks, Spanish Wells & similar enclaves',
+    insight:
+      'Spanish Oaks, Spanish Wells, and other valley neighborhoods are separate communities with their own HOAs and amenities—compare them with Spanish Trail for tennis, views, or lot size, but verify club access and fees for each. When you want guard-gated Spanish Trail listings specifically, pivot to the dedicated homes-for-sale hub after your comparison tour.',
+  },
 ]
 
 const relocationChecklist = [
@@ -42,6 +52,21 @@ const relocationChecklist = [
 ]
 
 const luxuryNeighborhoodsFaq = [
+  {
+    question: 'Is Spanish Trail in Summerlin?',
+    answer:
+      'No. Spanish Trail is a guard-gated master plan in southwest Las Vegas (Spring Valley area, ZIP 89113) west of I-215. Summerlin is a separate master-planned area to the northwest. Many buyers tour both because commutes and club cultures differ—Dr. Duffy maps the distinction before you write an offer.',
+  },
+  {
+    question: 'What is the difference between Spanish Trail and Spanish Hills in Las Vegas?',
+    answer:
+      'Spanish Trail is a large guard-gated golf community with Spanish Trail Country Club’s 27-hole private course. Spanish Hills is a distinct luxury enclave often chosen for view lots and custom architecture—buyers sometimes cross-shop the two for panorama versus fairway lifestyle. “Spanish Hills wedding” and event searches may point to venue marketing; for real estate, confirm address, HOA, and club access on each listing.',
+  },
+  {
+    question: 'How do Summerlin golf courses compare to Spanish Trail Country Club?',
+    answer:
+      'Summerlin-area golf includes high-profile semi-private and private options tied to neighborhoods like The Ridges and tournaments at TPC Summerlin. Spanish Trail offers a single member-focused 27-hole Robert Trent Jones Jr. layout inside its own gates. Neither is “better” universally—it depends on whether you want Summerlin master-plan services versus Spanish Trail’s mature landscaping and triple-nine routing. Dr. Duffy helps you tour both corridors and links to current Spanish Trail homes when you are ready to focus there.',
+  },
   {
     question: 'How does Spanish Trail compare to The Ridges in terms of price and lifestyle?',
     answer:
@@ -60,7 +85,7 @@ const luxuryNeighborhoodsFaq = [
   {
     question: 'How do club memberships differ between Spanish Trail and other luxury communities?',
     answer:
-      'Spanish Trail offers flexible membership categories (Full Golf, Young Executive, Lifestyle, Corporate) with initiation fees typically lower than newer communities like The Summit Club. Red Rock Country Club has two Arnold Palmer courses with family-focused programming. The Ridges features Bear\'s Best golf with modern amenities. Dr. Duffy arranges meetings with membership directors at each club to review categories, fees, waitlist status, and reciprocity benefits so you can make informed decisions.',
+      'Spanish Trail offers several membership categories (for example Full Golf, Young Executive, Lifestyle, and Corporate—confirm current names and availability with the club). Red Rock Country Club has two Arnold Palmer courses with family-focused programming. The Ridges ties to Bear’s Best. The Summit Club is a separate ultra-luxury private experience. Dr. Duffy arranges meetings with membership directors wherever you tour so you can review categories, initiation and dues, waitlists, and reciprocity from official materials—not comparisons based on rumor.',
   },
   {
     question: 'What factors should I prioritize when comparing luxury neighborhoods?',
@@ -83,9 +108,9 @@ const luxuryNeighborhoodsFaqSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Luxury Neighborhood Comparisons | Dr. Jan Duffy',
+  title: 'Las Vegas Luxury Neighborhoods | Spanish Trail vs Summerlin Golf & Spanish Hills | Dr. Jan Duffy',
   description:
-    'Compare Spanish Trail with top Las Vegas luxury communities including The Ridges, Red Rock Country Club, and The Summit Club.',
+    'Compare Spanish Trail with Summerlin golf communities, Spanish Hills, The Ridges, Red Rock Country Club, and The Summit Club—accurate geography and club context with Dr. Jan Duffy.',
   alternates: {
     canonical: getCanonicalUrl('/las-vegas-luxury-neighborhoods'),
   },
@@ -134,11 +159,14 @@ export default function LuxuryNeighborhoodComparisonsPage() {
       <header className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="neighborhoods-hero">
         <div className="mx-auto max-w-4xl space-y-5 px-6 text-center">
           <h1 id="neighborhoods-hero" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-            Compare Las Vegas Luxury Neighborhoods
+            Las Vegas Luxury Neighborhoods | Spanish Trail, Summerlin Golf & Beyond
           </h1>
           <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-            Evaluate Spanish Trail alongside premier west valley enclaves. Dr. Jan Duffy highlights lifestyle
-            differences, club programming, and investment considerations so you can pinpoint the community that fits best.
+            Evaluate Spanish Trail—southwest Las Vegas, not inside Summerlin—next to Summerlin country-club communities, Spanish Hills, The Ridges, and Red Rock Country Club. Dr. Jan Duffy clarifies geography, golf access, and HOA differences, then connects you to{' '}
+            <Link href="/spanish-trail-homes-for-sale-las-vegas" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
+              Spanish Trail homes for sale
+            </Link>{' '}
+            when you are ready to focus inside the 89113 gates.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button
@@ -283,16 +311,24 @@ function SpanishTrailPositioningSection() {
         <div className="rounded-3xl border border-border/40 bg-[#fdf9f3] p-6 shadow-lg shadow-primary/10">
           <p className="text-xs uppercase tracking-[0.4em] text-[#6f5237]">Next steps</p>
           <p className="mt-3 text-sm leading-relaxed text-[#372a20]/85">
-            Dr. Duffy can align West Valley showings across Spanish Trail, The Ridges, Red Rock Country Club, and beyond on
-            the same day—complete with membership briefings and gate coordination.
+            Dr. Duffy can align West Valley showings across Spanish Trail, The Ridges, Red Rock Country Club, and Summerlin-area clubs on the same day—complete with membership briefings and gate coordination.
           </p>
-          <Button
-            asChild
-            variant="outline"
-            className="mt-6 rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
-          >
-            <Link href="/contact">Plan a comparison tour</Link>
-          </Button>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
+            >
+              <Link href="/contact">Plan a comparison tour</Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-[#0d3b2c]/60 px-6 py-2 text-xs uppercase tracking-[0.3em] text-[#0d3b2c] hover:bg-[#0d3b2c]/10"
+            >
+              <Link href="/spanish-trail-homes-for-sale-las-vegas">Spanish Trail listings hub</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

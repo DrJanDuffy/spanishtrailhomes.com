@@ -12,9 +12,9 @@ import { createOgImageUrl, getCanonicalUrl } from '@/lib/structuredData'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-private-golf-course-homes'
 
 export const metadata: Metadata = {
-  title: 'Private Golf Course Homes Spanish Trail | Dr. Jan Duffy',
+  title: 'Las Vegas Private Golf Course Homes | Spanish Trail Country Club | Dr. Jan Duffy',
   description:
-    'Secure private golf course homes in Spanish Trail with Dr. Jan Duffy. Explore memberships, course-front estates, and concierge buyer services.',
+    'Las Vegas private golf at Spanish Trail Country Club: course-front estates, memberships via the club, and guard-gated showings with Dr. Jan Duffy—not public tee-time golf.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-private-golf-course-homes'),
   },
@@ -66,7 +66,7 @@ const faqContent = [
   {
     question: 'How much does golf membership cost?',
     answer:
-      'Full Golf memberships currently require a one-time initiation (mid five figures) with monthly dues in the $1,200 range, while Young Executive and Lifestyle memberships have reduced rates tailored to age or interests. Fees are subject to change—I confirm current pricing and payment plans before you write an offer.',
+      'Initiation fees, dues, and categories change with the club’s annual schedules. Dr. Jan Duffy does not quote official pricing—she introduces you to the Spanish Trail Country Club membership office for current numbers, payment plans, and waitlist status before you write an offer.',
   },
   {
     question: 'Do all homes have direct cart access?',
@@ -131,10 +131,10 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="private-golf-hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h1 id="private-golf-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Private Golf Course Homes Spanish Trail
+          Las Vegas Private Golf Homes | Spanish Trail Country Club
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail’s 27-hole Robert Trent Jones Jr. course delivers private fairways, sculpted water features, and a golf culture cherished by members for nearly four decades. I partner with buyers to secure course-front estates, villas, and custom homes that align with their play frequency, membership goals, and investment strategy.
+          Las Vegas private golf here means Spanish Trail’s member-only 27 holes by Robert Trent Jones Jr.—not a public tee sheet. Dr. Jan Duffy matches buyers with course-front estates, villas, and custom homes, then coordinates introductions to the club for membership questions tied to your closing timeline.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">

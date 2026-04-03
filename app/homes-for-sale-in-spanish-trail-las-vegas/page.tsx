@@ -14,9 +14,9 @@ import { marketStats, formatMedianPrice } from '@/lib/marketStats'
 const pageUrl = 'https://www.spanishtrailhomes.com/homes-for-sale-in-spanish-trail-las-vegas'
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale — Property Types & Las Vegas 89113 Guide | Dr. Jan Duffy',
+  title: 'Spanish Trail Las Vegas Homes for Sale | Country Club Property Types & 89113 Guide | Dr. Jan Duffy',
   description:
-    'Property types, neighborhoods, pools, and amenities for Spanish Trail homes for sale in Las Vegas NV 89113. Use the live listings hub for MLS snapshots, weekly stats, and private tours.',
+    'Spanish Trail Country Club Las Vegas: property types, neighborhoods, pools, and amenities for homes for sale in 89113. Compare villas, estates, and golf homes—then use the live MLS hub for tours.',
   alternates: {
     canonical: getCanonicalUrl('/homes-for-sale-in-spanish-trail-las-vegas'),
   },
@@ -60,6 +60,11 @@ export const metadata: Metadata = {
 }
 
 const homesForSaleFaq = [
+  {
+    question: 'What is the difference between Spanish Trail and Spanish Trails Country Club in Las Vegas?',
+    answer:
+      'There is one master-planned community: Spanish Trail, in southwest Las Vegas (ZIP 89113), with Spanish Trail Country Club operating the private 27-hole course. “Spanish Trails” (with an s) is usually the same place in casual search—maps and MLS use Spanish Trail. Dr. Jan Duffy can clarify gates, neighborhoods, and club membership when you tour homes for sale.',
+  },
   {
     question: 'What types of homes are available for sale in Spanish Trail, Las Vegas?',
     answer:
@@ -160,17 +165,17 @@ function HeroSection() {
     <section className="relative isolate overflow-hidden text-[#f8f5ef]" aria-labelledby="hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&auto=format&fit=crop&w=2000"
-        alt="Homes for sale in Spanish Trail, Las Vegas - guard-gated luxury golf community with elegant single-family homes and grand estates"
+        alt="Spanish Trail Country Club Las Vegas—homes for sale in guard-gated private golf community, fairway and estate architecture"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 to-[#0f2b1e]/85"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
       <div className="mx-auto flex max-w-4xl flex-col gap-6 px-6 py-28 text-center sm:py-32">
         <p className="text-xs uppercase tracking-[0.5em] text-[#f8f5ef]/70">Spanish Trail Real Estate</p>
         <h1 id="hero-heading" className="font-heading text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Homes for Sale: Property Types & Buyer Education (Las Vegas 89113)
+          Spanish Trail Country Club Homes for Sale | Las Vegas Property Types (89113)
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85 sm:text-lg">
-          This page is a <strong className="font-semibold text-[#f8f5ef]">read-first guide</strong>—villas, estates, fairway homes, pools, and how the eleven enclaves differ—not the primary MLS search surface. When you are ready for{' '}
+          This page is a <strong className="font-semibold text-[#f8f5ef]">read-first guide</strong> to Spanish Trail private country club real estate—villas, estates, fairway homes, pools, and how the eleven enclaves differ—not the primary MLS search surface. When you are ready for{' '}
           <strong className="font-semibold text-[#f8f5ef]">live listings, weekly stats, alerts, and tour coordination</strong>, use the{' '}
           <Link href="/spanish-trail-homes-for-sale-las-vegas" className="font-medium text-[#f8f5ef] underline-offset-4 hover:underline">
             Spanish Trail MLS listings & market hub

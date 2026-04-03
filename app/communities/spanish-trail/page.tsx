@@ -12,17 +12,17 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/communities/spanish-trail'
 const communityPageDescription =
-  'Browse Spanish Trail homes for sale, guard-gated amenities, neighborhood insights, and buyer resources with Dr. Jan Duffy.'
+  'Spanish Trail Country Club Las Vegas: guard-gated homes for sale, private 27-hole golf, 11 neighborhoods, and buyer resources with Dr. Jan Duffy.'
 
 const communityWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Homes for Sale | Community Guide',
+  name: 'Spanish Trail Country Club Las Vegas | Community & Homes Guide',
   description: communityPageDescription,
   path: '/communities/spanish-trail',
   type: 'CollectionPage',
 })
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Homes for Sale | Community Guide',
+  title: 'Spanish Trail Country Club Las Vegas | Homes for Sale & Community Guide',
   description: communityPageDescription,
   alternates: { canonical: getCanonicalUrl('/communities/spanish-trail') },
   robots: {
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: pageUrl,
-    title: 'Spanish Trail Homes & Community Overview',
+    title: 'Spanish Trail Country Club Las Vegas | Community & Homes',
     description:
-      'Tour Spanish Trail real estate, amenities, and lifestyle advantages with Dr. Jan Duffy.',
+      'Tour Spanish Trail Country Club real estate—guard-gated Las Vegas 89113—with Dr. Jan Duffy.',
     images: [
       createOgImageUrl({
         title: 'Spanish Trail Community Guide',
@@ -96,6 +96,11 @@ const communityNarratives = [
 ]
 
 const communityFaq = [
+  {
+    question: 'Is it called Spanish Trail or Spanish Trails Country Club?',
+    answer:
+      'The official community and club names use Spanish Trail (singular)—Spanish Trail Country Club operates the private golf course inside the guard gates in Las Vegas, NV 89113. “Spanish Trails” is a common search typo; maps and MLS copy use Spanish Trail. For homes for sale, tours, and HOA questions, contact Dr. Jan Duffy at (702) 766-3299.',
+  },
   {
     question: 'What price ranges define Spanish Trail homes in 2026?',
     answer:
@@ -231,6 +236,7 @@ function HeroSection() {
     <section className="relative isolate overflow-hidden" aria-labelledby="community-hero-heading">
       <HeroBackground
         src="https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Country Club guard-gated community and golf course landscape, Las Vegas Nevada"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 via-[#0f2b1e]/60 to-[#0f2b1e]/80"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -245,10 +251,10 @@ function HeroSection() {
             id="community-hero-heading"
             className="font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
           >
-            Spanish Trail Luxury Homes for Sale
+            Spanish Trail Country Club | Luxury Homes Las Vegas
           </h1>
           <p className="text-base leading-relaxed text-primary-foreground sm:text-lg">
-            Discover a guard-gated golf enclave in Southwest Las Vegas that pairs timeless architecture with resort-level amenities, all moments from Spring Valley and the Strip. Shopping inventory? Use the{' '}
+            Spanish Trail Country Club anchors this private guard-gated golf community in southwest Las Vegas (89113)—minutes from the Strip and Spring Valley. People often search “Spanish Trails Las Vegas”; this is the same place. Shopping inventory? Use the{' '}
             <Link href="/spanish-trail-homes-for-sale-las-vegas" className="font-medium text-primary-foreground underline-offset-4 hover:underline">
               live Las Vegas 89113 listings hub
             </Link>{' '}

@@ -20,10 +20,10 @@ import { TourCTAStrip } from '@/components/tour-cta-strip'
 
 const pageUrl = 'https://www.spanishtrailhomes.com/'
 const homePageDescription =
-  'Spanish Trail homes for sale in Las Vegas, NV 89113. Guard-gated golf community with Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.'
+  'Spanish Trail Country Club area homes for sale in Las Vegas, NV 89113—guard-gated private golf community. Search Spanish Trail or Spanish Trails; Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties.'
 
 const homeWebPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Las Vegas 89113 | Dr. Jan Duffy',
+  name: 'Spanish Trail Country Club Homes for Sale | Las Vegas 89113 | Dr. Jan Duffy',
   description: homePageDescription,
   path: '/',
   type: 'CollectionPage',
@@ -42,7 +42,7 @@ const homeBreadcrumbSchema = createBreadcrumbSchema([
 ])
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Guard-Gated Homes & Club Lifestyle | Las Vegas 89113 | Dr. Jan Duffy',
+  title: 'Spanish Trail Country Club Homes for Sale | Las Vegas 89113 | Dr. Jan Duffy',
   description: homePageDescription,
   alternates: {
     canonical: getCanonicalUrl('/'),
@@ -103,6 +103,11 @@ const overviewStats = [
 
 const homeFaq = [
   {
+    question: 'Is it Spanish Trail or Spanish Trails—and where is it in Las Vegas?',
+    answer:
+      'The correct name is Spanish Trail (singular), a guard-gated master plan in southwest Las Vegas, Nevada, ZIP 89113. Many people type “Spanish Trails” in search; it is the same community. Spanish Trail Country Club operates the private 27-hole golf course inside the gates. If you are searching “Spanish Trail near me” from the Las Vegas Valley, the main entrance and club are off Tropicana and Rainbow—call Dr. Jan Duffy at (702) 766-3299 for directions and guard-gate showing access.',
+  },
+  {
     question: 'How competitive is the current market for Spanish Trail homes?',
     answer:
       'Inventory in Spanish Trail remains limited, with many properties selling within the first two weeks when they are priced correctly. Dr. Jan Duffy prepares buyers with lender introductions, appraisal strategies, and neighborhood intel so they can move decisively. Her Berkshire Hathaway HomeServices network also uncovers private offerings and upcoming listings that never hit public portals, giving clients a competitive advantage.',
@@ -128,6 +133,19 @@ const homeFaq = [
       'Sellers working with Dr. Duffy benefit from multi-layered marketing: Berkshire Hathaway HomeServices global syndication, hyperlocal campaigns targeting 89113 and Summerlin move-up buyers, and private preview events for Dr. Duffy’s concierge clients. In addition, she deploys analytics-driven pricing models and property-specific landing pages to capture leads around the clock—essential for Spanish Trail homes where discerning buyers often preview online before booking a showing.',
   },
 ]
+
+const homeFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: homeFaq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
 
 const homeResourceSchema = {
   '@context': 'https://schema.org',
@@ -203,6 +221,9 @@ export default function HomePage() {
       <Script id="home-webpage-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeWebPageSchema)}
       </Script>
+      <Script id="home-faq-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify(homeFaqSchema)}
+      </Script>
       <Script id="home-resource-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(homeResourceSchema)}
       </Script>
@@ -231,10 +252,10 @@ function HeroSection() {
             id="hero-heading"
             className="font-heading text-3xl font-semibold leading-tight tracking-[0.06em] text-white [text-shadow:0_1px_3px_rgb(0_0_0/35%)] sm:text-4xl sm:tracking-[0.08em] lg:text-5xl xl:text-6xl"
           >
-            Spanish Trail Homes for Sale Las Vegas
+            Spanish Trail Country Club Homes for Sale in Las Vegas
           </h1>
           <p className="text-base font-medium leading-relaxed text-white/95 sm:text-lg sm:leading-relaxed [text-shadow:0_1px_2px_rgb(0_0_0/25%)]">
-            From search to keys, we help you find guard-gated golf community homes for sale in Spanish Trail—luxury, functionality, and the unique beauty of the Las Vegas landscape. Track new listings, real-time market shifts, and neighborhood insights curated by Dr. Jan Duffy of Berkshire Hathaway HomeServices.
+            Spanish Trail is a private guard-gated golf community in southwest Las Vegas (89113) centered on Spanish Trail Country Club. Whether you searched “Spanish Trail near me,” “Spanish Trails Las Vegas,” or country club homes, Dr. Jan Duffy helps you tour listings, read the market, and buy or sell with Berkshire Hathaway HomeServices— from first search to keys.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-3 sm:gap-4">

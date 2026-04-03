@@ -11,16 +11,16 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-hoa-guide'
 const pageDescription =
-  'Spanish Trail HOA guide for new owners. Learn about the orientation process, gate access, community rules, architectural guidelines, and HOA fees in this guard-gated Las Vegas community.'
+  'Spanish Trail HOA Las Vegas: new-owner orientation, gate access, fees, architectural review, and how HOA differs from country club dues in guard-gated 89113—Dr. Jan Duffy for real estate questions.'
 
 const webPageSchema = createWebPageSchema({
-  name: 'Spanish Trail HOA Guide | New Owner Information',
+  name: 'Spanish Trail HOA Las Vegas | Fees, Gates & New Owner Information',
   description: pageDescription,
   path: '/spanish-trail-hoa-guide',
 })
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail HOA Guide | New Owner Orientation & Rules',
+  title: 'Spanish Trail HOA Las Vegas | Fees, Gates & Rules | New Owner Guide',
   description: pageDescription,
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-hoa-guide'),
@@ -65,6 +65,11 @@ export const metadata: Metadata = {
 }
 
 const faqContent = [
+  {
+    question: 'What does the Spanish Trail HOA cover in Las Vegas?',
+    answer:
+      'The Spanish Trail homeowners association (HOA) oversees guard-gated security, common-area landscaping and maintenance, community standards, and architectural review for the residential master plan in Las Vegas, NV 89113. It is separate from Spanish Trail Country Club: HOA dues are not the same as golf or social membership. For official fee schedules and rules packets, request the latest HOA documents on your specific listing—Dr. Jan Duffy helps buyers and sellers obtain them during escrow.',
+  },
   {
     question: 'What happens during the new owner orientation?',
     answer:
@@ -150,10 +155,10 @@ function HeroSection() {
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <p className="text-xs uppercase tracking-[0.5em] text-[#c6aa7a]">Community Standards</p>
         <h1 id="hoa-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail HOA Guide
+          Spanish Trail HOA Las Vegas | Community Guide
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          The Spanish Trail HOA is tightly managed to maintain the highest community standards. While this may seem thorough, many homeowners appreciate knowing that exceptional standards are upheld throughout the community. Here&apos;s what you need to know.
+          Searching “Spanish Trail HOA” usually means you want fees, gates, and rules for this guard-gated Las Vegas community—not the private country club dues next door. The HOA keeps standards high across 89113; here is how orientation, access, and architectural review work before you buy or sell with Dr. Jan Duffy.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">

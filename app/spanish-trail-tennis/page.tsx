@@ -11,16 +11,16 @@ import { createOgImageUrl, createWebPageSchema, getCanonicalUrl } from '@/lib/st
 
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-tennis'
 const pageDescription =
-  'Spanish Trail Tennis Center features 12 lighted courts, a pro shop, and professional instruction. Discover one of the best tennis facilities in Las Vegas within this guard-gated golf community.'
+  'Las Vegas tennis lessons and league play at Spanish Trail Tennis Center—12 lighted courts, USPTA pros, and a pro shop inside Spanish Trail Country Club (membership applies for most programming).'
 
 const webPageSchema = createWebPageSchema({
-  name: 'Spanish Trail Tennis Center | 12 Lighted Courts in Las Vegas',
+  name: 'Las Vegas Tennis Lessons & Spanish Trail Tennis Center | 12 Courts',
   description: pageDescription,
   path: '/spanish-trail-tennis',
 })
 
 export const metadata: Metadata = {
-  title: 'Spanish Trail Tennis Center | 12 Lighted Courts in Las Vegas',
+  title: 'Las Vegas Tennis Lessons | Spanish Trail Tennis Center | 12 Courts',
   description: pageDescription,
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-tennis'),
@@ -65,6 +65,11 @@ export const metadata: Metadata = {
 }
 
 const faqContent = [
+  {
+    question: 'Can I take Las Vegas tennis lessons at Spanish Trail?',
+    answer:
+      'Yes—Spanish Trail Tennis Center employs USPTA-certified professionals who offer private lessons, semi-privates, clinics, and junior programs. Access is for members and their guests per club policies, not a public drop-in municipal court. Contact the tennis shop for schedules, pricing, and membership categories that include tennis. Dr. Jan Duffy focuses on real estate; she can introduce you to the club for lesson bookings.',
+  },
   {
     question: 'How many tennis courts are at Spanish Trail?',
     answer:
@@ -144,10 +149,10 @@ function HeroSection() {
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <p className="text-xs uppercase tracking-[0.5em] text-[#c6aa7a]">Tennis at Spanish Trail</p>
         <h1 id="tennis-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Spanish Trail Tennis Center
+          Las Vegas Tennis Lessons & Spanish Trail Tennis Center
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Spanish Trail offers one of the best tennis centers in Las Vegas with 12 lighted courts, a full-service pro shop, and USPTA-certified professionals. Whether you&apos;re a competitive player or just picking up a racquet, our facilities and programming support every level.
+          Spanish Trail Tennis Center—inside Spanish Trail Country Club—offers 12 lighted courts, a full pro shop, and USPTA-certified pros for lessons, clinics, and leagues (membership and guest policies apply). If you are comparing Las Vegas tennis facilities, start here for guard-gated programming; Dr. Jan Duffy helps with homes, the club handles court bookings.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">

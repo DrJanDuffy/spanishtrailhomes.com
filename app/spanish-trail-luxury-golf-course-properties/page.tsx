@@ -13,9 +13,9 @@ import { marketStats } from '@/lib/marketStats'
 const pageUrl = 'https://www.spanishtrailhomes.com/spanish-trail-luxury-golf-course-properties'
 
 export const metadata: Metadata = {
-  title: 'Luxury Golf Course Properties Spanish Trail Las Vegas | Dr. Jan Duffy',
+  title: 'Las Vegas Golf Course Homes for Sale | Spanish Trail Luxury Fairway Estates | Dr. Jan Duffy',
   description:
-    'Explore luxury golf course homes in Spanish Trail with Dr. Jan Duffy. View fairway estates, view premiums, private renovations, and in-depth market intelligence.',
+    'Las Vegas golf course homes for sale at Spanish Trail Country Club: luxury fairway estates, view premiums, renovations, and market context with Dr. Jan Duffy in guard-gated 89113.',
   alternates: {
     canonical: getCanonicalUrl('/spanish-trail-luxury-golf-course-properties'),
   },
@@ -59,6 +59,11 @@ export const metadata: Metadata = {
 }
 
 const faqContent = [
+  {
+    question: 'Are Spanish Trail golf course homes considered private Las Vegas golf real estate?',
+    answer:
+      'Yes. These residences sit inside the guard gates around Spanish Trail Country Club’s private 27-hole course—not on a public daily-fee layout. Buyers comparing “Las Vegas golf course homes for sale” here get member-golf lifestyle, cart-path access rules, and club membership steps explained in plain language.',
+  },
   {
     question: 'How do golf course views impact Spanish Trail pricing?',
     answer:
@@ -132,10 +137,10 @@ function HeroSection() {
     <section className="bg-[#0f2b1e] py-16 text-[#f8f5ef] sm:py-20" aria-labelledby="luxury-golf-hero-heading">
       <div className="mx-auto max-w-4xl space-y-6 px-6 text-center">
         <h1 id="luxury-golf-hero-heading" className="font-[var(--font-playfair)] text-3xl leading-tight sm:text-4xl">
-          Luxury Golf Course Properties Spanish Trail Las Vegas
+          Las Vegas Golf Course Homes for Sale | Spanish Trail Country Club
         </h1>
         <p className="text-base leading-relaxed text-[#f8f5ef]/85">
-          Every hole in Spanish Trail tells a different luxury story—from Lakes course waterfalls shimmering at sunset to Canyon fairways framing mountain silhouettes. Buyers seeking refined golf lifestyle living rely on me to decode where view premiums, renovation budgets, and club amenities align with their goals. Let’s craft a plan tailored to your vision of the perfect Spanish Trail estate.
+          If you are searching Las Vegas golf course homes for sale in a private club setting, Spanish Trail’s Sunrise, Lakes, and Canyon nines frame luxury estates and villas behind the guard gates. Dr. Jan Duffy decodes view premiums, renovation budgets, and membership next steps so your offer matches the fairway lifestyle you want.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="rounded-full bg-white px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#0f2b1e] hover:bg-[#efe5d8]">

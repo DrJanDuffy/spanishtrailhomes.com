@@ -45,6 +45,26 @@ const golfNarratives = [
 
 const golfFaq = [
   {
+    question: 'Is Spanish Trail a public or private golf course in Las Vegas?',
+    answer:
+      'Spanish Trail Country Club is a private, member-focused 27-hole facility inside the guard gates—not a daily-fee public course. Tee times, practice facilities, and most events are for members and their guests. If you are comparing Las Vegas public golf options, municipal and resort courses are available elsewhere; Dr. Jan Duffy focuses on real estate and introductions to the club’s golf shop for membership questions.',
+  },
+  {
+    question: 'How close is Spanish Trail Country Club to the Las Vegas Strip?',
+    answer:
+      'Spanish Trail sits in southwest Las Vegas (89113), roughly a 15-minute drive to the central Strip depending on traffic—close enough for dining and entertainment, far enough for quiet fairways. Buyers who search “golf near the Strip” often tour Spanish Trail for private club golf without living on the corridor itself.',
+  },
+  {
+    question: 'I searched “Spanish Trails golf”—is that the same as Spanish Trail?',
+    answer:
+      'Yes. The club and community are Spanish Trail (singular). “Spanish Trails golf” or “Spanish Trails golf Vegas” usually refers to the same private 27-hole Robert Trent Jones Jr. layout inside Spanish Trail Country Club.',
+  },
+  {
+    question: 'Where can I browse Las Vegas golf course homes for sale at Spanish Trail?',
+    answer:
+      'Use the live listings section on this page or the dedicated golf home hubs linked from SpanishTrailHomes.com (luxury golf course properties and private golf course homes). Dr. Jan Duffy coordinates guard-gate showings and explains cart path access, view premiums, and membership next steps.',
+  },
+  {
     question: 'How do tee times work for members and their guests?',
     answer:
       'Members can book tee times up to seven days in advance using the Spanish Trail mobile app or by contacting the golf shop. Peak morning times typically fill first, especially on weekends and during major events. Contact the golf shop for guest policies, dress code guidelines, and pace-of-play expectations.',
@@ -86,10 +106,10 @@ const golfFaqSchema = {
 
 const pageUrl = 'https://www.spanishtrailhomes.com/golf'
 const golfPageDescription =
-  'Tour the three 9-hole courses designed by Robert Trent Jones Jr. featuring lakes, waterfalls, streams, and 120 bunkers across all-grass terrain. Review the scorecard and explore golf course homes for sale near Spanish Trail Country Club in Las Vegas.'
+  'Spanish Trail Country Club private golf in Las Vegas: three 9-hole combinations (Sunrise, Lakes, Canyon) by Robert Trent Jones Jr., 120+ bunkers, and lakes and streams on all-grass terrain. Compare to public Las Vegas golf—then explore golf course homes for sale behind the guard gates with Dr. Jan Duffy.'
 
 const golfWebPageSchema = createWebPageSchema({
-  name: 'Golf Experience | Spanish Trail Country Club',
+  name: 'Spanish Trail Country Club Golf | Private Las Vegas 27-Hole Course',
   description: golfPageDescription,
   path: '/golf',
   extra: {
@@ -101,7 +121,7 @@ const golfWebPageSchema = createWebPageSchema({
 })
 
 export const metadata: Metadata = {
-  title: 'Golf Experience | Spanish Trail Country Club',
+  title: 'Spanish Trail Golf | Private Las Vegas Country Club | 27 Holes | Dr. Jan Duffy',
   description: golfPageDescription,
   alternates: { canonical: getCanonicalUrl('/golf') },
   robots: {
@@ -190,6 +210,7 @@ function GolfHero() {
     >
       <HeroBackground
         src="https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?q=80&auto=format&fit=crop&w=2000"
+        alt="Spanish Trail Country Club private golf course fairways and greens, Las Vegas Nevada"
         overlayClassName="bg-gradient-to-b from-[#0f2b1e]/60 via-[#0f2b1e]/65 to-[#0f2b1e]/80"
         sizes="(max-width: 1024px) 100vw, 1280px"
       />
@@ -202,12 +223,14 @@ function GolfHero() {
           id="golf-hero-heading"
           className="mt-5 font-[var(--font-playfair)] text-4xl leading-tight sm:text-5xl lg:text-6xl"
         >
-          27 championship holes. Three distinct personalities. Endless ways to
-          play.
+          Spanish Trail Country Club Golf—Private 27 Holes in Las Vegas
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-7 text-primary-foreground sm:text-lg">
-          Robert Trent Jones Jr. designed each nine to challenge strategy, ball
-          striking, and creativity. The all-grass terrain features lakes, waterfalls, and streams throughout, along with 120 bunkers to offer a challenge at every hole—all with postcard views of Red Rock Canyon and the Las Vegas Strip.
+          Robert Trent Jones Jr. designed the Sunrise, Lakes, and Canyon nines for strategy, ball striking, and creativity. This is private member golf in southwest Las Vegas—not a public tee sheet—with lakes, waterfalls, streams, and 120 bunkers, plus views toward Red Rock and the Strip skyline. Exploring{' '}
+          <Link href="/las-vegas-luxury-neighborhoods" className="font-medium text-primary-foreground underline-offset-4 hover:underline">
+            other private Las Vegas golf communities
+          </Link>
+          ? Start here for Spanish Trail, then compare enclaves with Dr. Jan Duffy.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button className="rounded-full px-7 py-3 text-xs uppercase tracking-[0.4em]" asChild>
